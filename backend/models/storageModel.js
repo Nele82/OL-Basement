@@ -18,6 +18,14 @@ const storageSchema = new Schema({
   height: {
     type: Number,
     required: true
+  },
+  userId: {
+    type: String,
+    required: true
+  },
+  facilityId: {
+    type: String,
+    required: true
   }
 }, { timestamps: true })
 
