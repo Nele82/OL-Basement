@@ -22,10 +22,6 @@ const storageSchema = new Schema({
   userId: {
     type: String,
     required: true
-  },
-  facilityId: {
-    type: String,
-    required: true
   }
 }, { timestamps: true })
 
