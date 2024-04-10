@@ -1,7 +1,7 @@
 import React from 'react'
 import icon from '../img/storage_icon.png'
 
-const Menu = () => {
+const Navbar = () => {
   return (
     <nav className='menu'>
         <img 
@@ -14,4 +14,4 @@ const Menu = () => {
   )
 }
 
-export default Menu
+export default Navbar
