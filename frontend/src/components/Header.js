@@ -1,11 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+import icon from '../assets/storage_icon.jpg'
 
 const Header = () => {
-  const [username, setUsername] = useState('')
 
   return (
-    <header className='header'>
-      <p>Welcome <span>, {username}</span>!</p>
+    <header>
+      <img 
+          src={icon} 
+          alt="Storage icon" 
+      />
+      <span>OL Basement</span>
+      <span>Test</span>
     </header>
   )
 }

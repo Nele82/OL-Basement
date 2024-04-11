@@ -1,0 +1,36 @@
+// Colors
+$colors: (
+    "primary": #326dee,
+    "secondary": #1ac886,
+    "error": #d32752,
+    "info": #f6c31c,
+    "blue": #1919e6,
+    "red": #e61919,
+    "yellow": #e6e619,
+    "green": #19e635,
+    "orange": #ffa600,
+    "purple": #9900ff,
+    "gray": #808080,
+    "black": black,
+    "white": white
+) !default;
+
+// Spacing
+$base-padding: 0.75rem !default;
+$base-margin: 0.75rem !default;
+
+// Borders
+$base-border-thickness: 1rem !default;
+$base-border-radius: 1rem !default;
+
+// Box-shadow
+$base-box-shadow: 1rem 2rem 4rem rgb(50, 46, 46) !default;
+
+// Font sizes
+$base-font-size: 1rem !default;
+$font-size-sm: $base-font-size * 0.75 !default;
+$font-size-lg: $base-font-size * 1.5 !default;
+$font-size-xl: $base-font-size * 2 !default;
+$font-size-xxl: $base-font-size * 3 !default;
+
+
