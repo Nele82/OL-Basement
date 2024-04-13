@@ -4,14 +4,19 @@ const userRoutes = require('./routes/users')
 require('dotenv').config() // .env library
 const cors = require('cors')
 
+const corsOptions = {
+  origin: 'http://localhost:3000', // Allow requests from this origin
+  credentials: true, // Enable credentials (cookies, authorization headers, etc.)
+  optionsSuccessStatus: 200, // HTTP status code for successful preflight requests
+}
+
 // An instance of the Express application 
 const app = express() // The App
 
 // Middleware
 app.use(express.json()) // Checks if a request comes with the body and attaches it to the 'req' object  
 
-// Cors
-app.use(cors())
+app.use(cors(corsOptions))
 
 // Routes
 app.use('/user', userRoutes)

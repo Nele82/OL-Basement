@@ -12,20 +12,20 @@ const Login = () => {
   const dispatch = useDispatch()
 
   // User login function
-  const loginUser = async (user, pass) => { 
+  const loginUser = async (username, password) => { 
     setLoading(true)
     setError(null)
 
     const response = await fetch('http://localhost:3500/user/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ user, pass })
+      body: JSON.stringify({ username, password })
     })
     const json = await response.json() // returns email & token
 
     if (!response.ok) {
       setLoading(false)
-      setError(json.error)
+      setError(json.message)
     }
 
     if (response.ok) {
@@ -37,6 +37,9 @@ const Login = () => {
 
       // update loading state
       setLoading(false)
+
+      // update error state
+      setError(null)
     }
   
   }
