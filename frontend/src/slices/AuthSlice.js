@@ -1,13 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 export const authSlice = createSlice({
-    name: 'authorization',
+    name: 'loggedin',
     initialState: {
         value: null
     },
     reducers: {
         set: state => {
-            state.value = 0
+            state.value = JSON.parse(localStorage.getItem('user'))
         }
     }
 })

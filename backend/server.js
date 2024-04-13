@@ -2,12 +2,16 @@ const express = require('express') // Express.js library
 const mongoose = require('mongoose') // Mongoose library
 const userRoutes = require('./routes/users')
 require('dotenv').config() // .env library
+const cors = require('cors')
 
 // An instance of the Express application 
 const app = express() // The App
 
 // Middleware
 app.use(express.json()) // Checks if a request comes with the body and attaches it to the 'req' object  
+
+// Cors
+app.use(cors())
 
 // Routes
 app.use('/user', userRoutes)

@@ -3,6 +3,6 @@ import setAuth from './slices/AuthSlice'
 
 export default configureStore({
   reducer: {
-    authorize: setAuth
+    loggedin: setAuth
   }
 })
