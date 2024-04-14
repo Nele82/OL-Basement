@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Layout from './components/Layout'
 import Main from './pages/Main'
@@ -8,8 +8,18 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import { useSelector, useDispatch } from 'react-redux'
+import { useEffect } from 'react';
+import { login } from './slices/AuthSlice';
 
 function App() {
+  const dispatch = useDispatch()
+  const user = useSelector(state => state.loggedin.value)
+
+  useEffect(()=>{
+    dispatch(login())
+  }, [])
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -28,7 +38,7 @@ function App() {
               />
               <Route
                 path='login'
-                element={<Login />}
+                element={!user ? <Login /> : <Main />}
               />
               <Route
                 path='signup'

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { set } from '../slices/AuthSlice'
+import { useDispatch } from 'react-redux'
+import { login } from '../slices/AuthSlice'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -8,7 +8,6 @@ const Login = () => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
 
-  const user = useSelector(state => state.loggedin.value)
   const dispatch = useDispatch()
 
   // User login function
@@ -33,17 +32,17 @@ const Login = () => {
       localStorage.setItem('user', JSON.stringify(json))
 
       // update the redux store
-      dispatch(set()) // sets 'user' to {email: string, token: string}
+      dispatch(login()) // sets 'user' to {email: string, token: string}
 
       // update loading state
       setLoading(false)
 
       // update error state
       setError(null)
-    }
-  
+    }  
   }
 
+  // Checking for an empty input
   const handleSubmit = async (e) => {
     e.preventDefault()
 
@@ -51,7 +50,6 @@ const Login = () => {
       setError('Please enter your username and password')
       return
     }
-
     await loginUser(username, password)
   }
   

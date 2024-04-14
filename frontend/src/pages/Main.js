@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { set } from '../slices/AuthSlice'
-
+import { login } from '../slices/AuthSlice'
+import { useLogout } from '../hooks/useLogout'
+  
 const Main = () => {
   const [username, setUsername] = useState('')
   const user = useSelector(state => state.loggedin.value)
   const dispatch = useDispatch()
+  const {logoutUser} = useLogout()
 
   useEffect(() => {
       // Sets the username and jwt if a user is logged in
-      dispatch(set()) 
+      dispatch(login()) 
       // Gets user details from the local storage
       const name = JSON.parse(localStorage.getItem('user'))  
       // Sets the name for the 'Welcome' greeting
       if (name) {
-        setUsername(name.username);
+        setUsername(name.username)
       }
   }, [])
 
@@ -38,8 +40,12 @@ const Main = () => {
         </div>
         : 
         <div>
-          <button>Log Out</button>
-          <button>To basement (s)</button>
+          <button
+            onClick={logoutUser}
+          >
+            Log Out
+          </button>
+          <button>Go to basement</button>
         </div>
         }
       </main>
