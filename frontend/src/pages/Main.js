@@ -45,7 +45,7 @@ const Main = () => {
           >
             Log Out
           </button>
-          <button>Go to basement</button>
+          <Link to="/storage-list">Go to the basement</Link>
         </div>
         }
       </main>

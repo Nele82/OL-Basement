@@ -38,7 +38,7 @@ function App() {
               />
               <Route
                 path='login'
-                element={!user ? <Login /> : <Main />}
+                element={!user ? <Login /> : <StorageList />}
               />
               <Route
                 path='signup'
@@ -50,7 +50,7 @@ function App() {
               />
               <Route
                 path='storage-list'
-                element={<StorageList />}
+                element={!user ? <Login /> : <StorageList />}
               />
               <Route
                 path='storage-overview'

@@ -19,7 +19,7 @@ const storageSchema = new Schema({
     type: Number,
     required: true
   },
-  userId: {
+  user_id: {
     type: String,
     required: true
   }

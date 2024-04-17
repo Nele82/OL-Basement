@@ -6,10 +6,13 @@ export const storageSlice = createSlice({
         value: null
     },
     reducers: {
-        getStorageList: state => {
-            state.value = null
+        getStorage: (state, action) => {
+            state.value = action.payload
         },
-        addStorage: state => {
+        createStorage: (state, action) => {
+            state.value = action.payload
+        },
+        updateStorage: state => {
             state.value = null
         },
         deleteStorage: state => {
@@ -18,6 +21,6 @@ export const storageSlice = createSlice({
     }
 })
 
-export const {getStorageList, addStorage, deleteStorage} = storageSlice.actions
+export const {getStorage, createStorage, updateStorage, deleteStorage} = storageSlice.actions
 
 export default storageSlice.reducer
