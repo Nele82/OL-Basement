@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { createStorage } from '../slices/StorageSlice'
 
 const StorageInput = () => {
   const [facilityName, setFacilityName] = useState('')
@@ -8,6 +10,7 @@ const StorageInput = () => {
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
   const [loading, setLoading] = useState(null)
+  const dispatch = useDispatch()
 
   const user = JSON.parse(localStorage.getItem('user'))
 
@@ -24,7 +27,7 @@ const StorageInput = () => {
     const json = await response.json()
 
     if (response.ok) {
-      console.log(json);
+      dispatch(createStorage(json))
     }
   }
 

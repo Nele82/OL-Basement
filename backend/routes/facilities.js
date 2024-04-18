@@ -1,5 +1,5 @@
 const express = require('express') // Express library
-const { getAllStorages, createStorage } = require('../controllers/storageController')
+const { getAllStorages, createStorage, removeStorage } = require('../controllers/storageController')
 const authorizeRequest = require('../middleware/authorizeRequest')
 const router = express.Router() // Router
 
@@ -11,5 +11,8 @@ router.get('/getStorages', getAllStorages)
 
 // Create a new storage - POST
 router.post('/createStorage', createStorage)
+
+// Delete a storage - DELETE
+router.delete('/deleteStorage/:id', removeStorage)
 
 module.exports = router

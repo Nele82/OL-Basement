@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../slices/AuthSlice'
+import { useLogout } from '../hooks/useLogout'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
+  const {logoutUser} = useLogout()
 
   const dispatch = useDispatch()
 
@@ -28,7 +30,6 @@ const Login = () => {
     }
 
     if (response.ok) {
-      // save the user to local storage
       localStorage.setItem('user', JSON.stringify(json))
 
       // update the redux store
@@ -39,6 +40,11 @@ const Login = () => {
 
       // update error state
       setError(null)
+
+      // Logout user after 23 hours
+      setTimeout(() => {
+        logoutUser()
+      }, 82800)
     }  
   }
 

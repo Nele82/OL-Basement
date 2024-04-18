@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import StorageInput from '../components/StorageInput'
 import { useDispatch, useSelector } from 'react-redux'
-import { getStorage } from '../slices/StorageSlice'
+import { deleteStorage, getStorage } from '../slices/StorageSlice'
+import distanceToNow from 'date-fns/formatDistanceToNow'
+import { deleteOneStorage } from '../hooks/useDelete'
 
 const StorageList = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const dispatch = useDispatch()
     const storages = useSelector((state)=> state.storage.value)
-    const [availSpace, setAvailSpace] = useState(null)
 
     useEffect(()=>{
       const fetchStorage = async () => {
@@ -24,19 +25,27 @@ const StorageList = () => {
       if (user) {
         fetchStorage()
       }
-    }, [storages])
+    }, [])
   
   return (
     <div className='storage-wrapper'>
       <StorageInput />
       <h3>Your basement / storage units</h3>
+      {storages.length == 0 && <p>There are no storage units saved for {user.username}</p>}
       {storages && storages.map((storage)=>(
         <div className="storage-details" key={storage._id}>
           <h3>Storage unit: {storage.facilityName}</h3>
-          <span>Length: {storage.length}m</span>
-          <span>Width: {storage.width}m</span>
-          <span>Height: {storage.height}m</span>
-          <span>Available space: {parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height)}m3</span>
+          <span>Length: <b>{(storage.length).toFixed(2)}m</b></span>
+          <span>Width: <b>{(storage.width).toFixed(2)}m</b></span>
+          <span>Height: <b>{(storage.height).toFixed(2)}m</b></span>
+          <span>Available space: <b>{(parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height)).toFixed(2)}m3</b></span>
+          <span>Created <b>{distanceToNow(new Date(storage.createdAt))}</b> ago</span>
+          <button onClick={() => {
+            deleteOneStorage(storage._id)
+            dispatch(deleteStorage(storage._id))
+          }}>
+            Delete
+          </button>
         </div>
       ))}
     </div>
