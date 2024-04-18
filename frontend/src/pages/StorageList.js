@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import StorageInput from '../components/StorageInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStorage } from '../slices/StorageSlice'
@@ -7,6 +7,7 @@ const StorageList = () => {
     const user = JSON.parse(localStorage.getItem('user'))
     const dispatch = useDispatch()
     const storages = useSelector((state)=> state.storage.value)
+    const [availSpace, setAvailSpace] = useState(null)
 
     useEffect(()=>{
       const fetchStorage = async () => {
@@ -35,6 +36,7 @@ const StorageList = () => {
           <span>Length: {storage.length}m</span>
           <span>Width: {storage.width}m</span>
           <span>Height: {storage.height}m</span>
+          <span>Available space: {parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height)}m3</span>
         </div>
       ))}
     </div>
