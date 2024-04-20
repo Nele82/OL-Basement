@@ -40,6 +40,7 @@ const StorageList = () => {
           <span>Height: <b>{(storage.height).toFixed(2)}m</b></span>
           <span>Available space: <b>{(parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height)).toFixed(2)}m3</b></span>
           <span>Created <b>{distanceToNow(new Date(storage.createdAt))}</b> ago</span>
+          <span>Updated <b>{distanceToNow(new Date(storage.updatedAt))}</b> ago</span>
           <button onClick={() => {
             document.querySelector("#root > div > div > main > div > div > div").style.display = 'block'
           }}>
