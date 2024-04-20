@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import StorageInput from '../components/StorageInput'
 import { useDispatch, useSelector } from 'react-redux'
-import { deleteStorage, getStorage } from '../slices/StorageSlice'
+import { getStorage } from '../slices/StorageSlice'
 import distanceToNow from 'date-fns/formatDistanceToNow'
-import { deleteOneStorage } from '../hooks/useDelete'
+import DialogBox from '../components/DialogBox'
 
 const StorageList = () => {
     const user = JSON.parse(localStorage.getItem('user'))
@@ -41,11 +41,11 @@ const StorageList = () => {
           <span>Available space: <b>{(parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height)).toFixed(2)}m3</b></span>
           <span>Created <b>{distanceToNow(new Date(storage.createdAt))}</b> ago</span>
           <button onClick={() => {
-            deleteOneStorage(storage._id)
-            dispatch(deleteStorage(storage._id))
+            document.querySelector("#root > div > div > main > div > div > div").style.display = 'block'
           }}>
             Delete
           </button>
+          <DialogBox storageId={storage._id}/>
         </div>
       ))}
     </div>
