@@ -1,24 +1,22 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-
 import Layout from './components/Layout'
 import Main from './pages/Main'
-import StorageList from './pages/StorageList';
-import StorageOverview from './pages/StorageOverview';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Login from './pages/Login';
-import Signup from './pages/Signup';
-import { useSelector, useDispatch } from 'react-redux'
-import { useEffect } from 'react';
-import { login } from './slices/AuthSlice';
+import StorageList from './pages/StorageList'
+import StorageOverview from './pages/StorageOverview'
+import About from './pages/About'
+import Contact from './pages/Contact'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 
 function App() {
-  const dispatch = useDispatch()
-  const user = useSelector(state => state.loggedin.value)
+  const loggedIn = useSelector(state => state.loggedin.value)
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
 
-  useEffect(()=>{
-    dispatch(login())
-  }, [])
+  useEffect(() => {      
+    console.log(loggedIn);
+  }, [loggedIn])
 
   return (
     <div className="App">
@@ -42,7 +40,7 @@ function App() {
               />
               <Route
                 path='signup'
-                element={<Signup />}
+                element={!user ? <Signup /> : <StorageList />}
               />
               <Route
                 path='contact'

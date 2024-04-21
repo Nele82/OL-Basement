@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { login } from '../slices/AuthSlice'
-import { useLogout } from '../hooks/useLogout'
+import { useDispatch } from 'react-redux'
+import { logout } from '../slices/AuthSlice'
   
 const Main = () => {
   const [username, setUsername] = useState('')
-  const user = useSelector(state => state.loggedin.value)
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
   const dispatch = useDispatch()
-  const {logoutUser} = useLogout()
 
-  useEffect(() => {
-      // Sets the username and jwt if a user is logged in
-      dispatch(login()) 
-      // Gets user details from the local storage
-      const name = JSON.parse(localStorage.getItem('user'))  
-      // Sets the name for the 'Welcome' greeting
-      if (name) {
-        setUsername(name.username)
-      }
-  }, [])
+  useEffect(() => {      
+    // Sets the name for the 'Welcome' greeting
+    if (user) {
+      setUsername(user.username)
+    }
+  }, [user])
 
   return (
     <div className='main-page display-f'>
@@ -41,7 +35,10 @@ const Main = () => {
         : 
         <div>
           <button
-            onClick={logoutUser}
+            onClick={() => {
+              dispatch(logout())
+              setUser(JSON.parse(localStorage.getItem('user')))
+            }}
           >
             Log Out
           </button>

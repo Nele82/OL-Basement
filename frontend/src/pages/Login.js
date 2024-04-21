@@ -1,14 +1,12 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../slices/AuthSlice'
-import { useLogout } from '../hooks/useLogout'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
-  const {logoutUser} = useLogout()
 
   const dispatch = useDispatch()
 
@@ -30,10 +28,8 @@ const Login = () => {
     }
 
     if (response.ok) {
-      localStorage.setItem('user', JSON.stringify(json))
-
       // update the redux store
-      dispatch(login()) // sets 'user' to {email: string, token: string}
+      dispatch(login(json)) // sets 'user' to {email: string, token: string}
 
       // update loading state
       setLoading(false)
@@ -43,8 +39,8 @@ const Login = () => {
 
       // Logout user after 23 hours
       setTimeout(() => {
-        logoutUser()
-      }, 82800)
+        console.log('Test')
+      }, 3595000)
     }  
   }
 
@@ -67,12 +63,14 @@ const Login = () => {
         type="text" 
         onChange={(e) => setUsername(e.target.value)}
         value={username}
+        autoComplete="off"
       />
       <label>Password:</label>
       <input 
         type="password" 
         onChange={(e) => setPassword(e.target.value)}
         value={password}
+        autoComplete="off"
       />
       <button disabled={loading}>Log in</button>
       {error && <div className="error">{error}</div>}

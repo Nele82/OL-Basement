@@ -3,7 +3,7 @@ const jwtoken = require('jsonwebtoken')
 
 // Create JSON Web Token 
 const createJWT = (_id) => {
-    return jwtoken.sign({_id}, process.env.SECRET_KEY, {expiresIn: '1d'})
+    return jwtoken.sign({_id}, process.env.SECRET_KEY, {expiresIn: '3600000'})
 }
 // Sign Up user function
 const signupUser = async (req, res) => {

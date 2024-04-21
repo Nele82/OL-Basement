@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import StorageInput from '../components/StorageInput'
 import { useDispatch, useSelector } from 'react-redux'
 import { getStorage } from '../slices/StorageSlice'
@@ -6,9 +6,9 @@ import distanceToNow from 'date-fns/formatDistanceToNow'
 import DialogBox from '../components/DialogBox'
 
 const StorageList = () => {
-    const user = JSON.parse(localStorage.getItem('user'))
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
     const dispatch = useDispatch()
-    const storages = useSelector((state)=> state.storage.value)
+    const storages = useSelector(state=> state.storage.value)
 
     useEffect(()=>{
       const fetchStorage = async () => {
@@ -49,6 +49,7 @@ const StorageList = () => {
           <DialogBox storageId={storage._id}/>
         </div>
       ))}
+      <button onClick={() => console.log('Test')}>Log Out</button>
     </div>
   )
 }
