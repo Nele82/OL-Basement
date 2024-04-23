@@ -4,7 +4,7 @@ import setStorage from './slices/StorageSlice'
 
 export default configureStore({
   reducer: {
-    loggedin: setAuth,
+    user: setAuth,
     storage: setStorage
   }
 })

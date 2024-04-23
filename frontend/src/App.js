@@ -7,16 +7,34 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
-import { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { login, logout } from './slices/AuthSlice'
+import { timeOut } from './hooks/useTimer'
 
 function App() {
-  const loggedIn = useSelector(state => state.loggedin.value)
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
+  const user = useSelector(state => state.user.value)
+  const dispatch = useDispatch()
 
-  useEffect(() => {      
-    console.log(loggedIn);
-  }, [loggedIn])
+  useEffect(()=>{
+    if (JSON.parse(localStorage.getItem('user'))) {
+      dispatch(login(JSON.parse(localStorage.getItem('user'))))
+    } else {
+      dispatch(logout())
+    }
+
+    const difference = timeOut()
+
+    if(difference >= 3590000) {
+      dispatch(logout())
+      localStorage.clear()
+    } else {
+      setTimeout(() => {
+        dispatch(logout())
+        localStorage.clear()
+      }, difference)
+    }
+  }, [])
 
   return (
     <div className="App">

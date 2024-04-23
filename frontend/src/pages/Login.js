@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { login } from '../slices/AuthSlice'
+import { login, logout } from '../slices/AuthSlice'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
-
+  // Redux
   const dispatch = useDispatch()
 
   // User login function
@@ -28,8 +28,15 @@ const Login = () => {
     }
 
     if (response.ok) {
-      // update the redux store
+      // Adding a timestamp 
+      const timestamp = new Date().toISOString()
+
+      // update the local storage
       dispatch(login(json)) // sets 'user' to {email: string, token: string}
+
+      // update the local storage
+      localStorage.setItem('user', JSON.stringify(json))
+      localStorage.setItem('time', JSON.stringify(timestamp))
 
       // update loading state
       setLoading(false)
@@ -37,10 +44,11 @@ const Login = () => {
       // update error state
       setError(null)
 
-      // Logout user after 23 hours
+      // Logout user after 1 hour
       setTimeout(() => {
-        console.log('Test')
-      }, 3595000)
+        dispatch(logout())
+        localStorage.clear()
+      }, 3590000)
     }  
   }
 

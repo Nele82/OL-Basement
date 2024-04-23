@@ -1,30 +1,30 @@
-import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
-import { logout } from '../slices/AuthSlice'
-  
+import { useDispatch, useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { login, logout } from '../slices/AuthSlice'
+
 const Main = () => {
-  const [username, setUsername] = useState('')
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem('user')))
+  const user = useSelector(state => state.user.value)
   const dispatch = useDispatch()
 
-  useEffect(() => {      
-    // Sets the name for the 'Welcome' greeting
-    if (user) {
-      setUsername(user.username)
+  useEffect(()=>{
+    if (JSON.parse(localStorage.getItem('user'))) {
+        dispatch(login(JSON.parse(localStorage.getItem('user'))))
+    } else {
+        dispatch(logout())
     }
-  }, [user])
+  }, [])
 
   return (
     <div className='main-page display-f'>
       <main>
-        {user == null ? <span>Welcome!</span> : <span>Welcome, {username}!</span>}
+        {!user ? <span>Welcome!</span> : <span>Welcome, {user.username}!</span>}
         <h1>Online Basement</h1>
         <h2>Your online home storage space manager</h2>
         <p>Calculate your storage space while keeping track of all your supplies and remember:
         a well-organized basement not only provides efficient storage but also contributes to a more functional home.  
         </p>
-        {user == null ? 
+        {!user ? 
         <div>
           <Link to="/login">Log In</Link>
           <div>
@@ -37,7 +37,7 @@ const Main = () => {
           <button
             onClick={() => {
               dispatch(logout())
-              setUser(JSON.parse(localStorage.getItem('user')))
+              localStorage.clear()
             }}
           >
             Log Out
