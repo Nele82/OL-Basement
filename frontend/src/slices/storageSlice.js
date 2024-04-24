@@ -12,8 +12,8 @@ export const storageSlice = createSlice({
         getStorage: (state, action) => {
             state.value = action.payload
         },
-        updateStorage: state => {
-            state.value = null
+        updateStorage: (state, action) => {
+            state.value = action.payload
         },
         deleteStorage: (state, action) => {
             state.value = (state.value).filter((storage) => storage._id !== action.payload)

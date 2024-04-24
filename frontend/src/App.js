@@ -10,7 +10,7 @@ import Signup from './pages/Signup'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
-import { timeOut } from './hooks/useTimer'
+import { timeOverHour, timeUpToHour } from './hooks/useTimer'
 
 function App() {
   const user = useSelector(state => state.user.value)
@@ -23,16 +23,20 @@ function App() {
       dispatch(logout())
     }
 
-    const difference = timeOut()
-
-    if(difference >= 3590000) {
-      dispatch(logout())
-      localStorage.clear()
-    } else {
-      setTimeout(() => {
+    if (localStorage.length > 0) {
+      const upToHour = timeUpToHour()
+      const overHour = timeOverHour()
+      console.log(upToHour, overHour)
+  
+      if(overHour >= 3590000) {
         dispatch(logout())
         localStorage.clear()
-      }, difference)
+      } else {
+        setTimeout(() => {
+          dispatch(logout())
+          localStorage.clear()
+        }, upToHour)
+      }
     }
   }, [])
 

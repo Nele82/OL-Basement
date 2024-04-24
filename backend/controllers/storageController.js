@@ -36,6 +36,31 @@ const createStorage = async (req, res) => {
     }
 }
 
+// Update a storage
+const updateStorage = async (req, res) => {
+    const user = req.user._id 
+    const {id} = req.params  
+    const {
+        facilityName, 
+        length, 
+        width, 
+        height
+    } = req.body 
+
+    try {
+        await Facility.updateOne({_id: id}, {$set: {facilityName: facilityName, length: length, width: width, height: height}})
+        let storages = await Facility.find({user_id: user})
+        if (storages.length == 0) {
+            return res.status(200).json(storages)
+        } else {
+            storages = await Facility.find({user_id: user}).sort({createdAt: -1})
+        }    
+        res.status(200).json(storages)
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}
+
 // Delete a storage
 const removeStorage = async (req, res) => {
     const {id} = req.params
@@ -51,5 +76,6 @@ const removeStorage = async (req, res) => {
 module.exports = { 
     getAllStorages,
     createStorage,
-    removeStorage
+    removeStorage,
+    updateStorage
 }

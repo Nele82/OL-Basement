@@ -4,7 +4,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getStorage } from '../slices/StorageSlice'
 import distanceToNow from 'date-fns/formatDistanceToNow'
 import DialogBox from '../components/DialogBox'
+import UpdateForm from '../components/UpdateForm'
 import { login, logout } from '../slices/AuthSlice'
+
 
 const StorageList = () => {
     const dispatch = useDispatch()
@@ -35,7 +37,7 @@ const StorageList = () => {
         fetchStorage()
       }
     }, [])
-  
+
   return (
     <div className='storage-wrapper'>
       <StorageInput />
@@ -55,7 +57,13 @@ const StorageList = () => {
           }}>
             Delete
           </button>
+          <button onClick={() => {
+            document.querySelector("#root > div > div > main > div > div > form").style.display = 'block'
+          }}>
+            Update
+          </button>
           <DialogBox storageId={storage._id}/>
+          <UpdateForm storageId={storage._id}/>
         </div>
       ))}
       <button onClick={() => {

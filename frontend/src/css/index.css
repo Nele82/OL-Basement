@@ -42,6 +42,22 @@ footer {
   display: none;
 }
 
+.update-form {
+  display: none;
+}
+
+.exit-update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aqua;
+  background-color: brown;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+}
+
 .container {
   width: 100%;
   margin: 0 auto;

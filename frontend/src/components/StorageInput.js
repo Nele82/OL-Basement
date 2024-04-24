@@ -83,7 +83,7 @@ const StorageInput = () => {
         type="text" 
         className='storage-input'
         onChange={(e)=> setFacilityName(e.target.value)}
-        onClick = {(e) => {
+        onClick = {() => {
           setError(null)
           setSuccess(null)
           document.querySelector("#root > div > div > main > div > form > input:nth-child(3)").classList.remove('bg-error-light-7')
@@ -95,7 +95,7 @@ const StorageInput = () => {
         type="text" 
         className='storage-input'
         onChange={(e)=> setLength(e.target.value)}
-        onClick = {(e) => {
+        onClick = {() => {
           setError(null)
           setSuccess(null)
           document.querySelector("#root > div > div > main > div > form > input:nth-child(5)").classList.remove('bg-error-light-7')
@@ -107,7 +107,7 @@ const StorageInput = () => {
         type="text" 
         className='storage-input'
         onChange={(e)=> setWidth(e.target.value)}
-        onClick = {(e) => {
+        onClick = {() => {
           setError(null)
           setSuccess(null)
           document.querySelector("#root > div > div > main > div > form > input:nth-child(7)").classList.remove('bg-error-light-7')
@@ -119,7 +119,7 @@ const StorageInput = () => {
         type="text" 
         className='storage-input'
         onChange={(e)=> setHeight(e.target.value)}
-        onClick = {(e) => {
+        onClick = {() => {
           setError(null)
           setSuccess(null)
           document.querySelector("#root > div > div > main > div > form > input:nth-child(9)").classList.remove('bg-error-light-7')
