@@ -7,7 +7,10 @@ const DialogBox = ({storageId}) => {
   const dispatch = useDispatch()
 
   return (
-    <div className='delete-box'>
+    <div 
+      id={`${storageId.slice(4, 11)}-delete`}
+      className='delete-box'
+    >
         <h3>Attention!</h3>
         <p>Deleting this storage unit will remove all assigned items. Are you sure you want to proceed?</p>
         <div>
@@ -18,7 +21,7 @@ const DialogBox = ({storageId}) => {
               Yes
             </button>
             <button onClick={() => {
-              document.querySelector("#root > div > div > main > div > div > div").style.display = 'none'
+              document.getElementById(`${storageId.slice(4, 11)}-delete`).style.display = 'none'
             }}>
               No
             </button>

@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { useDispatch } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { updateStorage } from "../slices/StorageSlice"
+import {updateTitle, updateLength, updateWidth, updateHeight} from '../slices/UpdateSlice'
 
-const UpdateForm = ({storageId}) => {
-    const [facilityName, setFacilityName] = useState('')
-    const [length, setLength] = useState('')
-    const [width, setWidth] = useState('')
-    const [height, setHeight] = useState('')
+const UpdateForm = ({storageId, n}) => {
+    const facilityName = useSelector(state => state.update.value.title)
+    const length = useSelector(state => state.update.value.length)
+    const width = useSelector(state => state.update.value.width)
+    const height = useSelector(state => state.update.value.height)
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
     const [loading, setLoading] = useState(null)
@@ -44,94 +45,96 @@ const UpdateForm = ({storageId}) => {
     
         if(!facilityName || !testTitle) {
           setError('Please provide the updated title for the basement. The title can consist of a combination of lowercase or uppercase letters, digits, and any characters, with a length ranging from 4 to 20 characters.')
-          document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(3)`).classList.add('bg-error-light-7')
+          document.getElementById(`${storageId.slice(4, 11)}-facility-title`).classList.add('bg-red-light-7')
           return
         }
         if(!length || !testLength) {
           setError('Please enter the updated length. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-          document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(5)`).classList.add('bg-error-light-7')
+          document.getElementById(`${storageId.slice(4, 11)}-length`).classList.add('bg-red-light-7')
           return
         }
         if(!width || !testWidth) {
           setError('Please enter the updated width. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-          document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(7)`).classList.add('bg-error-light-7')
+          document.getElementById(`${storageId.slice(4, 11)}-width`).classList.add('bg-red-light-7')
           return
         }
         if(!height || !testHeight) {
           setError('Please enter the updated height. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-          document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(9)`).classList.add('bg-error-light-7')
+          document.getElementById(`${storageId.slice(4, 11)}-height`).classList.add('bg-red-light-7')
           return
         }
     
         patchStorage(facilityName, length, width, height, storageId)
-        setFacilityName('')
-        setLength('')
-        setWidth('')
-        setHeight('')
         setSuccess('The basement / storage unit has been successfully updated!')
         setTimeout(() => {
           setSuccess(null)
+          document.getElementById(`${storageId.slice(4, 11)}-update`).style.display = 'none'
         }, 2000)
       }
 
   return (
     <form 
-        id={storageId.slice(0, 5)}
+        id={`${storageId.slice(4, 11)}-update`}
         className='update-form'
         onSubmit={handleSubmit}
     >
         <i 
             className="exit-update fa-solid fa-person-walking-arrow-right"
-            onClick={()=> {
-                document.querySelector("#root > div > div > main > div > div > form").style.display = 'none'
+            onClick={()=>{
+                document.getElementById(`${storageId.slice(4, 11)}-update`).style.display = 'none'
             }}
         > 
         </i>
+        <h3>Storage Unit "{n}" - Details Update Form</h3>
         <label>New storage facility title:</label>
         <input 
             type="text" 
+            id={`${storageId.slice(4, 11)}-facility-title`}
             className='storage-input'
-            onChange={(e)=> setFacilityName(e.target.value)}
+            onChange={(e)=> dispatch(updateTitle(e.target.value))}
             onClick = {() => {
-            setError(null)
-            setSuccess(null)
-            document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(3)`).classList.remove('bg-error-light-7')
+                setError(null)
+                setSuccess(null)
+                document.getElementById(`${storageId.slice(4, 11)}-facility-title`).classList.remove('bg-red-light-7')
             }}
             value={facilityName}
         />
         <label>New length (m):</label>
         <input 
             type="text" 
+            id={`${storageId.slice(4, 11)}-length`}
             className='storage-input'
-            onChange={(e)=> setLength(e.target.value)}
+            onChange={(e)=> dispatch(updateLength(e.target.value))}
             onClick = {() => {
-            setError(null)
-            setSuccess(null)
-            document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(5)`).classList.remove('bg-error-light-7')
+                setError(null)
+                setSuccess(null)
+                document.getElementById(`${storageId.slice(4, 11)}-length`).classList.remove('bg-red-light-7')
             }}
             value={length}
         />
         <label>New width (m):</label>
         <input 
             type="text" 
+            id={`${storageId.slice(4, 11)}-width`}
             className='storage-input'
-            onChange={(e)=> setWidth(e.target.value)}
+            onChange={(e)=> dispatch(updateWidth(e.target.value))}
             onClick = {() => {
-            setError(null)
-            setSuccess(null)
-            document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(7)`).classList.remove('bg-error-light-7')
+                setError(null)
+                setSuccess(null)
+                document.getElementById(`${storageId.slice(4, 11)}-width`).classList.remove('bg-red-light-7')
             }}
             value={width}
         />
         <label>New height (m):</label>
         <input 
             type="text" 
+            id={`${storageId.slice(4, 11)}-height`}
             className='storage-input'
-            onChange={(e)=> setHeight(e.target.value)}
+            onChange={(e)=> dispatch(updateHeight(e.target.value))}
             onClick = {() => {
-            setError(null)
-            setSuccess(null)
-            document.querySelector(`#\\3${storageId.slice(0, 1)} ${storageId.slice(1, 5)} > input:nth-child(9)`).classList.remove('bg-error-light-7')
+                setError(null)
+                setSuccess(null)
+                document.getElementById(`${storageId.slice(4, 11)}-height`).classList.remove('bg-red-light-7')
             }}
             value={height}
         />

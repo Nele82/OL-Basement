@@ -6,7 +6,7 @@ import distanceToNow from 'date-fns/formatDistanceToNow'
 import DialogBox from '../components/DialogBox'
 import UpdateForm from '../components/UpdateForm'
 import { login, logout } from '../slices/AuthSlice'
-
+import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/UpdateSlice'
 
 const StorageList = () => {
     const dispatch = useDispatch()
@@ -44,7 +44,11 @@ const StorageList = () => {
       <h3>Your basement / storage units</h3>
       {storages.length == 0 && <p>There are no storage units saved for {user.username}</p>}
       {storages && storages.map((storage)=>(
-        <div className="storage-details" key={storage._id}>
+        <div 
+          id={storage._id.slice(4, 11)}
+          className="storage-details" 
+          key={storage._id}
+        >
           <h3>Storage unit: {storage.facilityName}</h3>
           <span>Length: <b>{(storage.length).toFixed(2)}m</b></span>
           <span>Width: <b>{(storage.width).toFixed(2)}m</b></span>
@@ -53,17 +57,21 @@ const StorageList = () => {
           <span>Created <b>{distanceToNow(new Date(storage.createdAt))}</b> ago</span>
           <span>Updated <b>{distanceToNow(new Date(storage.updatedAt))}</b> ago</span>
           <button onClick={() => {
-            document.querySelector("#root > div > div > main > div > div > div").style.display = 'block'
+            document.getElementById(`${storage._id.slice(4, 11)}-delete`).style.display = 'block'
           }}>
             Delete
           </button>
           <button onClick={() => {
-            document.querySelector("#root > div > div > main > div > div > form").style.display = 'block'
+            document.getElementById(`${storage._id.slice(4, 11)}-update`).style.display = 'block'
+            dispatch(updateTitle(storage.facilityName))
+            dispatch(updateLength(storage.length))
+            dispatch(updateWidth(storage.width))
+            dispatch(updateHeight(storage.height))
           }}>
             Update
           </button>
-          <DialogBox storageId={storage._id}/>
-          <UpdateForm storageId={storage._id}/>
+          <DialogBox storageId={storage._id} />
+          <UpdateForm storageId={storage._id} n={storage.facilityName} />
         </div>
       ))}
       <button onClick={() => {
