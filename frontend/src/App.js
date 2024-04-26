@@ -11,6 +11,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
 import { timeOverHour, timeUpToHour } from './hooks/useTimer'
+import Items from './pages/Items'
 
 function App() {
   const user = useSelector(state => state.user.value)
@@ -75,6 +76,10 @@ function App() {
               <Route
                 path='storage-overview'
                 element={<StorageOverview />}
+              />
+              <Route
+                path='items'
+                element={!user ? <Login /> : <Items />}
               />
             </Route>
           </Routes>

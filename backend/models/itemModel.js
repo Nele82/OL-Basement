@@ -19,6 +19,14 @@ const itemSchema = new Schema({
     type: Number,
     required: true
   },
+  description: {
+    type: String,
+    required: true
+  },
+  category: {
+    type: String,
+    required: true
+  },
   storageId: {
     type: String,
     required: true

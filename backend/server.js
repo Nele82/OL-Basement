@@ -2,6 +2,7 @@ const express = require('express') // Express.js library
 const mongoose = require('mongoose') // Mongoose library
 const userRoutes = require('./routes/users')
 const userStorage = require('./routes/facilities')
+const userItems = require('./routes/items')
 require('dotenv').config() // .env library
 const cors = require('cors')
 
@@ -34,6 +35,7 @@ app.use(cors())
 // Routes
 app.use('/user', userRoutes)
 app.use('/facilities', userStorage)
+app.use('/items', userItems)
 
 // Connecting to MongoDB - establishing a connection with the MongoDB server first and then listening to the PORT
 mongoose.connect(process.env.MONGODB)

@@ -7,12 +7,13 @@ import DialogBox from '../components/DialogBox'
 import UpdateForm from '../components/UpdateForm'
 import { login, logout } from '../slices/AuthSlice'
 import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/UpdateSlice'
+import { Link } from 'react-router-dom'
 
 const StorageList = () => {
     const dispatch = useDispatch()
     const storages = useSelector(state=> state.storage.value)
     const user = useSelector(state => state.user.value)
-  
+
     useEffect(()=>{
       if (JSON.parse(localStorage.getItem('user'))) {
           dispatch(login(JSON.parse(localStorage.getItem('user'))))
@@ -70,6 +71,12 @@ const StorageList = () => {
           }}>
             Update
           </button>
+          <Link
+            to='/items'
+            onClick={() => localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id}))}
+          >
+            View Storage Items
+          </Link>
           <DialogBox storageId={storage._id} />
           <UpdateForm storageId={storage._id} n={storage.facilityName} />
         </div>

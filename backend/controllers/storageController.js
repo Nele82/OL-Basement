@@ -4,7 +4,7 @@ const mongoose = require('mongoose')
 
 // Get storages
 const getAllStorages = async (req, res) => {    
-    const user = req.user._id 
+    const user = req.user._id
 
     let storages = await Facility.find({user_id: user})
 
