@@ -8,13 +8,16 @@ const getAllItems = async (req, res) => {
 
     let items = await Item.find({storageId: id})
 
-    if (items.length == 0) {
-        return res.status(200).json(items)
-    } else {
-        items = await Item.find({storageId: id}).sort({createdAt: -1})
-    }
-
-    res.status(200).json(items)
+    try {
+        if (items.length == 0) {
+            return res.status(200).json(items)
+        } else {
+            items = await Item.find({storageId: id}).sort({createdAt: -1})
+            res.status(200).json(items)
+        }
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }    
 }
 
 module.exports = { 
