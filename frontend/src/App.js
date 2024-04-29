@@ -15,6 +15,7 @@ import Items from './pages/Items'
 
 function App() {
   const user = useSelector(state => state.user.value)
+  const inventoryKey = useSelector(state => state.inventory.value)
   const dispatch = useDispatch()
 
   useEffect(()=>{
@@ -28,7 +29,7 @@ function App() {
       const upToHour = timeUpToHour()
       const overHour = timeOverHour()
       console.log(upToHour, overHour)
-  
+
       if(overHour >= 3590000) {
         dispatch(logout())
         localStorage.clear()
@@ -79,7 +80,7 @@ function App() {
               />
               <Route
                 path='items'
-                element={!user ? <Login /> : <Items />}
+                element={!user ? <Login /> : !inventoryKey ? <StorageList /> : <Items />}
               />
             </Route>
           </Routes>

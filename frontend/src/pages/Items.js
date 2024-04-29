@@ -7,9 +7,10 @@ const Items = () => {
     const [title, setTitle] = useState('')
     const dispatch = useDispatch()
     const items = useSelector(state => state.items.value)
+    const [local, setLocal] = useState(JSON.parse(localStorage.getItem('singleStorage')))
+    const [availableSpace, setAvailableSpace] = useState(local.space)
 
     useEffect(() => {
-        const local = JSON.parse(localStorage.getItem('singleStorage'))
 
         setTitle(local.title)
         const fetchItems = async () => {
@@ -32,7 +33,11 @@ const Items = () => {
   return (
     <div className='single-storage'>
         <h3>Storage / basement unit: "{title}"</h3>
-        
+        {items.length == 0 && <p>There are no items stored in this storage unit</p>}
+        <span>Available space: <b>{availableSpace.toFixed(2)}m3</b></span>
+        <Link to='/storage-list'>
+          Back to storage(s)
+        </Link>
     </div>
   )
 }

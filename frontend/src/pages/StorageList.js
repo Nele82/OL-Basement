@@ -8,6 +8,7 @@ import UpdateForm from '../components/UpdateForm'
 import { login, logout } from '../slices/AuthSlice'
 import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/UpdateSlice'
 import { Link } from 'react-router-dom'
+import { setKey } from '../slices/StoreInventorySlice'
 
 const StorageList = () => {
     const dispatch = useDispatch()
@@ -20,6 +21,7 @@ const StorageList = () => {
       } else {
           dispatch(logout())
       }
+      localStorage.removeItem('singleStorage')
     }, [])
 
     useEffect(()=>{
@@ -42,7 +44,7 @@ const StorageList = () => {
   return (
     <div className='storage-wrapper'>
       <StorageInput />
-      <h3>Your basement / storage units</h3>
+      <h3>Basement / storage units (User: {user.username})</h3>
       {storages.length == 0 && <p>There are no storage units saved for {user.username}</p>}
       {storages && storages.map((storage)=>(
         <div 
@@ -72,8 +74,11 @@ const StorageList = () => {
             Update
           </button>
           <Link
+            onClick={() => {
+              localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id, space: (parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height))}))
+              dispatch(setKey(JSON.parse(localStorage.getItem('singleStorage'))))
+            }}
             to='/items'
-            onClick={() => localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id}))}
           >
             View Storage Items
           </Link>
