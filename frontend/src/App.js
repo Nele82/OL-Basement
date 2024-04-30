@@ -11,7 +11,7 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
 import { timeOverHour, timeUpToHour } from './hooks/useTimer'
-import Items from './pages/Items'
+import { setTimeoutMessage } from './slices/SessionSlice'
 
 function App() {
   const user = useSelector(state => state.user.value)
@@ -33,10 +33,12 @@ function App() {
       if(overHour >= 3590000) {
         dispatch(logout())
         localStorage.clear()
+        dispatch(setTimeoutMessage())
       } else {
         setTimeout(() => {
           dispatch(logout())
           localStorage.clear()
+          dispatch(setTimeoutMessage())
         }, upToHour)
       }
     }
@@ -76,11 +78,7 @@ function App() {
               />
               <Route
                 path='storage-overview'
-                element={<StorageOverview />}
-              />
-              <Route
-                path='items'
-                element={!user ? <Login /> : !inventoryKey ? <StorageList /> : <Items />}
+                element={!user ? <Login /> : !inventoryKey ? <StorageList /> : <StorageOverview />}
               />
             </Route>
           </Routes>

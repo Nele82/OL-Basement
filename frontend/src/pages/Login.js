@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from '../slices/AuthSlice'
+import { removeTimeoutMessage, setTimeoutMessage } from '../slices/SessionSlice'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
+  const navigate = useNavigate()
   // Redux
   const dispatch = useDispatch()
+  const sessionTimeout = useSelector(state => state.session.value)
 
   // User login function
   const loginUser = async (username, password) => { 
@@ -47,7 +51,9 @@ const Login = () => {
       // Logout user after 1 hour
       setTimeout(() => {
         dispatch(logout())
+        dispatch(setTimeoutMessage())
         localStorage.clear()
+        navigate('/login')
       }, 3590000)
     }  
   }
@@ -62,6 +68,12 @@ const Login = () => {
     }
     await loginUser(username, password)
   }
+
+  useEffect(() => {
+    if (sessionTimeout) {
+      setError(sessionTimeout)
+    }
+  }, [])
   
   return (
     <form className='login' onSubmit={handleSubmit}>
@@ -70,6 +82,10 @@ const Login = () => {
       <input 
         type="text" 
         onChange={(e) => setUsername(e.target.value)}
+        onClick={() => {
+          setError(null)
+          dispatch(removeTimeoutMessage())
+        }}
         value={username}
         autoComplete="off"
       />
@@ -77,11 +93,15 @@ const Login = () => {
       <input 
         type="password" 
         onChange={(e) => setPassword(e.target.value)}
+        onClick={() => {
+          setError(null)
+          dispatch(removeTimeoutMessage())
+        }}
         value={password}
         autoComplete="off"
       />
       <button disabled={loading}>Log in</button>
-      {error && <div className="error">{error}</div>}
+      {error && <div className="error text-red">{error}</div>}
     </form>
   )
 }

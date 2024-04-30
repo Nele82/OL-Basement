@@ -1,12 +1,12 @@
 const express = require('express') 
-const { getAllItems } = require('../controllers/itemsController')
+const { getAllItems, createItem } = require('../controllers/itemsController')
 const router = express.Router() 
 
 // Get all items - GET
 router.get('/getItems/:id', getAllItems)
 
 // Create a new item - POST
-// router.post('/createItem', createItem)
+router.post('/createItem', createItem)
 
 // Update item - PATCH
 // router.patch('/updateItem', updateItem)

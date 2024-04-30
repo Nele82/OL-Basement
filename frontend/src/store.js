@@ -4,6 +4,7 @@ import setStorage from './slices/StorageSlice'
 import setUpdateStore from './slices/UpdateSlice'
 import setItems from './slices/ItemsSlice'
 import setInventoryKey from './slices/StoreInventorySlice'
+import setSessionMessage from './slices/SessionSlice'
 
 export default configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export default configureStore({
     storage: setStorage,
     update: setUpdateStore,
     items: setItems,
-    inventory: setInventoryKey
+    inventory: setInventoryKey,
+    session: setSessionMessage
   }
 })

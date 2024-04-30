@@ -78,7 +78,7 @@ const StorageList = () => {
               localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id, space: (parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height))}))
               dispatch(setKey(JSON.parse(localStorage.getItem('singleStorage'))))
             }}
-            to='/items'
+            to='/storage-overview'
           >
             View Storage Items
           </Link>

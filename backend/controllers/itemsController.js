@@ -20,6 +20,27 @@ const getAllItems = async (req, res) => {
     }    
 }
 
+// Create a new item
+const createItem = async (req, res) => {
+    const {
+        itemTitle, 
+        length, 
+        width, 
+        height, 
+        description, 
+        category, 
+        storageId
+    } = req.body   
+
+    try {
+        const item = await Item.create({itemTitle, length, width, height, description, category, storageId})
+        res.status(200).json(item)
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}
+
 module.exports = { 
-    getAllItems
+    getAllItems,
+    createItem
 }
