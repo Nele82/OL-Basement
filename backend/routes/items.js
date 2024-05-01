@@ -1,5 +1,6 @@
 const express = require('express') 
-const { getAllItems, createItem } = require('../controllers/itemsController')
+const { getAllItems, createItem, removeItem } = require('../controllers/itemsController')
+const { removeAllListeners } = require('../models/itemModel')
 const router = express.Router() 
 
 // Get all items - GET
@@ -12,6 +13,6 @@ router.post('/createItem', createItem)
 // router.patch('/updateItem', updateItem)
 
 // Delete an item - DELETE
-// router.delete('/deleteItem', removeItem)
+router.delete('/deleteItem', removeItem)
 
 module.exports = router

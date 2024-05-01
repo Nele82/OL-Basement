@@ -15,3 +15,18 @@ export const deleteOneStorage = async (id) => {
         console.log(json.message)
     }
 } 
+
+export const deleteOneItem = async (id) => {
+
+    const response = await fetch(`http://localhost:3500/items/deleteItem/${id}`, {
+        method: 'DELETE'
+    })
+    const json = await response.json()
+
+    if (response.ok) {
+        console.log('Item has been deleted')
+    }
+    if (!response.ok) {
+        console.log(json.message)
+    }
+} 

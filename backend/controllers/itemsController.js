@@ -40,7 +40,20 @@ const createItem = async (req, res) => {
     }
 }
 
+// Delete an item
+const removeItem = async (req, res) => {
+    const {id} = req.params
+
+    try {
+        const deleteEntry = await Item.deleteOne({_id: id})
+        res.status(200).json(deleteEntry)
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}
+
 module.exports = { 
     getAllItems,
-    createItem
+    createItem,
+    removeItem
 }

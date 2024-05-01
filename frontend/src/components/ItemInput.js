@@ -146,16 +146,16 @@ const ItemInput = ({storageId}) => {
           }}
         >
           <option value=""></option>
-          <option value="documents">Papers and Records</option>
-          <option value="memorabilia">Photographs and Memorabilia</option>
-          <option value="metals">Metals</option>
-          <option value="food&drinks">Food / Beverages</option>
-          <option value="fabrics">Fabrics / Seasonal Clothing</option>
-          <option value="electronics">Electronics</option>
-          <option value="tools">Tools and Hardware</option>
-          <option value="sports">Sports Equipment</option>
-          <option value="cleaning">Cleaning Supplies</option>
-          <option value="other">Other</option>
+          <option value="Documents">Papers and Records</option>
+          <option value="Memorabilia">Photographs and Memorabilia</option>
+          <option value="Metals">Metals</option>
+          <option value="Food & drinks">Food / Beverages</option>
+          <option value="Fabrics">Fabrics / Seasonal Clothing</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Tools & hardware">Tools and Hardware</option>
+          <option value="Sports">Sports Equipment</option>
+          <option value="Cleaning">Cleaning Supplies</option>
+          <option value="Other">Other</option>
         </select>
         <button type="submit">Add Item</button>
         {error && <p className='text-red-dark-2'>{error}</p>}

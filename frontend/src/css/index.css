@@ -38,8 +38,21 @@ footer {
   margin-top: auto;
 }
 
+.storage-item {
+  border: 1px solid black;
+  margin-top: 0.5rem;
+}
+
+.storage-item-buttons {
+  cursor: pointer;
+}
+
 .progress-bar {
   position: relative;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 500px;
   height: 3em;
   background-color: rgb(100, 126, 126);
@@ -48,19 +61,44 @@ footer {
 }
 
 .progress-bar::before {
-  content: attr(data-label);
+  content: "";
   display: flex;
   align-items: center;
   position: absolute;
   left: 0.5em;
   top: 0.5em;
   bottom: 0.5em;
-  width: calc(var(--width, 0) * 1%);
-  min-width: 2rem;
+  z-index: -1;
+  width: calc(var(--width, 0) * 0.904%);
   max-width: calc(100% - 1em);
   background-color: rgb(127, 202, 202);
   padding: 1em;
   border-radius: 1em;
+}
+
+.filter-button-title {
+  margin: 0.5rem 0;
+}
+
+.filter-buttons {
+  border: 1px solid black;
+  border-radius: 0.5rem;
+  padding: 0.2rem;
+  margin: 2rem 0;
+}
+
+#single-storage-avail {
+  position: absolute;
+  z-index: 1;
+}
+
+.storage-item-details {
+  display: none;
+}
+
+.desription-section {
+  display: flex;
+  flex-direction: column;
 }
 
 .delete-box {
