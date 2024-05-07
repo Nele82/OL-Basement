@@ -10,11 +10,26 @@ export const deleteOneStorage = async (id) => {
 
     if (response.ok) {
         console.log('Storage has been deleted')
+        deleteAllItems(id)
     }
     if (!response.ok) {
         console.log(json.message)
     }
 } 
+
+const deleteAllItems = async (storeId) => {
+    const response = await fetch(`http://localhost:3500/items/deleteAllStorageItems/${storeId}`, {
+        method: 'DELETE'
+    })
+    const json = await response.json()
+
+    if (response.ok) {
+        console.log(`All items assigned to the storage ${storeId} have been deleted`)
+    }
+    if (!response.ok) {
+        console.log(json.message)
+    }
+}
 
 export const deleteOneItem = async (id) => {
 
@@ -30,3 +45,4 @@ export const deleteOneItem = async (id) => {
         console.log(json.message)
     }
 } 
+

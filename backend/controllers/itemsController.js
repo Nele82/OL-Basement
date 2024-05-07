@@ -52,8 +52,48 @@ const removeItem = async (req, res) => {
     }
 }
 
+// Delete all items assigned to one storage
+const removeAllStorageItems = async (req, res) => {
+    const {store} = req.params
+
+    try {
+        const deletedItems = await Item.deleteMany({storageId: store})
+        res.status(200).json(deletedItems)
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}
+
+// Update an item
+const updateItem = async (req, res) => {
+    const {id, store} = req.params  
+    const {
+        itemTitle, 
+        length, 
+        width, 
+        height, 
+        description, 
+        category
+    } = req.body 
+
+    try {
+        await Item.updateOne({_id: id}, {$set: {itemTitle: itemTitle, length: length, width: width, height: height, description: description, category: category}})
+        let items = await Item.find({storageId: store})
+        if (items.length == 0) {
+            return res.status(200).json(items)
+        } else {
+            items = await Item.find({storageId: store}).sort({createdAt: -1})
+            res.status(200).json(items)
+        }    
+    } catch (error) {
+        res.status(400).json({message: error.message})
+    }
+}
+
 module.exports = { 
     getAllItems,
     createItem,
-    removeItem
+    removeItem,
+    updateItem,
+    removeAllStorageItems
 }

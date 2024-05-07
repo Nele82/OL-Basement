@@ -12,7 +12,7 @@ const DialogBox = ({storageId}) => {
       className='delete-box'
     >
         <h3>Attention!</h3>
-        <p>Deleting this storage unit will remove all assigned items. Are you sure you want to proceed?</p>
+        <p>Confirming the deletion of this storage unit will also result in the <b>removal of all items associated with it.</b> Are you certain you wish to proceed?</p>
         <div>
             <button onClick={() => {
               deleteOneStorage(storageId)

@@ -16,7 +16,7 @@ export const itemsSlice = createSlice({
             state.value = action.payload
         },
         deleteItem: (state, action) => {
-            state.value = (state.value).filter((storage) => storage._id !== action.payload)
+            state.value = (state.value).filter((items) => items._id !== action.payload)
         }
     }
 })

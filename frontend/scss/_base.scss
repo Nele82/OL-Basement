@@ -124,6 +124,12 @@ footer {
     display: none;
 }
 
+// Dialog box (items)
+
+.items-delete-box {
+    display: none;
+}
+
 // Update form
 
 .update-form {
@@ -143,4 +149,12 @@ footer {
     font-size: 2rem;
 
     border-radius: 1rem;
+}
+
+// Update items form
+
+.update-items {
+    display: none;
+
+    width: 50%;
 }

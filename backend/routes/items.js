@@ -1,6 +1,5 @@
 const express = require('express') 
-const { getAllItems, createItem, removeItem } = require('../controllers/itemsController')
-const { removeAllListeners } = require('../models/itemModel')
+const { getAllItems, createItem, removeItem, updateItem, removeAllStorageItems } = require('../controllers/itemsController')
 const router = express.Router() 
 
 // Get all items - GET
@@ -10,9 +9,12 @@ router.get('/getItems/:id', getAllItems)
 router.post('/createItem', createItem)
 
 // Update item - PATCH
-// router.patch('/updateItem', updateItem)
+router.patch('/updateItem/:store/:id', updateItem)
 
 // Delete an item - DELETE
-router.delete('/deleteItem', removeItem)
+router.delete('/deleteItem/:id', removeItem)
+
+// Delete all items assigned to one storage - DELETE
+router.delete('/deleteAllStorageItems/:store', removeAllStorageItems)
 
 module.exports = router

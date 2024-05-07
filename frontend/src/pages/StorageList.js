@@ -61,11 +61,13 @@ const StorageList = () => {
           <span>Updated <b>{distanceToNow(new Date(storage.updatedAt))}</b> ago</span>
           <button onClick={() => {
             document.getElementById(`${storage._id.slice(4, 11)}-delete`).style.display = 'block'
+            document.getElementById(`${storage._id.slice(4, 11)}-update`).style.display = 'none'
           }}>
             Delete
           </button>
           <button onClick={() => {
             document.getElementById(`${storage._id.slice(4, 11)}-update`).style.display = 'block'
+            document.getElementById(`${storage._id.slice(4, 11)}-delete`).style.display = 'none'
             dispatch(updateTitle(storage.facilityName))
             dispatch(updateLength(storage.length))
             dispatch(updateWidth(storage.width))
@@ -75,7 +77,7 @@ const StorageList = () => {
           </button>
           <Link
             onClick={() => {
-              localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id, space: (parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height))}))
+              localStorage.setItem('singleStorage', JSON.stringify({title: storage.facilityName, id: storage._id, space: ((parseFloat(storage.length) * parseFloat(storage.width) * parseFloat(storage.height))).toFixed(4), dimensions: {length: storage.length, width: storage.width, height: storage.height}}))
               dispatch(setKey(JSON.parse(localStorage.getItem('singleStorage'))))
             }}
             to='/storage-overview'

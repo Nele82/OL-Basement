@@ -105,6 +105,10 @@ footer {
   display: none;
 }
 
+.items-delete-box {
+  display: none;
+}
+
 .update-form {
   display: none;
 }
@@ -119,6 +123,11 @@ footer {
   height: 3rem;
   font-size: 2rem;
   border-radius: 1rem;
+}
+
+.update-items {
+  display: none;
+  width: 50%;
 }
 
 .container {
