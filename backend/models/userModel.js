@@ -9,6 +9,11 @@ const userSchema = new Schema({
     required: true,
     unique: true
   },
+  email: {
+    type: String,
+    required: true,
+    unique: true
+  },
   password: {
     type: String,
     required: true
@@ -16,19 +21,24 @@ const userSchema = new Schema({
 }, { timestamps: true })
 
 // Sign Up function
-userSchema.statics.signup = async function (username, password) {
+userSchema.statics.signup = async function (username, email, password) {
 
-  const exists = await this.findOne({username}) // Checking for an existing user with mongo's 'findOne()' method
+  const userExists = await this.findOne({username}) // Checking for an existing user with mongo's 'findOne()' method
+  const emailExists = await this.findOne({email}) // Checking for an existing user with mongo's 'findOne()' method
 
-  if(exists) {
+  if(userExists) {
     throw Error('Username is already in use')
+  }
+
+  if(emailExists) {
+    throw Error('This email address is already in use')
   }
 
 // Both 'genSalt()' and 'hash()' methods used for hashing (encrypting) the password
   const salt = await bcrypt.genSalt(10)
   const hash = await bcrypt.hash(password, salt) 
 
-  const user = await this.create({username, password: hash})
+  const user = await this.create({username, email, password: hash})
 
   return user
 }

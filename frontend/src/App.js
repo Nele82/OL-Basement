@@ -7,11 +7,14 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
+import ResetRequest from './pages/ResetRequest'
+import PasswordReset from './pages/PasswordReset'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
 import { timeOverHour, timeUpToHour } from './hooks/useTimer'
 import { setTimeoutMessage } from './slices/SessionSlice'
+
 
 function App() {
   const user = useSelector(state => state.user.value)
@@ -61,12 +64,20 @@ function App() {
                 element={<About />}
               />
               <Route
+                path='signup'
+                element={!user ? <Signup /> : <StorageList />}
+              />
+              <Route
                 path='login'
                 element={!user ? <Login /> : <StorageList />}
               />
               <Route
-                path='signup'
-                element={!user ? <Signup /> : <StorageList />}
+                path='reset-request'
+                element={!user ? <ResetRequest /> : <StorageList />}
+              />
+              <Route
+                path='password-reset'
+                element={!user ? <PasswordReset /> : <StorageList />}
               />
               <Route
                 path='contact'
@@ -80,6 +91,7 @@ function App() {
                 path='storage-overview'
                 element={!user ? <Login /> : !inventoryKey ? <StorageList /> : <StorageOverview />}
               />
+
             </Route>
           </Routes>
       </BrowserRouter>

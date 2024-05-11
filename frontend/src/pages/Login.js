@@ -24,7 +24,7 @@ const Login = () => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, password })
     })
-    const json = await response.json() // returns email & token
+    const json = await response.json() // returns username, email & token
 
     if (!response.ok) {
       setLoading(false)
@@ -35,17 +35,20 @@ const Login = () => {
       // Adding a timestamp 
       const timestamp = new Date().toISOString()
 
-      // update the local storage
-      dispatch(login(json)) // sets 'user' to {email: string, token: string}
-
-      // update the local storage
+      // Update the local storage
       localStorage.setItem('user', JSON.stringify(json))
       localStorage.setItem('time', JSON.stringify(timestamp))
 
-      // update loading state
+      // Update the 'user' slice
+      dispatch(login(json)) // sets 'user' to {email: string, token: string}
+
+      // Navigate to 'storage-list'
+      navigate('/storage-list')
+
+      // Update loading state
       setLoading(false)
 
-      // update error state
+      // Update error state
       setError(null)
 
       // Logout user after 1 hour
@@ -102,6 +105,13 @@ const Login = () => {
       />
       <button disabled={loading}>Log in</button>
       {error && <div className="error text-red">{error}</div>}
+      <span 
+        onClick={()=>{
+          navigate('/reset-request')
+        }}
+      >
+        Forgot your password? Click here.
+      </span>
     </form>
   )
 }

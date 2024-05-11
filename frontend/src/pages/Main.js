@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { useEffect } from 'react'
 import { login, logout } from '../slices/AuthSlice'
@@ -6,6 +6,7 @@ import { login, logout } from '../slices/AuthSlice'
 const Main = () => {
   const user = useSelector(state => state.user.value)
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   useEffect(()=>{
     if (JSON.parse(localStorage.getItem('user'))) {
@@ -38,6 +39,7 @@ const Main = () => {
             onClick={() => {
               dispatch(logout())
               localStorage.clear()
+              navigate('/')
             }}
           >
             Log Out

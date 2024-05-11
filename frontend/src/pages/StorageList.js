@@ -7,13 +7,14 @@ import DialogBox from '../components/DialogBox'
 import UpdateForm from '../components/UpdateForm'
 import { login, logout } from '../slices/AuthSlice'
 import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/UpdateSlice'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { setKey } from '../slices/StoreInventorySlice'
 
 const StorageList = () => {
     const dispatch = useDispatch()
     const storages = useSelector(state=> state.storage.value)
     const user = useSelector(state => state.user.value)
+    const navigate = useNavigate()
 
     useEffect(()=>{
       if (JSON.parse(localStorage.getItem('user'))) {
@@ -91,6 +92,7 @@ const StorageList = () => {
       <button onClick={() => {
           dispatch(logout())
           localStorage.clear()
+          navigate('/login')
         }}
       >
         Log Out
