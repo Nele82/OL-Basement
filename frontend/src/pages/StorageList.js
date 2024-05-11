@@ -23,6 +23,7 @@ const StorageList = () => {
           dispatch(logout())
       }
       localStorage.removeItem('singleStorage')
+      navigate('/storage-list')
     }, [])
 
     useEffect(()=>{

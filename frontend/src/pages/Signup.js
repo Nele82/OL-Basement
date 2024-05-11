@@ -138,7 +138,7 @@ const Signup = () => {
         }}
         value={password}
       />
-      <button disabled={loading}>Log in</button>
+      <button disabled={loading}>Sign Up</button>
       <span>* - Required field</span>
       {error && <div className="error text-red">{error}</div>}
     </form>

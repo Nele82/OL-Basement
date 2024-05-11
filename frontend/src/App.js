@@ -15,11 +15,11 @@ import { login, logout } from './slices/AuthSlice'
 import { timeOverHour, timeUpToHour } from './hooks/useTimer'
 import { setTimeoutMessage } from './slices/SessionSlice'
 
-
 function App() {
   const user = useSelector(state => state.user.value)
   const inventoryKey = useSelector(state => state.inventory.value)
   const dispatch = useDispatch()
+  const tokenPresent = window.location.href.includes('token')
 
   useEffect(()=>{
     if (JSON.parse(localStorage.getItem('user'))) {
@@ -77,7 +77,7 @@ function App() {
               />
               <Route
                 path='password-reset'
-                element={!user ? <PasswordReset /> : <StorageList />}
+                element={!user && tokenPresent ? <PasswordReset /> : <Main />}
               />
               <Route
                 path='contact'

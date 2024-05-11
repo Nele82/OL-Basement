@@ -14,6 +14,7 @@ const Main = () => {
     } else {
         dispatch(logout())
     }
+    navigate('/')
   }, [])
 
   return (

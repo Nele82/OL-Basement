@@ -76,6 +76,7 @@ const Login = () => {
     if (sessionTimeout) {
       setError(sessionTimeout)
     }
+    navigate('/login')
   }, [])
   
   return (
