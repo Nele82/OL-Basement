@@ -3,12 +3,13 @@ import { useNavigate } from 'react-router-dom'
 
 const TermsOfUse = () => {
   const navigate = useNavigate()
+  
   return (
     <div 
         className='display-f fd-c'
         id='tos'
     >
-        <h1>TERMS AND CONDITIONS</h1>
+        <h1>Terms of Use</h1>
         <b>Last updated: May 27th, 2024</b>
         <h3>Introduction</h3>
         <p>Welcome to the OL Basement Project! This website is a graduation project developed by students of a coding academy. It is designed to assist 
