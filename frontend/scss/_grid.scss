@@ -3,11 +3,10 @@
 $grid-columns: 12;
 $grid-gaps: (
   "0": 0,
-  "1": 1rem,
-  "2": 2rem,
-  "3": 3rem,
+  "1": 1vw,
+  "2": 2vw,
+  "3": 3vw,
 );
-$layout-values: flex-start, flex-end, center, space-between, space-around;
 
 // Base layout 
 .container {
@@ -32,56 +31,639 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
   }
 }
 
-// Justify content classes
-@each $val in $layout-values {
-  .justify-#{$val} {
-    justify-content: $val;
-  }
-}
-
 // Column classes
+// FROM 0 PX
 @include xs {
+  // MAIN
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xs {
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
     }
+
+    ////////////////////////////////////////// C  O  M  P  O  N  E  N  T  S ////////////////////////////////////////////
+
+    // NAV
+    nav {
+      margin: $base-margin * 25 0 0 0;
+
+      width: 100%;
+
+      font-size: 5vw;
+    }
+    #reveal-menu span {
+      font-size: 5vw;
+    }
+    // HEADER
+    header img {
+      width: 29vw;
+    }
+    #theme {
+      width: 18vw;
+      height: 10vw;
+
+      right: 3vw;
+      top: 13vw;
+    }
+    #theme span {
+      width: 8vw;
+      height: 8vw;
+
+      font-size: $base-font-size * 4;
+
+      padding-bottom: 1vw;
+    }
+    // FOOTER
+    footer {
+      margin: $base-margin * 15 0 0 0;
+
+      font-size: $base-font-size * 4.5;
+    }
+    footer span:nth-child(1) {
+      font-size: $base-font-size * 3.5;
+    }
+    footer span:nth-child(1) i {
+      margin: 0 0 0 $base-margin * 2;
+    }
+    footer ul {
+      margin: $base-margin * 2 0 0 0;
+    }
+    footer ul li {
+      font-size: $base-font-size * 3.5;
+
+      margin: 0 $base-margin * 5 0 $base-margin * 5;
+    }
+    // STORAGE INPUT FORM
+    .create-storage h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 10 0;
+    }
+    .create-storage label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 2 0;
+    }
+    .create-storage input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .create-storage button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 2 0;
+    }
+    // STORAGE UPDATE FORM
+    .update-form h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .update-form label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 1 0;
+    }
+    .update-form input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 1 0;
+      padding: $base-padding * 2;
+    }
+    .update-form button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 3 0;
+    }
+    // ITEM INPUT FORM & SPACE CALCULATOR
+    // Input form
+    #form-space-housing-h3 {
+      font-size: $base-font-size * 6;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .form-space-housing label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 1 0;
+    }
+    .form-space-housing input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 1 0;
+      padding: $base-padding * 2;
+    }
+    .form-space-housing button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 3 0;
+    }
+    .form-space-housing p {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0;
+    }
+    // Space calculator
+    .space-component {
+      font-size: $base-font-size * 4.5;
+    }
+    // ITEM UPDATE FORM
+    .update-items-header h4 {
+      font-size: $base-font-size * 6;
+    }
+    .update-items-header i {
+      font-size: $base-font-size * 7;
+    }
+    .update-items label {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * .5 0;
+    }
+    .update-items input {
+      font-size: $base-font-size * 4;
+
+      margin: $base-margin * .5 0;
+      padding: $base-padding * 1;
+    }
+    .update-items textarea {
+      font-size: $base-font-size * 4;
+
+      margin: $base-margin * .5 0;
+      padding: $base-padding * 1;
+    }
+    .update-items select {
+      font-size: $base-font-size * 4;
+
+      margin: $base-margin * .5 0;
+      padding: $base-padding * 1;
+    }
+    .update-items button {
+      font-size: $base-font-size * 4;
+
+      margin: $base-margin * 2 0 0 0;
+      padding: $base-padding * 1 0;
+    }
+    .update-items div {
+      font-size: $base-font-size * 4;
+
+      margin: $base-margin * 2 0 0 0;
+      padding: $base-padding * 1;
+    }
+    // ITEMS DELETE DIALOG BOX
+    .items-delete-box button {
+      font-size: $base-font-size * 3;
+
+      padding: $base-padding * 1 $base-padding * 3;
+      margin: 0 0 0 $base-margin * 1;
+    }
+    .items-delete-box p {
+      font-size: $base-font-size * 3.5;
+    }
+    // ITEMS DETAILS
+    .storage-item-details span, .storage-item-details p {
+      font-size: $base-font-size * 3.5;
+    }
+
+    ////////////////////////////////////////// P  A  G  E  S ////////////////////////////////////////////
+
+    // MAIN PAGE
+    #main-page-housing {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    // Greeting
+    #main-page-housing main span {
+      font-size: $base-font-size * 7;
+    }
+    // Main section
+    #main-page-housing main h1 {
+      font-size: $base-font-size * 11;
+
+      margin-top: $base-margin * 5;
+    }
+    #main-page-housing main h2 {
+      font-size: $base-font-size * 8;
+    }
+    #main-page-housing main p {
+      font-size: $base-font-size * 5;
+
+      margin-top: 2vw;
+    }
+    // Logged out menu
+    #loggedOut {
+      margin: $base-margin * 4 0 $base-margin * 4 0;
+    }
+    #loggedOut a {
+      padding: $base-padding * 3 0 $base-padding * 3 0;
+      margin: $base-margin * 2 0 $base-margin * 2 0;
+
+      font-size: $base-font-size * 5;
+    }
+    #loggedOut div span {
+      margin: $base-margin * 2 0 $base-margin * 2 0;
+
+      font-size: $base-font-size * 5;
+    }
+    // Logged in menu
+    #loggedIn button, #loggedIn a {
+      padding: $base-padding * 3 0 $base-padding * 3 0;
+      margin: $base-margin * 3 0 $base-margin * 2 0;
+
+      font-size: $base-font-size * 4.5;
+    }
+    // Lower section
+    #features div {
+      margin: $base-margin * 4 0 $base-margin * 4 0;
+    }
+    #features div h4 {
+      margin: 0 0 $base-margin * 4 0;
+
+      font-size: $base-font-size * 7;
+    }
+    #features div p {
+      font-size: $base-font-size * 5;
+    }
+    // PAGE
+    .login {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .login h4 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 10 0;
+    }
+    .login label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 2 0;
+    }
+    .login input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .login button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 6 0 $base-margin * 3 0;
+    }
+    // SIGN UP PAGE
+    .signup {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .signup h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 10 0;
+    }
+    .signup label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 2 0;
+    }
+    .signup input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .signup button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 6 0 $base-margin * 3 0;
+    }
+    .signup span {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 3 0 $base-margin * 3 0;
+    }
+    #terms input {
+      width: 12.5vw;
+
+      margin: 0 $base-margin * 3 0 0;
+    }
+    #terms label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 $base-margin * 3 0 0;
+    }
+    // RESET REQUEST PAGE
+    .reset-form {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .reset-form h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 10 0;
+    }
+    .reset-form label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 2 0;
+    }
+    .reset-form input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .reset-form button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 6 0 $base-margin * 3 0;
+    }
+    .reset-form span {
+      font-size: $base-font-size * 5;
+    }
+    // PASSWORD RESET PAGE
+    .password-reset {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .password-reset h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 10 0;
+    }
+    .password-reset label {
+      font-size: $base-font-size * 5;
+
+      margin: 0 0 $base-margin * 2 0;
+    }
+    .password-reset input {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    .password-reset button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 6 0 $base-margin * 3 0;
+    }
+    .password-reset span {
+      font-size: $base-font-size * 5;
+    }
+    // STORAGE LIST PAGE
+    .storage-wrapper {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .storage-wrapper h3 {
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 5 0;
+    }
+    .storage-details button {
+      font-size: $base-font-size * 4.5;
+
+      padding: $base-padding * 2 0;
+    }
+    .storage-details span {
+      font-size: $base-font-size * 4.5;
+
+      padding: $base-padding * .5 0;
+    }
+    .storage-wrapper button {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 3 0;
+    }
+    .storage-wrapper p {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 2 0;
+    }
+    .storage-details a {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 $base-margin * 3 0;
+      padding: $base-padding * 2 $base-padding * 4;
+    }
+    // Storage unit details
+    .manage-storage-unit button {
+      padding: $base-padding * 2 $base-padding * 6;
+    }
+    // STORAGE OVERVIEW PAGE
+    .single-storage-housing {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .single-storage-housing h3 {
+      width: 80%;
+
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 5 0;
+    }
+    .single-storage-housing a {
+      font-size: $base-font-size * 5;
+
+      margin: $base-margin * 2 0;
+    }
+    .storage-items h3 {
+      font-size: $base-font-size * 7;
+
+      margin: $base-margin * 2 0;
+    }
+    // Buttons group
+    .filter-button-title {
+      font-size: $base-font-size * 5;
+    }
+    .filter-button {
+      font-size: $base-font-size * 4.5;
+    }
+    // Items - item info
+    .storage-item-info span {
+      font-size: $base-font-size * 4.5;
+    }
+    // Items - item buttons
+    .storage-item-buttons i {
+      font-size: $base-font-size * 5.5;
+    }
+    // CONTACT PAGE
+    .app-contact-page {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .app-contact-page h3 {
+      width: 67.5%;
+      font-size: $base-font-size * 7;
+
+      margin: 0 0 $base-margin * 5 0;
+    }
+    .app-contact-page label {
+      font-size: $base-font-size * 5;
+    }
+    .app-contact-page input {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 3 0;
+      padding: $base-padding * 2;
+    }
+    .app-contact-page textarea {
+      height: 20vw;
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 3 0;
+      padding: $base-padding * 2;
+    }
+    // ABOUT PAGE
+    .app-about {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    .app-about p, .app-about ul {
+      font-size: $base-font-size * 4.5;
+    }
+    // TERMS OF USE
+    #tos {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    #tos h1 {
+      font-size: $base-font-size * 9;
+
+      margin: $base-margin * 2 0;
+    }
+    #tos h3 {
+      font-size: $base-font-size * 8;
+
+      margin: $base-margin * 4 0 0 0;
+    }
+    #tos b {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 0 $base-margin * 2;
+    }
+    #tos p {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 0 0;
+    }
+    #tos ol {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 0 $base-margin * 5;
+    }
+    #tos button {
+      font-size: $base-font-size * 5;
+
+      margin: $base-margin * 4 0 0 0;
+    }
+    // PRIVACY POLICY
+    #privacy {
+      margin: $base-margin * 60 0 $base-margin * 10 0;
+    }
+    #privacy h1 {
+      font-size: $base-font-size * 9;
+
+      margin: $base-margin * 2 0;
+    }
+    #privacy h3 {
+      font-size: $base-font-size * 8;
+
+      margin: $base-margin * 4 0 0 0;
+    }
+    #privacy h4 {
+      font-size: $base-font-size * 7;
+
+      margin: $base-margin * 3 0 $base-margin * 2 0;
+    }
+    #privacy b {
+      font-size: $base-font-size * 4.5;
+
+      margin: 0 0 0 $base-margin * 2;
+    }
+    #privacy p {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 0 0;
+    }
+    #privacy ul {
+      font-size: $base-font-size * 4.5;
+
+      margin: $base-margin * 2 0 0 $base-margin * 5;
+    }
+    #privacy button {
+      font-size: $base-font-size * 5;
+
+      margin: $base-margin * 4 0 0 0;
+    }
   }
 }
+// FROM 480 PX
 @include sm {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-sm {
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
+      padding-top: 38vw;
+    }
+    header img {
+      width: 28vw;
+    }
+    #theme {
+      width: 20vw;
+      height: 9.5vw;
+
+      right: 3vw;
+      top: 12.5vw;
+    }
+    #theme span {
+      width: 7.5vw;
+      height: 7.5vw;
+
+      font-size: $base-font-size * 3.5;
+
+      padding-bottom: .75vw;
     }
   }
 }
+// FROM 720 PX
 @include md {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-md {
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
+      padding-top: 18vw;
+    }
+    header img {
+      width: 16vw;
+    }
+    #theme {
+      right: 3vw;
+      top: 6.5vw;
     }
   }
 }
+// FROM 960 PX
 @include lg {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-lg {
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
+      padding-top: 16vw;
+    }
+    header img {
+      width: 14vw;
+    }
+    #theme {
+      right: 3vw;
+      top: 5.5vw;
     }
   }
 }
+// FROM 1200 PX
 @include xl {
   @for $i from 1 through $grid-columns {
     .col-#{$i}-xl {
       box-sizing: border-box;
       flex-grow: 0;
       width: math.div($i * 100%, $grid-columns);
+      padding-top: 12vw;
+    }
+    header img {
+      width: 10vw;
+    }
+    #theme {
+      right: 3vw;
+      top: 3.5vw;
     }
   }
 }

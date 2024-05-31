@@ -63,32 +63,26 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
     
         if(!itemTitle || !testItemTitle) {
             setError('Please provide the updated title. The title can consist of a combination of lowercase or uppercase letters, digits, and any characters, with a length ranging from 4 to 20 characters.')
-            document.getElementById(`${itemId.slice(4, 11)}-item-title`).classList.add('bg-red-light-7')
             return
           }
           if(!length || !testLength) {
             setError('Please enter the updated length. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-            document.getElementById(`${itemId.slice(4, 11)}-item-length`).classList.add('bg-red-light-7')
             return
           }
           if(!width || !testWidth) {
             setError('Please enter the updated width. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-            document.getElementById(`${itemId.slice(4, 11)}-item-width`).classList.add('bg-red-light-7')
             return
           }
           if(!height || !testHeight) {
             setError('Please enter the updated height. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-            document.getElementById(`${itemId.slice(4, 11)}-item-height`).classList.add('bg-red-light-7')
             return
           }
           if(!description || !testDescription) {
             setError('Please provide the updated description. The description may contain uppercase letters, lowercase letters, digits, whitespace, and special characters (from 10 to 200 characters).')
-            document.getElementById(`${itemId.slice(4, 11)}-item-description`).classList.add('bg-red-light-7')
             return
           }
           if(!category) {
             setError('Please select the category')
-            document.getElementById(`${itemId.slice(4, 11)}-item-category`).classList.add('bg-red-light-7')
             return
           }
     
@@ -96,79 +90,78 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
         setSuccess('Item has been successfully updated!')
         setTimeout(() => {
           setSuccess(null)
-          // document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
+          document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
         }, 2000)
       }
 
   return (
     <form 
         id={`${itemId.slice(4, 11)}-update-items`}
-        className='update-items'
+        className='update-items fd-c p-3 mt-2'
         onSubmit={handleSubmit}
     >
-        <i 
-            className="exit-update fa-solid fa-person-walking-arrow-right"
-            onClick={()=>{
-              document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
-            }}
-        > 
-        </i>
-        <h3>Item "{itemName}" - Update Form</h3>
-        <label>New Item title:</label>
-        <input 
-            type="text" 
-            id={`${itemId.slice(4, 11)}-item-title`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemTitle(e.target.value))}
-            onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-title`).classList.remove('bg-red-light-7')
-              setError(null)
-            }}
-            value={itemTitle}
-        />
-        <label>New Item length (cm):</label>
-        <input 
-            type="text" 
-            id={`${itemId.slice(4, 11)}-item-length`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemLength(e.target.value))}
-            onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-length`).classList.remove('bg-red-light-7')
-              setError(null)
-            }}
-            value={length}
-        />
-        <label>New Item width (cm):</label>
-        <input 
-            type="text" 
-            id={`${itemId.slice(4, 11)}-item-width`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemWidth(e.target.value))}
-            onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-width`).classList.remove('bg-red-light-7')
-              setError(null)
-            }}
-            value={width}
-        />
-        <label>New Item height (cm):</label>
-        <input 
-            type="text" 
-            id={`${itemId.slice(4, 11)}-item-height`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemHeight(e.target.value))}
-            onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-height`).classList.remove('bg-red-light-7')
-              setError(null)
-            }}
-            value={height}
-        />
+        <div className="update-items-header display-f ai-c">
+          <h4>Item "{itemName}" - Update Form</h4>
+          <i 
+              className="fa-regular fa-rectangle-xmark display-f jc-c"
+              onClick={()=>{
+                document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
+              }}
+          > 
+          </i>
+        </div>
+        <div className="update-items-dimensions display-f fr-w">
+          <label>New Item title:</label>
+          <input 
+              type="text" 
+              id={`${itemId.slice(4, 11)}-item-title`}
+              className='item-update'
+              onChange={(e)=> dispatch(updateItemTitle(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={itemTitle}
+          />
+          <label>New Item length (cm):</label>
+          <input 
+              type="text" 
+              id={`${itemId.slice(4, 11)}-item-length`}
+              className='item-update'
+              onChange={(e)=> dispatch(updateItemLength(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={length}
+          />
+          <label>New Item width (cm):</label>
+          <input 
+              type="text" 
+              id={`${itemId.slice(4, 11)}-item-width`}
+              className='item-update'
+              onChange={(e)=> dispatch(updateItemWidth(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={width}
+          />
+          <label>New Item height (cm):</label>
+          <input 
+              type="text" 
+              id={`${itemId.slice(4, 11)}-item-height`}
+              className='item-update'
+              onChange={(e)=> dispatch(updateItemHeight(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={height}
+          />
+        </div>
         <label>New Item Description:</label>
         <textarea 
             id={`${itemId.slice(4, 11)}-item-description`}
             className='item-update'
             onChange={(e)=> dispatch(updateItemDescription(e.target.value))}
             onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-description`).classList.remove('bg-red-light-7')
               setError(null)
             }}
             value={description}
@@ -179,7 +172,6 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
             className='item-update'
             onChange={(e)=> dispatch(updateItemCategory(e.target.value))}
             onClick = {() => {
-              document.getElementById(`${itemId.slice(4, 11)}-item-category`).classList.remove('bg-red-light-7')
               setError(null)
             }}
             value={category}
@@ -213,12 +205,11 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
         </button>
         <button 
             type="submit"
-            // disabled={loading}
         >
             Update storage details
         </button>
-        {error && <div className="text-error">{error}</div>}
-        {success && <div className="text-green-dark-4">{success}</div>}
+        {error && <div>{error}</div>}
+        {success && <div>{success}</div>}
     </form>
   )
 }

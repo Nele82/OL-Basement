@@ -66,32 +66,26 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
 
     if(!itemTitle || !testTitle) {
       setError('Please provide the title for the item. The title can consist of a combination of lowercase or uppercase letters, digits, and any characters, with a length ranging from 4 to 20 characters.')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(2)").classList.add('bg-error-light-7')
       return
     }
     if(!length || !testLength) {
       setError('Please enter length. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(4)").classList.add('bg-error-light-7')
       return
     }
     if(!width || !testWidth) {
       setError('Please enter width. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(6)").classList.add('bg-error-light-7')
       return
     }
     if(!height || !testHeight) {
       setError('Please enter height. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(8)").classList.add('bg-error-light-7')
       return
     }
     if(!description || !testDescription) {
       setError('Please provide the description for the item. The description may contain uppercase letters, lowercase letters, digits, whitespace, and special characters (from 10 to 200 characters).')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > textarea").classList.add('bg-error-light-7')
       return
     }
     if(!category) {
       setError('Please select the category')
-      document.querySelector("#root > div > div > main > div > div.form-space-housing > form > select").classList.add('bg-error-light-7')
       return
     }
 
@@ -132,11 +126,24 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
 }, [storeSpace, array])
 
   return (
-    <div className="form-space-housing">
-      <h3>Add New Item</h3>
+    <div className="form-space-housing display-f fd-c">
+      {/* S T O R A G E  D E T A I L S  &  S P A C E */}
+      <div className='space-component display-f fd-c mt-1'>
+        {basementSpace && <span>Storage/basement space: <b>{basementSpace} m3</b></span>}
+        <span>Available space: <b>{(basementSpace - (occupiedSpaceCubic(array))).toFixed(4)} m3</b></span>
+        <span>Dimensions: <b>L</b> - {dimensions.length} m / <b>W</b> - {dimensions.width} m / <b>H</b> - {dimensions.height} m</span>
+        {/* Progress bar */}
+          <div 
+            className="progress-bar mt-2 mb-2"
+            style={{'--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}}
+          >
+            <span id='single-storage-avail'>{`Used space: ${occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}%`}</span>
+          </div>
+      </div>
+      <h3 id='form-space-housing-h3'>Add New Item</h3>
       {/* I N P U T */}
       <form 
-        className='items-form'
+        className='items-form display-f fd-c'
         onSubmit={handleSubmit}
       >
         <label>Item title:</label>
@@ -144,7 +151,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           type="text" 
           onChange={(e)=> setItemTitle(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(2)").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={itemTitle}
@@ -154,7 +160,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           type="text" 
           onChange={(e)=> setLength(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(4)").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={length}
@@ -164,7 +169,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           type="text" 
           onChange={(e)=> setWidth(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(6)").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={width}
@@ -174,7 +178,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           type="text" 
           onChange={(e)=> setHeight(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > input[type=text]:nth-child(8)").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={height}
@@ -185,7 +188,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           cols="50"
           onChange={(e)=> setDescription(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > textarea").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={description}
@@ -194,7 +196,6 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
         <select 
           onChange={(e)=> setCategory(e.target.value)}
           onClick={() => {
-            document.querySelector("#root > div > div > main > div > div.form-space-housing > form > select").classList.remove('bg-error-light-7')
             setError(null)
           }}
           value={category}
@@ -215,23 +216,8 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           <option value="Other">Other</option>
         </select>
         <button type="submit">Add Item</button>
-        {error && <p className='text-red-dark-2'>{error}</p>}
+        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><span className='fsz-10'>&#9888;</span> {error}</div>}
       </form>
-
-      {/* S P A C E */}
-
-      <div className='space-component'>
-        {basementSpace && <span>Storage/basement space: <b>{basementSpace} m3</b></span>}
-        <span>Available space: <b>{(basementSpace - (occupiedSpaceCubic(array))).toFixed(4)} m3</b></span>
-        <span>Dimensions: <b>L</b> - {dimensions.length} m / <b>W</b> - {dimensions.width} m / <b>H</b> - {dimensions.height} m</span>
-        {/* Progress bar */}
-          <div 
-            className="progress-bar"
-            style={{'--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}}
-          >
-            <span id='single-storage-avail'>{`Used space: ${occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}%`}</span>
-          </div>
-      </div>
     </div>
   )
 }

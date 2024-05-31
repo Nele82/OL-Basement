@@ -6,8 +6,16 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Barlow Condensed", sans-serif;
+    background-image: url('../assets/background.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .site-wrapper {
@@ -15,44 +23,52 @@ body {
     flex-direction: column;
 }
 
-.main-wrapper {
-    flex-direction: row-reverse;
-}
+/******************************************** P A G E S ****************************************************/
 
-// PAGES
+/* MAIN PAGE */
 
-// Main page
-.main-page {
-    flex-direction: column;
-}
+/* Logged out menu */
+#loggedOut a {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+    border-bottom-left-radius: 4vw;
 
-a {
     text-decoration: none;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
+}
+/* Logged in menu */
+#loggedIn button, #loggedIn a {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+    border-bottom-left-radius: 4vw;
+
+    text-decoration: none;
+
+    color: black;
+    background-color: rgb(255, 255, 255);
 }
 
-nav, header, footer, .main-page {
-    border: 1px solid black;
-}
-
-header img {
-    width: 5rem;
-}
-
-footer {
-    margin-top: auto;
-}
-
-// Items page
+/* ITEMS PAGE */
 
 .storage-item {
-    border: 1px solid black;
+    box-shadow: $light-box-shadow;
+    border: 2px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+    border-bottom-left-radius: 4vw;
 
-    margin-top: .5rem;
+    margin-top: 3vw;
 }
 
 .storage-item-buttons {
     cursor: pointer;
 }
+
+// Progress bar
+
 .progress-bar {
     position: relative;
     z-index: -1;
@@ -61,12 +77,11 @@ footer {
     align-items: center;
     justify-content: center;
 
-    width: 500px;
-    height: 3em;
+    height: 10vw;
 
-    background-color: rgb(100, 126, 126);
+    background-color: rgb(0, 0, 0);
 
-    border-radius: 1.5em;
+    border-radius: 5vw;
     color: white;
 }
 
@@ -76,31 +91,28 @@ footer {
     align-items: center;
 
     position: absolute;
-    left: .5em;
-    top: .5em;
-    bottom: .5em;
+    left: 1.5vw;
+    top: 1.5vw;
+    bottom: 1.5vw;
     z-index: -1;
 
-    width: calc((var(--width, 0) * .904%));
-    max-width: calc(100% - 1em);
+    width: calc(var(--width, 0)*1% + 7vw);
+    max-width: calc(100% - 3vw);
 
-    background-color: rgb(127, 202, 202);
+    background-color: rgb(97, 95, 95);
 
-    padding: 1em;
-
-    border-radius: 1em;
+    border-radius: 5vw;
 }
-
+// Filter buttons
 .filter-button-title {
     margin: .5rem 0;
 }
 
-.filter-buttons {
-    border: 1px solid black;
-    border-radius: .5rem;
+.filter-button {
+    cursor: pointer;
 
-    padding: .2rem;
-    margin: 2rem 0;
+    border: 1px solid black;
+    border-radius: 2vw;
 }
 
 #single-storage-avail {
@@ -108,53 +120,453 @@ footer {
     z-index: 1;
 }
 
-.storage-item-details {
-    display: none;
-}
-
 .desription-section {
     display: flex;
     flex-direction: column;
 }
+// Items list
 
-// COMPONENTS
-
-// Dialog box
-.delete-box {
-    display: none;
+// Item info
+.storage-item-info {
+    width: 70%;
 }
 
-// Dialog box (items)
+/* LOGIN PAGE */
 
-.items-delete-box {
-    display: none;
+.login input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.login button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+/* SIGN UP PAGE */
+
+.signup input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+.signup button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+#check {
+    box-shadow: none;
+}
+
+// PASSWORD RESET REQUEST PAGE
+
+.reset-form input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.reset-form button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+// PASSWORD RESET PAGE
+
+.password-reset input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.password-reset button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+// STORAGE LIST PAGE (WITH STORAGE INPUT COMPONENT)
+
+.storage-wrapper h3 {
+    width: 90%;
+}
+
+// Storage input form
+
+.create-storage input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.create-storage button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+// Storage list
+
+.storage-details {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(187, 187, 187);
+    border-bottom-right-radius: 4vw;
+    border-top-left-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.storage-details button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.storage-wrapper button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+.storage-details a {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background-color: rgb(238, 238, 238);
+    color: black;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+// Delete box
+
+.delete-box {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(187, 187, 187);
+    border-bottom-right-radius: 4vw;
+    border-top-left-radius: 4vw;
+}
+
+.delete-box div button {
+    margin-right: 4vw;
+    padding: $base-padding * 2 $base-padding * 6;
 }
 
 // Update form
 
 .update-form {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(187, 187, 187);
+    border-bottom-right-radius: 4vw;
+    border-top-left-radius: 4vw;
+}
+.update-form input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+}
+.update-form i {
+    color: black;
+
+    font-size: 9vw;
+}
+
+// STORAGE OVERVIEW PAGE
+
+.single-storage-housing a {
+    display: flex;
+    justify-content: center;
+
+    text-decoration: none;
+
+    background-color: rgb(238, 238, 238);
+    color: black;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+  }
+
+// CONTACT PAGE
+
+    .app-contact-page label {
+        font-size: $base-font-size * 5;
+    }
+    .app-contact-page input, .app-contact-page textarea {
+        box-shadow: $light-box-shadow;
+        border: 1px ridge rgb(218, 222, 223);
+        border-top-right-radius: 3vw;
+        border-bottom-left-radius: 3vw;
+    }
+
+// TERMS OF USE & PRIVACY POLICY
+
+    #privacy button, #tos button {
+        box-shadow: $light-box-shadow;
+        border: 1px ridge rgb(218, 222, 223);
+        border-bottom-right-radius: 4vw;
+    
+        padding: $base-padding * 2;
+    }
+
+/******************************************** C O M P O N E N T S ****************************************************/
+
+// ITEM INPUT FORM & SPACE CALCULATOR
+
+.form-space-housing label {
+    font-size: $base-font-size * 5;
+
+    margin: 0 0 $base-margin * 1 0;
+}
+.form-space-housing input {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+}
+.form-space-housing textarea {
+    padding: 2vw;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+}
+.form-space-housing select {
+    padding: 2vw;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 4vw;
+}
+.form-space-housing button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 4vw;
+
+    padding: $base-padding * 2;
+}
+
+// HEADER
+
+header {
+    width: 100%;
+
+    position: fixed;
+    z-index: 1;
+
+    box-shadow: $light-box-shadow;
+    background-color: rgb(255, 255, 255);
+}
+
+header img {
+    cursor: pointer;
+}
+
+#flip1 {
+    border: 2px double grey;
+    box-shadow: $light-box-shadow;
+
+    transition: transform .25s, opacity .25s;
+}
+
+#flip2 {
+    border: 2px double grey;
+    box-shadow: $light-box-shadow;
+
+    opacity: 0;
+
+    transition: transform .25s, opacity .25s;
+}
+
+#theme {
+    background-color: grey;
+    color: white;
+
+    position: absolute;
+    z-index: 0;
+}
+
+#theme span {
+    cursor: pointer;
+
+    background-color: white;
+    color: grey;
+}
+
+// NAVBAR
+
+nav {
+    position: fixed;
+
+    z-index: 0;
+
+    transition: margin .5s
+}
+
+nav div a {
+    width: 30%;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    color: grey;
+    background-color: rgb(255, 255, 255);
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 3vw;
+}
+
+#reveal-menu span {   
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    color: grey;
+    background-color: rgb(255, 255, 255);
+
+    box-shadow: $light-box-shadow;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+// FOOTER
+
+footer {
+    width: 100%;
+
+    color: white;
+    background-color: black;
+}
+
+footer a {
+    color: white;
+}
+
+footer span:nth-child(1) {
+    cursor: pointer;
+
+    text-transform: uppercase;
+
+    border: 1px dashed white;
+    border-top-left-radius: 5vw;
+    border-top-right-radius: 5vw;
+}
+
+/* Dialog box */
+
+.delete-box {
     display: none;
 }
 
-.exit-update {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: aqua;
-    background-color: brown;
+/* Dialog box (items) */
 
-    width: 3rem;
-    height: 3rem;
-
-    font-size: 2rem;
-
-    border-radius: 1rem;
+.items-delete-box {
+    display: none;
 }
 
-// Update items form
+/* Update form */
+
+.update-form {
+    display: none;
+}
+
+/* ITEM UPDATE FORM */
 
 .update-items {
     display: none;
 
+    box-shadow: $light-box-shadow;
+    border: 2px ridge rgb(218, 222, 223);
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
+}
+
+.update-items-header i {
+    width: 30%;
+}
+
+.update-items-dimensions label {
     width: 50%;
+}
+.update-items input {
+    width: 50%;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 3vw;
+}
+.update-items textarea {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 3vw;
+}
+.update-items select {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 3vw;
+}
+.update-items button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 3vw;
+}
+
+// ITEMS DELETE DIALOG BOX
+
+.items-delete-box {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge gray;
+    border-radius: 2vw;
+}
+.items-delete-box button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge gray;
+    border-bottom-right-radius: 2vw;
+    border-top-left-radius: 2vw;
+}
+
+// ITEMS DETAILS
+
+.storage-item-details {
+    display: none;
+
+    box-shadow: $light-box-shadow;
+    border: 1px ridge gray;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
 }

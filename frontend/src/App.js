@@ -9,6 +9,8 @@ import Login from './pages/Login'
 import Signup from './pages/Signup'
 import ResetRequest from './pages/ResetRequest'
 import PasswordReset from './pages/PasswordReset'
+import TermsOfUse from './pages/TermsOfUse'
+import PrivacyPolicy from './pages/PrivacyPolicy'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
@@ -17,7 +19,6 @@ import { setTimeoutMessage } from './slices/SessionSlice'
 
 function App() {
   const user = useSelector(state => state.user.value)
-  const inventoryKey = useSelector(state => state.inventory.value)
   const dispatch = useDispatch()
   const tokenPresent = window.location.href.includes('token')
 
@@ -89,9 +90,16 @@ function App() {
               />
               <Route
                 path='storage-overview'
-                element={!user ? <Login /> : !inventoryKey ? <StorageList /> : <StorageOverview />}
+                element={<StorageOverview />}
               />
-
+              <Route
+                path='terms-and-conditions'
+                element={<TermsOfUse />}
+              />
+              <Route
+                path='privacy-policy'
+                element={<PrivacyPolicy />}
+              />
             </Route>
           </Routes>
       </BrowserRouter>

@@ -48,7 +48,7 @@ const PasswordReset = () => {
 
   return (
         <form 
-          className="reset-form"
+          className="reset-form display-f fd-c"
           onSubmit={handleSubmit}
         >
           <h3>Password Reset Request Form:</h3>
@@ -67,8 +67,8 @@ const PasswordReset = () => {
           >
             Submit
           </button>
-          {error && <span className='error text-red'>{error}</span>}
-          {notification && <span className='text-green-dark-4'>{notification}</span>}
+          {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3 fsz-5'><div className='fsz-10'>&#9888;</div> {error}</div>}
+          {notification && <span>{notification}</span>}
           <button
             onClick={()=>{
               navigate('/login')

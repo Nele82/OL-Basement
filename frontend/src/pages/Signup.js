@@ -9,7 +9,7 @@ const Signup = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
-  const [loading, setLoading] = useState(null)
+  const [boolean, setBoolean] = useState(true)
   const navigate = useNavigate()
   // Redux
   const dispatch = useDispatch()
@@ -17,7 +17,6 @@ const Signup = () => {
 
   // User sign-up function
   const signupUser = async (username, email, password) => {
-      setLoading(true)
       setError(null)
 
       const response = await fetch('http://localhost:3500/user/signup', {
@@ -28,7 +27,6 @@ const Signup = () => {
     const json = await response.json() // Returns username, email & token
 
     if (!response.ok) {
-      setLoading(false)
       setError(json.message)
     }
 
@@ -45,9 +43,6 @@ const Signup = () => {
 
       // Navigate to 'storage-list'
       navigate('/storage-list')
-
-      // Update loading state
-      setLoading(false)
 
       // Update error state
       setError(null)
@@ -68,7 +63,7 @@ const Signup = () => {
     // The 'username' input begins with the capital or a lowcase letter and
     // can include letters, digits, hyphens, or underscores (input length: 6-30)
     const user_RegExp = /^[A-z][A-z0-9-_]{6,30}$/
-    // The 'password' input must contain at least one lowercase letter, one 
+    // The 'username' input must contain at least one lowercase letter, one 
     // uppercase letter, one digit (0-9) and one special character from the 
     // !@#$% set. (input length: 6-30)
     const email_RegExp = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/ 
@@ -95,9 +90,9 @@ const Signup = () => {
       return
     }
     if(!testEmail) {
-      setError(`Your email should contain the following: Local part (part before '@'): should contain one or more characters that are letters 
-      (both uppercase and lowercase), digits, dots, underscores, percent signs, plus signs, or hyphens; Domain (part after '@'): should contain one 
-      or more characters that are letters (both uppercase and lowercase), digits, dots, or hyphens; Top level domain (part after '.'): should contain
+      setError(`Your email should contain the following: LOCAL PART (part before '@'): should contain one or more characters that are letters 
+      (both uppercase and lowercase), digits, dots, underscores, percent signs, plus signs, or hyphens; DOMAIN (part after '@'): should contain one 
+      or more characters that are letters (both uppercase and lowercase), digits, dots, or hyphens; TOP LEVEL DOMAIN (part after '.'): should contain
       two or more letters for the top-level domain (like .com, .org, etc.)`)
       return
     }
@@ -109,7 +104,10 @@ const Signup = () => {
   }
 
   return (
-    <form className='signup' onSubmit={handleSubmit}>
+    <form 
+      className='signup display-f fd-c' 
+      onSubmit={handleSubmit}
+    >
       <h3>Sign Up</h3>
       <label>Username *</label>
       <input 
@@ -138,9 +136,23 @@ const Signup = () => {
         }}
         value={password}
       />
-      <button disabled={loading}>Sign Up</button>
+      <button disabled={boolean}>Sign Up</button>
       <span>* - Required field</span>
-      {error && <div className="error text-red">{error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3'><p className='fsz-8'>&#9888;</p> {error}</div>}
+      <div 
+        id='terms'
+        className='display-f'
+      >
+        <input 
+            type="checkbox" 
+            name="checkbox" 
+            id="check" 
+            onClick={()=>{
+              setBoolean(!boolean)
+            }}
+        />
+        <label>I hereby acknowledge that I have read and understood the <u><b onClick={() => navigate('/privacy-policy')}>Privacy Policy</b></u> and the <u><b onClick={() => navigate('/terms-and-conditions')}>Terms of Use</b></u>.</label>
+      </div>
     </form>
   )
 }

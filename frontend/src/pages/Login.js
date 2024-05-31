@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from '../slices/AuthSlice'
 import { removeTimeoutMessage, setTimeoutMessage } from '../slices/SessionSlice'
@@ -9,6 +9,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
+  const userRef = useRef()
   const navigate = useNavigate()
   // Redux
   const dispatch = useDispatch()
@@ -77,11 +78,15 @@ const Login = () => {
       setError(sessionTimeout)
     }
     navigate('/login')
+    userRef.current.focus()
   }, [])
   
   return (
-    <form className='login' onSubmit={handleSubmit}>
-      <h3>Log In</h3>
+    <form 
+      className='login display-f fd-c' 
+      onSubmit={handleSubmit}
+    >
+      <h4>Log In</h4>
       <label>Username:</label>
       <input 
         type="text" 
@@ -92,6 +97,7 @@ const Login = () => {
         }}
         value={username}
         autoComplete="off"
+        ref={userRef}
       />
       <label>Password:</label>
       <input 
@@ -105,13 +111,15 @@ const Login = () => {
         autoComplete="off"
       />
       <button disabled={loading}>Log in</button>
-      {error && <div className="error text-red">{error}</div>}
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><span className='fsz-10'>&#9888;</span> {error}</div>}
       <span 
+        id='forgotten-password'
         onClick={()=>{
           navigate('/reset-request')
+          window.scrollTo(0, 0)
         }}
       >
-        Forgot your password? Click here.
+        Forgot your password? <b>Click here.</b>
       </span>
     </form>
   )

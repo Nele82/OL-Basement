@@ -27,7 +27,7 @@ const DialogBoxItems = ({itemId, storeId}) => {
   return (
     <div
         id={`${itemId.slice(4, 11)}-delete-item`}
-        className='items-delete-box'
+        className='items-delete-box jc-c ai-c mt-1 p-2'
     >
         <p>Are you sure you want to delete this Item?</p>
         <div>

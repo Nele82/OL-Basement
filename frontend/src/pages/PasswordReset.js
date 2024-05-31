@@ -27,12 +27,12 @@ const PasswordReset = () => {
         }
 
         if(!testPass) {
-            setError('Error: Password may contain the following: one lowercase letter, one uppercase letter, one digit (0-9) and one special character from the !@#$% set and needs to be between 8 and 20 characters long')
+            setError('ERROR: Password may contain the following: one lowercase letter, one uppercase letter, one digit (0-9) and one special character from the !@#$% set and needs to be between 8 and 20 characters long')
             return
         }
 
         if(testPass && newPassword !== confirm) {
-            setError('Error: The passwords you entered do not match. Please try again.')
+            setError('ERROR: The passwords you provided don’t match. Please enter them again.')
             return
         }
 
@@ -65,7 +65,7 @@ const PasswordReset = () => {
 
   return (
     <form 
-        className='password-reset'
+        className='password-reset display-f fd-c'
         onSubmit={handleSubmit}
     >
         <h3>Set New Password:</h3>
@@ -100,8 +100,8 @@ const PasswordReset = () => {
         >
             Submit
         </button>
-        {error && <span className='error text-red'>{error}</span>}
-        {success && <span className='text-green-dark-4'>{success}</span>}
+        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3 fsz-5'><div className='fsz-10'>&#9888;</div> {error}</div>}
+        {success && <span>{success}</span>}
     </form>
   )
 }

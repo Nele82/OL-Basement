@@ -1,6 +1,72 @@
 @use 'sass:math';
 
 $utilities: (
+  // FLEX-CONTAINER
+  "flex-direction": (
+    "prefix": "fd",
+    "values": (
+      "r": row,
+      "rr": row-reverse,
+      "c": column,
+      "cr": column-reverse
+    ),
+  ),
+  "flex-wrap": (
+    "prefix": "fr",
+    "values": (
+      "nw": no-wrap,
+      "w": wrap,
+      "wr": wrap-reverse
+    ),
+  ),
+  "justify-content": (
+    "prefix": "jc",
+    "values": (
+      "fs": flex-start,
+      "fe": flex-end,
+      "c": center,
+      "sb": space-between,
+      "sa": space-around,
+      "se": space-evenly
+    ),
+  ),
+  "align-items": (
+    "prefix": "ai",
+    "values": (
+      "fs": flex-start,
+      "fe": flex-end,
+      "c": center,
+      "bl": baseline,
+      "fb": first baseline,
+      "lb": last baseline,
+      "s": start,
+      "e": end,
+      "ss": self-start,
+      "se": self-end,
+      "safe": safe,
+      "unsafe": unsafe
+    ),
+  ),
+  "align-content": (
+    "prefix": "ac",
+    "values": (
+      "fs": flex-start,
+      "fe": flex-end,
+      "c": center,
+      "sb": space-between,
+      "sa": space-around,
+      "se": space-evenly,
+      "st": stretch,
+      "s": start,
+      "e": end,
+      "bl": baseline,
+      "fb": first baseline,
+      "lb": last baseline,
+      "safe": safe,
+      "unsafe": unsafe
+    ),
+  ),
+  // PADDING
   "padding": (
     "prefix": "p",
     "values": (
@@ -56,6 +122,7 @@ $utilities: (
       "5": $base-padding * 8
     ),
   ),
+  // MARGIN
   "margin": (
     "prefix": "m",
     "values": (
@@ -64,7 +131,8 @@ $utilities: (
       "2": $base-margin * 2,
       "3": $base-margin * 4,
       "4": $base-margin * 6,
-      "5": $base-margin * 8
+      "5": $base-margin * 8,
+      "a": auto
     ),
   ),
   "margin-left": (
@@ -94,10 +162,10 @@ $utilities: (
     "values": (
       "0": 0,
       "1": $base-margin,
-      "2": $base-margin * 2,
-      "3": $base-margin * 4,
-      "4": $base-margin * 6,
-      "5": $base-margin * 8
+      "2": $base-margin * 4,
+      "3": $base-margin * 8,
+      "4": $base-margin * 12,
+      "5": $base-margin * 16
     ),
   ),
   "margin-bottom": (
@@ -111,7 +179,7 @@ $utilities: (
       "5": $base-margin * 8
     ),
   ),
-
+  // OPACITY
   "opacity": (
     "prefix": "o",
     "values": (
@@ -127,17 +195,7 @@ $utilities: (
       "100": 1,
     ),
   ),
-  "border-radius": (
-    "prefix": "br",
-    "values": (
-      "default": $base-border-radius,
-      "none": 0,
-      "xs": math.div($base-border-radius, 4),
-      "sm": math.div($base-border-radius, 2),
-      "lg": $base-border-radius * 2,
-      "full": 50%,
-    )
-  ),
+  // DISPLAY
   "display": (
     "prefix": "display",
     "values": (
@@ -148,14 +206,40 @@ $utilities: (
       "i-b": inline-block
     )
   ),
+  // FONT-SIZE
   "font-size": (
-    "prefix": "font",
+    "prefix": "fsz",
     "values": (
-      "sm": $font-size-sm,
-      "md": $base-font-size,
-      "lg": $font-size-lg,
-      "xl": $font-size-xl,
-      "xxl": $font-size-xxl
+      "1": $base-font-size * 1,
+      "2": $base-font-size * 2,
+      "3": $base-font-size * 3,
+      "4": $base-font-size * 4,
+      "5": $base-font-size * 5,
+      "6": $base-font-size * 6,
+      "7": $base-font-size * 7,
+      "8": $base-font-size * 8,
+      "9": $base-font-size * 9,
+      "10": $base-font-size * 10
+    )
+  ),
+  // BORDER-RADIUS
+  "border-radius": (
+    "prefix": "br",
+    "values": (
+      "default": $base-border-radius,
+      "none": 0,
+      "xs": math.div($base-border-radius, 4),
+      "sm": math.div($base-border-radius, 2),
+      "lg": $base-border-radius * 5,
+      "full": 50%,
+    )
+  ),
+  // BORDER
+  "border": (
+    "prefix": "bd",
+    "values": (
+      "black": 2px dotted black,
+      "gray": 1px ridge gray
     )
   )
 );

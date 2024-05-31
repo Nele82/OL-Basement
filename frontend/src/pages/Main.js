@@ -18,24 +18,55 @@ const Main = () => {
   }, [])
 
   return (
-    <div className='main-page display-f'>
+    <div 
+      className='main-page display-f fd-c'
+      id='main-page-housing'
+    >
       <main>
+        {/* GREETING */}
         {!user ? <span>Welcome!</span> : <span>Welcome, {user.username}!</span>}
-        <h1>Online Basement</h1>
+        {/* HEADLINE */}
+        <h1>OL Basement</h1>
         <h2>Your online home storage space manager</h2>
         <p>Calculate your storage space while keeping track of all your supplies and remember:
         a well-organized basement not only provides efficient storage but also contributes to a more functional home.  
         </p>
         {!user ? 
-        <div>
-          <Link to="/login">Log In</Link>
-          <div>
-            <span>Don't have an account? Sign Up.</span>
-            <Link to="/signup">Sign Up</Link>
+        // LOGGED OUT
+        <div
+          className='display-f fd-c'
+          id='loggedOut'
+        >
+          <Link 
+          className='display-f jc-c'
+            to="/login"
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Log In
+          </Link>
+          <div
+            className='display-f fd-c'
+          >
+            <span
+              className='display-f jc-c'
+            >
+              Don't have an account? Sign Up.
+            </span>
+            <Link 
+              className='display-f jc-c'
+              to="/signup"
+              onClick={() => window.scrollTo(0, 0)}
+            >
+              Sign Up
+            </Link>
           </div>
         </div>
         : 
-        <div>
+        // LOGGED IN
+        <div
+          className='display-f fd-c'
+          id='loggedIn'
+        >
           <button
             onClick={() => {
               dispatch(logout())
@@ -45,13 +76,41 @@ const Main = () => {
           >
             Log Out
           </button>
-          <Link to="/storage-list">Go to the basement</Link>
+          <Link 
+            to="/storage-list"
+            className='display-f jc-c'
+            onClick={() => window.scrollTo(0, 0)}
+          >
+            Go to the basement
+          </Link>
         </div>
         }
       </main>
-      <section className='display-f'>
-        <div>Section 1</div>
-        <div>Section 2</div>
+      <section 
+        id='features'
+        className='display-f fr-w'
+      >
+        <div
+          className='col-12-xs col-9-sm col-6-md col-8-lg col-8-xl display-f fd-c'  
+        >
+          <h4>Space calculation</h4>
+          <p>App is designed to help you efficiently manage the available space in 
+            your storage areas, such as a home basement, garage, or any other storage 
+            facility. It calculates the remaining space in percentages based on the 
+            dimensions of the storage area and the items stored within it. Simply add 
+            the dimensions of each item you store, and the app will keep track of the 
+            cumulative space these items occupy.
+          </p>
+        </div>
+        <div
+          className='col-12-xs col-9-sm col-6-md col-8-lg col-8-xl display-f fd-c'
+        >
+          <h4>Categorization</h4>
+          <p>After entering an item’s details, users can assign it to a predefined category from a dropdown menu. 
+          With items categorized, the app can filter and display items based on their assigned categories. This 
+          makes finding and managing items in the storage space much easier.
+          </p>
+        </div>
       </section>
     </div>
   )

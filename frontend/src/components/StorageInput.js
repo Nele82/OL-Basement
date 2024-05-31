@@ -42,22 +42,18 @@ const StorageInput = () => {
 
     if(!facilityName || !testTitle) {
       setError('Please provide the title for the basement. The title can consist of a combination of lowercase or uppercase letters, digits, and any characters, with a length ranging from 4 to 20 characters.')
-      document.querySelector("#root > div > div > main > div > form > input:nth-child(3)").classList.add('bg-error-light-7')
       return
     }
     if(!length || !testLength) {
       setError('Please enter length. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > form > input:nth-child(5)").classList.add('bg-error-light-7')
       return
     }
     if(!width || !testWidth) {
       setError('Please enter width. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > form > input:nth-child(7)").classList.add('bg-error-light-7')
       return
     }
     if(!height || !testHeight) {
       setError('Please enter height. The input can be either a whole number or a decimal with up to two digits after the decimal point')
-      document.querySelector("#root > div > div > main > div > form > input:nth-child(9)").classList.add('bg-error-light-7')
       return
     }
 
@@ -74,55 +70,47 @@ const StorageInput = () => {
 
   return (
     <form
-    className='create-storage'
-    onSubmit={handleSubmit}
+      className='create-storage display-f fd-c mt-2'
+      onSubmit={handleSubmit}
     >
       <h3>Create a basement / storage unit:</h3>
       <label>Storage unit title:</label>
       <input 
         type="text" 
-        className='storage-input'
         onChange={(e)=> setFacilityName(e.target.value)}
         onClick = {() => {
           setError(null)
           setSuccess(null)
-          document.querySelector("#root > div > div > main > div > form > input:nth-child(3)").classList.remove('bg-error-light-7')
         }}
         value={facilityName}
       />
       <label>Storage unit length (m):</label>
       <input 
         type="text" 
-        className='storage-input'
         onChange={(e)=> setLength(e.target.value)}
         onClick = {() => {
           setError(null)
           setSuccess(null)
-          document.querySelector("#root > div > div > main > div > form > input:nth-child(5)").classList.remove('bg-error-light-7')
         }}
         value={length}
       />
       <label>Storage unit width (m):</label>
       <input 
         type="text" 
-        className='storage-input'
         onChange={(e)=> setWidth(e.target.value)}
         onClick = {() => {
           setError(null)
           setSuccess(null)
-          document.querySelector("#root > div > div > main > div > form > input:nth-child(7)").classList.remove('bg-error-light-7')
         }}
         value={width}
       />
       <label>Storage unit height (m):</label>
       <input 
         type="text" 
-        className='storage-input'
         onChange={(e)=> setHeight(e.target.value)}
         onClick = {() => {
           setError(null)
           setSuccess(null)
-          document.querySelector("#root > div > div > main > div > form > input:nth-child(9)").classList.remove('bg-error-light-7')
         }}
         value={height}
       />
@@ -132,8 +120,8 @@ const StorageInput = () => {
       >
         Create Storage
       </button>
-      {error && <div className="text-error">{error}</div>}
-      {success && <div className="text-green-dark-4">{success}</div>}
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><div className='fsz-10'>&#9888;</div> {error}</div>}
+      {success && <span>{success}</span>}
     </form>
   )
 }
