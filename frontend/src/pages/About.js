@@ -1,13 +1,8 @@
-import React, { useRef } from 'react'
-import { CSSTransition } from 'react-transition-group'
+import React from 'react'
 
 const About = () => {
-  const aboutRef = useRef()
 
   return (
-    <CSSTransition
-      // in={}
-    >
       <div 
         className='app-about display-f fd-c'
       >
@@ -40,7 +35,6 @@ const About = () => {
           the guesswork. It’s a handy tool for maximizing space efficiency and staying organized.
         </p>
       </div>
-    </CSSTransition>
   )
 }
 
