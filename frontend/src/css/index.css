@@ -6828,6 +6828,10 @@ footer span:nth-child(1) {
   margin-bottom: 8vw;
 }
 
+.o-0 {
+  opacity: 0;
+}
+
 .o-10 {
   opacity: 0.1;
 }

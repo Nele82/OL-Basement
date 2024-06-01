@@ -72,6 +72,7 @@ const PasswordReset = () => {
           <button
             onClick={()=>{
               navigate('/login')
+              window.scrollTo(0, 0)
             }}
           >
             Back to Login

@@ -15,6 +15,7 @@ import {
   updateItemDescription, 
   updateItemCategory 
 } from '../slices/UpdateItemSlice'
+import { CSVLink } from "react-csv"
 
 const StorageOverview = () => {
     const dispatch = useDispatch()
@@ -40,6 +41,33 @@ const StorageOverview = () => {
           }  
         }
       }
+    }
+
+    // CSV file generetor fundtion
+    const csvGenerate = (arr) => {
+      let csvItems = []
+      for (let i = 0; i < arr.length; i++) {
+        csvItems = [...csvItems, new Array(
+          arr[i].category, 
+          arr[i].itemTitle, 
+          arr[i].height, 
+          arr[i].width, 
+          arr[i].length, 
+          arr[i].description, 
+          new Date(arr[i].createdAt), 
+          new Date(arr[i].updatedAt) 
+        )]
+      }
+      csvItems.unshift(['CATEGORY',
+      'TITLE',
+      'ITEM HEIGHT (CM)',
+      'ITEM WIDTH (CM)',
+      'ITEM LENGTH (CM)',
+      'DESCRIPTION',
+      'CREATED ON (DATE)',
+      'UPDATED ON (DATE)'
+      ])
+      return csvItems
     }
 
     useEffect(() => {
@@ -71,7 +99,6 @@ const StorageOverview = () => {
         if (local) {
           fetchItems()
         }
-
     }, [])
 
   return (
@@ -87,6 +114,18 @@ const StorageOverview = () => {
           </Link>
         <div className='storage-items'>
         <h3>Items:</h3>
+        {/* CSV GENERATOR */}
+        <div 
+            id="download-csv"
+            className='mt-2 mb-2'
+          >
+            <span className='fsz-5'>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
+            <CSVLink 
+              data={csvGenerate(items)}
+            >
+              Download CSV
+            </CSVLink>
+          </div>
           {items.length === 0 && <p>There are no items stored in this storage unit</p>}
           {/* BUTTONS GROUP */}
           <div className="buttons-group display-f fd-c">
