@@ -14,6 +14,7 @@ const Login = () => {
   // Redux
   const dispatch = useDispatch()
   const sessionTimeout = useSelector(state => state.session.value)
+  const theme = useSelector(state => state.theme.value)
 
   // User login function
   const loginUser = async (username, password) => { 
@@ -98,6 +99,10 @@ const Login = () => {
         value={username}
         autoComplete="off"
         ref={userRef}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Password:</label>
       <input 
@@ -109,9 +114,21 @@ const Login = () => {
         }}
         value={password}
         autoComplete="off"
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
-      <button disabled={loading}>Log in</button>
-      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><span className='fsz-10'>&#9888;</span> {error}</div>}
+      <button 
+        disabled={loading}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
+      >
+        Log in
+      </button>
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><span className='fsz-10'>&#9888;</span> {error}</div>}
       <span 
         id='forgotten-password'
         onClick={()=>{

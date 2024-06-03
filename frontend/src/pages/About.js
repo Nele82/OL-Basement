@@ -22,6 +22,9 @@ const About = () => {
           all from the comfort of your device.
         </p>
         <p className='mt-2 mb-2'>
+          <b>Additional perk:</b> Users can effortlessly download the complete list of stored items as a .csv file (compatible with MS Excel) by clicking a single button.
+        </p>
+        <p className='mt-2 mb-2'>
           It's called OL Basement where 'OL', unsurprisingly, stands for 'Online'. This a full-stack application designed using a well-known MERN stack. The MERN stack is 
           a popular set of technology used to build modern web applications. It is an acronym that stands for MongoDB, Express.js, React, and Node.js where:
         </p>

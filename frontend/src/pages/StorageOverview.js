@@ -18,12 +18,14 @@ import {
 import { CSVLink } from "react-csv"
 
 const StorageOverview = () => {
-    const dispatch = useDispatch()
-    const items = useSelector(state => state.items.value)
     const buttons = useSelector(state => state.buttons.value)
     const [local, setLocal] = useState(JSON.parse(localStorage.getItem('singleStorage')))
     const [title, setTitle] = useState('')
     const navigate = useNavigate() 
+    // Redux    
+    const dispatch = useDispatch()
+    const theme = useSelector(state => state.theme.value)
+    const items = useSelector(state => state.items.value)
 
     const filterElements = (arr, category) => {
       if(category === 'Show All Items') {
@@ -43,7 +45,7 @@ const StorageOverview = () => {
       }
     }
 
-    // CSV file generetor fundtion
+    // CSV file generetor function
     const csvGenerate = (arr) => {
       let csvItems = []
       for (let i = 0; i < arr.length; i++) {
@@ -109,6 +111,10 @@ const StorageOverview = () => {
           <Link 
             to='/storage-list'
             onClick={() => window.scrollTo(0, 0)}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
           >
             Back to storage(s)
           </Link>
@@ -122,6 +128,10 @@ const StorageOverview = () => {
             <span className='fsz-5'>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
             <CSVLink 
               data={csvGenerate(items)}
+              style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+              }}
             >
               Download CSV
             </CSVLink>
@@ -143,6 +153,9 @@ const StorageOverview = () => {
                   onClick={(e)=> {
                     filterElements(document.getElementsByClassName('items-group')[0].children, e.target.innerText)
                   }}
+                  style={{ 
+                    border: theme ? '1px solid white' : '1px solid black'
+                  }}
                 >
                   Show All Items
                 </span>
@@ -153,6 +166,9 @@ const StorageOverview = () => {
                     key={i}
                     onClick={(e)=> {
                       filterElements(document.getElementsByClassName('items-group')[0].children, e.target.innerText)
+                    }}
+                    style={{ 
+                      border: theme ? '1px solid white' : '1px solid black'
                     }}
                   >
                     {btn}

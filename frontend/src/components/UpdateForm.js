@@ -11,6 +11,8 @@ const UpdateForm = ({storageId}) => {
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
     const [loading, setLoading] = useState(null)
+    // Redux
+    const theme = useSelector(state => state.theme.value)
     const dispatch = useDispatch()
 
     const patchStorage = async (facilityName, length, width, height, id) => {
@@ -81,6 +83,9 @@ const UpdateForm = ({storageId}) => {
                 onClick={()=>{
                     document.getElementById(`${storageId.slice(4, 11)}-update`).style.display = 'none'
                 }}
+                style={{ 
+                    color: theme ? 'rgb(255, 255, 255)' : 'black' 
+                }}
             > 
             </i>
         </div>
@@ -95,6 +100,10 @@ const UpdateForm = ({storageId}) => {
                 setSuccess(null)
             }}
             value={facilityName}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+                color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
         />
         <label>New length (m):</label>
         <input 
@@ -107,6 +116,10 @@ const UpdateForm = ({storageId}) => {
                 setSuccess(null)
             }}
             value={length}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+                color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
         />
         <label>New width (m):</label>
         <input 
@@ -119,6 +132,10 @@ const UpdateForm = ({storageId}) => {
                 setSuccess(null)
             }}
             value={width}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+                color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
         />
         <label>New height (m):</label>
         <input 
@@ -131,10 +148,18 @@ const UpdateForm = ({storageId}) => {
                 setSuccess(null)
             }}
             value={height}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+                color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
         />
         <button 
             type="submit"
             disabled={loading}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
         >
             Update
         </button>

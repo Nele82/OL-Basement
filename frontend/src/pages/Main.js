@@ -4,8 +4,11 @@ import { useEffect } from 'react'
 import { login, logout } from '../slices/AuthSlice'
 
 const Main = () => {
+  // Redux
+  const theme = useSelector(state => state.theme.value)
   const user = useSelector(state => state.user.value)
   const dispatch = useDispatch()
+  // Location
   const navigate = useNavigate()
 
   useEffect(()=>{
@@ -41,6 +44,10 @@ const Main = () => {
           className='display-f jc-c'
             to="/login"
             onClick={() => window.scrollTo(0, 0)}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
           >
             Log In
           </Link>
@@ -56,6 +63,10 @@ const Main = () => {
               className='display-f jc-c'
               to="/signup"
               onClick={() => window.scrollTo(0, 0)}
+              style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+                color: theme ? 'rgb(255, 255, 255)' : 'black' 
+              }}
             >
               Sign Up
             </Link>
@@ -73,6 +84,10 @@ const Main = () => {
               localStorage.clear()
               navigate('/')
             }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
           >
             Log Out
           </button>
@@ -80,6 +95,10 @@ const Main = () => {
             to="/storage-list"
             className='display-f jc-c'
             onClick={() => window.scrollTo(0, 0)}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
           >
             Go to the basement
           </Link>

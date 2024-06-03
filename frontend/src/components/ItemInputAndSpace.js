@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createItem } from '../slices/ItemsSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { getButtons } from '../slices/ButtonsSlice'
 
 const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
@@ -13,6 +13,7 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   const [error, setError] = useState(null)
   const [basementSpace, setbasementSpace] = useState(null)
   // Redux
+  const theme = useSelector(state => state.theme.value)
   const dispatch = useDispatch()
 
   const addItem = async () => {
@@ -135,7 +136,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
         {/* Progress bar */}
           <div 
             className="progress-bar mt-2 mb-2"
-            style={{'--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}}
+            style={{
+              '--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array)),
+              backgroundColor: theme ? 'rgb(255, 255, 255)' : 'black',
+            }}
           >
             <span id='single-storage-avail'>{`Used space: ${occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}%`}</span>
           </div>
@@ -154,6 +158,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={itemTitle}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         />
         <label>Item length (cm):</label>
         <input 
@@ -163,6 +171,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={length}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         />
         <label>Item width (cm):</label>
         <input 
@@ -172,6 +184,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={width}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         />
         <label>Item height (cm):</label>
         <input 
@@ -181,6 +197,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={height}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         />
         <label>Item description:</label>
         <textarea 
@@ -191,6 +211,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={description}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         ></textarea>
         <label>Category:</label>
         <select 
@@ -199,6 +223,10 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             setError(null)
           }}
           value={category}
+          style={{ 
+            backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+            color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          }}
         >
           <option value=""></option>
           <option value="Chemicals">Chemicals</option>
@@ -215,8 +243,16 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
           <option value="Wood / Furniture">Wood / Furniture</option>
           <option value="Other">Other</option>
         </select>
-        <button type="submit">Add Item</button>
-        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><span className='fsz-10'>&#9888;</span> {error}</div>}
+        <button 
+        type="submit"
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+          color: theme ? 'rgb(238, 238, 238)' : 'black' 
+        }}
+        >
+          Add Item
+        </button>
+        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><span className='fsz-10'>&#9888;</span> {error}</div>}
       </form>
     </div>
   )

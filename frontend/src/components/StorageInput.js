@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { createStorage } from '../slices/StorageSlice'
 
 const StorageInput = () => {
@@ -13,6 +13,8 @@ const StorageInput = () => {
   const dispatch = useDispatch()
 
   const user = JSON.parse(localStorage.getItem('user'))
+  // Redux
+  const theme = useSelector(state => state.theme.value)
 
   // Create a basement / storage unit
   const createStorageUnit = async (facilityName, length, width, height) => {
@@ -83,6 +85,10 @@ const StorageInput = () => {
           setSuccess(null)
         }}
         value={facilityName}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Storage unit length (m):</label>
       <input 
@@ -93,6 +99,10 @@ const StorageInput = () => {
           setSuccess(null)
         }}
         value={length}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Storage unit width (m):</label>
       <input 
@@ -103,6 +113,10 @@ const StorageInput = () => {
           setSuccess(null)
         }}
         value={width}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Storage unit height (m):</label>
       <input 
@@ -113,14 +127,22 @@ const StorageInput = () => {
           setSuccess(null)
         }}
         value={height}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <button 
         type="submit"
         disabled={loading}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+          color: theme ? 'rgb(238, 238, 238)' : 'black' 
+        }}
       >
         Create Storage
       </button>
-      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3'><div className='fsz-10'>&#9888;</div> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><div className='fsz-10'>&#9888;</div> {error}</div>}
       {success && <span>{success}</span>}
     </form>
   )

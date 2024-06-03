@@ -31,8 +31,6 @@ body {
   border-top-right-radius: 4vw;
   border-bottom-left-radius: 4vw;
   text-decoration: none;
-  color: black;
-  background-color: rgb(255, 255, 255);
 }
 
 /* Logged in menu */
@@ -42,8 +40,6 @@ body {
   border-top-right-radius: 4vw;
   border-bottom-left-radius: 4vw;
   text-decoration: none;
-  color: black;
-  background-color: rgb(255, 255, 255);
 }
 
 /* ITEMS PAGE */
@@ -66,7 +62,6 @@ body {
   align-items: center;
   justify-content: center;
   height: 10vw;
-  background-color: rgb(0, 0, 0);
   border-radius: 5vw;
   color: white;
 }
@@ -82,7 +77,7 @@ body {
   z-index: -1;
   width: calc(var(--width, 0) * 1% + 7vw);
   max-width: calc(100% - 3vw);
-  background-color: rgb(97, 95, 95);
+  background-color: rgb(110, 110, 110);
   border-radius: 5vw;
 }
 
@@ -92,7 +87,6 @@ body {
 
 .filter-button {
   cursor: pointer;
-  border: 1px solid black;
   border-radius: 2vw;
 }
 
@@ -216,8 +210,6 @@ body {
   display: flex;
   justify-content: center;
   text-decoration: none;
-  background-color: rgb(238, 238, 238);
-  color: black;
   box-shadow: 0px 4px 7px -2px #9E9284;
   border: 1px ridge rgb(218, 222, 223);
   border-bottom-right-radius: 4vw;
@@ -322,7 +314,6 @@ header {
   position: fixed;
   z-index: 1;
   box-shadow: 0px 4px 7px -2px #9E9284;
-  background-color: rgb(255, 255, 255);
 }
 
 header img {
@@ -343,16 +334,12 @@ header img {
 }
 
 #theme {
-  background-color: grey;
-  color: white;
   position: absolute;
   z-index: 0;
 }
 
 #theme span {
   cursor: pointer;
-  background-color: white;
-  color: grey;
 }
 
 nav {
@@ -382,12 +369,6 @@ nav div a {
   border-bottom-right-radius: 2vw;
 }
 
-footer {
-  width: 100%;
-  color: white;
-  background-color: black;
-}
-
 footer a {
   color: white;
 }
@@ -395,7 +376,6 @@ footer a {
 footer span:nth-child(1) {
   cursor: pointer;
   text-transform: uppercase;
-  border: 1px dashed white;
   border-top-left-radius: 5vw;
   border-top-right-radius: 5vw;
 }

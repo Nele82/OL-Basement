@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const PasswordReset = () => {
   const [email, setEmail] = useState('')
@@ -7,6 +8,9 @@ const PasswordReset = () => {
   const [notification, setNotification] = useState('')
 
   const navigate = useNavigate()
+
+  // Redux
+  const theme = useSelector(state => state.theme.value)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -61,18 +65,30 @@ const PasswordReset = () => {
               setNotification(null)
             }}
             value={email}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
           />
           <button 
             type="submit"
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+            }}
           >
             Submit
           </button>
-          {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3 fsz-5'><div className='fsz-10'>&#9888;</div> {error}</div>}
+          {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3 fsz-5' style={{border: theme ? '2px dotted white' : null}}><div className='fsz-10'>&#9888;</div> {error}</div>}
           {notification && <span>{notification}</span>}
           <button
             onClick={()=>{
               navigate('/login')
               window.scrollTo(0, 0)
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'black' 
             }}
           >
             Back to Login

@@ -11,10 +11,12 @@ import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/
 import { Link, useNavigate } from 'react-router-dom'
 
 const StorageList = () => {
-    const dispatch = useDispatch()
     const storages = useSelector(state=> state.storage.value)
     const user = useSelector(state => state.user.value)
     const navigate = useNavigate()
+    // Redux
+    const theme = useSelector(state => state.theme.value)
+    const dispatch = useDispatch()
 
     useEffect(()=>{
       if (JSON.parse(localStorage.getItem('user'))) {
@@ -64,7 +66,12 @@ const StorageList = () => {
             <button onClick={() => {
               document.getElementById(`${storage._id.slice(4, 11)}-delete`).style.display = 'block'
               document.getElementById(`${storage._id.slice(4, 11)}-update`).style.display = 'none'
-            }}>
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+            >
               <i className="fa-solid fa-trash-can"></i>
             </button>
             <button onClick={() => {
@@ -74,7 +81,12 @@ const StorageList = () => {
               dispatch(updateLength(storage.length))
               dispatch(updateWidth(storage.width))
               dispatch(updateHeight(storage.height))
-            }}>
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+            >
               <i className="fa-regular fa-pen-to-square"></i>
             </button>
             <Link
@@ -83,6 +95,10 @@ const StorageList = () => {
                 window.scrollTo(0, 0)
               }}
               to='/storage-overview'
+              style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+              }}
             >
               View Storage Items
             </Link>
@@ -96,6 +112,10 @@ const StorageList = () => {
           dispatch(logout())
           localStorage.clear()
           navigate('/login')
+        }}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+          color: theme ? 'rgb(238, 238, 238)' : 'black' 
         }}
       >
         Log Out

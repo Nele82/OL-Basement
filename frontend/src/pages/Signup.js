@@ -13,7 +13,7 @@ const Signup = () => {
   const navigate = useNavigate()
   // Redux
   const dispatch = useDispatch()
-  const sessionTimeout = useSelector(state => state.session.value)
+  const theme = useSelector(state => state.theme.value)
 
   // User sign-up function
   const signupUser = async (username, email, password) => {
@@ -62,7 +62,7 @@ const Signup = () => {
     e.preventDefault()
     // The 'username' input begins with the capital or a lowcase letter and
     // can include letters, digits, hyphens, or underscores (input length: 6-30)
-    const user_RegExp = /^[A-z][A-z0-9-_]{6,30}$/
+    const user_RegExp = /^[A-z][A-z0-9-_]{5,30}$/
     // The 'username' input must contain at least one lowercase letter, one 
     // uppercase letter, one digit (0-9) and one special character from the 
     // !@#$% set. (input length: 6-30)
@@ -86,7 +86,7 @@ const Signup = () => {
       return
     }
     if(!testUser) {
-      setError('Your username must be between 6 and 30 characters long and can include letters, digits, hyphens, or underscores')
+      setError('Your username must be between 6 and 30 characters long and may include letters, digits, hyphens, or underscores')
       return
     }
     if(!testEmail) {
@@ -117,6 +117,10 @@ const Signup = () => {
           setError(null)
         }}
         value={username}
+        style={{ 
+          backgroundColor: theme ? 'black' : null,
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Email address *</label>
       <input 
@@ -126,6 +130,10 @@ const Signup = () => {
           setError(null)
         }}
         value={email}
+        style={{ 
+          backgroundColor: theme ? 'black' : null,
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Password *</label>
       <input 
@@ -135,10 +143,22 @@ const Signup = () => {
           setError(null)
         }}
         value={password}
+        style={{ 
+          backgroundColor: theme ? 'black' : null,
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
-      <button disabled={boolean}>Sign Up</button>
+      <button 
+        disabled={boolean}
+        style={{ 
+          backgroundColor: theme ? 'black' : null,
+          color: theme ? 'rgb(255, 255, 255)' : null 
+        }}
+      >
+        Sign Up
+      </button>
       <span>* - Required field</span>
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3'><p className='fsz-8'>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p className='fsz-8'>&#9888;</p> {error}</div>}
       <div 
         id='terms'
         className='display-f'

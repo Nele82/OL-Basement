@@ -1,10 +1,12 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { deleteStorage } from '../slices/StorageSlice'
 import { deleteOneStorage } from '../hooks/useDelete'
 
 const DialogBox = ({storageId}) => {
   const dispatch = useDispatch()
+  // Redux
+  const theme = useSelector(state => state.theme.value)
 
   return (
     <div 
@@ -17,12 +19,22 @@ const DialogBox = ({storageId}) => {
             <button onClick={() => {
               deleteOneStorage(storageId)
               dispatch(deleteStorage(storageId))
-            }}>
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+            >
               Yes
             </button>
             <button onClick={() => {
               document.getElementById(`${storageId.slice(4, 11)}-delete`).style.display = 'none'
-            }}>
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+            >
               No
             </button>
         </div>

@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const [angle, setAngle] = useState('fa-solid fa-angle-down')
   const [boolean, setBoolean] = useState(false)
+  // Redux
+  const theme = useSelector(state => state.theme.value)
   
   return (
     <nav className='display-f fd-c'>
@@ -17,6 +20,10 @@ const Navbar = () => {
               }  
               window.scrollTo(0, 0)          
             }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : null 
+            }}
           >
             Home
           </Link>
@@ -29,6 +36,10 @@ const Navbar = () => {
               } 
               window.scrollTo(0, 0)           
             }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : null 
+            }}
           >
             About
           </Link>
@@ -40,6 +51,10 @@ const Navbar = () => {
                 localStorage.removeItem('singleStorage')
               }     
               window.scrollTo(0, 0)       
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : null 
             }}
           >
             Contact
@@ -64,6 +79,11 @@ const Navbar = () => {
                   document.getElementsByTagName('nav')[0].style.marginTop = '25vw'
                 }
               }
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : null,
+              boxShadow: theme ? '0px 0px 3px 1px #FFFFFF' : '0px 4px 7px -2px #9E9284'
             }}
           >
             <i className={angle}></i>

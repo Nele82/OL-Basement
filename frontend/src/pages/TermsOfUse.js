@@ -1,9 +1,12 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const TermsOfUse = () => {
-  const navigate = useNavigate()
-  
+    const navigate = useNavigate()
+    // Redux
+    const theme = useSelector(state => state.theme.value)
+
   return (
     <div 
         className='display-f fd-c'
@@ -52,7 +55,15 @@ const TermsOfUse = () => {
             avoid any potential loss of information.
         </p>
         <p>By using the OL Basement Project, you agree to these Terms and Conditions.</p>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+        <button 
+            onClick={() => navigate(-1)}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+        >
+            Go Back
+        </button>
     </div>
   )
 }

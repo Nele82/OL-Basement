@@ -1,8 +1,11 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const PrivacyPolicy = () => {
-  const navigate = useNavigate()
+    const navigate = useNavigate()
+    // Redux
+    const theme = useSelector(state => state.theme.value)
   return (
     <div 
         className='display-f fd-c'
@@ -51,7 +54,15 @@ const PrivacyPolicy = () => {
         <p>We may update this Privacy Policy from time to time. We encourage you to review it periodically.</p>
         <h3>Contact Us</h3>
         <p>If you have any questions about this Privacy Policy, please contact us at <b>ol.basement@gmail.com.</b></p>
-        <button onClick={() => navigate(-1)}>Go Back</button>
+        <button 
+            onClick={() => navigate(-1)}
+            style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+            }}
+        >
+            Go Back
+        </button>
     </div> 
   )
 }

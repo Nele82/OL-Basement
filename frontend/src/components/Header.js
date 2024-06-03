@@ -2,10 +2,13 @@ import React, { useEffect, useState } from 'react'
 import icon from '../assets/storage_icon.jpg'
 import icon1 from '../assets/storage_icon1.png'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
+import { toggleTheme } from '../slices/ThemeSlice'
 
 const Header = () => {
-  const [boolean, setBoolean] = useState(false)
-    const navigate = useNavigate()
+  const theme = useSelector(state => state.theme.value)
+  const navigate = useNavigate()
+  const dispatch = useDispatch()
 
     useEffect(()=>{
     // Changing the logo image on hover
@@ -37,7 +40,12 @@ const Header = () => {
     }, [])
 
   return (
-    <header className='display-f jc-c p-3'>
+    <header 
+      className='display-f jc-c p-3'
+      style={{ 
+        backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)'
+      }}
+    >
         <img 
             id='flip1'
             className='br-full'
@@ -57,18 +65,32 @@ const Header = () => {
         <div 
           id="theme"
           className='display-f p-1 br-lg jc-fs'
+          style={{ 
+            backgroundColor: theme ? 'rgb(255, 255, 255)' : 'grey'
+          }}
         >
+          {/* DARK THEME BUTTON */}
           <span
             className='br-full display-f jc-c ai-c'
             onClick={(e)=>{
-              setBoolean(!boolean)
-              if(boolean === false) {
+              dispatch(toggleTheme())
+              if(theme === false) {
+                // DARK
                 e.target.innerText = 'dark'
                 document.getElementById('theme').style.justifyContent = 'flex-end'
+                document.querySelector("body").style.backgroundImage = 'url("../static/media/background-dark.ff488043f3d1c1d245a2.png")'
+                document.querySelector("#root > div > div > main").style.color = 'white'
               } else {
+                // LIGHT
                 e.target.innerText = 'light'
                 document.getElementById('theme').style.justifyContent = 'flex-start'
+                document.querySelector("body").style.backgroundImage = 'url("../static/media/background.0ee4301a5feed96be7d2.png")'
+                document.querySelector("#root > div > div > main").style.color = 'black'
               }
+            }}
+            style={{ 
+              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+              color: theme ? 'rgb(255, 255, 255)' : 'grey' 
             }}
           >
             light

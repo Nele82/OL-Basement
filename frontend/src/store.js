@@ -6,6 +6,7 @@ import setItems from './slices/ItemsSlice'
 import setSessionMessage from './slices/SessionSlice'
 import setButtons from './slices/ButtonsSlice'
 import setUpdateItem from './slices/UpdateItemSlice'
+import setTheme from './slices/ThemeSlice'
 
 export default configureStore({
   reducer: {
@@ -15,6 +16,7 @@ export default configureStore({
     items: setItems,
     session: setSessionMessage,
     buttons: setButtons,
-    updatedItems: setUpdateItem
+    updatedItems: setUpdateItem,
+    theme: setTheme
   }
 })

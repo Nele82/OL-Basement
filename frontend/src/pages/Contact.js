@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { useSelector } from 'react-redux'
 
 const Contact = () => {  
   const nameRef = useRef()
@@ -10,6 +11,8 @@ const Contact = () => {
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
   const [error, setError] = useState(null)
+  // Redux
+  const theme = useSelector(state => state.theme.value)
 
   const name_RegExp = /^[A-z][A-z0-9-_ ]{3,30}$/
   // The 'name' input may contain the following:
@@ -100,6 +103,10 @@ const Contact = () => {
         onChange={(e)=>{
           setName(e.target.value)
         }}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Email</label>
       <input 
@@ -112,6 +119,10 @@ const Contact = () => {
         onChange={(e)=>{
           setEmail(e.target.value)
         }}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <label>Message</label>
       <textarea 
@@ -123,12 +134,20 @@ const Contact = () => {
         onChange={(e)=>{
           setMessage(e.target.value)
         }}
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
+          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+        }}
       />
       <input 
         type="submit" 
         value="Send" 
+        style={{ 
+          backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+          color: theme ? 'rgb(238, 238, 238)' : 'black' 
+        }}
       />
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3'><p className='fsz-8'>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p className='fsz-8'>&#9888;</p> {error}</div>}
     </form>
   )
 }
