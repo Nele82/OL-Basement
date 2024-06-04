@@ -11,11 +11,11 @@ const DialogBox = ({storageId}) => {
   return (
     <div 
       id={`${storageId.slice(4, 11)}-delete`}
-      className='delete-box p-3'
+      className='delete-box p-1'
     >
-        <h3>Attention!</h3>
+        <h4>Attention!</h4>
         <p>Confirming the deletion of this storage unit will also result in the <b>removal of all items associated with it.</b> Are you certain you wish to proceed?</p>
-        <div className='display-f'>
+        <div className='display-f jc-c'>
             <button onClick={() => {
               deleteOneStorage(storageId)
               dispatch(deleteStorage(storageId))

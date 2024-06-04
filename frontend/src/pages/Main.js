@@ -110,7 +110,7 @@ const Main = () => {
         className='display-f fr-w'
       >
         <div
-          className='col-12-xs col-9-sm col-6-md col-8-lg col-8-xl display-f fd-c'  
+          className='col-12-xs col-12-sm col-6-md col-8-lg col-8-xl display-f fd-c'  
         >
           <h4>Space calculation</h4>
           <p>App is designed to help you efficiently manage the available space in 
@@ -122,7 +122,7 @@ const Main = () => {
           </p>
         </div>
         <div
-          className='col-12-xs col-9-sm col-6-md col-8-lg col-8-xl display-f fd-c'
+          className='col-12-xs col-12-sm col-6-md col-8-lg col-8-xl display-f fd-c'
         >
           <h4>Categorization</h4>
           <p>After entering an item’s details, users can assign it to a predefined category from a dropdown menu. 

@@ -1,20 +1,19 @@
 import React from 'react'
 
-
 const About = () => {
 
   return (
       <div 
         className='app-about display-f fd-c'
       >
-        <h1 className='fsz-10'>About</h1>
+        <h1>About</h1>
         <p className='mt-2 mb-2'>
           I am Nebojša Pavlović, currently a student at the ‘CODE’ by Comtrade Coding Academy in Belgrade. This project represents the culmination 
           of my academic journey – my graduation piece. It is the product of numerous tutorials and hands-on experience with MERN applications. 
           I’ve distilled the essence of these learnings into a practical application designed to manage storage facilities. It not only tracks and 
           categorizes items but also monitors available space, ensuring efficient utilization of the facility.
         </p>
-        <h2 className='fsz-8'>The App</h2>
+        <h2>The App</h2>
         <p className='mt-2 mb-2'>
           The App allows you to enter the dimensions of your storage area and each item you store, automatically calculating the total and available space. 
           It’s like having a smart inventory system where every item has its place, categorized for easy retrieval. With the added convenience of filtering 

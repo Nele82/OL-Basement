@@ -18,9 +18,10 @@ import { timeOverHour, timeUpToHour } from './hooks/useTimer'
 import { setTimeoutMessage } from './slices/SessionSlice'
 
 function App() {
+  const tokenPresent = window.location.href.includes('token')
+  // Redux
   const user = useSelector(state => state.user.value)
   const dispatch = useDispatch()
-  const tokenPresent = window.location.href.includes('token')
 
   useEffect(()=>{
     if (JSON.parse(localStorage.getItem('user'))) {

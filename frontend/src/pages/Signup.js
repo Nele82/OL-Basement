@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from '../slices/AuthSlice'
 import { setTimeoutMessage } from '../slices/SessionSlice'
@@ -10,6 +10,7 @@ const Signup = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [boolean, setBoolean] = useState(true)
+  const signUpRef = useRef()
   const navigate = useNavigate()
   // Redux
   const dispatch = useDispatch()
@@ -103,9 +104,13 @@ const Signup = () => {
     await signupUser(username, email, password)
   }
 
+  useEffect(()=>{
+    signUpRef.current.focus()
+  }, [])
+
   return (
     <form 
-      className='signup display-f fd-c' 
+      className='signup col-12-xs col-10-sm display-f fd-c ml-a mr-a' 
       onSubmit={handleSubmit}
     >
       <h3>Sign Up</h3>
@@ -116,6 +121,7 @@ const Signup = () => {
         onClick={() => {
           setError(null)
         }}
+        ref={signUpRef}
         value={username}
         style={{ 
           backgroundColor: theme ? 'black' : null,
@@ -158,7 +164,7 @@ const Signup = () => {
         Sign Up
       </button>
       <span>* - Required field</span>
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p className='fsz-8'>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
       <div 
         id='terms'
         className='display-f'

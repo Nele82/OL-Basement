@@ -82,6 +82,7 @@ const Contact = () => {
       ref={formRef}
     >
       <h3>Your Thoughts Matter - Drop Us a Line!</h3>
+      {/* EmailJS - hidden inputs */}
       <input 
         type="hidden" 
         name="to_name"

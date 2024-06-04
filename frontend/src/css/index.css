@@ -63,7 +63,6 @@ body {
   justify-content: center;
   height: 10vw;
   border-radius: 5vw;
-  color: white;
 }
 
 .progress-bar::before {
@@ -512,4741 +511,55 @@ footer span:nth-child(1) {
     flex-grow: 0;
     width: 8.3333333333%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-2-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 16.6666666667%;
-  }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
   }
   .col-3-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 25%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-4-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 33.3333333333%;
-  }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
   }
   .col-5-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 41.6666666667%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-6-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 50%;
-  }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
   }
   .col-7-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 58.3333333333%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-8-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 66.6666666667%;
-  }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
   }
   .col-9-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 75%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-10-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 83.3333333333%;
   }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
   .col-11-xs {
     box-sizing: border-box;
     flex-grow: 0;
     width: 91.6666666667%;
-  }
-  nav {
-    margin: 25vw 0 0 0;
-    width: 100%;
-    font-size: 5vw;
-  }
-  #reveal-menu span {
-    font-size: 5vw;
-  }
-  header img {
-    width: 29vw;
-  }
-  #theme {
-    width: 18vw;
-    height: 10vw;
-    right: 3vw;
-    top: 13vw;
-  }
-  #theme span {
-    width: 8vw;
-    height: 8vw;
-    font-size: 4vw;
-    padding-bottom: 1vw;
-  }
-  footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
-  }
-  footer span:nth-child(1) {
-    font-size: 3.5vw;
-  }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
-  }
-  footer ul {
-    margin: 2vw 0 0 0;
-  }
-  footer ul li {
-    font-size: 3.5vw;
-    margin: 0 5vw 0 5vw;
-  }
-  .create-storage h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .create-storage label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .create-storage input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .create-storage button {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .update-form h3 {
-    font-size: 7vw;
-    margin: 0 0 3vw 0;
-  }
-  .update-form label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .update-form input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .update-form button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  #form-space-housing-h3 {
-    font-size: 6vw;
-    margin: 0 0 3vw 0;
-  }
-  .form-space-housing label {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
-    font-size: 4.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .space-component {
-    font-size: 4.5vw;
-  }
-  .update-items-header h4 {
-    font-size: 6vw;
-  }
-  .update-items-header i {
-    font-size: 7vw;
-  }
-  .update-items label {
-    font-size: 4.5vw;
-    margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items select {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
-  }
-  .update-items button {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw 0;
-  }
-  .update-items div {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
-    padding: 1vw;
-  }
-  .items-delete-box button {
-    font-size: 3vw;
-    padding: 1vw 3vw;
-    margin: 0 0 0 1vw;
-  }
-  .items-delete-box p {
-    font-size: 3.5vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
-  }
-  #main-page-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  #main-page-housing main span {
-    font-size: 7vw;
-  }
-  #main-page-housing main h1 {
-    font-size: 11vw;
-    margin-top: 5vw;
-  }
-  #main-page-housing main h2 {
-    font-size: 8vw;
-  }
-  #main-page-housing main p {
-    font-size: 5vw;
-    margin-top: 2vw;
-  }
-  #loggedOut {
-    margin: 4vw 0 4vw 0;
-  }
-  #loggedOut a {
-    padding: 3vw 0 3vw 0;
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
-  }
-  #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
-    margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
-  }
-  #features div {
-    margin: 4vw 0 4vw 0;
-  }
-  #features div h4 {
-    margin: 0 0 4vw 0;
-    font-size: 7vw;
-  }
-  #features div p {
-    font-size: 5vw;
-  }
-  .login {
-    margin: 60vw 0 10vw 0;
-  }
-  .login h4 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .login label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .login input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .login button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup {
-    margin: 60vw 0 10vw 0;
-  }
-  .signup h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .signup label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .signup input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .signup button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .signup span {
-    font-size: 4.5vw;
-    margin: 3vw 0 3vw 0;
-  }
-  #terms input {
-    width: 12.5vw;
-    margin: 0 3vw 0 0;
-  }
-  #terms label {
-    font-size: 5vw;
-    margin: 0 3vw 0 0;
-  }
-  .reset-form {
-    margin: 60vw 0 10vw 0;
-  }
-  .reset-form h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .reset-form label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .reset-form input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .reset-form button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .reset-form span {
-    font-size: 5vw;
-  }
-  .password-reset {
-    margin: 60vw 0 10vw 0;
-  }
-  .password-reset h3 {
-    font-size: 7vw;
-    margin: 0 0 10vw 0;
-  }
-  .password-reset label {
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
-  }
-  .password-reset input {
-    font-size: 4.5vw;
-    margin: 0 0 3vw 0;
-  }
-  .password-reset button {
-    font-size: 4.5vw;
-    margin: 6vw 0 3vw 0;
-  }
-  .password-reset span {
-    font-size: 5vw;
-  }
-  .storage-wrapper {
-    margin: 60vw 0 10vw 0;
-  }
-  .storage-wrapper h3 {
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .storage-details button {
-    font-size: 4.5vw;
-    padding: 2vw 0;
-  }
-  .storage-details span {
-    font-size: 4.5vw;
-    padding: 0.5vw 0;
-  }
-  .storage-wrapper button {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .storage-wrapper p {
-    font-size: 4.5vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .storage-details a {
-    font-size: 4.5vw;
-    margin: 2vw 0 3vw 0;
-    padding: 2vw 4vw;
-  }
-  .manage-storage-unit button {
-    padding: 2vw 6vw;
-  }
-  .single-storage-housing {
-    margin: 60vw 0 10vw 0;
-  }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .single-storage-housing a {
-    font-size: 5vw;
-    margin: 2vw 0;
-  }
-  .storage-items h3 {
-    font-size: 7vw;
-    margin: 2vw 0;
-  }
-  .filter-button-title {
-    font-size: 5vw;
-  }
-  .filter-button {
-    font-size: 4.5vw;
-  }
-  .storage-item-info span {
-    font-size: 4.5vw;
-  }
-  .storage-item-buttons i {
-    font-size: 5.5vw;
-  }
-  .app-contact-page {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-contact-page h3 {
-    width: 67.5%;
-    font-size: 7vw;
-    margin: 0 0 5vw 0;
-  }
-  .app-contact-page label {
-    font-size: 5vw;
-  }
-  .app-contact-page input {
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-contact-page textarea {
-    height: 20vw;
-    font-size: 4.5vw;
-    margin: 3vw 0;
-    padding: 2vw;
-  }
-  .app-about {
-    margin: 60vw 0 10vw 0;
-  }
-  .app-about p, .app-about ul {
-    font-size: 4.5vw;
-  }
-  #tos {
-    margin: 60vw 0 10vw 0;
-  }
-  #tos h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #tos h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #tos b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #tos p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #tos ol {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #tos button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy {
-    margin: 60vw 0 10vw 0;
-  }
-  #privacy h1 {
-    font-size: 9vw;
-    margin: 2vw 0;
-  }
-  #privacy h3 {
-    font-size: 8vw;
-    margin: 4vw 0 0 0;
-  }
-  #privacy h4 {
-    font-size: 7vw;
-    margin: 3vw 0 2vw 0;
-  }
-  #privacy b {
-    font-size: 4.5vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 0;
-  }
-  #privacy ul {
-    font-size: 4.5vw;
-    margin: 2vw 0 0 5vw;
-  }
-  #privacy button {
-    font-size: 5vw;
-    margin: 4vw 0 0 0;
   }
   .col-12-xs {
     box-sizing: border-box;
@@ -5293,6 +606,557 @@ footer span:nth-child(1) {
     font-size: 3.5vw;
     margin: 0 5vw 0 5vw;
   }
+  .storage-wrapper .create-storage h3 {
+    font-size: 7vw;
+    margin: 0 0 2vw 0;
+  }
+  .storage-wrapper .create-storage label {
+    font-size: 5.5vw;
+    margin: 0 0 2vw 0;
+  }
+  .storage-wrapper .create-storage input {
+    font-size: 5vw;
+    margin: 0 0 3vw 0;
+  }
+  .storage-wrapper .create-storage button {
+    font-size: 5vw;
+    margin: 2vw 0 2vw 0;
+  }
+  .storage-details .update-form i {
+    font-size: 8vw;
+  }
+  .storage-details .update-form h3 {
+    font-size: 7vw;
+    margin: 0 0 3vw 0;
+  }
+  .storage-details .update-form label {
+    font-size: 5.5vw;
+    margin: 0 0 1vw 0;
+  }
+  .storage-details .update-form input {
+    font-size: 5vw;
+    margin: 0 0 1vw 0;
+    padding: 2vw;
+  }
+  .storage-details .update-form button {
+    font-size: 5vw;
+    margin: 2vw 0 3vw 0;
+  }
+  .form-space-housing h4 {
+    font-size: 7vw;
+    margin: 2vw 0 2vw 0;
+  }
+  .form-space-housing label {
+    font-size: 5.5vw;
+    margin: 0 0 1vw 0;
+  }
+  .form-space-housing input {
+    font-size: 5vw;
+    margin: 0 0 1vw 0;
+    padding: 2vw;
+  }
+  .form-space-housing textarea {
+    font-size: 5vw;
+    margin: 0 0 1vw 0;
+    padding: 2vw;
+  }
+  .form-space-housing select {
+    font-size: 5vw;
+    margin: 0 0 1vw 0;
+    padding: 2vw;
+  }
+  .form-space-housing button {
+    font-size: 5vw;
+    margin: 2vw 0 3vw 0;
+  }
+  .form-space-housing p {
+    font-size: 4.5vw;
+    margin: 2vw 0;
+  }
+  .form-space-housing div span {
+    font-size: 5vw;
+  }
+  .update-items-header h4 {
+    font-size: 6vw;
+  }
+  .update-items-header i {
+    font-size: 7vw;
+  }
+  .update-items label {
+    font-size: 4.5vw;
+    margin: 0.5vw 0;
+  }
+  .update-items input {
+    font-size: 4vw;
+    margin: 0.5vw 0;
+    padding: 1vw;
+  }
+  .update-items textarea {
+    font-size: 4vw;
+    margin: 0.5vw 0;
+    padding: 1vw;
+  }
+  .update-items select {
+    font-size: 4vw;
+    margin: 0.5vw 0;
+    padding: 1vw;
+  }
+  .update-items button {
+    font-size: 4vw;
+    margin: 2vw 0 0 0;
+    padding: 1vw 0;
+  }
+  .update-items div {
+    font-size: 4vw;
+    margin: 2vw 0 0 0;
+    padding: 1vw;
+  }
+  .storage-details .delete-box h4 {
+    font-size: 6vw;
+    text-align: center;
+  }
+  .storage-details .delete-box p {
+    font-size: 4.5vw;
+    text-align: center;
+  }
+  .storage-details .delete-box div button {
+    font-size: 4vw;
+    padding: 2vw 4vw;
+  }
+  .items-delete-box button {
+    font-size: 3vw;
+    padding: 1vw 3vw;
+    margin: 0 0 0 1vw;
+  }
+  .items-delete-box p {
+    font-size: 3.5vw;
+  }
+  .storage-item-details span, .storage-item-details p {
+    font-size: 4vw;
+  }
+  #main-page-housing {
+    margin: 60vw 0 10vw 0;
+  }
+  #main-page-housing main span {
+    font-size: 7vw;
+  }
+  #main-page-housing main h1 {
+    font-size: 11vw;
+    margin-top: 5vw;
+  }
+  #main-page-housing main h2 {
+    font-size: 8vw;
+  }
+  #main-page-housing main p {
+    font-size: 5vw;
+    margin-top: 2vw;
+  }
+  #loggedOut {
+    margin: 4vw 0 4vw 0;
+  }
+  #loggedOut a {
+    padding: 3vw 0 3vw 0;
+    margin: 2vw 0 2vw 0;
+    font-size: 5vw;
+  }
+  #loggedOut div span {
+    margin: 2vw 0 2vw 0;
+    font-size: 5vw;
+  }
+  #loggedIn button, #loggedIn a {
+    padding: 3vw 0 3vw 0;
+    margin: 3vw 0 2vw 0;
+    font-size: 4.5vw;
+  }
+  #features div {
+    margin: 4vw 0 4vw 0;
+  }
+  #features div h4 {
+    margin: 0 0 4vw 0;
+    font-size: 7vw;
+  }
+  #features div p {
+    font-size: 5vw;
+  }
+  .login {
+    margin: 60vw 0 10vw 0;
+  }
+  .login h4 {
+    font-size: 7vw;
+    margin: 0 0 10vw 0;
+  }
+  .login label {
+    font-size: 5.5vw;
+    margin: 0 0 2vw 0;
+  }
+  .login input {
+    font-size: 5vw;
+    margin: 0 0 3vw 0;
+  }
+  .login button {
+    font-size: 5vw;
+    margin: 6vw 0 3vw 0;
+  }
+  .login div {
+    font-size: 5vw;
+  }
+  .login div span {
+    font-size: 10vw;
+  }
+  #forgotten-password {
+    font-size: 5vw;
+  }
+  .signup {
+    margin: 60vw 0 10vw 0;
+  }
+  .signup h3 {
+    font-size: 7vw;
+    margin: 0 0 10vw 0;
+  }
+  .signup label {
+    font-size: 5.5vw;
+    margin: 0 0 2vw 0;
+  }
+  .signup input {
+    font-size: 5vw;
+    margin: 0 0 3vw 0;
+  }
+  .signup button {
+    font-size: 5vw;
+    margin: 6vw 0 3vw 0;
+  }
+  .signup span {
+    font-size: 5vw;
+    margin: 3vw 0 3vw 0;
+  }
+  .signup div {
+    font-size: 5vw;
+  }
+  .signup div p {
+    font-size: 10vw;
+  }
+  #terms input {
+    width: 12.5vw;
+    margin: 0 3vw 0 0;
+  }
+  #terms label {
+    font-size: 5vw;
+    margin: 0 3vw 0 0;
+  }
+  .reset-form {
+    margin: 60vw 0 10vw 0;
+  }
+  .reset-form h3 {
+    font-size: 7vw;
+    text-align: center;
+    margin: 0 0 10vw 0;
+  }
+  .reset-form label {
+    font-size: 5.5vw;
+    text-align: center;
+    margin: 0 0 2vw 0;
+  }
+  .reset-form input {
+    font-size: 5vw;
+    margin: 0 0 3vw 0;
+  }
+  .reset-form button {
+    font-size: 5vw;
+    margin: 6vw 0 3vw 0;
+  }
+  .reset-form span {
+    font-size: 5vw;
+  }
+  .reset-form div {
+    font-size: 5vw;
+  }
+  .reset-form div div {
+    font-size: 10vw;
+  }
+  .password-reset {
+    margin: 60vw 0 10vw 0;
+  }
+  .password-reset h3 {
+    font-size: 7vw;
+    margin: 0 0 10vw 0;
+  }
+  .password-reset label {
+    font-size: 5vw;
+    margin: 0 0 2vw 0;
+  }
+  .password-reset input {
+    font-size: 5vw;
+    margin: 0 0 3vw 0;
+  }
+  .password-reset button {
+    font-size: 5vw;
+    margin: 6vw 0 3vw 0;
+  }
+  .password-reset div {
+    font-size: 5vw;
+  }
+  .password-reset div div {
+    font-size: 10vw;
+  }
+  .storage-wrapper {
+    margin: 60vw 0 10vw 0;
+  }
+  .storage-wrapper h3 {
+    font-size: 7vw;
+    margin: 0 0 5vw 0;
+  }
+  .storage-details button {
+    font-size: 4.5vw;
+    padding: 2vw 0;
+  }
+  .storage-details span {
+    font-size: 4.5vw;
+    padding: 0.5vw 0;
+  }
+  .storage-wrapper button {
+    font-size: 4.5vw;
+    margin: 2vw 0 3vw 0;
+  }
+  .storage-wrapper p {
+    font-size: 4.5vw;
+    margin: 2vw 0 2vw 0;
+  }
+  .storage-details a {
+    font-size: 4.5vw;
+    margin: 2vw 0 3vw 0;
+    padding: 2vw 4vw;
+  }
+  .manage-storage-unit button {
+    padding: 2vw 6vw;
+  }
+  .single-storage-housing {
+    margin: 60vw 0 10vw 0;
+  }
+  .single-storage-housing h3 {
+    width: 80%;
+    font-size: 7vw;
+    margin: 0 0 5vw 0;
+  }
+  .single-storage-housing a {
+    font-size: 5vw;
+    margin: 2vw 0;
+  }
+  .storage-items h3 {
+    font-size: 7vw;
+    margin: 2vw 0;
+  }
+  #download-csv span {
+    font-size: 5vw;
+  }
+  #download-csv a {
+    font-size: 5vw;
+  }
+  .filter-button-title {
+    font-size: 5vw;
+  }
+  .filter-button {
+    font-size: 4.5vw;
+  }
+  .storage-item-info span {
+    font-size: 4.5vw;
+  }
+  .storage-item-buttons i {
+    font-size: 5.5vw;
+  }
+  .app-contact-page {
+    margin: 60vw 0 10vw 0;
+  }
+  .app-contact-page h3 {
+    width: 67.5%;
+    font-size: 7vw;
+    margin: 0 0 5vw 0;
+  }
+  .app-contact-page label {
+    font-size: 5.5vw;
+  }
+  .app-contact-page input {
+    font-size: 5vw;
+    margin: 3vw 0;
+    padding: 2vw;
+  }
+  .app-contact-page textarea {
+    height: 20vw;
+    font-size: 5vw;
+    margin: 3vw 0;
+    padding: 2vw;
+  }
+  .app-about {
+    margin: 60vw 0 10vw 0;
+  }
+  .app-about h1 {
+    font-size: 9vw;
+  }
+  .app-about h2 {
+    font-size: 8vw;
+  }
+  .app-about p, .app-about ul {
+    font-size: 5vw;
+  }
+  #tos {
+    margin: 60vw 0 10vw 0;
+  }
+  #tos h1 {
+    font-size: 9vw;
+    margin: 2vw 0;
+  }
+  #tos h3 {
+    font-size: 8vw;
+    margin: 4vw 0 0 0;
+  }
+  #tos b {
+    font-size: 5vw;
+    margin: 0 0 0 2vw;
+  }
+  #tos p {
+    font-size: 5vw;
+    margin: 2vw 0 0 0;
+  }
+  #tos ol {
+    font-size: 5vw;
+    margin: 2vw 0 0 5vw;
+  }
+  #tos button {
+    font-size: 5vw;
+    margin: 4vw 0 0 0;
+  }
+  #privacy {
+    margin: 60vw 0 10vw 0;
+  }
+  #privacy h1 {
+    font-size: 9vw;
+    margin: 2vw 0;
+  }
+  #privacy h3 {
+    font-size: 8vw;
+    margin: 4vw 0 0 0;
+  }
+  #privacy h4 {
+    font-size: 7vw;
+    margin: 3vw 0 2vw 0;
+  }
+  #privacy b {
+    font-size: 5vw;
+    margin: 0 0 0 2vw;
+  }
+  #privacy p {
+    font-size: 5vw;
+    margin: 2vw 0 0 0;
+  }
+  #privacy ul {
+    font-size: 5vw;
+    margin: 2vw 0 0 5vw;
+  }
+  #privacy button {
+    font-size: 5vw;
+    margin: 4vw 0 0 0;
+  }
+}
+@media (min-width: 480px) {
+  .col-1-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 8.3333333333%;
+  }
+  .col-2-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 16.6666666667%;
+  }
+  .col-3-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 25%;
+  }
+  .col-4-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 33.3333333333%;
+  }
+  .col-5-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 41.6666666667%;
+  }
+  .col-6-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 50%;
+  }
+  .col-7-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 58.3333333333%;
+  }
+  .col-8-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 66.6666666667%;
+  }
+  .col-9-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 75%;
+  }
+  .col-10-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 83.3333333333%;
+  }
+  .col-11-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 91.6666666667%;
+  }
+  .col-12-sm {
+    box-sizing: border-box;
+    flex-grow: 0;
+    width: 100%;
+  }
+  nav {
+    margin: 20.25vw 0 0 0;
+    width: 100%;
+    font-size: 4vw;
+  }
+  #reveal-menu span {
+    font-size: 4vw;
+  }
+  header img {
+    width: 23vw;
+  }
+  #theme {
+    width: 15vw;
+    height: 8vw;
+    right: 3vw;
+    top: 11.5vw;
+  }
+  #theme span {
+    width: 6vw;
+    height: 6vw;
+    font-size: 3vw;
+    padding-bottom: 1vw;
+  }
+  footer {
+    margin: 15vw 0 0 0;
+    font-size: 3.5vw;
+  }
+  footer span:nth-child(1) {
+    font-size: 3vw;
+  }
+  footer span:nth-child(1) i {
+    margin: 0 0 0 2vw;
+  }
+  footer ul {
+    margin: 2vw 0 0 0;
+  }
+  footer ul li {
+    font-size: 3vw;
+    margin: 0 5vw 0 5vw;
+  }
   .create-storage h3 {
     font-size: 7vw;
     margin: 0 0 10vw 0;
@@ -5347,9 +1211,6 @@ footer span:nth-child(1) {
     font-size: 4.5vw;
     margin: 2vw 0;
   }
-  .space-component {
-    font-size: 4.5vw;
-  }
   .update-items-header h4 {
     font-size: 6vw;
   }
@@ -5385,6 +1246,12 @@ footer span:nth-child(1) {
     margin: 2vw 0 0 0;
     padding: 1vw;
   }
+  .delete-box h5 {
+    font-size: 5vw;
+  }
+  .delete-box p {
+    font-size: 5vw;
+  }
   .items-delete-box button {
     font-size: 3vw;
     padding: 1vw 3vw;
@@ -5397,27 +1264,27 @@ footer span:nth-child(1) {
     font-size: 3.5vw;
   }
   #main-page-housing {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   #main-page-housing main span {
-    font-size: 7vw;
+    font-size: 6vw;
   }
   #main-page-housing main h1 {
-    font-size: 11vw;
+    font-size: 9vw;
     margin-top: 5vw;
   }
   #main-page-housing main h2 {
-    font-size: 8vw;
+    font-size: 7vw;
   }
   #main-page-housing main p {
-    font-size: 5vw;
+    font-size: 4.5vw;
     margin-top: 2vw;
   }
   #loggedOut {
     margin: 4vw 0 4vw 0;
   }
   #loggedOut a {
-    padding: 3vw 0 3vw 0;
+    padding: 2.5vw 0;
     margin: 2vw 0 2vw 0;
     font-size: 5vw;
   }
@@ -5438,14 +1305,14 @@ footer span:nth-child(1) {
     font-size: 7vw;
   }
   #features div p {
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
   .login {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   .login h4 {
     font-size: 7vw;
-    margin: 0 0 10vw 0;
+    margin: 0 0 7vw 0;
   }
   .login label {
     font-size: 5vw;
@@ -5459,12 +1326,21 @@ footer span:nth-child(1) {
     font-size: 4.5vw;
     margin: 6vw 0 3vw 0;
   }
+  .login div {
+    font-size: 4vw;
+  }
+  .login div span {
+    font-size: 10vw;
+  }
+  #forgotten-password {
+    font-size: 4vw;
+  }
   .signup {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   .signup h3 {
     font-size: 7vw;
-    margin: 0 0 10vw 0;
+    margin: 0 0 7vw 0;
   }
   .signup label {
     font-size: 5vw;
@@ -5479,23 +1355,33 @@ footer span:nth-child(1) {
     margin: 6vw 0 3vw 0;
   }
   .signup span {
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 3vw 0 3vw 0;
   }
+  .signup div {
+    font-size: 4.5vw;
+  }
+  .signup div p {
+    font-size: 10vw;
+  }
   #terms input {
-    width: 12.5vw;
+    width: 10vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 5vw;
+    font-size: 4vw;
     margin: 0 3vw 0 0;
   }
+  .signup div {
+    font-size: 4vw;
+  }
   .reset-form {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   .reset-form h3 {
     font-size: 7vw;
-    margin: 0 0 10vw 0;
+    text-align: center;
+    margin: 0 0 7vw 0;
   }
   .reset-form label {
     font-size: 5vw;
@@ -5510,14 +1396,21 @@ footer span:nth-child(1) {
     margin: 6vw 0 3vw 0;
   }
   .reset-form span {
-    font-size: 5vw;
+    font-size: 4vw;
+  }
+  .reset-form div {
+    font-size: 4vw;
+  }
+  .reset-form div div {
+    font-size: 10vw;
   }
   .password-reset {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   .password-reset h3 {
     font-size: 7vw;
-    margin: 0 0 10vw 0;
+    text-align: center;
+    margin: 0 0 7vw 0;
   }
   .password-reset label {
     font-size: 5vw;
@@ -5531,26 +1424,33 @@ footer span:nth-child(1) {
     font-size: 4.5vw;
     margin: 6vw 0 3vw 0;
   }
-  .password-reset span {
-    font-size: 5vw;
+  .password-reset div {
+    font-size: 4vw;
+    text-align: center;
+  }
+  .password-reset div div {
+    font-size: 10vw;
   }
   .storage-wrapper {
-    margin: 60vw 0 10vw 0;
+    margin: 51vw 0 10vw 0;
   }
   .storage-wrapper h3 {
     font-size: 7vw;
     margin: 0 0 5vw 0;
+  }
+  .storage-details h3 {
+    font-size: 6vw;
   }
   .storage-details button {
     font-size: 4.5vw;
     padding: 2vw 0;
   }
   .storage-details span {
-    font-size: 4.5vw;
+    font-size: 4vw;
     padding: 0.5vw 0;
   }
   .storage-wrapper button {
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 2vw 0 3vw 0;
   }
   .storage-wrapper p {
@@ -5558,7 +1458,7 @@ footer span:nth-child(1) {
     margin: 2vw 0 2vw 0;
   }
   .storage-details a {
-    font-size: 4.5vw;
+    font-size: 4vw;
     margin: 2vw 0 3vw 0;
     padding: 2vw 4vw;
   }
@@ -5678,260 +1578,6 @@ footer span:nth-child(1) {
   #privacy button {
     font-size: 5vw;
     margin: 4vw 0 0 0;
-  }
-}
-@media (min-width: 480px) {
-  .col-1-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 8.3333333333%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-2-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 16.6666666667%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-3-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 25%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-4-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 33.3333333333%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-5-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 41.6666666667%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-6-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 50%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-7-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 58.3333333333%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-8-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 66.6666666667%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-9-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 75%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-10-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 83.3333333333%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-11-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 91.6666666667%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
-  }
-  .col-12-sm {
-    box-sizing: border-box;
-    flex-grow: 0;
-    width: 100%;
-    padding-top: 38vw;
-  }
-  header img {
-    width: 28vw;
-  }
-  #theme {
-    width: 20vw;
-    height: 9.5vw;
-    right: 3vw;
-    top: 12.5vw;
-  }
-  #theme span {
-    width: 7.5vw;
-    height: 7.5vw;
-    font-size: 3.5vw;
-    padding-bottom: 0.75vw;
   }
 }
 @media (min-width: 720px) {
@@ -6712,6 +2358,10 @@ footer span:nth-child(1) {
   margin: auto;
 }
 
+.ml-a {
+  margin-left: auto;
+}
+
 .ml-0 {
   margin-left: 0;
 }
@@ -6734,6 +2384,10 @@ footer span:nth-child(1) {
 
 .ml-5 {
   margin-left: 8vw;
+}
+
+.mr-a {
+  margin-right: auto;
 }
 
 .mr-0 {
@@ -6870,46 +2524,6 @@ footer span:nth-child(1) {
 
 .display-i-b {
   display: inline-block;
-}
-
-.fsz-1 {
-  font-size: 1vw;
-}
-
-.fsz-2 {
-  font-size: 2vw;
-}
-
-.fsz-3 {
-  font-size: 3vw;
-}
-
-.fsz-4 {
-  font-size: 4vw;
-}
-
-.fsz-5 {
-  font-size: 5vw;
-}
-
-.fsz-6 {
-  font-size: 6vw;
-}
-
-.fsz-7 {
-  font-size: 7vw;
-}
-
-.fsz-8 {
-  font-size: 8vw;
-}
-
-.fsz-9 {
-  font-size: 9vw;
-}
-
-.fsz-10 {
-  font-size: 10vw;
 }
 
 .br {

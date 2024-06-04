@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -6,6 +6,7 @@ const PasswordReset = () => {
   const [email, setEmail] = useState('')
   const [error, setError] = useState('')
   const [notification, setNotification] = useState('')
+  const requestRef = useRef()
 
   const navigate = useNavigate()
 
@@ -50,9 +51,13 @@ const PasswordReset = () => {
     }
   }
 
+  useEffect(()=>{
+    requestRef.current.focus()
+  }, [])
+
   return (
         <form 
-          className="reset-form display-f fd-c"
+          className="reset-form col-12-xs col-10-sm display-f fd-c ml-a mr-a"
           onSubmit={handleSubmit}
         >
           <h3>Password Reset Request Form:</h3>
@@ -64,6 +69,7 @@ const PasswordReset = () => {
               setError(null)
               setNotification(null)
             }}
+            ref={requestRef}
             value={email}
             style={{ 
               backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
@@ -73,13 +79,13 @@ const PasswordReset = () => {
           <button 
             type="submit"
             style={{ 
-              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
-              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
             }}
           >
             Submit
           </button>
-          {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3 fsz-5' style={{border: theme ? '2px dotted white' : null}}><div className='fsz-10'>&#9888;</div> {error}</div>}
+          {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
           {notification && <span>{notification}</span>}
           <button
             onClick={()=>{
@@ -87,8 +93,8 @@ const PasswordReset = () => {
               window.scrollTo(0, 0)
             }}
             style={{ 
-              backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
-              color: theme ? 'rgb(255, 255, 255)' : 'black' 
+              backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+              color: theme ? 'rgb(238, 238, 238)' : 'black' 
             }}
           >
             Back to Login

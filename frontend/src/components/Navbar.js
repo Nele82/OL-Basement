@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 
@@ -7,6 +7,26 @@ const Navbar = () => {
   const [boolean, setBoolean] = useState(false)
   // Redux
   const theme = useSelector(state => state.theme.value)
+
+  window.addEventListener('resize', ()=>{
+    // Navbar position
+    if (angle === 'fa-solid fa-angle-up') {
+      if (window.innerWidth < 480) {
+        document.getElementsByTagName('nav')[0].style.marginTop = '39vw'
+      }
+      if (window.innerWidth > 480 && window.innerWidth <= 720) {
+        document.getElementsByTagName('nav')[0].style.marginTop = '33vw'
+      }
+    }
+    if (angle === 'fa-solid fa-angle-down') {
+      if (window.innerWidth < 480) {
+        document.getElementsByTagName('nav')[0].style.marginTop = '25vw'
+      }
+      if (window.innerWidth > 480 && window.innerWidth <= 720) {
+        document.getElementsByTagName('nav')[0].style.marginTop = '20.25vw'
+      }
+    }
+  })
   
   return (
     <nav className='display-f fd-c'>
@@ -73,10 +93,16 @@ const Navbar = () => {
                 if (window.innerWidth < 480) {
                   document.getElementsByTagName('nav')[0].style.marginTop = '39vw'
                 }
+                if (window.innerWidth > 480 && window.innerWidth <= 720) {
+                  document.getElementsByTagName('nav')[0].style.marginTop = '33vw'
+                }
               } else {
                 setAngle('fa-solid fa-angle-down')
                 if (window.innerWidth < 480) {
                   document.getElementsByTagName('nav')[0].style.marginTop = '25vw'
+                }
+                if (window.innerWidth > 480 && window.innerWidth <= 720) {
+                  document.getElementsByTagName('nav')[0].style.marginTop = '20.25vw'
                 }
               }
             }}

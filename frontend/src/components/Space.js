@@ -26,7 +26,7 @@ const Space = ({array, storeSpace}) => {
     <div className='space-component'>
         {basementSpace && <span>Storage/basement space: <b>{basementSpace} m3</b></span>}
         <span>Available space: <b>{(basementSpace - (occupiedSpaceCubic(array))).toFixed(4)} m3</b></span>
-        {/* Progress bar */}
+        {/* PROGRESS BAR */}
           <div 
             className="progress-bar"
             style={{'--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}}

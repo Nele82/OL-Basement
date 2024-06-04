@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import icon from '../assets/storage_icon.jpg'
 import icon1 from '../assets/storage_icon1.png'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleTheme } from '../slices/ThemeSlice'
+import backgroundImage from '../assets/background.png'
+import backgroundImageDark from '../assets/background-dark.png'
 
 const Header = () => {
   const theme = useSelector(state => state.theme.value)
@@ -78,13 +80,13 @@ const Header = () => {
                 // DARK
                 e.target.innerText = 'dark'
                 document.getElementById('theme').style.justifyContent = 'flex-end'
-                document.querySelector("body").style.backgroundImage = 'url("../static/media/background-dark.ff488043f3d1c1d245a2.png")'
+                document.body.style.backgroundImage = `url(${backgroundImageDark})` 
                 document.querySelector("#root > div > div > main").style.color = 'white'
               } else {
                 // LIGHT
                 e.target.innerText = 'light'
                 document.getElementById('theme').style.justifyContent = 'flex-start'
-                document.querySelector("body").style.backgroundImage = 'url("../static/media/background.0ee4301a5feed96be7d2.png")'
+                document.body.style.backgroundImage = `url(${backgroundImage})`   
                 document.querySelector("#root > div > div > main").style.color = 'black'
               }
             }}

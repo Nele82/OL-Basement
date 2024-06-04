@@ -46,10 +46,11 @@ const StorageList = () => {
     }, [])
 
   return (
-    <div className='storage-wrapper display-f fd-c'>
+    <div className='storage-wrapper col-11-sm display-f fd-c ml-a mr-a'>
       <h3>Basement / storage units (User: {user.username})</h3>
       {storages.length === 0 && <p>There are no storage units saved for {user.username}</p>}
       {storages && storages.map((storage)=>(
+        // STORAGE UNITS
         <div 
           id={storage._id.slice(4, 11)}
           className="storage-details display-f fd-c jc-c mb-3" 
@@ -103,10 +104,12 @@ const StorageList = () => {
               View Storage Items
             </Link>
           </div>
+          {/* DELETE DIALOG BOX & STORAGE UNIT'S UPDATE FORM */}
           <DialogBox storageId={storage._id} />
           <UpdateForm storageId={storage._id} />
         </div>
       ))}
+      {/* STORAGE INPUT */}
       <StorageInput />
       <button onClick={() => {
           dispatch(logout())

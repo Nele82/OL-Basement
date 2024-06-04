@@ -35,7 +35,7 @@ const StorageOverview = () => {
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
-          if (arr[i].children[0].children[0].children[1].innerText.split(' ')[1] !== category) {
+          if (arr[i].children[0].children[0].children[1].innerText.split(': ')[1] !== category) {
             arr[i].style.display = 'none'
           } else {
             arr[i].style.display = 'flex'
@@ -125,7 +125,7 @@ const StorageOverview = () => {
             id="download-csv"
             className='mt-2 mb-2'
           >
-            <span className='fsz-5'>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
+            <span>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
             <CSVLink 
               data={csvGenerate(items)}
               style={{ 

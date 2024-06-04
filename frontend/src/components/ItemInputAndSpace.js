@@ -133,18 +133,19 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
         {basementSpace && <span>Storage/basement space: <b>{basementSpace} m3</b></span>}
         <span>Available space: <b>{(basementSpace - (occupiedSpaceCubic(array))).toFixed(4)} m3</b></span>
         <span>Dimensions: <b>L</b> - {dimensions.length} m / <b>W</b> - {dimensions.width} m / <b>H</b> - {dimensions.height} m</span>
-        {/* Progress bar */}
+        {/* P R O G R E S S  B A R */}
           <div 
             className="progress-bar mt-2 mb-2"
             style={{
               '--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array)),
               backgroundColor: theme ? 'rgb(255, 255, 255)' : 'black',
+              color: theme ? 'black' : 'rgb(255, 255, 255)',
             }}
           >
             <span id='single-storage-avail'>{`Used space: ${occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}%`}</span>
           </div>
       </div>
-      <h3 id='form-space-housing-h3'>Add New Item</h3>
+      <h4>Add New Item</h4>
       {/* I N P U T */}
       <form 
         className='items-form display-f fd-c'

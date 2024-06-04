@@ -84,7 +84,7 @@ const Login = () => {
   
   return (
     <form 
-      className='login display-f fd-c' 
+      className='login col-12-xs col-10-sm display-f fd-c ml-a mr-a' 
       onSubmit={handleSubmit}
     >
       <h4>Log In</h4>
@@ -122,13 +122,13 @@ const Login = () => {
       <button 
         disabled={loading}
         style={{ 
-          backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)',
-          color: theme ? 'rgb(255, 255, 255)' : 'black' 
+          backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+          color: theme ? 'rgb(238, 238, 238)' : 'black' 
         }}
       >
         Log in
       </button>
-      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><span className='fsz-10'>&#9888;</span> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><span>&#9888;</span> {error}</div>}
       <span 
         id='forgotten-password'
         onClick={()=>{
