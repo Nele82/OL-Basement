@@ -1411,94 +1411,114 @@ footer span:nth-child(1) {
     text-align: center;
     padding: 1vw;
   }
-  .progress-bar {
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 2vw 0;
+  }
+  #storage-overview-upper .form-space-housing .space-component span {
+    font-size: 4.5vw;
+  }
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
     height: 8vw;
   }
-  .progress-bar::before {
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
     left: 1vw;
     top: 1vw;
     bottom: 1vw;
     width: calc(var(--width, 0) * 1% + 6vw);
     max-width: calc(100% - 2vw);
   }
-  .items-form h4 {
-    font-size: 7vw;
-    margin: 2vw 0 2vw 0;
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 2vw 0;
   }
-  .form-space-housing label {
+  #storage-overview-upper .form-space-housing .items-form h4 {
     font-size: 5.5vw;
-    margin: 0 0 1vw 0;
   }
-  .form-space-housing input {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing textarea {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing select {
-    font-size: 5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
-  }
-  .form-space-housing button {
-    font-size: 5vw;
-    margin: 2vw 0 3vw 0;
-  }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
-  }
-  .form-space-housing div span {
-    font-size: 5vw;
-    text-align: left;
-  }
-  .form-space-housing div {
-    font-size: 5vw;
-    text-align: center;
-  }
-  .form-space-housing div div {
-    font-size: 10vw;
-  }
-  .update-items-header h4 {
-    font-size: 5vw;
-    text-align: center;
-  }
-  .update-items-header i {
-    font-size: 6vw;
-  }
-  .update-items label {
+  #storage-overview-upper .form-space-housing .items-form label {
     font-size: 4.5vw;
     margin: 0.5vw 0;
   }
-  .update-items input {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: 4.5vw;
+    margin: 0;
+    padding: 1vw 0 1vw 1vw;
   }
-  .update-items textarea {
-    font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: 4.5vw;
+    margin: 0;
+    padding: 1vw 0 1vw 1vw;
   }
-  .update-items select {
+  #storage-overview-upper .form-space-housing .items-form select {
     font-size: 4vw;
-    margin: 0.5vw 0;
-    padding: 1vw;
+    margin: 0;
+    padding: 1vw 0 1vw 1vw;
   }
-  .update-items button {
-    font-size: 4vw;
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: 4.5vw;
+    margin: 3vw 0 0 0;
+    padding: 1vw 0 1vw 1vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form div {
+    font-size: 4.5vw;
+    text-align: center;
+    padding: 1vw;
+    margin: 3vw 0 0 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: 9vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
     margin: 2vw 0 0 0;
-    padding: 1vw 0;
+    padding: 2vw 2vw;
   }
-  .update-items div {
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header {
+    margin: 0 0 0.5vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
     font-size: 4.5vw;
     text-align: center;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
+    font-size: 5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
+    font-size: 3.5vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description {
     margin: 2vw 0 0 0;
-    padding: 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
+    font-size: 3.5vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
+    font-size: 3.5vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
+    font-size: 3.5vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
+    font-size: 3.5vw;
+    text-align: center;
+    margin: 0.5vw 0;
+    padding: 0;
   }
   .storage-details .delete-box {
     margin: 3vw 0 1vw 0;
@@ -1517,17 +1537,44 @@ footer span:nth-child(1) {
     font-size: 4.5vw;
     padding: 1vw 0;
   }
-  .storage-item .items-delete-box p {
-    font-size: 3.5vw;
-    margin: auto auto;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
+    margin: 0.5vw 0;
+    padding: 0.5vw 1vw;
   }
-  .items-delete-box button {
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
+    font-size: 3.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
+    margin: 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
     font-size: 3vw;
-    padding: 1vw 2vw;
-    margin: 0 0 0 1vw;
+    padding: 0.5vw 5vw;
+    margin: 0 1vw;
   }
-  .storage-item-details span, .storage-item-details p {
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: 0.5vw 0;
+    padding: 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0.5vw 0;
+    padding: 0 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
     font-size: 3.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: 0;
+    padding: 0;
+    font-size: 3.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: 3.5vw;
+    margin: 0 1vw;
+    padding: 0;
   }
   #main-page-housing {
     margin: 48vw 0 10vw 0;
@@ -1743,6 +1790,83 @@ footer span:nth-child(1) {
     font-size: 4.5vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
+  }
+  .single-storage-housing #storage-overview-upper {
+    margin: 48vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 80%;
+    margin: 0 auto 5vw auto;
+    font-size: 6vw;
+    text-align: center;
+  }
+  .single-storage-housing #storage-overview-upper a {
+    font-size: 4.5vw;
+    margin: 1vw 0 0 0;
+    padding: 1vw 0 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower {
+    margin: 5vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: 5.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower p {
+    font-size: 4.5vw;
+    margin: 3vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group {
+    margin: 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
+    font-size: 4.5vw;
+    margin: 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: 0 0 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: 4.5vw;
+    margin: 0 1vw 1vw 0;
+    padding: 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 75vw;
+    margin: 1vw 0;
+    padding: 2vw 2vw;
+    flex-direction: column;
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 4vw 0;
+    padding: 2vw 2vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: 1vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
+    font-size: 5.5vw;
+    margin: 0 2vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
+    font-size: 4.5vw;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: 2vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv span {
+    font-size: 4.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: 4.5vw;
+    margin: 2vw 0 0 0;
+    padding: 1vw 0 1vw 1vw;
   }
   .app-contact-page {
     margin: 48vw 0 10vw 0;
@@ -2017,56 +2141,60 @@ footer span:nth-child(1) {
     text-align: center;
     padding: 1vw;
   }
-  .form-space-housing div span {
-    font-size: 3vw;
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 2vw 0;
   }
-  .progress-bar {
-    height: 5vw;
-  }
-  .progress-bar::before {
-    left: 0.75vw;
-    top: 0.75vw;
-    bottom: 0.75vw;
-    width: calc(var(--width, 0) * 1% + 3.5vw);
-    max-width: calc(100% - 1.5vw);
-  }
-  .items-form h4 {
-    font-size: 6vw;
-    margin: 2vw 0 2vw 0;
-  }
-  .form-space-housing label {
-    font-size: 4vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing input {
+  #storage-overview-upper .form-space-housing .space-component span {
     font-size: 3.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
   }
-  .form-space-housing textarea {
-    font-size: 3.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
+    height: 6vw;
   }
-  .form-space-housing select {
-    font-size: 3.5vw;
-    margin: 0 0 1vw 0;
-    padding: 2vw;
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
+    left: 1vw;
+    top: 1vw;
+    bottom: 1vw;
+    width: calc(var(--width, 0) * 1% + 4vw);
+    max-width: calc(100% - 2vw);
   }
-  .form-space-housing button {
-    font-size: 3.5vw;
-    margin: 2vw 0 2vw 0;
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 2vw 0;
   }
-  .form-space-housing p {
+  #storage-overview-upper .form-space-housing .items-form h4 {
     font-size: 4.5vw;
-    margin: 2vw 0;
   }
-  .form-space-housing div {
+  #storage-overview-upper .form-space-housing .items-form label {
+    font-size: 3.5vw;
+    margin: 0.25vw 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form select {
+    font-size: 3.5vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: 3.5vw;
+    margin: 2vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form div {
     font-size: 3.5vw;
     text-align: center;
+    padding: 1vw;
+    margin: 3vw 0 0 0;
   }
-  .form-space-housing div div {
-    font-size: 8vw;
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: 7vw;
   }
   .update-items-header h4 {
     font-size: 4vw;
@@ -2130,9 +2258,6 @@ footer span:nth-child(1) {
     font-size: 3vw;
     padding: 1vw 2vw;
     margin: 0 0 0 1vw;
-  }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
   }
   #main-page-housing {
     margin: 32vw 0 0 0;
@@ -2346,50 +2471,83 @@ footer span:nth-child(1) {
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
-  .single-storage-housing {
+  .single-storage-housing #storage-overview-upper {
     margin: 32vw 0 0 0;
   }
-  .single-storage-housing h3 {
-    width: 80%;
-    font-size: 6vw;
-    margin: 0 0 5vw 0;
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 70%;
+    margin: 0 auto 5vw auto;
+    font-size: 5vw;
+    text-align: center;
   }
-  .single-storage-housing a {
+  .single-storage-housing #storage-overview-upper a {
     font-size: 3.5vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower {
+    margin: 3vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: 4.5vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower p {
+    font-size: 4.5vw;
+    margin: 3vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
   }
-  .storage-items h3 {
-    font-size: 6vw;
-    margin: 2vw 0;
-  }
-  #download-csv span {
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
     font-size: 4vw;
+    margin: 0.5vw 0;
   }
-  #download-csv a {
-    font-size: 3.5vw;
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: 1vw 0 1vw 0;
   }
-  .single-storage-housing p {
-    font-size: 4vw;
-    margin: 6vw 0 0 0;
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: 3.25vw;
+    margin: 0 1vw 1vw 0;
+    padding: 1vw 1vw;
+    border-radius: 2vw;
   }
-  .filter-button-title {
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 50vw;
+    margin: 1vw 0;
+    padding: 2vw 2vw;
+    flex-direction: column;
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 3vw 0;
+    padding: 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: 1vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
     font-size: 4.5vw;
+    margin: 0 2vw;
   }
-  .filter-button {
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
     font-size: 3.5vw;
   }
-  .storage-item-info span {
-    font-size: 3.5vw;
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: 2vw 0 0 0;
   }
-  .storage-item-buttons i {
-    font-size: 4.5vw;
-  }
-  .description-section p {
+  .single-storage-housing #storage-overview-lower #download-csv span {
     font-size: 3.5vw;
     margin: 0;
   }
-  .storage-item-details span {
-    font-size: 3vw;
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: 3.5vw;
+    margin: 1vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
   }
   .app-contact-page {
     margin: 32vw 0 0 0;
