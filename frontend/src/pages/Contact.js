@@ -77,7 +77,7 @@ const Contact = () => {
   return (
     <form 
       id='app-contact-form'
-      className='app-contact-page display-f fd-c'
+      className='app-contact-page col-12-xs col-10-sm col-11-md col-9-lg col-5-xl display-f fd-c ml-a mr-a'
       onSubmit={sendEmail}
       ref={formRef}
     >
@@ -141,6 +141,8 @@ const Contact = () => {
         }}
       />
       <input 
+        id='contact-ol'
+        className='col-6-xl'
         type="submit" 
         value="Send" 
         style={{ 
@@ -148,7 +150,7 @@ const Contact = () => {
           color: theme ? 'rgb(238, 238, 238)' : 'black' 
         }}
       />
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p className='fsz-8'>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
     </form>
   )
 }

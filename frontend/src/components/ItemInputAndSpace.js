@@ -127,15 +127,15 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
 }, [storeSpace, array])
 
   return (
-    <div className="form-space-housing display-f fd-c">
+    <div className='form-space-housing display-f fd-c'>
       {/* S T O R A G E  D E T A I L S  &  S P A C E */}
-      <div className='space-component display-f fd-c mt-1'>
+      <div className='space-component display-f fd-c'>
         {basementSpace && <span>Storage/basement space: <b>{basementSpace} m3</b></span>}
         <span>Available space: <b>{(basementSpace - (occupiedSpaceCubic(array))).toFixed(4)} m3</b></span>
         <span>Dimensions: <b>L</b> - {dimensions.length} m / <b>W</b> - {dimensions.width} m / <b>H</b> - {dimensions.height} m</span>
         {/* P R O G R E S S  B A R */}
           <div 
-            className="progress-bar mt-2 mb-2"
+            className="progress-bar mt-1 mb-1"
             style={{
               '--width': occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array)),
               backgroundColor: theme ? 'rgb(255, 255, 255)' : 'black',
@@ -145,12 +145,12 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
             <span id='single-storage-avail'>{`Used space: ${occupiedSpacePercentage(basementSpace, occupiedSpaceCubic(array))}%`}</span>
           </div>
       </div>
-      <h4>Add New Item</h4>
       {/* I N P U T */}
       <form 
         className='items-form display-f fd-c'
         onSubmit={handleSubmit}
       >
+        <h4>Add New Item</h4>
         <label>Item title:</label>
         <input 
           type="text" 
@@ -253,7 +253,7 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
         >
           Add Item
         </button>
-        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><span className='fsz-10'>&#9888;</span> {error}</div>}
+        {error && <div className='display-f fd-c ai-c bd-black' style={{border: theme ? '2px dotted white' : null}}><span>&#9888;</span> {error}</div>}
       </form>
     </div>
   )

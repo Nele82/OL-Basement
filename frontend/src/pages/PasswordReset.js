@@ -69,7 +69,7 @@ const PasswordReset = () => {
 
   return (
     <form 
-        className='password-reset col-12-xs col-10-sm display-f fd-c ml-a mr-a'
+        className='password-reset col-12-xs col-10-sm col-11-md col-9-lg col-5-xl display-f fd-c ml-a mr-a'
         onSubmit={handleSubmit}
     >
         <h3>Set New Password:</h3>
@@ -117,7 +117,7 @@ const PasswordReset = () => {
         >
             Submit
         </button>
-        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
+        {error && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
         {success && <span>{success}</span>}
     </form>
   )

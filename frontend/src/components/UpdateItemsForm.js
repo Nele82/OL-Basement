@@ -97,10 +97,11 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
   return (
     <form 
         id={`${itemId.slice(4, 11)}-update-items`}
-        className='update-items fd-c p-3 mt-2'
+        className='update-items fd-c'
         onSubmit={handleSubmit}
     >
-        <div className="update-items-header display-f ai-c">
+      {/* UPDATE ITEM - HEADER */}
+        <div className="update-items-header display-f ai-c jc-c">
           <h4>Item "{itemName}" - Update Form</h4>
           <i 
               className="fa-regular fa-rectangle-xmark display-f jc-c"
@@ -110,8 +111,9 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
           > 
           </i>
         </div>
+        {/* UPDATE ITEM - LABELS & INPUT FIELDS */}
         <div className="update-items-dimensions display-f fr-w">
-          <label>New Item title:</label>
+          <label className='display-f ai-c jc-fs'>New Item title:</label>
           <input 
               type="text" 
               id={`${itemId.slice(4, 11)}-item-title`}
@@ -122,7 +124,7 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
               }}
               value={itemTitle}
           />
-          <label>New Item length (cm):</label>
+          <label className='display-f ai-c jc-fs'>New Item length (cm):</label>
           <input 
               type="text" 
               id={`${itemId.slice(4, 11)}-item-length`}
@@ -133,7 +135,7 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
               }}
               value={length}
           />
-          <label>New Item width (cm):</label>
+          <label className='display-f ai-c jc-fs'>New Item width (cm):</label>
           <input 
               type="text" 
               id={`${itemId.slice(4, 11)}-item-width`}
@@ -144,7 +146,7 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
               }}
               value={width}
           />
-          <label>New Item height (cm):</label>
+          <label className='display-f ai-c jc-fs'>New Item height (cm):</label>
           <input 
               type="text" 
               id={`${itemId.slice(4, 11)}-item-height`}
@@ -156,42 +158,48 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
               value={height}
           />
         </div>
-        <label>New Item Description:</label>
-        <textarea 
-            id={`${itemId.slice(4, 11)}-item-description`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemDescription(e.target.value))}
-            onClick = {() => {
-              setError(null)
-            }}
-            value={description}
-        />
-        <label>New Item Category:</label>
-        <select 
-            id={`${itemId.slice(4, 11)}-item-category`}
-            className='item-update'
-            onChange={(e)=> dispatch(updateItemCategory(e.target.value))}
-            onClick = {() => {
-              setError(null)
-            }}
-            value={category}
-        >
-          <option value=""></option>
-          <option value="Chemicals">Chemicals</option>
-          <option value="Cleaning">Cleaning Supplies</option>
-          <option value="Electronics">Electronics</option>
-          <option value="Fabrics">Fabrics / Seasonal Clothing</option>
-          <option value="Food & drinks">Food / Beverages</option>
-          <option value="Metals">Metals</option>
-          <option value="Machines, appliances & other equipment">Machines, appliances & other equipment</option>
-          <option value="Documents & Books">Papers, Records & Books</option>
-          <option value="Memorabilia">Photographs and Memorabilia</option>
-          <option value="Sports">Sports Equipment</option>
-          <option value="Tools & hardware">Tools and Hardware</option>
-          <option value="Wood / Furniture">Wood / Furniture</option>
-          <option value="Other">Other</option>
-        </select>
-        <button
+        {/* TEXTAREA, SELECT ELEMENT & BUTTONS */}
+        <div className="update-item-description display-f fd-c">
+          <label>
+            New Item Description:
+          </label>
+          <textarea 
+              id={`${itemId.slice(4, 11)}-item-description`}
+              className='item-update'
+              onChange={(e)=> dispatch(updateItemDescription(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={description}
+          />
+          <label>
+            New Item Category:
+          </label>
+          <select 
+              id={`${itemId.slice(4, 11)}-item-category`}
+              className='item-update col-12-xl'
+              onChange={(e)=> dispatch(updateItemCategory(e.target.value))}
+              onClick = {() => {
+                setError(null)
+              }}
+              value={category}
+          >
+            <option value=""></option>
+            <option value="Chemicals">Chemicals</option>
+            <option value="Cleaning">Cleaning Supplies</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fabrics">Fabrics / Seasonal Clothing</option>
+            <option value="Food & drinks">Food / Beverages</option>
+            <option value="Metals">Metals</option>
+            <option value="Machines, appliances & other equipment">Machines, appliances & other equipment</option>
+            <option value="Documents & Books">Papers, Records & Books</option>
+            <option value="Memorabilia">Photographs and Memorabilia</option>
+            <option value="Sports">Sports Equipment</option>
+            <option value="Tools & hardware">Tools and Hardware</option>
+            <option value="Wood / Furniture">Wood / Furniture</option>
+            <option value="Other">Other</option>
+          </select>
+          <button
           onClick={()=>{
             dispatch(updateItemTitle(''))
             dispatch(updateItemLength(''))
@@ -200,16 +208,18 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
             dispatch(updateItemDescription(''))
             dispatch(updateItemCategory(''))
           }}
-        >
-          Clear All Fields
-        </button>
-        <button 
-            type="submit"
-        >
-            Update storage details
-        </button>
-        {error && <div>{error}</div>}
-        {success && <div>{success}</div>}
+          >
+            Clear All Fields
+          </button>
+          <button 
+              type="submit"
+          >
+              Update storage details
+          </button>
+        </div>
+        {/* ERROR & SUCCESS MESSAGE */}
+        {error && <div><b>ATTENTION! </b>{error}</div>}
+        {success && <div><b>SUCCESS! </b>{success}</div>}
     </form>
   )
 }

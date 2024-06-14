@@ -56,6 +56,7 @@ const TermsOfUse = () => {
         </p>
         <p>By using the OL Basement Project, you agree to these Terms and Conditions.</p>
         <button 
+            className='col-9-lg'
             onClick={() => navigate(-1)}
             style={{ 
                 backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',

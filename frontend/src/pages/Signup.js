@@ -110,7 +110,7 @@ const Signup = () => {
 
   return (
     <form 
-      className='signup col-12-xs col-10-sm display-f fd-c ml-a mr-a' 
+      className='signup col-12-xs col-10-sm col-11-md col-9-lg col-5-xl display-f fd-c ml-a mr-a' 
       onSubmit={handleSubmit}
     >
       <h3>Sign Up</h3>
@@ -164,7 +164,7 @@ const Signup = () => {
         Sign Up
       </button>
       <span>* - Required field</span>
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
       <div 
         id='terms'
         className='display-f'

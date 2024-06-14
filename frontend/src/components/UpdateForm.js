@@ -73,13 +73,16 @@ const UpdateForm = ({storageId}) => {
   return (
     <form 
         id={`${storageId.slice(4, 11)}-update`}
-        className='update-form fd-c p-2'
+        className='update-form fd-c p-1'
         onSubmit={handleSubmit}
+        style={{ 
+            backgroundColor: theme ? 'black' : 'white'
+        }}
     >
-        <div className="storage-unit-header-house display-f">
-            <h3>Update Form</h3>
+        <div className="storage-unit-header-house display-f jc-c ai-c">
+            <h3 className="display-f jc-c">Update Form</h3>
             <i
-                className="fa-regular fa-rectangle-xmark"
+                className="fa-regular fa-rectangle-xmark display-f jc-c"
                 onClick={()=>{
                     document.getElementById(`${storageId.slice(4, 11)}-update`).style.display = 'none'
                 }}
@@ -163,8 +166,8 @@ const UpdateForm = ({storageId}) => {
         >
             Update
         </button>
-        {error && <div>{error}</div>}
-        {success && <div>{success}</div>}
+        {error && <div><b>ATTENTION! </b>{error}</div>}
+        {success && <div><b>SUCCESS! </b>{success}</div>}
     </form>
   )
 }

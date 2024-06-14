@@ -35,7 +35,7 @@ const StorageOverview = () => {
         }
       } else {
         for (let i = 0; i < arr.length; i++) {
-          if (arr[i].children[0].children[0].children[1].innerText.split(': ')[1] !== category) {
+          if (arr[i].children[0].children[4].children[1].innerText.split(': ')[1] !== category) {
             arr[i].style.display = 'none'
           } else {
             arr[i].style.display = 'flex'
@@ -101,13 +101,38 @@ const StorageOverview = () => {
         if (local) {
           fetchItems()
         }
-    }, [])
 
+        // Changes main DIV's layout on resize
+        const changeLayout = () => {
+          if (window.innerWidth > 1199) {
+            document.getElementsByClassName('single-storage-housing')[0].style.flexDirection = 'row'
+          } else {
+            document.getElementsByClassName('single-storage-housing')[0].style.flexDirection = 'column'
+          }
+        }
+
+        window.addEventListener('resize', changeLayout)
+
+        // Cleanup
+        return () => {
+          window.removeEventListener('resize', changeLayout)
+        }
+    }, [])
+    
   return (
-    <div className="single-storage-housing display-f fd-c">
-        <h3>Storage / basement unit: "{title}"</h3>
-        {/* I N P U T  &  S P A C E */}
-        {local && items && <ItemInputAndSpace storageId={local.id} storeSpace={local.space} array={items} dimensions={local.dimensions}/>}
+    <div className={window.innerWidth > 1199 ? "single-storage-housing display-f fd-r" : "single-storage-housing display-f fd-c"}>
+
+        {/* U P P E R */}
+
+        <div 
+          id="storage-overview-upper"
+          className='display-f fd-c col-12-xs col-5-xl ml-a mr-a'
+        >
+          {/* TITLE */}
+          <h3>Storage / basement unit: "{title}"</h3>
+          {/* STORAGE UNIT INFO & INPUT FORM */}
+          {local && items && <ItemInputAndSpace storageId={local.id} storeSpace={local.space} array={items} dimensions={local.dimensions}/>}
+          {/* BACK TO STORAGES */}
           <Link 
             to='/storage-list'
             onClick={() => window.scrollTo(0, 0)}
@@ -118,26 +143,20 @@ const StorageOverview = () => {
           >
             Back to storage(s)
           </Link>
-        <div className='storage-items'>
-        <h3>Items:</h3>
-        {/* CSV GENERATOR */}
+        </div> 
+
+        {/* L O W E R */}
+
         <div 
-            id="download-csv"
-            className='mt-2 mb-2'
-          >
-            <span>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
-            <CSVLink 
-              data={csvGenerate(items)}
-              style={{ 
-                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
-                color: theme ? 'rgb(238, 238, 238)' : 'black' 
-              }}
-            >
-              Download CSV
-            </CSVLink>
-          </div>
-          {items.length === 0 && <p>There are no items stored in this storage unit</p>}
-          {/* BUTTONS GROUP */}
+          id="storage-overview-lower"
+          className='display-f fd-c col-5-xl ml-a mr-a'
+        >
+          {/* TITLE*/}
+          <h3>Items:</h3>
+          {/* NO ITEMS MESSAGE */}
+          {items.length === 0 && <p><b>There are no items stored in this storage unit.</b></p>}
+          {/* BUTTONS */}
+          {items.length > 0 && 
           <div className="buttons-group display-f fd-c">
             {items.length > 0 &&
               <h4 
@@ -149,7 +168,7 @@ const StorageOverview = () => {
             <div className="filter-buttons display-f fr-w">
               {items.length > 0 && 
                 <span 
-                  className="filter-button mr-2 mb-2 pl-2 pr-2 pt-1 pb-1" 
+                  className="filter-button display-f jc-c ai-c" 
                   onClick={(e)=> {
                     filterElements(document.getElementsByClassName('items-group')[0].children, e.target.innerText)
                   }}
@@ -162,7 +181,7 @@ const StorageOverview = () => {
               }
               {buttons && buttons.map((btn, i) => (   
                   <span 
-                    className="filter-button mr-2 mb-2 pl-2 pr-2 pt-1 pb-1"
+                    className="filter-button display-f jc-c ai-c"
                     key={i}
                     onClick={(e)=> {
                       filterElements(document.getElementsByClassName('items-group')[0].children, e.target.innerText)
@@ -176,13 +195,15 @@ const StorageOverview = () => {
               ))}
             </div>
           </div>
-          {/* ITEMS LIST */}
-          <div className="items-group">
+          }
+          {/* ITEMS */}
+          {items.length > 0 && 
+          <div className="items-group display-f ai-c col-12-xs">
             {items.length > 0 && items.map((item) => (
-              // SINGLE ITEM
+              // Single item DIV element
               <div 
                 id={item._id.slice(4, 11)}
-                className="storage-item p-2"
+                className="storage-item p-1 col-12-xs col-5-lg"
                 key={item._id}
                 onMouseLeave={()=>{
                   document.getElementById(`${item._id.slice(4, 11)}-item-details`).style.display = 'none'
@@ -190,14 +211,9 @@ const StorageOverview = () => {
                   document.getElementById(`${item._id.slice(4, 11)}-delete-item`).style.display = 'none'
                 }}
               >
-                <div className="storage-item-header display-f">
-                  {/* ITEM INFO */}
-                  <div className="storage-item-info display-f fd-c">
-                    <span>Title: {item.itemTitle}</span>
-                    <span>Category: {item.category}</span>
-                    <span>Space taken: <b className="single-item-space">{(((parseFloat(item.length) * parseFloat(item.width) * parseFloat(item.height)))/1000000).toFixed(4)} m3</b></span>
-                  </div>
-                  {/* ITEM BUTTONS */}
+                {/* Item header DIV element - Info & buttons*/}
+                <div className="storage-item-header display-f fd-c">
+                  {/* Item management buttons - DIV element */}
                   <div className="storage-item-buttons display-f ai-c m-a">
                     <i
                         id={`${item._id.slice(4, 11)}-edit`} 
@@ -237,30 +253,52 @@ const StorageOverview = () => {
                       >
                       </i>
                   </div>
-                </div>
-                {/* ITEM UPDATE FORM */}
-                {local && <UpdateItemsForm itemId={item._id} itemName={item.itemTitle} storeId={local.id}/>}
-                {/* ITEM DELETE BOX */}
-                {local && <DialogBoxItems itemId={item._id} storeId={local.id}/>}
-                {/* ITEM DETAILS */}
-                <div 
-                  id={`${item._id.slice(4, 11)}-item-details`}
-                  className="storage-item-details p-2 mt-1"
-                >
-                  <div className="description-section display-f fd-c">
-                    <span><b>Item description:</b></span>
-                    <p>{item.description}</p>
+                  {/* Item update form component */}
+                  {local && <UpdateItemsForm itemId={item._id} itemName={item.itemTitle} storeId={local.id}/>}
+                  {/* Item delete - dialog box component */}
+                  {local && <DialogBoxItems itemId={item._id} storeId={local.id}/>}
+                  {/* Item info housing */}
+                  <div 
+                    id={`${item._id.slice(4, 11)}-item-details`}
+                    className="storage-item-details"
+                  >
+                    <div className="description-section display-f fd-c">
+                      <span><b>Item description:</b></span>
+                      <p>{item.description}</p>
+                    </div>
+                    <span><b>Length:</b> {item.length} cm</span>
+                    <span><b>Width:</b> {item.width} cm</span>
+                    <span><b>Height:</b> {item.height} cm</span>
+                    <span><b>Created:</b> {distanceToNow(new Date(item.createdAt))} ago</span>
+                    <span><b>Updated:</b> {distanceToNow(new Date(item.updatedAt))} ago</span>
                   </div>
-                  <span><b>Length:</b> {item.length} cm</span>
-                  <span><b>Width:</b> {item.width} cm</span>
-                  <span><b>Height:</b> {item.height} cm</span>
-                  <span><b>Created:</b> {distanceToNow(new Date(item.createdAt))} ago</span>
-                  <span><b>Updated:</b> {distanceToNow(new Date(item.updatedAt))} ago</span>
+                  {/* Item info */}
+                  <div className="storage-item-info display-f fd-c col-12-xs">
+                    <span>Title: <b>{item.itemTitle}</b></span>
+                    <span>Category: {item.category}</span>
+                    <span>Space taken: <b className="single-item-space">{(((parseFloat(item.length) * parseFloat(item.width) * parseFloat(item.height)))/1000000).toFixed(4)} m3</b></span>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
-      </div>
+          }
+          {/* CSV GENERATOR*/}
+          <div 
+            id="download-csv"
+          >
+            <span>By clicking the <b>'Download CSV'</b> button, all stored items will be downloaded as a <b>.csv</b> file:</span>
+            <CSVLink 
+              data={csvGenerate(items)}
+              style={{ 
+                backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',
+                color: theme ? 'rgb(238, 238, 238)' : 'black' 
+              }}
+            >
+              Download CSV
+            </CSVLink>
+          </div>
+        </div>    
     </div>
   )
 }

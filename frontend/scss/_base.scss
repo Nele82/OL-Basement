@@ -13,6 +13,7 @@ html {
 body {
     font-family: "Barlow Condensed", sans-serif;
     background-image: url('../assets/background.png');
+    background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -23,6 +24,33 @@ body {
     flex-direction: column;
 }
 
+// Scrollbar
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(185, 185, 185); 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #3e3f41; 
+  }
+
+// Cursor - pointer
+#loggedOut a, #loggedIn button, #loggedIn a, .storage-item-buttons, .filter-button, .login button, #forgotten-password b, .signup button, #check, #terms label u, .reset-form button, .password-reset button, .manage-storage-unit button, #root > div > div > main > div > button, #contact-ol, #privacy button, #tos button, .form-space-housing button, header img, #theme span, #reveal-menu span, footer a, footer ul li, footer span:nth-child(1), .update-items-header i, #storage-overview-lower .update-items .update-item-description button, .storage-item .items-delete-box div button, .storage-details .delete-box div button, .storage-details .update-form button, .storage-details .update-form .storage-unit-header-house i  {
+    cursor: pointer;
+}
+
 /******************************************** P A G E S ****************************************************/
 
 /* MAIN PAGE */
@@ -31,8 +59,8 @@ body {
 #loggedOut a {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
-    border-bottom-left-radius: 4vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
 
     text-decoration: none;
 }
@@ -40,10 +68,16 @@ body {
 #loggedIn button, #loggedIn a {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
-    border-bottom-left-radius: 4vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
 
     text-decoration: none;
+}
+#features div {
+  box-shadow: $light-box-shadow;
+  border: 1px ridge rgb(218, 222, 223);
+  border-top-right-radius: 3vw;
+  border-bottom-left-radius: 3vw;
 }
 
 /* ITEMS PAGE */
@@ -51,18 +85,12 @@ body {
 .storage-item {
     box-shadow: $light-box-shadow;
     border: 2px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
-    border-bottom-left-radius: 4vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
 
     margin-top: 3vw;
 }
-
-.storage-item-buttons {
-    cursor: pointer;
-}
-
 // Progress bar
-
 .progress-bar {
     position: relative;
     z-index: -1;
@@ -71,26 +99,19 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 10vw;
-
     border-radius: 5vw;
-}
 
+    font-weight: 500;
+}
 .progress-bar::before {
     content: '';
     display: flex;
     align-items: center;
 
     position: absolute;
-    left: 1.5vw;
-    top: 1.5vw;
-    bottom: 1.5vw;
     z-index: -1;
 
-    width: calc(var(--width, 0)*1% + 7vw);
-    max-width: calc(100% - 3vw);
-
-    background-color: rgb(110, 110, 110);
+    background-color: rgb(173, 173, 173);
 
     border-radius: 5vw;
 }
@@ -98,24 +119,17 @@ body {
 .filter-button-title {
     margin: .5rem 0;
 }
-
 .filter-button {
-    cursor: pointer;
-
-    border-radius: 2vw;
+    border-radius: 3vw;
 }
-
 #single-storage-avail {
     position: absolute;
     z-index: 1;
 }
-
 .desription-section {
     display: flex;
     flex-direction: column;
 }
-// Items list
-
 // Item info
 .storage-item-info {
     width: 70%;
@@ -126,15 +140,14 @@ body {
 .login input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .login button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
@@ -144,14 +157,14 @@ body {
 .signup input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
 .signup button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
@@ -164,15 +177,14 @@ body {
 .reset-form input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .reset-form button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
@@ -182,15 +194,14 @@ body {
 .password-reset input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .password-reset button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
@@ -200,52 +211,51 @@ body {
 .storage-wrapper h3 {
     width: 90%;
 }
+// Storage units housing
+#storage-units-housing {
+    box-shadow: 0px 0px 4px 2px rgb(200, 200, 200);
 
+    // overflow: auto;
+    overflow-x: scroll;
+}
 // Storage input form
-
 .create-storage input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .create-storage button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 // Storage list
-
 .storage-details {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(187, 187, 187);
-    border-bottom-right-radius: 4vw;
-    border-top-left-radius: 4vw;
+    border-bottom-right-radius: 3vw;
+    border-top-left-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .storage-details button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .storage-wrapper button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 .storage-details a {
     display: flex;
     justify-content: center;
@@ -254,42 +264,31 @@ body {
 
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
-
 // Delete box
-
 .delete-box {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(187, 187, 187);
-    border-bottom-right-radius: 4vw;
-    border-top-left-radius: 4vw;
+    border-bottom-right-radius: 3vw;
+    border-top-left-radius: 3vw;
 }
-
-.delete-box div button {
-    margin-right: 4vw;
-    padding: $base-padding * 2 $base-padding * 6;
-}
-
 // Update form
-
 .update-form {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(187, 187, 187);
-    border-bottom-right-radius: 4vw;
-    border-top-left-radius: 4vw;
+    border-bottom-right-radius: 3vw;
+    border-top-left-radius: 3vw;
 }
 .update-form input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 }
 .update-form i {
     color: black;
-
-    font-size: 9vw;
 }
 
 // STORAGE OVERVIEW PAGE
@@ -305,65 +304,62 @@ body {
 
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
   }
 
+  .single-storage-housing #storage-overview-lower .items-group {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    
+    overflow: auto;
+  }
+
 // CONTACT PAGE
 
-    .app-contact-page label {
-        font-size: $base-font-size * 5;
-    }
-    .app-contact-page input, .app-contact-page textarea {
-        box-shadow: $light-box-shadow;
-        border: 1px ridge rgb(218, 222, 223);
-        border-top-right-radius: 3vw;
-        border-bottom-left-radius: 3vw;
-    }
+.app-contact-page input, .app-contact-page textarea {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+}
 
 // TERMS OF USE & PRIVACY POLICY
 
-    #privacy button, #tos button {
-        box-shadow: $light-box-shadow;
-        border: 1px ridge rgb(218, 222, 223);
-        border-bottom-right-radius: 4vw;
-    
-        padding: $base-padding * 2;
-    }
+#privacy button, #tos button {
+    box-shadow: $light-box-shadow;
+    border: 1px ridge rgb(218, 222, 223);
+    border-bottom-right-radius: 3vw;
+
+    padding: $base-padding * 2;
+}
 
 /******************************************** C O M P O N E N T S ****************************************************/
 
 // ITEM INPUT FORM & SPACE CALCULATOR
 
-.form-space-housing label {
-    font-size: $base-font-size * 5;
-
-    margin: 0 0 $base-margin * 1 0;
-}
 .form-space-housing input {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 }
 .form-space-housing textarea {
     padding: 2vw;
 
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 }
 .form-space-housing select {
-    padding: 2vw;
-
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 4vw;
+    border-top-right-radius: 3vw;
 }
 .form-space-housing button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-bottom-right-radius: 4vw;
+    border-bottom-right-radius: 3vw;
 
     padding: $base-padding * 2;
 }
@@ -378,18 +374,12 @@ header {
 
     box-shadow: $light-box-shadow;
 }
-
-header img {
-    cursor: pointer;
-}
-
 #flip1 {
     border: 2px double grey;
     box-shadow: $light-box-shadow;
 
     transition: transform .25s, opacity .25s;
 }
-
 #flip2 {
     border: 2px double grey;
     box-shadow: $light-box-shadow;
@@ -398,14 +388,9 @@ header img {
 
     transition: transform .25s, opacity .25s;
 }
-
 #theme {
     position: absolute;
     z-index: 0;
-}
-
-#theme span {
-    cursor: pointer;
 }
 
 // NAVBAR
@@ -417,7 +402,6 @@ nav {
 
     transition: margin .5s
 }
-
 nav div a {
     width: 30%;
     text-decoration: none;
@@ -428,20 +412,16 @@ nav div a {
 
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
-    border-top-right-radius: 3vw;
 }
-
 #reveal-menu span {   
-    cursor: pointer;
-
     text-transform: uppercase;
 
     color: grey;
     background-color: rgb(255, 255, 255);
 
     box-shadow: $light-box-shadow;
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
 }
 
 // FOOTER
@@ -451,47 +431,35 @@ footer a {
 }
 
 footer span:nth-child(1) {
-    cursor: pointer;
-
     text-transform: uppercase;
 
     border-top-left-radius: 5vw;
     border-top-right-radius: 5vw;
 }
-
 /* Dialog box */
-
 .delete-box {
     display: none;
 }
-
 /* Dialog box (items) */
-
 .items-delete-box {
     display: none;
 }
-
 /* Update form */
-
 .update-form {
     display: none;
 }
-
 /* ITEM UPDATE FORM */
-
 .update-items {
     display: none;
 
     box-shadow: $light-box-shadow;
     border: 2px ridge rgb(218, 222, 223);
-    border-bottom-left-radius: 2vw;
-    border-bottom-right-radius: 2vw;
+    border-bottom-left-radius: 3vw;
+    border-bottom-right-radius: 3vw;
 }
-
 .update-items-header i {
     width: 30%;
 }
-
 .update-items-dimensions label {
     width: 50%;
 }
@@ -512,7 +480,7 @@ footer span:nth-child(1) {
     border: 1px ridge rgb(218, 222, 223);
     border-top-right-radius: 3vw;
 }
-.update-items button {
+#storage-overview-lower .update-items .update-item-description button {
     box-shadow: $light-box-shadow;
     border: 1px ridge rgb(218, 222, 223);
     border-bottom-right-radius: 3vw;
@@ -523,14 +491,14 @@ footer span:nth-child(1) {
 .items-delete-box {
     box-shadow: $light-box-shadow;
     border: 1px ridge gray;
-    border-radius: 2vw;
+    border-radius: 3vw;
 }
-.items-delete-box button {
+.storage-item .items-delete-box div button {
     box-shadow: $light-box-shadow;
     border: 1px ridge gray;
-    border-bottom-right-radius: 2vw;
-    border-top-left-radius: 2vw;
-}
+    border-bottom-right-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
 
 // ITEMS DETAILS
 
@@ -539,6 +507,6 @@ footer span:nth-child(1) {
 
     box-shadow: $light-box-shadow;
     border: 1px ridge gray;
-    border-top-right-radius: 2vw;
-    border-bottom-left-radius: 2vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
 }

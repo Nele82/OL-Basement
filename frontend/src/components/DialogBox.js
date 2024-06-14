@@ -9,13 +9,20 @@ const DialogBox = ({storageId}) => {
   const theme = useSelector(state => state.theme.value)
 
   return (
+    // HOUSING
     <div 
       id={`${storageId.slice(4, 11)}-delete`}
       className='delete-box p-1'
+      style={{ 
+        backgroundColor: theme ? 'black' : 'white'
+      }}
     >
+        {/* HEADING */}
         <h4>Attention!</h4>
+        {/* NOTICE */}
         <p>Confirming the deletion of this storage unit will also result in the <b>removal of all items associated with it.</b> Are you certain you wish to proceed?</p>
-        <div className='display-f jc-c'>
+        {/* BUTTONS */}
+        <div className='display-f jc-sa'>
             <button onClick={() => {
               deleteOneStorage(storageId)
               dispatch(deleteStorage(storageId))

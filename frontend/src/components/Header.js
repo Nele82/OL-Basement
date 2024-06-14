@@ -23,7 +23,7 @@ const Header = () => {
           document.getElementById("flip1").style.display = 'none'
           document.getElementById("flip2").style.display = 'block'
           document.getElementById("flip2").style.opacity = '1'
-        }, 250)
+        }, 150)
       })
       document.getElementById("flip2").addEventListener('mouseout', ()=>{
           document.getElementById("flip2").style.opacity = '0'
@@ -33,7 +33,7 @@ const Header = () => {
           document.getElementById("flip2").style.display = 'none'
           document.getElementById("flip1").style.display = 'block'
           document.getElementById("flip1").style.opacity = '1'
-        }, 250)
+        }, 150)
       })
     }
 
@@ -41,9 +41,25 @@ const Header = () => {
     
     }, [])
 
+    // Window size listener for the Header layout
+    window.addEventListener('resize', ()=>{      
+      if (window.innerWidth > 1199) {
+        document.getElementsByTagName('header')[0].style.justifyContent = 'flex-start'
+        document.getElementsByTagName('header')[0].style.padding = '.5vw 0 .5vw 3vw'
+      } 
+      if (window.innerWidth > 719 && window.innerWidth <= 1199) {
+        document.getElementsByTagName('header')[0].style.justifyContent = 'flex-start'
+        document.getElementsByTagName('header')[0].style.padding = '1vw 0 1vw 3vw'
+      } 
+      if (window.innerWidth <= 719) {
+        document.getElementsByTagName('header')[0].style.justifyContent = 'center'
+        document.getElementsByTagName('header')[0].style.padding = '2vw 0'
+      }
+    })
+
   return (
     <header 
-      className='display-f jc-c p-3'
+      className={window.innerWidth > 1199 ? 'display-f jc-fs pt-1 pb-1' : window.innerWidth > 719 && window.innerWidth <= 1199 ? 'display-f jc-fs pt-2 pb-2' : 'display-f jc-c pt-4 pb-4'}
       style={{ 
         backgroundColor: theme ? 'black' : 'rgb(255, 255, 255)'
       }}
@@ -66,7 +82,7 @@ const Header = () => {
         />
         <div 
           id="theme"
-          className='display-f p-1 br-lg jc-fs'
+          className='display-f br-lg jc-fs'
           style={{ 
             backgroundColor: theme ? 'rgb(255, 255, 255)' : 'grey'
           }}

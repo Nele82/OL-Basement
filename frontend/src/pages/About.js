@@ -4,26 +4,26 @@ const About = () => {
 
   return (
       <div 
-        className='app-about display-f fd-c'
+        className='app-about display-f fd-c col-7-xl ml-a mr-a'
       >
         <h1>About</h1>
-        <p className='mt-2 mb-2'>
+        <p className='mt-1 mb-2'>
           I am Nebojša Pavlović, currently a student at the ‘CODE’ by Comtrade Coding Academy in Belgrade. This project represents the culmination 
           of my academic journey – my graduation piece. It is the product of numerous tutorials and hands-on experience with MERN applications. 
           I’ve distilled the essence of these learnings into a practical application designed to manage storage facilities. It not only tracks and 
           categorizes items but also monitors available space, ensuring efficient utilization of the facility.
         </p>
         <h2>The App</h2>
-        <p className='mt-2 mb-2'>
+        <p className='mt-1 mb-2'>
           The App allows you to enter the dimensions of your storage area and each item you store, automatically calculating the total and available space. 
           It’s like having a smart inventory system where every item has its place, categorized for easy retrieval. With the added convenience of filtering 
           items by category, this app not only helps you maximize your storage efficiency but also makes finding and managing your stored items a breeze, 
           all from the comfort of your device.
         </p>
-        <p className='mt-2 mb-2'>
+        <p className='mt-1 mb-2'>
           <b>Additional perk:</b> Users can effortlessly download the complete list of stored items as a .csv file (compatible with MS Excel) by clicking a single button.
         </p>
-        <p className='mt-2 mb-2'>
+        <p className='mt-1 mb-2'>
           It's called OL Basement where 'OL', unsurprisingly, stands for 'Online'. This a full-stack application designed using a well-known MERN stack. The MERN stack is 
           a popular set of technology used to build modern web applications. It is an acronym that stands for MongoDB, Express.js, React, and Node.js where:
         </p>
