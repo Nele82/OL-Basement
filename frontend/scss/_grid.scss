@@ -79,7 +79,7 @@ $grid-gaps: (
       width: 8vw;
       height: 8vw;
 
-      font-size: $base-font-size * 4;
+      font-size: $base-font-size * 5;
 
       padding-bottom: 1vw;
     }
@@ -87,21 +87,27 @@ $grid-gaps: (
     // FOOTER (FROM 0 PX)
 
     footer {
-      margin: $base-margin * 15 0 0 0;
-
-      font-size: $base-font-size * 4.5;
+      margin: $base-margin * 10 0 0 0;
+      padding: $base-padding * 3 0;
     }
     footer span:nth-child(1) {
-      font-size: $base-font-size * 3.5;
+      font-size: $base-font-size * 4.5;
+
+      padding: 0 $base-padding * 4;
     }
     footer span:nth-child(1) i {
       margin: 0 0 0 $base-margin * 2;
+    }
+    footer span:nth-child(2), footer span:nth-child(3) {
+      font-size: $base-font-size * 5.5;
+
+      padding: 0 $base-padding * 3;
     }
     footer ul {
       margin: $base-margin * 2 0 0 0;
     }
     footer ul li {
-      font-size: $base-font-size * 3.5;
+      font-size: $base-font-size * 4.5;
 
       margin: 0 $base-margin * 5 0 $base-margin * 5;
     }
@@ -143,6 +149,7 @@ $grid-gaps: (
     }
     .storage-wrapper .create-storage div div {
       font-size: $base-font-size * 10;
+      padding: 0;
     }
     // Success message
     .storage-wrapper .create-storage span {
@@ -466,25 +473,33 @@ $grid-gaps: (
     }
     // Logged out menu
     #loggedOut {
-      margin: $base-margin * 4 0 $base-margin * 4 0;
+      margin: $base-margin * 4 auto $base-margin * 4 auto;
     }
     #loggedOut a {
-      padding: $base-padding * 3 0 $base-padding * 3 0;
+      padding: $base-padding * 1.5 0;
       margin: $base-margin * 2 0 $base-margin * 2 0;
 
       font-size: $base-font-size * 5;
+      font-weight: bold;
     }
     #loggedOut div span {
-      margin: $base-margin * 2 0 $base-margin * 2 0;
+      width: 70%;
+
+      margin: $base-margin * 2 auto $base-margin * 2 auto;
 
       font-size: $base-font-size * 5;
+      text-align: center;
     }
     // Logged in menu
+    #loggedIn {
+      margin: 0 auto;
+    }
     #loggedIn button, #loggedIn a {
-      padding: $base-padding * 3 0 $base-padding * 3 0;
+      padding: $base-padding * 1.5;
       margin: $base-margin * 3 0 $base-margin * 2 0;
 
       font-size: $base-font-size * 4.5;
+      font-weight: bold;
     }
     // Lower section
     #features div {
@@ -587,7 +602,7 @@ $grid-gaps: (
     }
     // Input checkbox
     #terms input {
-      width: 12.5vw;
+      width: 10vw;
 
       margin: 0 $base-margin * 3 0 0;
     }
@@ -679,6 +694,10 @@ $grid-gaps: (
     }
     .password-reset div div {
       font-size: $base-font-size * 10;
+    }
+    // Success message
+    .password-reset span {
+      font-size: $base-font-size * 5;
     }
 
     // STORAGE LIST PAGE (FROM 0 PX)
@@ -895,6 +914,7 @@ $grid-gaps: (
     // Error message
     .app-contact-page div {
       font-size: $base-font-size * 5;
+      text-align: center;
 
       margin: $base-margin * 3 0;
       padding: $base-padding * 2;
@@ -1041,29 +1061,31 @@ $grid-gaps: (
     width: 6vw;
     height: 6vw;
 
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 3.75;
 
-    padding-bottom: 1vw;
+    padding-bottom: .75vw;
   }
 
   // FOOTER (FROM 480 PX) 
 
   footer {
     margin: $base-margin * 15 0 0 0;
-
-    font-size: $base-font-size * 3.5;
+    padding: $base-padding * 2 0;
   }
   footer span:nth-child(1) {
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 3.75;
   }
   footer span:nth-child(1) i {
-    margin: 0 0 0 $base-margin * 2;
+    margin: 0 0 0 $base-margin * 3.75;
+  }
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: $base-font-size * 4.25;
   }
   footer ul {
     margin: $base-margin * 2 0 0 0;
   }
   footer ul li {
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 4;
 
     margin: 0 $base-margin * 5 0 $base-margin * 5;
   }
@@ -1105,6 +1127,7 @@ $grid-gaps: (
     }
     .storage-wrapper .create-storage div div {
       font-size: $base-font-size * 9;
+      padding: 0;
     }
     // Success message
     .storage-wrapper .create-storage span {
@@ -1428,25 +1451,32 @@ $grid-gaps: (
   }
   // Logged out menu
   #loggedOut {
-    margin: $base-margin * 4 0 $base-margin * 4 0;
+    margin: $base-margin * 4 auto $base-margin * 4 auto;
   }
   #loggedOut a {
-    padding: $base-padding * 2.5 0;
+    padding: $base-padding * 1.5 0;
     margin: $base-margin * 2 0 $base-margin * 2 0;
 
     font-size: $base-font-size * 5;
+    font-weight: normal;
   }
   #loggedOut div span {
-    margin: $base-margin * 2 0 $base-margin * 2 0;
+    width: 90%;
 
-    font-size: $base-font-size * 5;
+    margin: $base-margin * 1 auto $base-margin * 1 auto;
+
+    font-size: $base-font-size * 4;
   }
   // Logged in menu
+  #loggedIn {
+    margin: $base-margin * 2 auto;
+  }
   #loggedIn button, #loggedIn a {
-    padding: $base-padding * 3 0 $base-padding * 3 0;
+    padding: $base-padding * 1.5 0;
     margin: $base-margin * 3 0 $base-margin * 2 0;
 
     font-size: $base-font-size * 5;
+    font-weight: normal;
   }
   // Lower section
   #features div {
@@ -1627,6 +1657,10 @@ $grid-gaps: (
   }
   .password-reset div div {
     font-size: $base-font-size * 9;
+  }
+  // Success message
+  .password-reset span {
+    font-size: $base-font-size * 4.5;
   }
 
   // STORAGE LIST PAGE (FROM 480 PX)
@@ -1969,7 +2003,7 @@ $grid-gaps: (
   #reveal-menu span {
     font-size: 3vw;
 
-    padding: $base-padding * 1 $base-padding * 3;
+    padding: $base-padding * .75 $base-padding * 3;
   }
 
   // HEADER (FROM 720 PX)  
@@ -1993,7 +2027,7 @@ $grid-gaps: (
     width: 4vw;
     height: 4vw;
 
-    font-size: $base-font-size * 2;
+    font-size: $base-font-size * 2.5;
 
     padding-bottom: .25vw;
   }
@@ -2002,22 +2036,24 @@ $grid-gaps: (
 
   footer {
     margin: $base-margin * 20 0 0 0;
-
-    font-size: $base-font-size * 3;
+    padding: $base-padding * 1 0;
   }
   footer span:nth-child(1) {
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 2.75;
   }
   footer span:nth-child(1) i {
-    margin: 0 0 0 $base-margin * 2;
+    margin: 0 0 0 $base-margin * 2.75;
   }
   footer ul {
     margin: $base-margin * 2 0 0 0;
   }
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: $base-font-size * 2.75;
+  }
   footer ul li {
-    font-size: $base-font-size * 3;
+    font-size: $base-font-size * 2.5;
 
-    margin: 0 $base-margin * 5 0 $base-margin * 5;
+    margin: 0 $base-margin * 3 0 $base-margin * 3;
   }
 
   // STORAGE INPUT FORM (FROM 720 PX)
@@ -2053,7 +2089,7 @@ $grid-gaps: (
       font-size: $base-font-size * 3.5;
       text-align: center;
 
-      padding: $base-padding * 2;
+      padding: $base-padding * 1;
     }
     .storage-wrapper .create-storage div div {
       font-size: $base-font-size * 7;
@@ -2281,6 +2317,37 @@ $grid-gaps: (
 
   // ITEMS DETAILS (FROM 720 PX)
 
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: $base-margin * .5 0;
+    padding: $base-padding * 1 $base-padding * 1;
+  }
+  // Header - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: $base-margin * .5 0;
+    padding: 0 $base-padding * 1;
+  }
+  // Header - span element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
+
+    font-size: $base-font-size * 3.5;
+  }
+  // Header - p element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: 0;
+    padding: 0;
+
+    font-size: $base-font-size * 3.5;
+  }
+  // Description elements - span elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: $base-font-size * 3.5;
+    
+    margin: 0 $base-margin * 1;
+    padding: 0;
+  }
 
   ////////////// P  A  G  E  S (FROM 720 PX) //////////////
 
@@ -2309,22 +2376,23 @@ $grid-gaps: (
   }
   // Logged out menu
   #loggedOut {
-    margin: $base-margin * 4 0 $base-margin * 4 0;
+    margin: $base-margin * 4 auto $base-margin * 4 auto;
   }
   #loggedOut a {
-    padding: $base-padding * 1.5 0;
+    padding: $base-padding * 1 0;
     margin: $base-margin * 2 0 $base-margin * 2 0;
 
     font-size: $base-font-size * 4;
   }
   #loggedOut div span {
-    margin: $base-margin * 2 0 $base-margin * 2 0;
+    width: 90%;
+    margin: $base-margin * 1 auto $base-margin * 1 auto;
 
-    font-size: $base-font-size * 4;
+    font-size: $base-font-size * 3.75;
   }
   // Logged in menu
   #loggedIn button, #loggedIn a {
-    padding: $base-padding * 1.5 0;
+    padding: $base-padding * 1 0;
     margin: $base-margin * 3 0 $base-margin * 2 0;
 
     font-size: $base-font-size * 4;
@@ -2492,6 +2560,10 @@ $grid-gaps: (
   }
   .password-reset div div {
     font-size: $base-font-size * 8;
+  }
+  // Success message
+  .password-reset span {
+    font-size: $base-font-size * 3.5;
   }
 
   // STORAGE LIST PAGE (FROM 720 PX)
@@ -2689,12 +2761,15 @@ $grid-gaps: (
   }
   .app-contact-page label {
     font-size: $base-font-size * 4;
+
+    margin: 0 0 $base-margin * .5 0;
+    padding: 0;
   }
   .app-contact-page input {
     font-size: $base-font-size * 3.5;
 
-    margin: $base-margin * 1 0;
-    padding: $base-padding * 2;
+    margin: 0 0 $base-margin * .5 0;
+    padding: $base-padding * .75 0 $base-padding * .75 $base-padding * 2;
   }
   .app-contact-page textarea {
     height: 20vw;
@@ -2850,7 +2925,7 @@ $grid-gaps: (
       width: 2.75vw;
       height: 2.75vw;
 
-      font-size: $base-font-size * 1.5;
+      font-size: $base-font-size * 1.75;
 
       padding-bottom: .25vw;
     }
@@ -2859,20 +2934,23 @@ $grid-gaps: (
 
     footer {
       margin: $base-margin * 15 0 0 0;
+      padding: $base-padding * .5 0;
     }
     footer span:nth-child(1) {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 2;
 
-      margin: 0 0 $base-margin * 1 0;
+      margin: $base-margin * .5 0 $base-margin * .5 0;
     }
-    footer span:nth-child(1) i {
-      margin: 0 0 0 $base-margin * 2;
+    footer span:nth-child(2), footer span:nth-child(3) {
+      font-size: $base-font-size * 2;
+
+      margin: 0 0 $base-margin * .5 0;
     }
     footer ul {
-      margin: $base-margin * 1 0 0 0;
+      margin: 0 0 $base-margin * .5 0;
     }
     footer ul li {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 2;
 
       margin: 0 $base-margin * 5 0 $base-margin * 5;
     }
@@ -2910,7 +2988,7 @@ $grid-gaps: (
       font-size: $base-font-size * 2.5;
       text-align: center;
 
-      padding: $base-padding * 1;
+      padding: $base-padding * .5;
     }
     .storage-wrapper .create-storage div div {
       font-size: $base-font-size * 5;
@@ -2985,124 +3063,176 @@ $grid-gaps: (
       margin: 0;
     }
 
-    // ITEM INPUT FORM & SPACE CALCULATOR (FROM 960 PX)
-    // Storage info
-    .form-space-housing div span {
-      font-size: $base-font-size * 2.75;
-    }
-    // Progress bar
-    .progress-bar {
-      height: 4.5vw;
-    }
-    .progress-bar::before {
-      left: .75vw;
-      top: .75vw;
-      bottom: .75vw;
-  
-      width: calc(var(--width, 0) * 1% + 3vw);
-      max-width: calc(100% - 1.5vw);
-    }
-    // Input form
-    .items-form h4 {
-      font-size: $base-font-size * 5;
+  // ITEM INPUT FORM & SPACE CALCULATOR (FROM 960 PX)
 
-      margin: $base-margin * 2 0 $base-margin * 2 0;
-    }
-    .form-space-housing label {
-      font-size: $base-font-size * 3.5;
+  // Storage info & progress bar housing
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 $base-margin * 2 0;
+  }
+  // Storage info elements
+  #storage-overview-upper .form-space-housing .space-component span {
+    font-size: $base-font-size * 2.5;
+  }
+  // Progress bar
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
+    height: 4vw;
+  }
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
+    left: .5vw;
+    top: .5vw;
+    bottom: .5vw;
 
-      margin: 0;
-    }
-    .form-space-housing input {
-      font-size: $base-font-size * 2.75;
+    width: calc(var(--width, 0) * 1% + 3vw);
+    max-width: calc(100% - 1vw);
+  }
+  // Input form housing
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 $base-margin * 2 0;
+  } 
+  // Input form - title
+  #storage-overview-upper .form-space-housing .items-form h4 {
+    font-size: $base-font-size * 3;
+  } 
+  // Input form - labels
+  #storage-overview-upper .form-space-housing .items-form label {
+    font-size: $base-font-size * 2.5;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * 1.5;
-    }
-    .form-space-housing textarea {
-      font-size: $base-font-size * 2.75;
+    margin: $base-margin * .25 0;
+  } 
+  // Input form - input fields
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: $base-font-size * 2.5;
 
-      margin: $base-margin * .5 0 0 0;
-      padding: $base-padding * 2;
-    }
-    .form-space-housing select {
-      font-size: $base-font-size * 2.5;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * .5 0 0 0;
-      padding: $base-padding * 1.5;
-    }
-    .form-space-housing button {
-      font-size: $base-font-size * 2.75;
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - textarea
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: $base-font-size * 2.5;
 
-      margin: $base-margin * 2 0 $base-margin * 2 0;
-      padding: $base-padding * 1.5 0;
-    }
-    .form-space-housing p {
-      font-size: $base-font-size * 4.5;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * 2 0;
-    }
-    // Error message
-    .form-space-housing div {
-      font-size: $base-font-size * 2.75;
-      text-align: center;
-    }
-    .form-space-housing div div {
-      font-size: $base-font-size * 6;
-    }
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - select element
+  #storage-overview-upper .form-space-housing .items-form select {
+    font-size: $base-font-size * 2;
 
-    // ITEM UPDATE FORM (FROM 960 PX)
-    .update-items-header h4 {
-      font-size: $base-font-size * 2.75;
-      text-align: center;
-    }
-    .update-items-header i {
-      font-size: $base-font-size * 3.5;
-    }
-    .update-items label {
-      font-size: $base-font-size * 2.25;
-      text-align: left;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * .5 0;
-    }
-    .update-items input {
-      font-size: $base-font-size * 2;
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - button
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: $base-font-size * 2.25;
 
-      border-top-right-radius: 3vw;
+    margin: $base-margin * 2 0 0 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
-    }
-    .update-items textarea {
-      font-size: $base-font-size * 2;
+    border-bottom-right-radius: 1.5vw;
+  } 
+  // Input form - Error message
+  #storage-overview-upper .form-space-housing .items-form div {
+    font-size: $base-font-size * 2;
+    text-align: center;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
-    }
-    .update-items select {
-      font-size: $base-font-size * 2;
+    padding: $base-padding * 1;
+    margin: $base-margin * 2 0 0 0;
+  }
+  // Input form - 'Attention!' symbol
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: $base-font-size * 4;
+  }
 
-      border-top-right-radius: 3vw;
+  // ITEM UPDATE FORM (FROM 960 PX)
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
-    }
-    .update-items button {
-      font-size: $base-font-size * 2;
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
+    margin: $base-margin * 1 0 0 0;
+    padding: $base-padding * 1 $base-padding * .5;
+  }
+  // Header
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header {
+    margin: $base-margin * .5 0;
+    padding: 0;
+  }
+  // Header - title
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
+    font-size: $base-font-size * 2.5;
+    text-align: center;
+  }
+  // Header - 'X' button
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
+    font-size: $base-font-size * 3.5;
+  }
+  // Labels & input fields - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
+    margin: 0;
+  }
+  // Labels & input fields - labels
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
+    font-size: $base-font-size * 1.8;
 
-      border-bottom-right-radius: 3vw;
+    margin: 0;
+  }
+  // Labels & input fields - input fields
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
+    font-size: $base-font-size * 1.8;
 
-      margin: $base-margin * 1 0 0 0;
-      padding: $base-padding * .5 0;
-    }
-    // Error & success message
-    .update-items div {
-      font-size: $base-font-size * 2;
-      text-align: center;
+    margin: $base-margin * .25 0;
+    padding: $base-padding * .25 0 $base-padding * .25 $base-padding * 1;
 
-      margin: $base-margin * 1 0 0 0;
-      padding: $base-padding * 1;
-    }
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description {
+    margin: $base-margin * .5 0 0 0;
+  }
+  // Textarea, select element & buttons - label
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
+    font-size: $base-font-size * 1.8;
+
+    margin: 0;
+  }
+  // Textarea, select element & buttons - textarea
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
+    font-size: $base-font-size * 1.8;
+
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - select
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
+    font-size: $base-font-size * 1.8;
+
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - button
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
+    font-size: $base-font-size * 1.8;
+
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-bottom-right-radius: 1.5vw;
+  }
+  // Error & success messages
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
+    font-size: $base-font-size * 1.8;
+    text-align: center;
+
+    margin: $base-margin * .5 0;
+    padding: 0;
+  }
 
     // STORAGE UNIT DELETE DIALOG BOX (FROM 960 PX)
 
@@ -3141,28 +3271,66 @@ $grid-gaps: (
     }
 
     // ITEMS DELETE DIALOG BOX (FROM 960 PX)
-    .storage-item .items-delete-box div {
-      display: flex;
-    }
-    .storage-item .items-delete-box p {
-      font-size: $base-font-size * 2;
 
-      margin: auto auto;
-    }
-    .storage-item .items-delete-box button {
-      font-size: $base-font-size * 2;
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 $base-padding * 1;
+  }
+  // Delete message
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
+    font-size: $base-font-size * 1.8;
+    margin: 0;
+  }
+  // Buttons - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
+    margin: $base-margin * 1 0;
+  }
+  // Buttons - elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
+    font-size: $base-font-size * 1.8;
 
-      padding: $base-padding * .75 $base-padding * .75;
+    padding: $base-padding * .5 $base-padding * 2;
+    margin: 0 $base-margin * 1;
 
-      border-bottom-right-radius: 1.5vw;
-      border-top-left-radius: 1.5vw;
-    }
+    border-top-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+  }
 
-    // ITEMS DETAILS (FROM 960 PX)
+  // ITEMS DETAILS (FROM 960 PX)
 
-    .storage-item-details span, .storage-item-details p {
-      font-size: $base-font-size * 3.5;
-    }
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 $base-padding * .5;
+  }
+  // Header - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0;
+    padding: 0 $base-padding * 1;
+  }
+  // Header - span element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
+
+    font-size: $base-font-size * 1.8;
+  }
+  // Header - p element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: $base-margin * .5 0;
+    padding: 0;
+
+    font-size: $base-font-size * 1.8;
+    text-align: left;
+  }
+  // Description elements - span elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: $base-font-size * 1.8;
+    
+    margin: 0 $base-margin * 1;
+    padding: 0;
+  }
 
     ////////////// P  A  G  E  S (FROM 960 PX) //////////////
 
@@ -3194,7 +3362,7 @@ $grid-gaps: (
       margin: $base-margin * 2 auto $base-margin * 2 auto;
     }
     #loggedOut a {
-      padding: $base-padding * 1;
+      padding: $base-padding * .75;
       margin: $base-margin * 1 0 $base-margin * 1 0;
 
       font-size: $base-font-size * 2.5;
@@ -3203,7 +3371,7 @@ $grid-gaps: (
       border-bottom-left-radius: 2vw;
     }
     #loggedOut div span {
-      margin: $base-margin * 1 0;
+      margin: $base-margin * 1 auto;
 
       font-size: $base-font-size * 2.5;
     }
@@ -3212,7 +3380,7 @@ $grid-gaps: (
       margin: $base-margin * 1 auto $base-margin * 1 auto;
     }
     #loggedIn button, #loggedIn a {
-      padding: $base-padding * 1;
+      padding: $base-padding * .75;
       margin: $base-margin * 1.5 0;
 
       font-size: $base-font-size * 2.5;
@@ -3395,6 +3563,10 @@ $grid-gaps: (
     .password-reset div div {
       font-size: $base-font-size * 5;
     }
+    .password-reset span {
+      font-size: $base-font-size * 2.5;
+      text-align: center;
+    }
 
     // STORAGE LIST PAGE (FROM 960 PX)
 
@@ -3463,86 +3635,124 @@ $grid-gaps: (
       padding: $base-padding * .5 0;
     }
 
-    // STORAGE OVERVIEW PAGE (FROM 960 PX)
+  // STORAGE OVERVIEW PAGE (FROM 960 PX)
   
-    .single-storage-housing {
-      margin: $base-margin * 25 0 0 0;
-    }
-    // Heading
-    .single-storage-housing h3 {
-      width: 70%;
+  // Upper section
+  .single-storage-housing #storage-overview-upper {
+    margin: $base-margin * 25 auto 0 auto;
+  }
+  // Page title
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 95%;
 
-      font-size: $base-font-size * 5;
+    margin: 0 auto $base-margin * 3 auto;
 
-      margin: 0 0 $base-margin * 2 0;
-    }
-    // 'Back to storage(s)' button
-    .single-storage-housing a {
-      font-size: $base-font-size * 2.75;
+    font-size: $base-font-size * 3.5;
+    text-align: center;
+  }
+  // "Back to storage's" button
+  .single-storage-housing #storage-overview-upper a {
+    font-size: $base-font-size * 2.25;
 
-      margin: $base-margin * 1 0;
-      padding: $base-padding * 1.5;
-    }
-    // 'Items' title
-    .storage-items h3 {
-      font-size: $base-font-size * 4;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * 2 0 0 0;
-    }
-    // CSV Generator
-    #download-csv span {
-      font-size: $base-font-size * 2.75;
+    border-bottom-right-radius: 1.5vw;
+  }
+  // Lower section
+  .single-storage-housing #storage-overview-lower {
+    margin: $base-margin * 25 auto 0 auto;
+  }
+  // Storage items - title
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: $base-font-size * 3.5;
 
-      margin: 0;
-    }
-    #download-csv a {
-      font-size: $base-font-size * 2.75;
+    margin: 0;
+  }
+  // 'No Items' message 
+  .single-storage-housing #storage-overview-lower p {
+    font-size: $base-font-size * 2.5;
+    text-align: center;
 
-      margin: $base-margin * 2 0 0 0;
-      padding: $base-padding * 1.5;
-    } 
-    // No stored items
-    .single-storage-housing p {
-      font-size: $base-font-size * 2.75;
+    margin: $base-margin * 2 auto;
+  }
+  // Buttons - overall housing
+  .single-storage-housing #storage-overview-lower .buttons-group {
+    margin: $base-margin * 1 0;
+  }
+  // Buttons - title
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
+    font-size: $base-font-size * 3;
 
-      margin: $base-margin * 6 0 0 0;
-    }
-    // Buttons group
-    .filter-button-title {
-      font-size: $base-font-size * 4;
+    margin: $base-margin * .5 0;
+  }
+  // Buttons - elements housing
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: $base-margin * 1 0 $base-margin * 1 0;
+  }
+  // Buttons - elements themselves
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: $base-font-size * 2.25;
 
-      margin: 0 0 $base-margin * 2 0;
-    }
-    .filter-button {
-      font-size: $base-font-size * 2.5;
-      padding: $base-padding * 1 0;
-    }
-    // Items - housing 
-    .items-group {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    // Single item - housing
-    .storage-item {
-      margin: $base-margin * 1 $base-margin * 2 0 0;
-    }
-    // Items - item info
-    .storage-item-info span {
-      font-size: $base-font-size * 2.25;
-    }
-    // Items - item buttons
-    .storage-item-buttons i {
-      font-size: $base-font-size * 2.5;
-    }
-    // Items -Details Card
-    .description-section p {
-      font-size: $base-font-size * 2;
+    margin: 0 $base-margin * 1 $base-margin * 1 0;
+    padding: $base-padding * .5 $base-padding * .5;
 
-      margin: 0;
-    }
-    .storage-item-details span {
-      font-size: $base-font-size * 2;
-    }
+    border-radius: 1.5vw;
+  }
+  // Storage items - housing
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 60vw;
+
+    margin: $base-margin * 1 0;
+    padding: $base-padding * 1.5 $base-padding * 1.5;
+
+    flex-direction: column;
+
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
+  // Single item - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 $base-margin * 3 0;
+    padding: $base-padding * 1 $base-padding * 1;
+  }
+  // Single item - Buttons housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: $base-margin * .5 auto;
+  }
+  // Single item - Button elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
+    font-size: $base-font-size * 3;
+
+    margin: 0 $base-margin * 2;
+  }
+  // Single item - Info housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
+    margin: 0;
+  }
+  // Single item - Info elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
+    font-size: $base-font-size * 2.25;
+  }
+  // CSV download - housing
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: $base-margin * 1 0 0 0;
+  }
+  // CSV download - span
+  .single-storage-housing #storage-overview-lower #download-csv span {
+    font-size: $base-font-size * 2.55;
+
+    margin: 0;
+  }
+  // CSV download - link
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: $base-font-size * 2.5;
+
+    margin: $base-margin * 1 0 0 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-bottom-right-radius: 1.5vw;
+  }
 
     // CONTACT PAGE (FROM 960 PX)
 
@@ -3711,6 +3921,9 @@ $grid-gaps: (
 
       font-size: 1.75vw;
     }
+    nav div a {
+      border-top-right-radius: 2vw;
+    }
     #reveal-menu span {
       font-size: 1.75vw;
 
@@ -3738,29 +3951,33 @@ $grid-gaps: (
       width: 2vw;
       height: 2vw;
 
-      font-size: $base-font-size * 1;
+      font-size: $base-font-size * 1.25;
 
-      padding-bottom: .25vw;
+      padding-bottom: .15vw;
     }
 
     // FOOTER (FROM 1200 PX) 
 
     footer {
-      margin: $base-margin * 15 0 0 0;
+      margin: $base-margin * 5 0 0 0;
+      padding: $base-padding * 1 0;
     }
     footer span:nth-child(1) {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 1.8;
 
-      margin: 0 0 $base-margin * 1 0;
+      margin: 0 0 $base-margin * .5 0;
     }
-    footer span:nth-child(1) i {
-      margin: 0 0 0 $base-margin * 2;
+    footer span:nth-child(2), footer span:nth-child(3) {
+      font-size: $base-font-size * 1.8;
+
+      margin: 0 0 $base-margin * .5 0;
+      padding: 0 $base-padding * .5;
     }
     footer ul {
-      margin: $base-margin * 1 0 0 0;
+      margin: 0;
     }
     footer ul li {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 1.65;
 
       margin: 0 $base-margin * 5 0 $base-margin * 5;
     }
@@ -3797,17 +4014,21 @@ $grid-gaps: (
     }
     // Error message
     .storage-wrapper .create-storage div {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 1.65;
       text-align: center;
 
-      padding: $base-padding * 1;
+      padding: $base-padding * .5;
+      margin: 0 0 $base-margin * 1.5 0;
     }
     .storage-wrapper .create-storage div div {
-      font-size: $base-font-size * 5;
+      font-size: $base-font-size * 3.3;
+
+      padding: 0;
+      margin: 0;
     }
     // Success message
     .storage-wrapper .create-storage span {
-      font-size: $base-font-size * 2.5;
+      font-size: $base-font-size * 1.65;
       text-align: center;
     }
 
@@ -3875,172 +4096,176 @@ $grid-gaps: (
       margin: 0;
     }
 
-    // ITEM INPUT FORM & SPACE CALCULATOR (FROM 1200 PX)
-    // Storage info
-    .form-space-housing div span {
-      font-size: $base-font-size * 1.65;
-    }
-    // Progress bar
-    .progress-bar {
-      height: 3vw;
-    }
-    .progress-bar::before {
-      left: .5vw;
-      top: .5vw;
-      bottom: .5vw;
-  
-      width: calc(var(--width, 0) * 1% + 2vw);
-      max-width: calc(100% - 1vw);
-    }
-    // Input form
-    .items-form {
-      margin: 0;
-    }
-    .items-form h4 {
-      font-size: $base-font-size * 2;
+  // ITEM INPUT FORM & SPACE CALCULATOR (FROM 1200 PX)
 
-      margin: 0 0 $base-margin * 1 0;
-    }
-    .form-space-housing label {
-      font-size: $base-font-size * 1.65;
-    }
-    .form-space-housing input {
-      font-size: $base-font-size * 1.65;
+  // Storage info & progress bar housing
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 $base-margin * 1 0;
+  }
+  // Storage info elements
+  #storage-overview-upper .form-space-housing .space-component span {
+    font-size: $base-font-size * 1.65;
+  }
+  // Progress bar
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
+    height: 3vw;
+  }
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
+    left: .5vw;
+    top: .5vw;
+    bottom: .5vw;
 
-      margin: $base-margin * .25 0;
-      padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 3;
+    width: calc(var(--width, 0) * 1% + 2vw);
+    max-width: calc(100% - 1vw);
+  }
+  // Input form housing
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 $base-margin * 2 0;
+  } 
+  // Input form - title
+  #storage-overview-upper .form-space-housing .items-form h4 {
+    font-size: $base-font-size * 2;
+  } 
+  // Input form - labels
+  #storage-overview-upper .form-space-housing .items-form label {
+    font-size: $base-font-size * 1.65;
 
-      border-top-right-radius: 1.5vw;
-    }
-    .form-space-housing textarea {
-      height: 9vw;
-      font-size: $base-font-size * 1.65;
+    margin: $base-margin * .25 0;
+  } 
+  // Input form - input fields
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * .25 0;
-      padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 3;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-top-right-radius: 1.5vw;
-    }
-    .form-space-housing select {
-      font-size: $base-font-size * 1.35;
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - textarea
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * .5 0 0 0;
-      padding: $base-padding * .5;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-top-right-radius: 1.5vw;
-    }
-    .form-space-housing button {
-      font-size: $base-font-size * 1.65;
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - select element
+  #storage-overview-upper .form-space-housing .items-form select {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 1 0 0 0;
-      padding: $base-padding * .5 0;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-bottom-right-radius: 1.5vw;
-    }
-    .form-space-housing p {
-      font-size: $base-font-size * 4.5;
+    border-top-right-radius: 1.5vw;
+  } 
+  // Input form - button
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 2 0;
-    }
-    // Error message
-    .form-space-housing div {
-      font-size: $base-font-size * 1.65;
-      text-align: center;
-    }
-    .form-space-housing div div {
-      font-size: $base-font-size * 3;
-    }
+    margin: $base-margin * 2 0 0 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-bottom-right-radius: 1.5vw;
+  } 
+  // Input form - Error message
+  #storage-overview-upper .form-space-housing .items-form div {
+    font-size: $base-font-size * 1.65;
+    text-align: center;
+
+    padding: $base-padding * 1;
+    margin: $base-margin * 2 0 0 0;
+  }
+  // Input form - 'Attention!' symbol
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: $base-font-size * 3.3;
+  }
+
     // ITEM UPDATE FORM (FROM 1200 PX)
-    // Housing DIV
-    #storage-overview-lower .update-items {
-      padding: $base-padding * .25;
-      margin: $base-margin * .25 0;
 
-      border-bottom-left-radius: 1vw;
-      border-bottom-right-radius: 1vw;
-    }
-    // Header
-    #storage-overview-lower .update-items .update-items-header {
-      padding: 0;
-      margin: 0;
-    }
-    #storage-overview-lower .update-items .update-items-header h4 {
-      font-size: $base-font-size * 1.35;
-      text-align: center;
-    }
-    #storage-overview-lower .update-items .update-items-header i {
-      font-size: $base-font-size * 2;
-    }
-    // Labels & input fields (Housing DIV)
-    #storage-overview-lower .update-items .update-items-dimensions {
-      padding: 0;
-      margin: 0;
-    }
-    // Labels
-    #storage-overview-lower .update-items .update-items-dimensions label {
-      font-size: $base-font-size * 1.25;
-      text-align: left;
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
+    margin: $base-margin * .75 0;
+    padding: $base-padding * 1 $base-padding * .5;
+  }
+  // Header
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header {
+    margin: $base-margin * .5 0;
+    padding: 0;
+  }
+  // Header - title
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
+    font-size: $base-font-size * 2;
+    text-align: center;
+  }
+  // Header - 'X' button
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
+    font-size: $base-font-size * 2.5;
+  }
+  // Labels & input fields - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
+    margin: 0;
+  }
+  // Labels & input fields - labels
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
+    font-size: $base-font-size * 1.8;
 
-      margin: $base-margin * .25 0;
-    }
-    // Input fields
-    #storage-overview-lower .update-items .update-items-dimensions input {
-      font-size: $base-font-size * 1;
+    margin: 0;
+  }
+  // Labels & input fields - input fields
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
+    margin: $base-margin * .25 0;
+    padding: $base-padding * .25 0 $base-padding * .25 $base-padding * 1;
 
-      border-top-right-radius: 1vw;
-    }
-    // Description (Housing DIV)
-    #storage-overview-lower .update-items .update-item-description {
-      padding: 0;
-      margin: 0;
-    }
-    // Description labels
-    #storage-overview-lower .update-items .update-item-description label {
-      font-size: $base-font-size * 1.25;
-      text-align: left;
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description {
+    margin: $base-margin * .5 0 0 0;
+  }
+  // Textarea, select element & buttons - label
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
+    font-size: $base-font-size * 1.8;
 
-      margin: $base-margin * .25 0;
-    }
-    // Textarea
-    #storage-overview-lower .update-items .update-item-description textarea {
-      font-size: $base-font-size * 1;
+    margin: 0;
+  }
+  // Textarea, select element & buttons - textarea
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-top-right-radius: 1vw;
-    }
-    // Category selector
-    #storage-overview-lower .update-items .update-item-description select {
-      font-size: $base-font-size * 1;
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - select
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
+    font-size: $base-font-size * 1.25;
 
-      border-top-right-radius: 3vw;
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      margin: $base-margin * .5 0;
-      padding: $base-padding * .5;
+    border-top-right-radius: 1.5vw;
+  }
+  // Textarea, select element & buttons - button
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
+    font-size: $base-font-size * 1.5;
 
-      border-top-right-radius: 1vw;
-    }
-    // Buttons
-    #storage-overview-lower .update-items .update-item-description button {
-      font-size: $base-font-size * 1;
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-bottom-right-radius: 1vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+  // Error & success messages
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
+    font-size: $base-font-size * 1.5;
+    text-align: center;
 
-      margin: $base-margin * .35 0;
-      padding: $base-padding * .25 0;
-    }
-    // Error & success message
-    .update-items div {
-      font-size: $base-font-size * 1.15;
-      text-align: center;
-
-      margin: $base-margin * .35 0;
-      padding: $base-padding * .25;
-    }
+    margin: $base-margin * .5 0;
+    padding: 0;
+  }
 
     // STORAGE UNIT DELETE DIALOG BOX (FROM 1200 PX)
 
@@ -4078,47 +4303,67 @@ $grid-gaps: (
       border-bottom-right-radius: 1.5vw;
     }
 
-    // ITEMS DELETE DIALOG BOX (FROM 1200 PX)
-    // Housing
-    .storage-item .items-delete-box {
-      display: none;
-      flex-direction: column;
+  // ITEMS DELETE DIALOG BOX (FROM 1200 PX)
 
-      border-radius: 1vw;
-    }
-    // Message
-    .storage-item .items-delete-box p {
-      font-size: $base-font-size * 1.15;
-      text-align: center;
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 $base-padding * 1;
+  }
+  // Delete message
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
+    font-size: $base-font-size * 1.65;
+    margin: 0;
+  }
+  // Buttons - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
+    margin: $base-margin * 1 0;
+  }
+  // Buttons - elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
+    font-size: $base-font-size * 1.5;
 
-      margin: 0 0 $base-margin * .5 0;
-    }
-    // Buttons housing DIV
-    .storage-item .items-delete-box div {
-      display: flex;
-    }
-    // Buttons
-    .storage-item .items-delete-box div button {
-      font-size: $base-font-size * 1;
+    padding: $base-padding * .5 $base-padding * 2;
+    margin: 0 $base-margin * 1;
 
-      border-top-left-radius: 1vw;
-      border-bottom-right-radius: 1vw;
+    border-top-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
+  }
 
-      margin: 0 0 0 $base-margin * .5;
-      padding: $base-padding * .25 $base-padding * .5;
-    }
+  // ITEMS DETAILS (FROM 1200 PX)
 
-    // ITEMS DETAILS (FROM 1200 PX)
+  // Housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: $base-margin * .5 0;
+    padding: $base-padding * .5 $base-padding * .5;
+  }
+  // Header - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0;
+    padding: 0 $base-padding * 1;
+  }
+  // Header - span element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
 
-    // Housing
-    .storage-item .storage-item-details {
-      border-top-right-radius: 1vw;
-      border-bottom-left-radius: 1vw;
-    }
-    // Elements
-    .storage-item .storage-item-details span, .storage-item .storage-item-details p {
-      font-size: $base-font-size * 1.15;
-    }
+    font-size: $base-font-size * 1.65;
+  }
+  // Header - p element
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: $base-margin * .5 0;
+    padding: 0;
+
+    font-size: $base-font-size * 1.65;
+    text-align: left;
+  }
+  // Description elements - span elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: $base-font-size * 1.65;
+    
+    margin: 0 $base-margin * 1;
+    padding: 0;
+  }
 
     ////////////// P  A  G  E  S (FROM 1200 PX) //////////////
 
@@ -4368,6 +4613,10 @@ $grid-gaps: (
     .password-reset div div {
       font-size: $base-font-size * 3;
     }
+    // Success message
+    .password-reset span {
+      font-size: $base-font-size * 1.65;
+    }
 
     // STORAGE LIST PAGE (FROM 1200 PX)
 
@@ -4398,24 +4647,27 @@ $grid-gaps: (
       border-top-left-radius: 4vw;
     }
     // Single storage unit housing
-    #storage-units-housing .storage-details {
+    .storage-wrapper #storage-units-housing .storage-details {
       padding: $base-padding * 2;
       margin: 0 $base-margin * 1 $base-margin * 5 0;
     }
     // Storage unit title
-    #storage-units-housing .storage-details h3 {
+    .storage-wrapper #storage-units-housing .storage-details h3 {
       font-size: $base-font-size * 2;
 
       margin: 0 auto 0 auto;
       padding: 0;
     }
     // Storage details
-    .storage-details span {
+    .storage-wrapper #storage-units-housing .storage-details span {
       font-size: $base-font-size * 1.65;
 
       padding: $base-padding * .25 0;
     }
-    // Storage unit buttons
+    // Storage unit upper buttons - housing
+    .storage-wrapper #storage-units-housing .storage-details .manage-storage-unit .delete-update-store {
+      margin: $base-margin * 1 0;
+    }
     .storage-details .manage-storage-unit button {
       width: 48%;
       font-size: $base-font-size * 1.65;
@@ -4436,7 +4688,7 @@ $grid-gaps: (
     .storage-wrapper button {
       font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 1 0 $base-margin * 2 0;
+      margin: 0;
       padding: $base-padding * .5 0;
 
       border-bottom-right-radius: 1.5vw;
@@ -4444,101 +4696,122 @@ $grid-gaps: (
 
     // STORAGE OVERVIEW PAGE (FROM 1200 PX)
   
-    .single-storage-housing {
-      margin: $base-margin * 16 0 0 0;
-    }
-    // Heading
-    .single-storage-housing h3 {
-      width: 100%;
+  // Upper section
+  .single-storage-housing #storage-overview-upper {
+    margin: $base-margin * 16 auto 0 auto;
+  }
+  // Page title
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 70%;
 
-      font-size: $base-font-size * 2;
+    margin: 0 auto $base-margin * 3 auto;
 
-      margin: 0 0 $base-margin * 1 0;
-    }
-    // 'Back to storage(s)' button
-    .single-storage-housing a {
-      font-size: $base-font-size * 1.65;
+    font-size: $base-font-size * 2.5;
+    text-align: center;
+  }
+  // "Back to storage's" button
+  .single-storage-housing #storage-overview-upper a {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 1 0 0 0;
-      padding: $base-padding * .5;
+    margin: 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
 
-      border-bottom-right-radius: 1.5vw;
-    }
-    // 'Items' title
-    .storage-items h3 {
-      font-size: $base-font-size * 4;
+    border-bottom-right-radius: 1.5vw;
+  }
+  // Lower section
+  .single-storage-housing #storage-overview-lower {
+    margin: $base-margin * 16 auto 0 auto;
+  }
+  // Storage items - title
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: $base-font-size * 2.5;
 
-      margin: $base-margin * 2 0 0 0;
-    }
-    // CSV Generator
-    #download-csv span {
-      font-size: $base-font-size * 1.65;
+    margin: 0;
+  }
+  // 'No Items' message 
+  .single-storage-housing #storage-overview-lower p {
+    font-size: $base-font-size * 2;
+    text-align: center;
 
-      margin: 0;
-    }
-    #download-csv a {
-      font-size: $base-font-size * 1.65;
+    margin: $base-margin * 2 auto;
+  }
+  // Buttons - overall housing
+  .single-storage-housing #storage-overview-lower .buttons-group {
+    margin: $base-margin * 1 0;
+  }
+  // Buttons - title
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
+    font-size: $base-font-size * 2;
 
-      margin: $base-margin * .5 0 $base-margin * .25 0;
-      padding: $base-padding * .5 0 $base-padding * .5 0;
-    } 
-    // No stored items
-    .single-storage-housing p {
-      font-size: $base-font-size * 1.65;
+    margin: $base-margin * .5 0;
+  }
+  // Buttons - elements housing
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: $base-margin * 1 0 $base-margin * 1 0;
+  }
+  // Buttons - elements themselves
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 1 0;
-    }
-    // Buttons group
-    .filter-button-title {
-      font-size: $base-font-size * 1.65;
+    margin: 0 $base-margin * 1 $base-margin * 1 0;
+    padding: $base-padding * .5 $base-padding * .5;
 
-      margin: $base-margin * 1 0;
-    }
-    .filter-button {
-      font-size: $base-font-size * 1.65;
+    border-radius: 1vw;
+  }
+  // Storage items - housing
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 41.5vw;
 
-      padding: $base-padding * .5 0;
+    margin: 0;
+    padding: $base-padding * 1.5 $base-padding * 1.5;
 
-      border-radius: 1vw;
-    }
-    // Items - wrapper 
-    .storage-items {
-      height: 40vw;
-      overflow: auto;
-    }
-    // Items - housing 
-    .items-group {
-      display: flex;
-      flex-wrap: wrap;
-    }
-    // Single item - housing
-    .storage-item {
-      margin: $base-margin * 1 $base-margin * 1 0 0;
+    flex-direction: column;
 
-      border-bottom-left-radius: 1.5vw;
-      border-top-right-radius: 1.5vw;
-    }
-    // Items - item info
-    .storage-item-info span {
-      font-size: $base-font-size * 1.35;
-    }
-    // Items - item buttons housing
-    .storage-item-buttons {
-      margin: $base-margin * .25 0;
-    }
-    // Items - item buttons
-    .storage-item-buttons i {
-      font-size: $base-font-size * 1.5;
-    }
-    // Items -Details Card
-    .description-section p {
-      font-size: $base-font-size * 2;
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
+  // Single item - housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 $base-margin * 2 0;
+    padding: $base-padding * 1 $base-padding * 1;
+  }
+  // Single item - Buttons housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: $base-margin * .5 auto;
+  }
+  // Single item - Button elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
+    font-size: $base-font-size * 2.25;
 
-      margin: 0;
-    }
-    .storage-item-details span {
-      font-size: $base-font-size * 2;
-    }
+    margin: 0 $base-margin * 2;
+  }
+  // Single item - Info housing
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
+    margin: 0;
+  }
+  // Single item - Info elements
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
+    font-size: $base-font-size * 1.65;
+  }
+  // CSV download - housing
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: $base-margin * 1 0 0 0;
+  }
+  // CSV download - span
+  .single-storage-housing #storage-overview-lower #download-csv span {
+    font-size: $base-font-size * 1.65;
+
+    margin: 0;
+  }
+  // CSV download - link
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: $base-font-size * 1.65;
+
+    margin: $base-margin * 1 0 0 0;
+    padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1;
+
+    border-bottom-right-radius: 1.5vw;
+  }
 
     // CONTACT PAGE (FROM 1200 PX)
 
@@ -4555,11 +4828,14 @@ $grid-gaps: (
     }
     .app-contact-page label {
       font-size: $base-font-size * 1.65;
+
+      margin: $base-margin * .25 0;
+      padding: 0;
     }
     .app-contact-page input {
       font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * .25 0;
+      margin: 0;
       padding: $base-padding * .5 0 $base-padding * .5 $base-padding * 1.5;
 
       border-bottom-left-radius: 2vw;
@@ -4617,38 +4893,40 @@ $grid-gaps: (
     // TERMS OF USE (FROM 1200 PX)
 
     #tos {
-      margin: $base-margin * 31 0 0 0;
+      margin: $base-margin * 16 0 0 0;
     }
     #tos h1 {
-      font-size: $base-font-size * 6;
+      font-size: $base-font-size * 2.5;
 
-      margin: $base-margin * 2 0;
+      margin: 0 0 $base-margin * 1 0;
     }
     #tos h3 {
-      font-size: $base-font-size * 4.5;
+      font-size: $base-font-size * 2;
 
-      margin: $base-margin * 3 0 0 0;
+      margin: $base-margin * 1 0 0 0;
     }
     #tos b {
-      font-size: $base-font-size * 2.75;
+      font-size: $base-font-size * 1.65;
 
-      margin: 0 0 0 $base-margin * 2;
+      margin: 0;
     }
     #tos p {
-      font-size: $base-font-size * 2.75;
+      font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 2 0 0 0;
+      margin: $base-margin * 1 0 0 0;
     }
     #tos ol {
-      font-size: $base-font-size * 2.75;
+      font-size: $base-font-size * 1.65;
 
       margin: $base-margin * 2 0 0 $base-margin * 5;
     }
     #tos button {
-      font-size: $base-font-size * 2.75;
+      font-size: $base-font-size * 1.65;
 
       margin: $base-margin * 3 auto 0 auto;
-      padding: $base-padding * 1.5 0;
+      padding: $base-padding * .5 0;
+
+      border-bottom-right-radius: 1.5vw;
     }
 
     // PRIVACY POLICY (FROM 1200 PX)

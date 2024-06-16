@@ -420,11 +420,15 @@ nav div a {
     background-color: rgb(255, 255, 255);
 
     box-shadow: $light-box-shadow;
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
 }
 
 // FOOTER
+
+footer {
+    flex-shrink: 0;
+}
 
 footer a {
     color: white;
@@ -454,8 +458,8 @@ footer span:nth-child(1) {
 
     box-shadow: $light-box-shadow;
     border: 2px ridge rgb(218, 222, 223);
-    border-bottom-left-radius: 3vw;
-    border-bottom-right-radius: 3vw;
+    border-bottom-left-radius: 2vw;
+    border-bottom-right-radius: 2vw;
 }
 .update-items-header i {
     width: 30%;
@@ -491,7 +495,7 @@ footer span:nth-child(1) {
 .items-delete-box {
     box-shadow: $light-box-shadow;
     border: 1px ridge gray;
-    border-radius: 3vw;
+    border-radius: 2vw;
 }
 .storage-item .items-delete-box div button {
     box-shadow: $light-box-shadow;
@@ -507,6 +511,6 @@ footer span:nth-child(1) {
 
     box-shadow: $light-box-shadow;
     border: 1px ridge gray;
-    border-top-right-radius: 3vw;
-    border-bottom-left-radius: 3vw;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
 }

@@ -214,7 +214,7 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
           <button 
               type="submit"
           >
-              Update storage details
+              Update Item details
           </button>
         </div>
         {/* ERROR & SUCCESS MESSAGE */}

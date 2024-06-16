@@ -131,7 +131,7 @@ const StorageList = () => {
       <StorageInput />
       {/* LOG OUT BUTTON */}
       <button 
-        className='col-12-xs col-7-lg'
+        className='col-12-xs col-7-lg col-5-xl'
         onClick={() => {
           dispatch(logout())
           localStorage.clear()

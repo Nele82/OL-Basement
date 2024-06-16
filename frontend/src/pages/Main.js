@@ -55,7 +55,7 @@ const Main = () => {
         {!user ? 
         // LOGGED OUT
         <div
-          className='display-f fd-c col-10-lg col-12-xl'
+          className='display-f fd-c col-8-xs col-7-sm col-7-lg col-12-xl'
           id='loggedOut'
         >
           <Link 
@@ -93,7 +93,7 @@ const Main = () => {
         : 
         // LOGGED IN
         <div
-          className='display-f fd-c col-10-lg col-12-xl'
+          className='display-f fd-c col-8-xs col-7-sm col-7-lg col-12-xl'
           id='loggedIn'
         >
           <button

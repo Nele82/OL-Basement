@@ -72,7 +72,7 @@ const StorageInput = () => {
 
   return (
     <form
-      className='create-storage col-11-sm col-11-md col-7-lg display-f fd-c mt-2 ml-a mr-a'
+      className='create-storage col-11-sm col-11-md col-7-lg col-5-xl display-f fd-c mt-2 ml-a mr-a'
       onSubmit={handleSubmit}
     >
       <h3>Create a basement / storage unit:</h3>
@@ -142,7 +142,7 @@ const StorageInput = () => {
       >
         Create Storage
       </button>
-      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-2 mb-3' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
+      {error && <div className='display-f fd-c ai-c bd-black' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
       {success && <span>{success}</span>}
     </form>
   )

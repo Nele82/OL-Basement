@@ -45,7 +45,7 @@ const TermsOfUse = () => {
             new terms.
         </p>
         <h3>Contact Information</h3>
-        <p>For any questions or concerns regarding these Terms and Conditions, please contact us at <b>ol.basement@gmail.com</b>.
+        <p>For any questions or concerns regarding these Terms and Conditions, please contact us at:<br/><b>ol.basement@gmail.com</b>.
         </p>
         <h3>Discontinuation of Service</h3>
         <p>The OL Basement Project is an academic project and, as such, may be subject to discontinuation at any time without prior notice. 

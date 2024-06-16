@@ -372,8 +372,12 @@ nav div a {
   color: grey;
   background-color: rgb(255, 255, 255);
   box-shadow: 0px 4px 7px -2px #9E9284;
-  border-bottom-left-radius: 3vw;
-  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 footer a {
@@ -406,8 +410,8 @@ footer span:nth-child(1) {
   display: none;
   box-shadow: 0px 4px 7px -2px #9E9284;
   border: 2px ridge rgb(218, 222, 223);
-  border-bottom-left-radius: 3vw;
-  border-bottom-right-radius: 3vw;
+  border-bottom-left-radius: 2vw;
+  border-bottom-right-radius: 2vw;
 }
 
 .update-items-header i {
@@ -446,7 +450,7 @@ footer span:nth-child(1) {
 .items-delete-box {
   box-shadow: 0px 4px 7px -2px #9E9284;
   border: 1px ridge gray;
-  border-radius: 3vw;
+  border-radius: 2vw;
 }
 
 .storage-item .items-delete-box div button {
@@ -460,8 +464,8 @@ footer span:nth-child(1) {
   display: none;
   box-shadow: 0px 4px 7px -2px #9E9284;
   border: 1px ridge gray;
-  border-top-right-radius: 3vw;
-  border-bottom-left-radius: 3vw;
+  border-top-right-radius: 2vw;
+  border-bottom-left-radius: 2vw;
 }
 
 .container {
@@ -576,13 +580,13 @@ footer span:nth-child(1) {
   nav {
     margin: 21vw 0 0 0;
     width: 100%;
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   nav div a {
     border-top-right-radius: 3vw;
   }
   #reveal-menu span {
-    font-size: 5.5vw;
+    font-size: 4.675vw;
     padding: 1vw 5vw;
   }
   header img {
@@ -598,54 +602,60 @@ footer span:nth-child(1) {
   #theme span {
     width: 8vw;
     height: 8vw;
-    font-size: 4vw;
+    font-size: 4.25vw;
     padding-bottom: 1vw;
   }
   footer {
-    margin: 15vw 0 0 0;
-    font-size: 4.5vw;
+    margin: 10vw 0 0 0;
+    padding: 3vw 0;
   }
   footer span:nth-child(1) {
-    font-size: 3.5vw;
+    font-size: 3.825vw;
+    padding: 0 4vw;
   }
   footer span:nth-child(1) i {
     margin: 0 0 0 2vw;
+  }
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: 4.675vw;
+    padding: 0 3vw;
   }
   footer ul {
     margin: 2vw 0 0 0;
   }
   footer ul li {
-    font-size: 3.5vw;
+    font-size: 3.825vw;
     margin: 0 5vw 0 5vw;
   }
   .storage-wrapper .create-storage h3 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 0 auto 2vw auto;
   }
   .storage-wrapper .create-storage label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .storage-wrapper .create-storage input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .storage-wrapper .create-storage button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper .create-storage div {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     padding: 2vw;
   }
   .storage-wrapper .create-storage div div {
-    font-size: 10vw;
+    font-size: 8.5vw;
+    padding: 0;
   }
   .storage-wrapper .create-storage span {
-    font-size: 4.75vw;
+    font-size: 4.0375vw;
     text-align: center;
   }
   #storage-units-housing .storage-details .update-form {
@@ -657,28 +667,28 @@ footer span:nth-child(1) {
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house h3 {
     width: 80%;
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0;
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house i {
     width: 20%;
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #storage-units-housing .storage-details .update-form label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0.5vw 0;
   }
   #storage-units-housing .storage-details .update-form input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0.25vw;
     padding: 1vw;
   }
   #storage-units-housing .storage-details .update-form button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 3vw auto 2vw auto;
   }
   #storage-units-housing .storage-details .update-form div {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     padding: 1vw;
   }
@@ -686,7 +696,7 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .space-component span {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #storage-overview-upper .form-space-housing .space-component .progress-bar {
     height: 8vw;
@@ -702,56 +712,56 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form h4 {
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   #storage-overview-upper .form-space-housing .items-form label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form textarea {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form select {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 3vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form div {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     padding: 1vw;
     margin: 3vw 0 0 0;
   }
   #storage-overview-upper .form-space-housing .items-form div span {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   .storage-details .delete-box {
     margin: 3vw 0 1vw 0;
     padding: 1vw;
   }
   .storage-details .delete-box h4 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     text-align: center;
   }
   .storage-details .delete-box p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
   }
   .storage-details .delete-box div button {
     width: 30%;
-    font-size: 5vw;
+    font-size: 4.25vw;
     padding: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
@@ -762,21 +772,21 @@ footer span:nth-child(1) {
     margin: 0 0 0.5vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
     padding: 1vw 0 1vw 1vw;
   }
@@ -784,26 +794,26 @@ footer span:nth-child(1) {
     margin: 2vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
     padding: 1vw 0 1vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
     padding: 1vw 0 1vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
     padding: 1vw 0 1vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     margin: 0.5vw 0;
     padding: 0;
@@ -813,14 +823,14 @@ footer span:nth-child(1) {
     padding: 1vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     padding: 0.5vw 4vw;
     margin: 0 1vw;
   }
@@ -835,15 +845,15 @@ footer span:nth-child(1) {
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
     margin: 0;
     padding: 0;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
     margin: 0;
     padding: 0;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 1vw;
     padding: 0;
   }
@@ -851,184 +861,194 @@ footer span:nth-child(1) {
     margin: 54vw 0 10vw 0;
   }
   #main-page-housing main span {
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #main-page-housing main h1 {
-    font-size: 11vw;
+    font-size: 9.35vw;
     margin-top: 5vw;
   }
   #main-page-housing main h2 {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   #main-page-housing main p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin-top: 2vw;
   }
   #loggedOut {
-    margin: 4vw 0 4vw 0;
+    margin: 4vw auto 4vw auto;
   }
   #loggedOut a {
-    padding: 3vw 0 3vw 0;
+    padding: 1.5vw 0;
     margin: 2vw 0 2vw 0;
-    font-size: 5vw;
+    font-size: 4.25vw;
+    font-weight: bold;
   }
   #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
+    width: 70%;
+    margin: 2vw auto 2vw auto;
+    font-size: 4.25vw;
+    text-align: center;
+  }
+  #loggedIn {
+    margin: 0 auto;
   }
   #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
+    padding: 1.5vw;
     margin: 3vw 0 2vw 0;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
+    font-weight: bold;
   }
   #features div {
     margin: 4vw 0 4vw 0;
   }
   #features div h4 {
     margin: 0 0 4vw 0;
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #features div p {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .login {
     margin: 54vw 0 10vw 0;
   }
   .login h4 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 0 0 10vw 0;
   }
   .login label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .login input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .login button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 6vw 0 3vw 0;
     padding: 1vw 0;
   }
   .login div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .login div span {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   #forgotten-password {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .signup {
     margin: 54vw 0 10vw 0;
   }
   .signup h3 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 0 0 10vw 0;
   }
   .signup label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .signup input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .signup button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 6vw 0 3vw 0;
     padding: 1vw 0;
   }
   .signup span {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 3vw 0 3vw 0;
   }
   .signup div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .signup div p {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   #terms input {
-    width: 12.5vw;
+    width: 10vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 3vw 0 0;
   }
   .reset-form {
     margin: 54vw 0 10vw 0;
   }
   .reset-form h3 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     text-align: center;
     margin: 0 0 10vw 0;
   }
   .reset-form label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     margin: 1vw 0;
   }
   .reset-form input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .reset-form button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 5vw 0 3vw 0;
     padding: 1vw 0;
   }
   .reset-form span {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .reset-form div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .reset-form div div {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   .password-reset {
     margin: 54vw 0 10vw 0;
   }
   .password-reset h3 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 0 0 10vw 0;
   }
   .password-reset label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .password-reset input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .password-reset button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 6vw 0 3vw 0;
     padding: 1vw 0;
   }
   .password-reset div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .password-reset div div {
-    font-size: 10vw;
+    font-size: 8.5vw;
+  }
+  .password-reset span {
+    font-size: 4.25vw;
   }
   .storage-wrapper {
     margin: 54vw 0 10vw 0;
   }
   .storage-wrapper h3 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .storage-wrapper p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     margin: 2vw 0 2vw 0;
   }
@@ -1042,26 +1062,26 @@ footer span:nth-child(1) {
     margin: 0 0 5vw 0;
   }
   #storage-units-housing .storage-details h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 auto 0 auto;
     padding: 0;
   }
   .storage-details span {
-    font-size: 5vw;
+    font-size: 4.25vw;
     padding: 0.5vw 0;
   }
   .storage-details .manage-storage-unit button {
     width: 48%;
-    font-size: 5vw;
+    font-size: 4.25vw;
     padding: 1vw 0;
   }
   .storage-details .manage-storage-unit a {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
@@ -1071,11 +1091,11 @@ footer span:nth-child(1) {
   .single-storage-housing #storage-overview-upper h3 {
     width: 80%;
     margin: 0 auto 5vw auto;
-    font-size: 7vw;
+    font-size: 5.95vw;
     text-align: center;
   }
   .single-storage-housing #storage-overview-upper a {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
@@ -1083,25 +1103,25 @@ footer span:nth-child(1) {
     margin: 5vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 3vw auto;
   }
   .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group h4 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
     margin: 0 0 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 1vw 1vw 0;
     padding: 1vw 1vw;
   }
@@ -1121,24 +1141,24 @@ footer span:nth-child(1) {
     margin: 2vw auto;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 2vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .single-storage-housing #storage-overview-lower #download-csv {
     margin: 2vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv span {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv a {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
@@ -1147,100 +1167,101 @@ footer span:nth-child(1) {
   }
   .app-contact-page h3 {
     width: 67.5%;
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 0 0 5vw 0;
   }
   .app-contact-page label {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 1vw 0;
   }
   .app-contact-page input {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0;
     padding: 1vw 0 1vw 2vw;
   }
   .app-contact-page textarea {
     height: 20vw;
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0 3vw 0;
     padding: 1vw 0 1vw 2vw;
   }
   .app-contact-page div {
-    font-size: 5vw;
+    font-size: 4.25vw;
+    text-align: center;
     margin: 3vw 0;
     padding: 2vw;
   }
   .app-contact-page div p {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   .app-about {
     margin: 54vw 0 10vw 0;
   }
   .app-about h1 {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   .app-about h2 {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   .app-about p, .app-about ul {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #tos {
     margin: 54vw 0 10vw 0;
   }
   #tos h1 {
-    font-size: 9vw;
+    font-size: 7.65vw;
     margin: 2vw 0;
   }
   #tos h3 {
-    font-size: 8vw;
+    font-size: 6.8vw;
     margin: 4vw 0 0 0;
   }
   #tos b {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0 0 2vw;
   }
   #tos p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 0;
   }
   #tos ol {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 5vw;
   }
   #tos button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 4vw 0 0 0;
   }
   #privacy {
     margin: 54vw 0 10vw 0;
   }
   #privacy h1 {
-    font-size: 9vw;
+    font-size: 7.65vw;
     margin: 2vw 0;
   }
   #privacy h3 {
-    font-size: 8vw;
+    font-size: 6.8vw;
     margin: 4vw 0 0 0;
   }
   #privacy h4 {
-    font-size: 7vw;
+    font-size: 5.95vw;
     margin: 3vw 0 2vw 0;
   }
   #privacy b {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0 0 2vw;
   }
   #privacy p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 0;
   }
   #privacy ul {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 5vw;
   }
   #privacy button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 4vw 0 0 0;
   }
 }
@@ -1327,54 +1348,58 @@ footer span:nth-child(1) {
   #theme span {
     width: 6vw;
     height: 6vw;
-    font-size: 3vw;
-    padding-bottom: 1vw;
+    font-size: 3.1875vw;
+    padding-bottom: 0.75vw;
   }
   footer {
     margin: 15vw 0 0 0;
-    font-size: 3.5vw;
+    padding: 2vw 0;
   }
   footer span:nth-child(1) {
-    font-size: 3vw;
+    font-size: 3.1875vw;
   }
   footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
+    margin: 0 0 0 3.75vw;
+  }
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: 3.6125vw;
   }
   footer ul {
     margin: 2vw 0 0 0;
   }
   footer ul li {
-    font-size: 3vw;
+    font-size: 3.4vw;
     margin: 0 5vw 0 5vw;
   }
   .storage-wrapper .create-storage h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 auto 2vw auto;
   }
   .storage-wrapper .create-storage label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
   }
   .storage-wrapper .create-storage input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .storage-wrapper .create-storage button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper .create-storage div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     padding: 2vw;
   }
   .storage-wrapper .create-storage div div {
-    font-size: 9vw;
+    font-size: 7.65vw;
+    padding: 0;
   }
   .storage-wrapper .create-storage span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
   }
   #storage-units-housing .storage-details .update-form {
@@ -1386,28 +1411,28 @@ footer span:nth-child(1) {
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house h3 {
     width: 80%;
-    font-size: 5.5vw;
+    font-size: 4.675vw;
     margin: 0;
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house i {
     width: 20%;
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   #storage-units-housing .storage-details .update-form label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0.5vw 0;
   }
   #storage-units-housing .storage-details .update-form input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0.25vw;
     padding: 1vw;
   }
   #storage-units-housing .storage-details .update-form button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw auto 2vw auto;
   }
   #storage-units-housing .storage-details .update-form div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     padding: 1vw;
   }
@@ -1415,7 +1440,7 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .space-component span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   #storage-overview-upper .form-space-housing .space-component .progress-bar {
     height: 8vw;
@@ -1431,40 +1456,40 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form h4 {
-    font-size: 5.5vw;
+    font-size: 4.675vw;
   }
   #storage-overview-upper .form-space-housing .items-form label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0.5vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form textarea {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form select {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     padding: 1vw;
     margin: 3vw 0 0 0;
   }
   #storage-overview-upper .form-space-housing .items-form div span {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
     margin: 2vw 0 0 0;
@@ -1474,21 +1499,21 @@ footer span:nth-child(1) {
     margin: 0 0 0.5vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
@@ -1496,26 +1521,26 @@ footer span:nth-child(1) {
     margin: 2vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     margin: 0.5vw 0;
     padding: 0;
@@ -1525,16 +1550,16 @@ footer span:nth-child(1) {
     padding: 1vw;
   }
   .storage-details .delete-box h4 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
   }
   .storage-details .delete-box p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
   }
   .storage-details .delete-box div button {
     width: 30%;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     padding: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
@@ -1542,14 +1567,14 @@ footer span:nth-child(1) {
     padding: 0.5vw 1vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
-    font-size: 3vw;
+    font-size: 2.55vw;
     padding: 0.5vw 5vw;
     margin: 0 1vw;
   }
@@ -1564,15 +1589,15 @@ footer span:nth-child(1) {
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
     margin: 0;
     padding: 0;
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
     margin: 0;
     padding: 0;
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 1vw;
     padding: 0;
   }
@@ -1580,181 +1605,190 @@ footer span:nth-child(1) {
     margin: 48vw 0 10vw 0;
   }
   #main-page-housing main span {
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #main-page-housing main h1 {
-    font-size: 9vw;
+    font-size: 7.65vw;
     margin-top: 5vw;
   }
   #main-page-housing main h2 {
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #main-page-housing main p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin-top: 2vw;
   }
   #loggedOut {
-    margin: 4vw 0 4vw 0;
+    margin: 4vw auto 4vw auto;
   }
   #loggedOut a {
-    padding: 2.5vw 0;
+    padding: 1.5vw 0;
     margin: 2vw 0 2vw 0;
-    font-size: 5vw;
+    font-size: 4.25vw;
+    font-weight: normal;
   }
   #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 5vw;
+    width: 90%;
+    margin: 1vw auto 1vw auto;
+    font-size: 3.4vw;
+  }
+  #loggedIn {
+    margin: 2vw auto;
   }
   #loggedIn button, #loggedIn a {
-    padding: 3vw 0 3vw 0;
+    padding: 1.5vw 0;
     margin: 3vw 0 2vw 0;
-    font-size: 5vw;
+    font-size: 4.25vw;
+    font-weight: normal;
   }
   #features div {
     margin: 4vw 0 4vw 0;
   }
   #features div h4 {
     margin: 0 0 4vw 0;
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   #features div p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .login {
     margin: 48vw 0 10vw 0;
   }
   .login h4 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 0 7vw 0;
   }
   .login label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
   }
   .login input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .login button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 6vw 0 3vw 0;
     padding: 1vw 0;
   }
   .login div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .login div span {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   #forgotten-password {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .signup {
     margin: 48vw 0 10vw 0;
   }
   .signup h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 0 7vw 0;
   }
   .signup label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
   }
   .signup input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .signup button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 6vw 0 3vw 0;
     padding: 1vw 0;
   }
   .signup span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw 0 3vw 0;
   }
   .signup div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .signup div p {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   #terms input {
     width: 10vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 3vw 0 0;
   }
   .reset-form {
     margin: 48vw 0 10vw 0;
   }
   .reset-form h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 0 7vw 0;
   }
   .reset-form label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 0 2vw 0;
   }
   .reset-form input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 0 3vw 0;
   }
   .reset-form button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 6vw 0 3vw 0;
   }
   .reset-form span {
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   .reset-form div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .reset-form div div {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   .password-reset {
     margin: 48vw 0 10vw 0;
   }
   .password-reset h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 0 7vw 0;
   }
   .password-reset label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 0 2vw 0;
   }
   .password-reset input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 0 3vw 0;
   }
   .password-reset button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 6vw 0 3vw 0;
   }
   .password-reset div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
   }
   .password-reset div div {
-    font-size: 9vw;
+    font-size: 7.65vw;
+  }
+  .password-reset span {
+    font-size: 3.825vw;
   }
   .storage-wrapper {
     margin: 48vw 0 10vw 0;
   }
   .storage-wrapper h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .storage-wrapper p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     margin: 2vw 0 2vw 0;
   }
@@ -1768,26 +1802,26 @@ footer span:nth-child(1) {
     margin: 0 0 5vw 0;
   }
   #storage-units-housing .storage-details h3 {
-    font-size: 5.5vw;
+    font-size: 4.675vw;
     margin: 0 auto 0 auto;
     padding: 0;
   }
   .storage-details span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     padding: 0.5vw 0;
   }
   .storage-details .manage-storage-unit button {
     width: 48%;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     padding: 1vw 0;
   }
   .storage-details .manage-storage-unit a {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
@@ -1797,11 +1831,11 @@ footer span:nth-child(1) {
   .single-storage-housing #storage-overview-upper h3 {
     width: 80%;
     margin: 0 auto 5vw auto;
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
   }
   .single-storage-housing #storage-overview-upper a {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
@@ -1809,25 +1843,25 @@ footer span:nth-child(1) {
     margin: 5vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower h3 {
-    font-size: 5.5vw;
+    font-size: 4.675vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw auto;
   }
   .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group h4 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
     margin: 0 0 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 1vw 1vw 0;
     padding: 1vw 1vw;
   }
@@ -1847,24 +1881,24 @@ footer span:nth-child(1) {
     margin: 1vw auto;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
-    font-size: 5.5vw;
+    font-size: 4.675vw;
     margin: 0 2vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   .single-storage-housing #storage-overview-lower #download-csv {
     margin: 2vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv span {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv a {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 2vw 0 0 0;
     padding: 1vw 0 1vw 1vw;
   }
@@ -1873,98 +1907,98 @@ footer span:nth-child(1) {
   }
   .app-contact-page h3 {
     width: 80%;
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .app-contact-page label {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 1vw 0;
   }
   .app-contact-page input {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
     padding: 1vw 0 1vw 2vw;
   }
   .app-contact-page textarea {
     height: 20vw;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 0 3vw 0;
     padding: 1vw 0 1vw 2vw;
   }
   .app-contact-page div {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw 0;
     padding: 2vw;
   }
   .app-contact-page div p {
-    font-size: 9vw;
+    font-size: 7.65vw;
   }
   .app-about {
     margin: 48vw 0 10vw 0;
   }
   .app-about h1 {
-    font-size: 10vw;
+    font-size: 8.5vw;
   }
   .app-about p, .app-about ul {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #tos {
     margin: 48vw 0 10vw 0;
   }
   #tos h1 {
-    font-size: 10vw;
+    font-size: 8.5vw;
     margin: 2vw 0;
   }
   #tos h3 {
-    font-size: 7.5vw;
+    font-size: 6.375vw;
     margin: 4vw 0 0 0;
   }
   #tos b {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0 0 2vw;
   }
   #tos p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 0;
   }
   #tos ol {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 5vw;
   }
   #tos button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 4vw 0 0 0;
   }
   #privacy {
     margin: 48vw 0 10vw 0;
   }
   #privacy h1 {
-    font-size: 10vw;
+    font-size: 8.5vw;
     margin: 2vw 0;
   }
   #privacy h3 {
-    font-size: 7.5vw;
+    font-size: 6.375vw;
     margin: 4vw 0 0 0;
   }
   #privacy h4 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 3vw 0 2vw 0;
   }
   #privacy b {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0 0 2vw;
   }
   #privacy p {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 0;
   }
   #privacy ul {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0 0 5vw;
   }
   #privacy button {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 4vw 0 0 0;
   }
 }
@@ -2039,7 +2073,7 @@ footer span:nth-child(1) {
   }
   #reveal-menu span {
     font-size: 3vw;
-    padding: 1vw 3vw;
+    padding: 0.75vw 3vw;
   }
   header {
     padding-left: 3vw;
@@ -2057,54 +2091,57 @@ footer span:nth-child(1) {
   #theme span {
     width: 4vw;
     height: 4vw;
-    font-size: 2vw;
+    font-size: 2.125vw;
     padding-bottom: 0.25vw;
   }
   footer {
     margin: 20vw 0 0 0;
-    font-size: 3vw;
+    padding: 1vw 0;
   }
   footer span:nth-child(1) {
-    font-size: 3vw;
+    font-size: 2.3375vw;
   }
   footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
+    margin: 0 0 0 2.75vw;
   }
   footer ul {
     margin: 2vw 0 0 0;
   }
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: 2.3375vw;
+  }
   footer ul li {
-    font-size: 3vw;
-    margin: 0 5vw 0 5vw;
+    font-size: 2.125vw;
+    margin: 0 3vw 0 3vw;
   }
   .storage-wrapper .create-storage h3 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 auto 2vw auto;
   }
   .storage-wrapper .create-storage label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 1vw 0;
   }
   .storage-wrapper .create-storage input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
     padding: 1vw 0 1vw 1vw;
   }
   .storage-wrapper .create-storage button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper .create-storage div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
-    padding: 2vw;
+    padding: 1vw;
   }
   .storage-wrapper .create-storage div div {
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   .storage-wrapper .create-storage span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
   }
   #storage-units-housing .storage-details .update-form {
@@ -2116,28 +2153,28 @@ footer span:nth-child(1) {
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house h3 {
     width: 80%;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house i {
     width: 20%;
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #storage-units-housing .storage-details .update-form label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
   }
   #storage-units-housing .storage-details .update-form input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.25vw;
     padding: 1vw;
   }
   #storage-units-housing .storage-details .update-form button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 3vw auto 2vw auto;
   }
   #storage-units-housing .storage-details .update-form div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     padding: 1vw;
   }
@@ -2145,7 +2182,7 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .space-component span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   #storage-overview-upper .form-space-housing .space-component .progress-bar {
     height: 6vw;
@@ -2161,74 +2198,74 @@ footer span:nth-child(1) {
     margin: 0 0 2vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form h4 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
   }
   #storage-overview-upper .form-space-housing .items-form label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.25vw 0;
   }
   #storage-overview-upper .form-space-housing .items-form input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form textarea {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form select {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 0 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
   #storage-overview-upper .form-space-housing .items-form div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     padding: 1vw;
     margin: 3vw 0 0 0;
   }
   #storage-overview-upper .form-space-housing .items-form div span {
-    font-size: 7vw;
+    font-size: 5.95vw;
   }
   .update-items-header h4 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     text-align: center;
   }
   .update-items-header i {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .update-items label {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0.5vw 0;
   }
   .update-items input {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0.5vw 0;
     padding: 1vw;
   }
   .update-items textarea {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0.5vw 0;
     padding: 1vw;
   }
   .update-items select {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0.5vw 0;
     padding: 1vw;
   }
   .update-items button {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 2vw 0 0 0;
     padding: 1vw 0;
   }
   .update-items div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     margin: 2vw 0 0 0;
     padding: 1vw;
@@ -2238,203 +2275,230 @@ footer span:nth-child(1) {
     padding: 1vw;
   }
   .storage-details .delete-box h4 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
   }
   .storage-details .delete-box p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
   }
   .storage-details .delete-box div button {
     width: 30%;
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     padding: 1vw 0;
   }
   .storage-item .items-delete-box p {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: auto auto;
   }
   .items-delete-box button {
-    font-size: 3vw;
+    font-size: 2.55vw;
     padding: 1vw 2vw;
     margin: 0 0 0 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: 0.5vw 0;
+    padding: 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0.5vw 0;
+    padding: 0 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
+    font-size: 2.975vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: 0;
+    padding: 0;
+    font-size: 2.975vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: 2.975vw;
+    margin: 0 1vw;
+    padding: 0;
   }
   #main-page-housing {
     margin: 32vw 0 0 0;
   }
   #main-page-housing main span {
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   #main-page-housing main h1 {
-    font-size: 8vw;
+    font-size: 6.8vw;
     margin-top: 5vw;
   }
   #main-page-housing main h2 {
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   #main-page-housing main p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin-top: 2vw;
   }
   #loggedOut {
-    margin: 4vw 0 4vw 0;
+    margin: 4vw auto 4vw auto;
   }
   #loggedOut a {
-    padding: 1.5vw 0;
+    padding: 1vw 0;
     margin: 2vw 0 2vw 0;
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   #loggedOut div span {
-    margin: 2vw 0 2vw 0;
-    font-size: 4vw;
+    width: 90%;
+    margin: 1vw auto 1vw auto;
+    font-size: 3.1875vw;
   }
   #loggedIn button, #loggedIn a {
-    padding: 1.5vw 0;
+    padding: 1vw 0;
     margin: 3vw 0 2vw 0;
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   #features div {
     margin: 3vw 0 0 0;
   }
   #features div h4 {
     margin: 0 0 2vw 0;
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #features div p {
-    font-size: 3vw;
+    font-size: 2.55vw;
     text-align: left;
   }
   .login {
     margin: 32vw 0 0 0;
   }
   .login h4 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 0 4vw 0;
   }
   .login label {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 1vw 0;
   }
   .login input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 0 1vw 0;
   }
   .login button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 4vw 0 3vw 0;
   }
   .login div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
   }
   .login div span {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   #forgotten-password {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .signup {
     margin: 32vw 0 0 0;
   }
   .signup h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 0 0 4vw 0;
   }
   .signup label {
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   .signup input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 0 1vw 0;
   }
   .signup button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 6vw 0 3vw 0;
   }
   .signup span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 3vw 0 3vw 0;
   }
   .signup div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .signup div p {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   #terms input {
     width: 8vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 3vw 0 0;
   }
   .reset-form {
     margin: 32vw 0 0 0;
   }
   .reset-form h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 0 5vw 0;
   }
   .reset-form label {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 2vw 0;
   }
   .reset-form input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 0 3vw 0;
   }
   .reset-form button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 3vw 0 3vw 0;
   }
   .reset-form span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .reset-form div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .reset-form div div {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   .password-reset {
     margin: 32vw 0 0 0;
   }
   .password-reset h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 0 4vw 0;
   }
   .password-reset label {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 1vw 0;
   }
   .password-reset input {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 0 2vw 0;
   }
   .password-reset button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 5vw 0 3vw 0;
   }
   .password-reset div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
   }
   .password-reset div div {
-    font-size: 8vw;
+    font-size: 6.8vw;
+  }
+  .password-reset span {
+    font-size: 2.975vw;
   }
   .storage-wrapper {
     margin: 32vw 0 0 0;
   }
   .storage-wrapper h3 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .storage-wrapper p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     margin: 2vw 0 2vw 0;
   }
@@ -2448,26 +2512,26 @@ footer span:nth-child(1) {
     margin: 0 0 5vw 0;
   }
   #storage-units-housing .storage-details h3 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 auto 0 auto;
     padding: 0;
   }
   .storage-details span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     padding: 0.5vw 0;
   }
   .storage-details .manage-storage-unit button {
     width: 48%;
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     padding: 1vw 0;
   }
   .storage-details .manage-storage-unit a {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 2vw 0;
     padding: 1vw 0;
   }
@@ -2477,11 +2541,11 @@ footer span:nth-child(1) {
   .single-storage-housing #storage-overview-upper h3 {
     width: 70%;
     margin: 0 auto 5vw auto;
-    font-size: 5vw;
+    font-size: 4.25vw;
     text-align: center;
   }
   .single-storage-housing #storage-overview-upper a {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
@@ -2489,25 +2553,25 @@ footer span:nth-child(1) {
     margin: 3vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower h3 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower p {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw auto;
   }
   .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group h4 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0.5vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
     margin: 1vw 0 1vw 0;
   }
   .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
-    font-size: 3.25vw;
+    font-size: 2.7625vw;
     margin: 0 1vw 1vw 0;
     padding: 1vw 1vw;
     border-radius: 2vw;
@@ -2528,24 +2592,24 @@ footer span:nth-child(1) {
     margin: 1vw auto;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 0 2vw;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .single-storage-housing #storage-overview-lower #download-csv {
     margin: 2vw 0 0 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0;
   }
   .single-storage-housing #storage-overview-lower #download-csv a {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 1vw 0 0 0;
     padding: 0.5vw 0 0.5vw 1vw;
   }
@@ -2554,97 +2618,99 @@ footer span:nth-child(1) {
   }
   .app-contact-page h3 {
     width: 70%;
-    font-size: 6vw;
+    font-size: 5.1vw;
     text-align: center;
     margin: 0 auto 3vw auto;
   }
   .app-contact-page label {
-    font-size: 4vw;
+    font-size: 3.4vw;
+    margin: 0 0 0.5vw 0;
+    padding: 0;
   }
   .app-contact-page input {
-    font-size: 3.5vw;
-    margin: 1vw 0;
-    padding: 2vw;
+    font-size: 2.975vw;
+    margin: 0 0 0.5vw 0;
+    padding: 0.75vw 0 0.75vw 2vw;
   }
   .app-contact-page textarea {
     height: 20vw;
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 1vw 0;
     padding: 2vw;
   }
   .app-contact-page div {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 3vw 0;
     padding: 2vw;
   }
   .app-contact-page div p {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   .app-about {
     margin: 32vw 0 0 0;
   }
   .app-about h1 {
-    font-size: 8vw;
+    font-size: 6.8vw;
   }
   .app-about p, .app-about ul {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   #tos {
     margin: 32vw 0 0 0;
   }
   #tos h1 {
-    font-size: 8vw;
+    font-size: 6.8vw;
     margin: 2vw 0;
   }
   #tos h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 4vw 0 0 0;
   }
   #tos b {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 0 2vw;
   }
   #tos p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 0 0;
   }
   #tos ol {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 0 5vw;
   }
   #tos button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 4vw 0 0 0;
   }
   #privacy {
     margin: 32vw 0 0 0;
   }
   #privacy h1 {
-    font-size: 8vw;
+    font-size: 6.8vw;
     margin: 2vw 0;
   }
   #privacy h3 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 4vw 0 0 0;
   }
   #privacy h4 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 3vw 0 2vw 0;
   }
   #privacy b {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 0 0 0 2vw;
   }
   #privacy p {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 0 0;
   }
   #privacy ul {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 2vw 0 0 5vw;
   }
   #privacy button {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     margin: 4vw 0 0 0;
   }
 }
@@ -2733,54 +2799,56 @@ footer span:nth-child(1) {
   #theme span {
     width: 2.75vw;
     height: 2.75vw;
-    font-size: 1.5vw;
+    font-size: 1.4875vw;
     padding-bottom: 0.25vw;
   }
   footer {
     margin: 15vw 0 0 0;
+    padding: 0.5vw 0;
   }
   footer span:nth-child(1) {
-    font-size: 2.5vw;
-    margin: 0 0 1vw 0;
+    font-size: 1.7vw;
+    margin: 0.5vw 0 0.5vw 0;
   }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: 1.7vw;
+    margin: 0 0 0.5vw 0;
   }
   footer ul {
-    margin: 1vw 0 0 0;
+    margin: 0 0 0.5vw 0;
   }
   footer ul li {
-    font-size: 2.5vw;
+    font-size: 1.7vw;
     margin: 0 5vw 0 5vw;
   }
   .storage-wrapper .create-storage h3 {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0 auto 2vw auto;
   }
   .storage-wrapper .create-storage label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0.25vw 0;
   }
   .storage-wrapper .create-storage input {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0;
     padding: 0.5vw 1vw;
   }
   .storage-wrapper .create-storage button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 2vw 0 2vw 0;
     padding: 0.5vw 0;
   }
   .storage-wrapper .create-storage div {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     text-align: center;
-    padding: 1vw;
+    padding: 0.5vw;
   }
   .storage-wrapper .create-storage div div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .storage-wrapper .create-storage span {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     text-align: center;
   }
   #storage-units-housing .storage-details .update-form {
@@ -2796,127 +2864,152 @@ footer span:nth-child(1) {
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house h3 {
     width: 80%;
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     margin: 0;
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house i {
     width: 20%;
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   #storage-units-housing .storage-details .update-form label {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0.25vw 0;
   }
   #storage-units-housing .storage-details .update-form input {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0.25vw;
     padding: 0.25vw;
     border-top-right-radius: 1.5vw;
   }
   #storage-units-housing .storage-details .update-form button {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 1.25vw auto 1.25vw auto;
     padding: 0.25vw 0;
     border-bottom-right-radius: 1.5vw;
   }
   #storage-units-housing .storage-details .update-form div {
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
     padding: 0.25vw;
     margin: 0;
   }
-  .form-space-housing div span {
-    font-size: 2.75vw;
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 2vw 0;
   }
-  .progress-bar {
-    height: 4.5vw;
+  #storage-overview-upper .form-space-housing .space-component span {
+    font-size: 2.125vw;
   }
-  .progress-bar::before {
-    left: 0.75vw;
-    top: 0.75vw;
-    bottom: 0.75vw;
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
+    height: 4vw;
+  }
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
+    left: 0.5vw;
+    top: 0.5vw;
+    bottom: 0.5vw;
     width: calc(var(--width, 0) * 1% + 3vw);
-    max-width: calc(100% - 1.5vw);
+    max-width: calc(100% - 1vw);
   }
-  .items-form h4 {
-    font-size: 5vw;
-    margin: 2vw 0 2vw 0;
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 2vw 0;
   }
-  .form-space-housing label {
-    font-size: 3.5vw;
+  #storage-overview-upper .form-space-housing .items-form h4 {
+    font-size: 2.55vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form label {
+    font-size: 2.125vw;
+    margin: 0.25vw 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: 2.125vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: 2.125vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form select {
+    font-size: 1.7vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: 1.9125vw;
+    margin: 2vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form div {
+    font-size: 1.7vw;
+    text-align: center;
+    padding: 1vw;
+    margin: 2vw 0 0 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: 3.4vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
+    margin: 1vw 0 0 0;
+    padding: 1vw 0.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header {
+    margin: 0.5vw 0;
+    padding: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
+    font-size: 2.125vw;
+    text-align: center;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
+    font-size: 2.975vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
     margin: 0;
   }
-  .form-space-housing input {
-    font-size: 2.75vw;
-    margin: 0.5vw 0;
-    padding: 1.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
+    font-size: 1.53vw;
+    margin: 0;
   }
-  .form-space-housing textarea {
-    font-size: 2.75vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
+    font-size: 1.53vw;
+    margin: 0.25vw 0;
+    padding: 0.25vw 0 0.25vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description {
     margin: 0.5vw 0 0 0;
-    padding: 2vw;
   }
-  .form-space-housing select {
-    font-size: 2.5vw;
-    margin: 0.5vw 0 0 0;
-    padding: 1.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
+    font-size: 1.53vw;
+    margin: 0;
   }
-  .form-space-housing button {
-    font-size: 2.75vw;
-    margin: 2vw 0 2vw 0;
-    padding: 1.5vw 0;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
+    font-size: 1.53vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
   }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
+    font-size: 1.53vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
   }
-  .form-space-housing div {
-    font-size: 2.75vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
+    font-size: 1.53vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
+    font-size: 1.53vw;
     text-align: center;
-  }
-  .form-space-housing div div {
-    font-size: 6vw;
-  }
-  .update-items-header h4 {
-    font-size: 2.75vw;
-    text-align: center;
-  }
-  .update-items-header i {
-    font-size: 3.5vw;
-  }
-  .update-items label {
-    font-size: 2.25vw;
-    text-align: left;
     margin: 0.5vw 0;
-  }
-  .update-items input {
-    font-size: 2vw;
-    border-top-right-radius: 3vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-  }
-  .update-items textarea {
-    font-size: 2vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-  }
-  .update-items select {
-    font-size: 2vw;
-    border-top-right-radius: 3vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-  }
-  .update-items button {
-    font-size: 2vw;
-    border-bottom-right-radius: 3vw;
-    margin: 1vw 0 0 0;
-    padding: 0.5vw 0;
-  }
-  .update-items div {
-    font-size: 2vw;
-    text-align: center;
-    margin: 1vw 0 0 0;
-    padding: 1vw;
+    padding: 0;
   }
   .storage-details .delete-box {
     width: 40vw;
@@ -2927,74 +3020,100 @@ footer span:nth-child(1) {
     box-shadow: 0vw 0vw 2vw 2vw lightgray;
   }
   .storage-details .delete-box h4 {
-    font-size: 3vw;
+    font-size: 2.55vw;
     text-align: center;
   }
   .storage-details .delete-box p {
-    font-size: 2.25vw;
+    font-size: 1.9125vw;
     text-align: center;
   }
   .storage-details .delete-box div button {
     width: 35%;
-    font-size: 2.25vw;
+    font-size: 1.9125vw;
     padding: 0.25vw 0;
     margin: 0.5vw 0 0.75vw 0;
     border-bottom-right-radius: 1.5vw;
   }
-  .storage-item .items-delete-box div {
-    display: flex;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
+    margin: 0.5vw 0;
+    padding: 0.5vw 1vw;
   }
-  .storage-item .items-delete-box p {
-    font-size: 2vw;
-    margin: auto auto;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
+    font-size: 1.53vw;
+    margin: 0;
   }
-  .storage-item .items-delete-box button {
-    font-size: 2vw;
-    padding: 0.75vw 0.75vw;
-    border-bottom-right-radius: 1.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
+    margin: 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
+    font-size: 1.53vw;
+    padding: 0.5vw 2vw;
+    margin: 0 1vw;
     border-top-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
   }
-  .storage-item-details span, .storage-item-details p {
-    font-size: 3.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: 0.5vw 0;
+    padding: 0.5vw 0.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0;
+    padding: 0 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
+    font-size: 1.53vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: 0.5vw 0;
+    padding: 0;
+    font-size: 1.53vw;
+    text-align: left;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: 1.53vw;
+    margin: 0 1vw;
+    padding: 0;
   }
   #main-page-housing {
     margin: 25vw 0 0 0;
   }
   #main-page-housing main span {
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   #main-page-housing main h1 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin-top: 5vw;
   }
   #main-page-housing main h2 {
-    font-size: 4vw;
+    font-size: 3.4vw;
   }
   #main-page-housing main p {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin-top: 2vw;
   }
   #loggedOut {
     margin: 2vw auto 2vw auto;
   }
   #loggedOut a {
-    padding: 1vw;
+    padding: 0.75vw;
     margin: 1vw 0 1vw 0;
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     border-top-right-radius: 2vw;
     border-bottom-left-radius: 2vw;
   }
   #loggedOut div span {
-    margin: 1vw 0;
-    font-size: 2.5vw;
+    margin: 1vw auto;
+    font-size: 2.125vw;
   }
   #loggedIn {
     margin: 1vw auto 1vw auto;
   }
   #loggedIn button, #loggedIn a {
-    padding: 1vw;
+    padding: 0.75vw;
     margin: 1.5vw 0;
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     border-top-right-radius: 2vw;
     border-bottom-left-radius: 2vw;
   }
@@ -3003,10 +3122,10 @@ footer span:nth-child(1) {
   }
   #features div h4 {
     margin: 0 0 1vw 0;
-    font-size: 3.25vw;
+    font-size: 2.7625vw;
   }
   #features div p {
-    font-size: 2.1vw;
+    font-size: 1.785vw;
     text-align: justify;
     text-indent: 3vw;
   }
@@ -3014,142 +3133,146 @@ footer span:nth-child(1) {
     margin: 25vw 0 0 0;
   }
   .login h4 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 2vw 0;
   }
   .login label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 1vw 0;
   }
   .login input {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 1vw 0;
     padding: 1vw;
   }
   .login button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 4vw 0 3vw 0;
     padding: 1vw;
   }
   .login div {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     text-align: center;
   }
   .login div span {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #forgotten-password {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
   }
   .signup {
     margin: 25vw 0 0 0;
   }
   .signup h3 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0 2vw 0;
   }
   .signup label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0.5vw 0;
   }
   .signup input {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0.25vw 0;
     padding: 1vw;
   }
   .signup button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 5vw 0 2vw 0;
     padding: 1vw;
   }
   .signup span {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 1vw 0 3vw 0;
   }
   .signup div {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
   }
   .signup div p {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   #terms input {
     width: 4vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 3vw 0 0;
   }
   .reset-form {
     margin: 25vw 0 0 0;
   }
   .reset-form h3 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     text-align: center;
     margin: 0 0 3vw 0;
   }
   .reset-form label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 1vw 0;
   }
   .reset-form input {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 3vw 0;
     padding: 1.5vw;
   }
   .reset-form button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 1vw 0;
     padding: 1vw;
   }
   .reset-form span {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
   }
   .reset-form div {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
   }
   .reset-form div div {
-    font-size: 5vw;
+    font-size: 4.25vw;
   }
   .password-reset {
     margin: 25vw 0 0 0;
   }
   .password-reset h3 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     text-align: center;
     margin: 0 0 2vw 0;
   }
   .password-reset label {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 1vw 0;
   }
   .password-reset input {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 0 0 1vw 0;
     padding: 1vw;
   }
   .password-reset button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 3vw 0 3vw 0;
     padding: 1vw;
   }
   .password-reset div {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     text-align: center;
   }
   .password-reset div div {
-    font-size: 5vw;
+    font-size: 4.25vw;
+  }
+  .password-reset span {
+    font-size: 2.125vw;
+    text-align: center;
   }
   .storage-wrapper {
     margin: 25vw 0 0 0;
   }
   .storage-wrapper h3 {
-    font-size: 3.5vw;
+    font-size: 2.975vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .storage-wrapper p {
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     text-align: center;
     margin: 1vw 0;
   }
@@ -3163,163 +3286,186 @@ footer span:nth-child(1) {
     margin: 0 0 5vw 0;
   }
   #storage-units-housing .storage-details h3 {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0 auto 0 auto;
     padding: 0;
   }
   .storage-details span {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     padding: 0.25vw 0;
   }
   .storage-details .manage-storage-unit button {
     width: 48%;
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     padding: 1vw 0;
   }
   .storage-details .manage-storage-unit a {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
   }
   .storage-wrapper button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 2vw 0 2vw 0;
     padding: 0.5vw 0;
   }
-  .single-storage-housing {
-    margin: 25vw 0 0 0;
+  .single-storage-housing #storage-overview-upper {
+    margin: 25vw auto 0 auto;
   }
-  .single-storage-housing h3 {
-    width: 70%;
-    font-size: 5vw;
-    margin: 0 0 2vw 0;
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 95%;
+    margin: 0 auto 3vw auto;
+    font-size: 2.975vw;
+    text-align: center;
   }
-  .single-storage-housing a {
-    font-size: 2.75vw;
+  .single-storage-housing #storage-overview-upper a {
+    font-size: 1.9125vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower {
+    margin: 25vw auto 0 auto;
+  }
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: 2.975vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower p {
+    font-size: 2.125vw;
+    text-align: center;
+    margin: 2vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
-    padding: 1.5vw;
   }
-  .storage-items h3 {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
+    font-size: 2.55vw;
+    margin: 0.5vw 0;
   }
-  #download-csv span {
-    font-size: 2.75vw;
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: 1vw 0 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: 1.9125vw;
+    margin: 0 1vw 1vw 0;
+    padding: 0.5vw 0.5vw;
+    border-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 60vw;
+    margin: 1vw 0;
+    padding: 1.5vw 1.5vw;
+    flex-direction: column;
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 3vw 0;
+    padding: 1vw 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: 0.5vw auto;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
+    font-size: 2.55vw;
+    margin: 0 2vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
     margin: 0;
   }
-  #download-csv a {
-    font-size: 2.75vw;
-    margin: 2vw 0 0 0;
-    padding: 1.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
+    font-size: 1.9125vw;
   }
-  .single-storage-housing p {
-    font-size: 2.75vw;
-    margin: 6vw 0 0 0;
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: 1vw 0 0 0;
   }
-  .filter-button-title {
-    font-size: 4vw;
-    margin: 0 0 2vw 0;
-  }
-  .filter-button {
-    font-size: 2.5vw;
-    padding: 1vw 0;
-  }
-  .items-group {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .storage-item {
-    margin: 1vw 2vw 0 0;
-  }
-  .storage-item-info span {
-    font-size: 2.25vw;
-  }
-  .storage-item-buttons i {
-    font-size: 2.5vw;
-  }
-  .description-section p {
-    font-size: 2vw;
+  .single-storage-housing #storage-overview-lower #download-csv span {
+    font-size: 2.1675vw;
     margin: 0;
   }
-  .storage-item-details span {
-    font-size: 2vw;
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: 2.125vw;
+    margin: 1vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
   }
   .app-contact-page {
     margin: 25vw 0 0 0;
   }
   .app-contact-page h3 {
     width: 70%;
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     text-align: center;
     margin: 0 auto 1vw auto;
   }
   .app-contact-page label {
-    font-size: 3vw;
+    font-size: 2.55vw;
     padding: 0.5vw 0;
   }
   .app-contact-page input {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0;
     padding: 0.75vw 1.5vw;
   }
   .app-contact-page textarea {
     height: 20vw;
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 0 0 3vw 0;
     padding: 1.5vw;
   }
   .app-contact-page div {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 3vw 0;
     padding: 2vw;
   }
   .app-contact-page div p {
-    font-size: 6vw;
+    font-size: 5.1vw;
   }
   .app-about {
     margin: 25vw 0 0 0;
   }
   .app-about h1 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 0 0;
   }
   .app-about h2 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 3vw 0 0 0;
   }
   .app-about p {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 3vw 0 0 0;
   }
   .app-about ul {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 3vw 0 0 3vw;
   }
   #tos {
     margin: 25vw 0 0 0;
   }
   #tos h1 {
-    font-size: 6vw;
+    font-size: 5.1vw;
     margin: 2vw 0;
   }
   #tos h3 {
-    font-size: 4.5vw;
+    font-size: 3.825vw;
     margin: 3vw 0 0 0;
   }
   #tos b {
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     margin: 0 0 0 2vw;
   }
   #tos p {
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     margin: 2vw 0 0 0;
   }
   #tos ol {
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     margin: 2vw 0 0 5vw;
   }
   #tos button {
-    font-size: 2.75vw;
+    font-size: 2.3375vw;
     margin: 3vw auto 0 auto;
     padding: 1.5vw 0;
   }
@@ -3327,31 +3473,31 @@ footer span:nth-child(1) {
     margin: 25vw auto 0 auto;
   }
   #privacy h1 {
-    font-size: 5vw;
+    font-size: 4.25vw;
     margin: 2vw 0;
   }
   #privacy h3 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 2vw 0 0 0;
   }
   #privacy h4 {
-    font-size: 3vw;
-    margin: 1vw 0 0 0;
-  }
-  #privacy b {
-    font-size: 3vw;
-    margin: 0 0 0 2vw;
-  }
-  #privacy p {
     font-size: 2.55vw;
     margin: 1vw 0 0 0;
   }
+  #privacy b {
+    font-size: 2.55vw;
+    margin: 0 0 0 2vw;
+  }
+  #privacy p {
+    font-size: 2.1675vw;
+    margin: 1vw 0 0 0;
+  }
   #privacy ul {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 2vw 0 0 5vw;
   }
   #privacy button {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     margin: 4vw auto 0 auto;
     padding: 1vw;
   }
@@ -3422,6 +3568,9 @@ footer span:nth-child(1) {
     width: 100%;
     font-size: 1.75vw;
   }
+  nav div a {
+    border-top-right-radius: 2vw;
+  }
   #reveal-menu span {
     font-size: 1.75vw;
     padding: 0.25vw 2vw;
@@ -3441,55 +3590,61 @@ footer span:nth-child(1) {
   #theme span {
     width: 2vw;
     height: 2vw;
-    font-size: 1vw;
-    padding-bottom: 0.25vw;
+    font-size: 1.0625vw;
+    padding-bottom: 0.15vw;
   }
   footer {
-    margin: 15vw 0 0 0;
+    margin: 5vw 0 0 0;
+    padding: 1vw 0;
   }
   footer span:nth-child(1) {
-    font-size: 2.5vw;
-    margin: 0 0 1vw 0;
+    font-size: 1.53vw;
+    margin: 0 0 0.5vw 0;
   }
-  footer span:nth-child(1) i {
-    margin: 0 0 0 2vw;
+  footer span:nth-child(2), footer span:nth-child(3) {
+    font-size: 1.53vw;
+    margin: 0 0 0.5vw 0;
+    padding: 0 0.5vw;
   }
   footer ul {
-    margin: 1vw 0 0 0;
+    margin: 0;
   }
   footer ul li {
-    font-size: 2.5vw;
+    font-size: 1.4025vw;
     margin: 0 5vw 0 5vw;
   }
   .storage-wrapper .create-storage h3 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0 auto 2vw auto;
   }
   .storage-wrapper .create-storage label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
   }
   .storage-wrapper .create-storage input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0;
     padding: 0.5vw 1vw;
     border-top-right-radius: 1.5vw;
   }
   .storage-wrapper .create-storage button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0 2vw 0;
     padding: 0.5vw 0;
   }
   .storage-wrapper .create-storage div {
-    font-size: 2.5vw;
+    font-size: 1.4025vw;
     text-align: center;
-    padding: 1vw;
+    padding: 0.5vw;
+    margin: 0 0 1.5vw 0;
   }
   .storage-wrapper .create-storage div div {
-    font-size: 5vw;
+    font-size: 2.805vw;
+    padding: 0;
+    margin: 0;
   }
   .storage-wrapper .create-storage span {
-    font-size: 2.5vw;
+    font-size: 1.4025vw;
     text-align: center;
   }
   #storage-units-housing .storage-details .update-form {
@@ -3505,159 +3660,152 @@ footer span:nth-child(1) {
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house h3 {
     width: 80%;
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0;
   }
   #storage-units-housing .storage-details .update-form .storage-unit-header-house i {
     width: 20%;
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   #storage-units-housing .storage-details .update-form label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
   }
   #storage-units-housing .storage-details .update-form input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw;
     padding: 0.25vw;
     border-top-right-radius: 1.5vw;
   }
   #storage-units-housing .storage-details .update-form button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 1.25vw auto 1.25vw auto;
     padding: 0.25vw 0;
     border-bottom-right-radius: 1.5vw;
   }
   #storage-units-housing .storage-details .update-form div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     text-align: center;
     padding: 0.25vw;
     margin: 0;
   }
-  .form-space-housing div span {
-    font-size: 1.65vw;
+  #storage-overview-upper .form-space-housing .space-component {
+    margin: 0 0 1vw 0;
   }
-  .progress-bar {
+  #storage-overview-upper .form-space-housing .space-component span {
+    font-size: 1.4025vw;
+  }
+  #storage-overview-upper .form-space-housing .space-component .progress-bar {
     height: 3vw;
   }
-  .progress-bar::before {
+  #storage-overview-upper .form-space-housing .space-component .progress-bar::before {
     left: 0.5vw;
     top: 0.5vw;
     bottom: 0.5vw;
     width: calc(var(--width, 0) * 1% + 2vw);
     max-width: calc(100% - 1vw);
   }
-  .items-form {
+  #storage-overview-upper .form-space-housing .items-form {
+    margin: 0 0 2vw 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form h4 {
+    font-size: 1.7vw;
+  }
+  #storage-overview-upper .form-space-housing .items-form label {
+    font-size: 1.4025vw;
+    margin: 0.25vw 0;
+  }
+  #storage-overview-upper .form-space-housing .items-form input {
+    font-size: 1.4025vw;
     margin: 0;
-  }
-  .items-form h4 {
-    font-size: 2vw;
-    margin: 0 0 1vw 0;
-  }
-  .form-space-housing label {
-    font-size: 1.65vw;
-  }
-  .form-space-housing input {
-    font-size: 1.65vw;
-    margin: 0.25vw 0;
-    padding: 0.5vw 0 0.5vw 3vw;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-top-right-radius: 1.5vw;
   }
-  .form-space-housing textarea {
-    height: 9vw;
-    font-size: 1.65vw;
-    margin: 0.25vw 0;
-    padding: 0.5vw 0 0.5vw 3vw;
+  #storage-overview-upper .form-space-housing .items-form textarea {
+    font-size: 1.4025vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-top-right-radius: 1.5vw;
   }
-  .form-space-housing select {
-    font-size: 1.35vw;
-    margin: 0.5vw 0 0 0;
-    padding: 0.5vw;
+  #storage-overview-upper .form-space-housing .items-form select {
+    font-size: 1.4025vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-top-right-radius: 1.5vw;
   }
-  .form-space-housing button {
-    font-size: 1.65vw;
-    margin: 1vw 0 0 0;
-    padding: 0.5vw 0;
+  #storage-overview-upper .form-space-housing .items-form button {
+    font-size: 1.4025vw;
+    margin: 2vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-bottom-right-radius: 1.5vw;
   }
-  .form-space-housing p {
-    font-size: 4.5vw;
-    margin: 2vw 0;
+  #storage-overview-upper .form-space-housing .items-form div {
+    font-size: 1.4025vw;
+    text-align: center;
+    padding: 1vw;
+    margin: 2vw 0 0 0;
   }
-  .form-space-housing div {
-    font-size: 1.65vw;
+  #storage-overview-upper .form-space-housing .items-form div span {
+    font-size: 2.805vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items {
+    margin: 0.75vw 0;
+    padding: 1vw 0.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header {
+    margin: 0.5vw 0;
+    padding: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header h4 {
+    font-size: 1.7vw;
     text-align: center;
   }
-  .form-space-housing div div {
-    font-size: 3vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-header i {
+    font-size: 2.125vw;
   }
-  #storage-overview-lower .update-items {
-    padding: 0.25vw;
-    margin: 0.25vw 0;
-    border-bottom-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-  }
-  #storage-overview-lower .update-items .update-items-header {
-    padding: 0;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions {
     margin: 0;
   }
-  #storage-overview-lower .update-items .update-items-header h4 {
-    font-size: 1.35vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions label {
+    font-size: 1.53vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-items-dimensions input {
+    font-size: 1.4025vw;
+    margin: 0.25vw 0;
+    padding: 0.25vw 0 0.25vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description {
+    margin: 0.5vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description label {
+    font-size: 1.53vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description textarea {
+    font-size: 1.4025vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description select {
+    font-size: 1.0625vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-top-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items .update-item-description button {
+    font-size: 1.275vw;
+    margin: 0.5vw 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .update-items div {
+    font-size: 1.275vw;
     text-align: center;
-  }
-  #storage-overview-lower .update-items .update-items-header i {
-    font-size: 2vw;
-  }
-  #storage-overview-lower .update-items .update-items-dimensions {
+    margin: 0.5vw 0;
     padding: 0;
-    margin: 0;
-  }
-  #storage-overview-lower .update-items .update-items-dimensions label {
-    font-size: 1.25vw;
-    text-align: left;
-    margin: 0.25vw 0;
-  }
-  #storage-overview-lower .update-items .update-items-dimensions input {
-    font-size: 1vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-    border-top-right-radius: 1vw;
-  }
-  #storage-overview-lower .update-items .update-item-description {
-    padding: 0;
-    margin: 0;
-  }
-  #storage-overview-lower .update-items .update-item-description label {
-    font-size: 1.25vw;
-    text-align: left;
-    margin: 0.25vw 0;
-  }
-  #storage-overview-lower .update-items .update-item-description textarea {
-    font-size: 1vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-    border-top-right-radius: 1vw;
-  }
-  #storage-overview-lower .update-items .update-item-description select {
-    font-size: 1vw;
-    border-top-right-radius: 3vw;
-    margin: 0.5vw 0;
-    padding: 0.5vw;
-    border-top-right-radius: 1vw;
-  }
-  #storage-overview-lower .update-items .update-item-description button {
-    font-size: 1vw;
-    border-bottom-right-radius: 1vw;
-    margin: 0.35vw 0;
-    padding: 0.25vw 0;
-  }
-  .update-items div {
-    font-size: 1.15vw;
-    text-align: center;
-    margin: 0.35vw 0;
-    padding: 0.25vw;
   }
   .storage-details .delete-box {
     width: 30vw;
@@ -3668,62 +3816,77 @@ footer span:nth-child(1) {
     box-shadow: 0vw 0vw 2vw 2vw lightgray;
   }
   .storage-details .delete-box h4 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
   }
   .storage-details .delete-box p {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     text-align: center;
   }
   .storage-details .delete-box div button {
     width: 35%;
-    font-size: 2vw;
+    font-size: 1.7vw;
     padding: 0.25vw 0;
     margin: 0.5vw 0 0.75vw 0;
     border-bottom-right-radius: 1.5vw;
   }
-  .storage-item .items-delete-box {
-    display: none;
-    flex-direction: column;
-    border-radius: 1vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box {
+    margin: 0.5vw 0;
+    padding: 0.5vw 1vw;
   }
-  .storage-item .items-delete-box p {
-    font-size: 1.15vw;
-    text-align: center;
-    margin: 0 0 0.5vw 0;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box p {
+    font-size: 1.4025vw;
+    margin: 0;
   }
-  .storage-item .items-delete-box div {
-    display: flex;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div {
+    margin: 1vw 0;
   }
-  .storage-item .items-delete-box div button {
-    font-size: 1vw;
-    border-top-left-radius: 1vw;
-    border-bottom-right-radius: 1vw;
-    margin: 0 0 0 0.5vw;
-    padding: 0.25vw 0.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .items-delete-box div button {
+    font-size: 1.275vw;
+    padding: 0.5vw 2vw;
+    margin: 0 1vw;
+    border-top-left-radius: 1.5vw;
+    border-bottom-right-radius: 1.5vw;
   }
-  .storage-item .storage-item-details {
-    border-top-right-radius: 1vw;
-    border-bottom-left-radius: 1vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details {
+    margin: 0.5vw 0;
+    padding: 0.5vw 0.5vw;
   }
-  .storage-item .storage-item-details span, .storage-item .storage-item-details p {
-    font-size: 1.15vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section {
+    margin: 0;
+    padding: 0 1vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section span {
+    margin: 0;
+    padding: 0;
+    font-size: 1.4025vw;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details .description-section p {
+    margin: 0.5vw 0;
+    padding: 0;
+    font-size: 1.4025vw;
+    text-align: left;
+  }
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-details span {
+    font-size: 1.4025vw;
+    margin: 0 1vw;
+    padding: 0;
   }
   #main-page-housing {
     margin: 16vw 0 0 0;
   }
   #main-page-housing main span {
-    font-size: 2vw;
+    font-size: 1.7vw;
   }
   #main-page-housing main h1 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin-top: 2vw;
   }
   #main-page-housing main h2 {
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   #main-page-housing main p {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin-top: 1vw;
   }
   #loggedOut {
@@ -3731,13 +3894,13 @@ footer span:nth-child(1) {
   }
   #loggedOut a {
     width: 50%;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
     padding: 0.5vw;
   }
   #loggedOut div span {
     width: 50%;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
   }
   #loggedIn {
@@ -3745,7 +3908,7 @@ footer span:nth-child(1) {
   }
   #loggedIn button, #loggedIn a {
     width: 50%;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.5vw 0;
     padding: 0.5vw;
   }
@@ -3754,10 +3917,10 @@ footer span:nth-child(1) {
   }
   #features div h4 {
     margin: 0 0 1vw 0;
-    font-size: 2.5vw;
+    font-size: 2.125vw;
   }
   #features div p {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     text-align: left;
     text-indent: 3vw;
   }
@@ -3765,150 +3928,153 @@ footer span:nth-child(1) {
     margin: 16vw 0 0 0;
   }
   .login h4 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0 0 1vw 0;
   }
   .login label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 0 0.25vw 0;
   }
   .login input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
     padding: 0.5vw 0 0.5vw 1.5vw;
     border-top-right-radius: 2vw;
   }
   .login button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0;
     padding: 0.5vw;
     border-bottom-right-radius: 2vw;
   }
   .login div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     text-align: center;
   }
   .login div span {
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   #forgotten-password {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0;
   }
   .signup {
     margin: 16vw 0 0 0;
   }
   .signup h3 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0 0 1vw 0;
   }
   .signup label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 0 0.25vw 0;
   }
   .signup input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.5vw 0;
     padding: 0.5vw 0 0.5vw 3vw;
     border-top-right-radius: 2vw;
   }
   .signup button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0;
     padding: 0.5vw;
     border-bottom-right-radius: 2vw;
   }
   .signup span {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 1vw 0 1vw 0;
   }
   .signup div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
   }
   .signup div p {
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   #terms input {
     width: 3.5vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 3vw 0 0;
   }
   .reset-form {
     margin: 16vw 0 0 0;
   }
   .reset-form h3 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
     margin: 0 0 1vw 0;
   }
   .reset-form label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 0 0.25vw 0;
   }
   .reset-form input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.75vw 0;
     padding: 0.5vw 0 0.5vw 3vw;
     border-top-right-radius: 2vw;
   }
   .reset-form button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 1vw 0;
     padding: 0.5vw;
     border-bottom-right-radius: 2vw;
   }
   .reset-form span {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
   }
   .reset-form div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
   }
   .reset-form div div {
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   .password-reset {
     margin: 16vw 0 0 0;
   }
   .password-reset h3 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0 0 1vw 0;
   }
   .password-reset label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 0 0.25vw 0;
   }
   .password-reset input {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
     padding: 0.5vw 0 0.5vw 1.5vw;
     border-top-right-radius: 2vw;
   }
   .password-reset button {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0;
     padding: 0.5vw;
     border-bottom-right-radius: 2vw;
   }
   .password-reset div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     text-align: center;
   }
   .password-reset div div {
-    font-size: 3vw;
+    font-size: 2.55vw;
+  }
+  .password-reset span {
+    font-size: 1.4025vw;
   }
   .storage-wrapper {
     margin: 16vw 0 0 0;
   }
   .storage-wrapper h3 {
-    font-size: 2.5vw;
+    font-size: 2.125vw;
     text-align: center;
     margin: 0 auto 5vw auto;
   }
   .storage-wrapper p {
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
     margin: 1vw 0;
   }
@@ -3917,221 +4083,239 @@ footer span:nth-child(1) {
     padding: 2vw;
     border-top-left-radius: 4vw;
   }
-  #storage-units-housing .storage-details {
+  .storage-wrapper #storage-units-housing .storage-details {
     padding: 2vw;
     margin: 0 1vw 5vw 0;
   }
-  #storage-units-housing .storage-details h3 {
-    font-size: 2vw;
+  .storage-wrapper #storage-units-housing .storage-details h3 {
+    font-size: 1.7vw;
     margin: 0 auto 0 auto;
     padding: 0;
   }
-  .storage-details span {
-    font-size: 1.65vw;
+  .storage-wrapper #storage-units-housing .storage-details span {
+    font-size: 1.4025vw;
     padding: 0.25vw 0;
+  }
+  .storage-wrapper #storage-units-housing .storage-details .manage-storage-unit .delete-update-store {
+    margin: 1vw 0;
   }
   .storage-details .manage-storage-unit button {
     width: 48%;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;
   }
   .storage-details .manage-storage-unit a {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;
   }
   .storage-wrapper button {
-    font-size: 1.65vw;
-    margin: 1vw 0 2vw 0;
+    font-size: 1.4025vw;
+    margin: 0;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;
   }
-  .single-storage-housing {
-    margin: 16vw 0 0 0;
+  .single-storage-housing #storage-overview-upper {
+    margin: 16vw auto 0 auto;
   }
-  .single-storage-housing h3 {
-    width: 100%;
-    font-size: 2vw;
-    margin: 0 0 1vw 0;
+  .single-storage-housing #storage-overview-upper h3 {
+    width: 70%;
+    margin: 0 auto 3vw auto;
+    font-size: 2.125vw;
+    text-align: center;
   }
-  .single-storage-housing a {
-    font-size: 1.65vw;
-    margin: 1vw 0 0 0;
-    padding: 0.5vw;
+  .single-storage-housing #storage-overview-upper a {
+    font-size: 1.4025vw;
+    margin: 0;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-bottom-right-radius: 1.5vw;
   }
-  .storage-items h3 {
-    font-size: 4vw;
-    margin: 2vw 0 0 0;
+  .single-storage-housing #storage-overview-lower {
+    margin: 16vw auto 0 auto;
   }
-  #download-csv span {
-    font-size: 1.65vw;
+  .single-storage-housing #storage-overview-lower h3 {
+    font-size: 2.125vw;
     margin: 0;
   }
-  #download-csv a {
-    font-size: 1.65vw;
-    margin: 0.5vw 0 0.25vw 0;
-    padding: 0.5vw 0 0.5vw 0;
+  .single-storage-housing #storage-overview-lower p {
+    font-size: 1.7vw;
+    text-align: center;
+    margin: 2vw auto;
   }
-  .single-storage-housing p {
-    font-size: 1.65vw;
+  .single-storage-housing #storage-overview-lower .buttons-group {
     margin: 1vw 0;
   }
-  .filter-button-title {
-    font-size: 1.65vw;
-    margin: 1vw 0;
+  .single-storage-housing #storage-overview-lower .buttons-group h4 {
+    font-size: 1.7vw;
+    margin: 0.5vw 0;
   }
-  .filter-button {
-    font-size: 1.65vw;
-    padding: 0.5vw 0;
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons {
+    margin: 1vw 0 1vw 0;
+  }
+  .single-storage-housing #storage-overview-lower .buttons-group .filter-buttons .filter-button {
+    font-size: 1.4025vw;
+    margin: 0 1vw 1vw 0;
+    padding: 0.5vw 0.5vw;
     border-radius: 1vw;
   }
-  .storage-items {
-    height: 40vw;
-    overflow: auto;
+  .single-storage-housing #storage-overview-lower .items-group {
+    height: 41.5vw;
+    margin: 0;
+    padding: 1.5vw 1.5vw;
+    flex-direction: column;
+    border-bottom-left-radius: 3vw;
+    border-top-left-radius: 3vw;
   }
-  .items-group {
-    display: flex;
-    flex-wrap: wrap;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item {
+    margin: 0 0 2vw 0;
+    padding: 1vw 1vw;
   }
-  .storage-item {
-    margin: 1vw 1vw 0 0;
-    border-bottom-left-radius: 1.5vw;
-    border-top-right-radius: 1.5vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons {
+    margin: 0.5vw auto;
   }
-  .storage-item-info span {
-    font-size: 1.35vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-buttons i {
+    font-size: 1.9125vw;
+    margin: 0 2vw;
   }
-  .storage-item-buttons {
-    margin: 0.25vw 0;
-  }
-  .storage-item-buttons i {
-    font-size: 1.5vw;
-  }
-  .description-section p {
-    font-size: 2vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info {
     margin: 0;
   }
-  .storage-item-details span {
-    font-size: 2vw;
+  .single-storage-housing #storage-overview-lower .items-group .storage-item .storage-item-info span {
+    font-size: 1.4025vw;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv {
+    margin: 1vw 0 0 0;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv span {
+    font-size: 1.4025vw;
+    margin: 0;
+  }
+  .single-storage-housing #storage-overview-lower #download-csv a {
+    font-size: 1.4025vw;
+    margin: 1vw 0 0 0;
+    padding: 0.5vw 0 0.5vw 1vw;
+    border-bottom-right-radius: 1.5vw;
   }
   .app-contact-page {
     margin: 16vw 0 0 0;
   }
   .app-contact-page h3 {
     width: 50%;
-    font-size: 2vw;
+    font-size: 1.7vw;
     text-align: center;
     margin: 0 auto 1vw auto;
   }
   .app-contact-page label {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
+    margin: 0.25vw 0;
+    padding: 0;
   }
   .app-contact-page input {
-    font-size: 1.65vw;
-    margin: 0.25vw 0;
+    font-size: 1.4025vw;
+    margin: 0;
     padding: 0.5vw 0 0.5vw 1.5vw;
     border-bottom-left-radius: 2vw;
     border-top-right-radius: 2vw;
   }
   #contact-ol {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.75vw 0 0 0;
     padding: 0.5vw;
   }
   .app-contact-page textarea {
     height: 9vw;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.25vw 0;
     padding: 0.5vw 0 0.5vw 1.5vw;
     border-bottom-left-radius: 2vw;
     border-top-right-radius: 2vw;
   }
   .app-contact-page div {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
   }
   .app-contact-page div p {
-    font-size: 3vw;
+    font-size: 2.55vw;
   }
   .app-about {
     margin: 16vw 0 0 0;
   }
   .app-about h1 {
-    font-size: 4vw;
+    font-size: 3.4vw;
     margin: 0 0;
   }
   .app-about h2 {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 3vw 0 0 0;
   }
   .app-about p {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 1vw 0 0 0;
   }
   .app-about ul {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0 1vw 3vw;
   }
   #tos {
-    margin: 31vw 0 0 0;
+    margin: 16vw 0 0 0;
   }
   #tos h1 {
-    font-size: 6vw;
-    margin: 2vw 0;
+    font-size: 2.125vw;
+    margin: 0 0 1vw 0;
   }
   #tos h3 {
-    font-size: 4.5vw;
-    margin: 3vw 0 0 0;
+    font-size: 1.7vw;
+    margin: 1vw 0 0 0;
   }
   #tos b {
-    font-size: 2.75vw;
-    margin: 0 0 0 2vw;
+    font-size: 1.4025vw;
+    margin: 0;
   }
   #tos p {
-    font-size: 2.75vw;
-    margin: 2vw 0 0 0;
+    font-size: 1.4025vw;
+    margin: 1vw 0 0 0;
   }
   #tos ol {
-    font-size: 2.75vw;
+    font-size: 1.4025vw;
     margin: 2vw 0 0 5vw;
   }
   #tos button {
-    font-size: 2.75vw;
+    font-size: 1.4025vw;
     margin: 3vw auto 0 auto;
-    padding: 1.5vw 0;
+    padding: 0.5vw 0;
+    border-bottom-right-radius: 1.5vw;
   }
   #privacy {
     margin: 16vw auto 0 auto;
   }
   #privacy h1 {
-    font-size: 4vw;
-    margin: 0 0 1vw 0;
+    font-size: 3.4vw;
+    margin: 0 0 0.85vw 0;
   }
   #privacy h3 {
-    font-size: 3vw;
+    font-size: 2.55vw;
     margin: 2vw 0 0 0;
   }
   #privacy h4 {
-    font-size: 2vw;
+    font-size: 1.7vw;
     margin: 0.5vw 0 0 0;
   }
   #privacy b {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0 0 0 2vw;
   }
   #privacy p {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 0.5vw 0 0 0;
   }
   #privacy ul {
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0 0 5vw;
   }
   #privacy button {
     width: 40%;
-    font-size: 1.65vw;
+    font-size: 1.4025vw;
     margin: 2vw 0 0 0;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;

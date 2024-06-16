@@ -28,7 +28,7 @@ const StorageOverview = () => {
     const items = useSelector(state => state.items.value)
 
     const filterElements = (arr, category) => {
-      if(category === 'Show All Items') {
+      if(category === 'All Items') {
         for (let i = 0; i < arr.length; i++) {
           arr[i].style.display = 'flex'
           arr[i].style.flexDirection = 'column'
@@ -104,7 +104,7 @@ const StorageOverview = () => {
 
         // Changes main DIV's layout on resize
         const changeLayout = () => {
-          if (window.innerWidth > 1199) {
+          if (window.innerWidth > 959) {
             document.getElementsByClassName('single-storage-housing')[0].style.flexDirection = 'row'
           } else {
             document.getElementsByClassName('single-storage-housing')[0].style.flexDirection = 'column'
@@ -120,13 +120,13 @@ const StorageOverview = () => {
     }, [])
     
   return (
-    <div className={window.innerWidth > 1199 ? "single-storage-housing display-f fd-r" : "single-storage-housing display-f fd-c"}>
+    <div className={window.innerWidth > 959 ? "single-storage-housing display-f fd-r jc-c" : "single-storage-housing display-f fd-c"}>
 
         {/* U P P E R */}
 
         <div 
           id="storage-overview-upper"
-          className='display-f fd-c col-12-xs col-5-xl ml-a mr-a'
+          className='display-f fd-c col-12-xs col-5-lg col-5-xl'
         >
           {/* TITLE */}
           <h3>Storage / basement unit: "{title}"</h3>
@@ -149,15 +149,15 @@ const StorageOverview = () => {
 
         <div 
           id="storage-overview-lower"
-          className='display-f fd-c col-5-xl ml-a mr-a'
+          className='display-f fd-c col-5-lg col-5-xl'
         >
           {/* TITLE*/}
-          <h3>Items:</h3>
+          <h3 className='display-f jc-c'>Items:</h3>
           {/* NO ITEMS MESSAGE */}
           {items.length === 0 && <p><b>There are no items stored in this storage unit.</b></p>}
           {/* BUTTONS */}
           {items.length > 0 && 
-          <div className="buttons-group display-f fd-c">
+          <div className="buttons-group display-f fd-c ai-c">
             {items.length > 0 &&
               <h4 
                 className="filter-button-title"
@@ -176,7 +176,7 @@ const StorageOverview = () => {
                     border: theme ? '1px solid white' : '1px solid black'
                   }}
                 >
-                  Show All Items
+                  All Items
                 </span>
               }
               {buttons && buttons.map((btn, i) => (   
@@ -203,7 +203,7 @@ const StorageOverview = () => {
               // Single item DIV element
               <div 
                 id={item._id.slice(4, 11)}
-                className="storage-item p-1 col-12-xs col-5-lg"
+                className="storage-item p-1 col-12-xs"
                 key={item._id}
                 onMouseLeave={()=>{
                   document.getElementById(`${item._id.slice(4, 11)}-item-details`).style.display = 'none'

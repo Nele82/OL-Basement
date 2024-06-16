@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer
-      className='display-f fd-c ai-c pt-2 pb-4'
+      className='display-f fd-c ai-c'
       style={{ 
         backgroundColor: theme ? 'rgb(255, 255, 255)' : 'black',
         color: theme ? 'black' : 'rgb(255, 255, 255)' 
@@ -17,7 +17,7 @@ const Footer = () => {
     >
       {/* Back to top button */}
       <span 
-        className='display-f ai-c pt-1 pb-1 pl-2 pr-2 mb-3'
+        className='display-f ai-c'
         onClick={() => window.scrollTo(0, 0)}
         style={{ 
           border: theme ? '2px dashed black' : '2px dashed rgb(255, 255, 255)'
