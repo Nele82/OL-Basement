@@ -3442,7 +3442,7 @@ footer span:nth-child(1) {
     margin: 3vw 0 0 3vw;
   }
   #tos {
-    margin: 25vw 0 0 0;
+    margin: 25vw auto 0 auto;
   }
   #tos h1 {
     font-size: 5.1vw;
