@@ -4258,7 +4258,7 @@ footer span:nth-child(1) {
     margin: 2vw 0 1vw 3vw;
   }
   #tos {
-    margin: 16vw 0 0 0;
+    margin: 16vw auto 0 auto;
   }
   #tos h1 {
     font-size: 2.125vw;
@@ -4281,8 +4281,9 @@ footer span:nth-child(1) {
     margin: 2vw 0 0 5vw;
   }
   #tos button {
+    width: 40%;
     font-size: 1.4025vw;
-    margin: 3vw auto 0 auto;
+    margin: 2vw 0 0 0;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;
   }

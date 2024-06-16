@@ -4893,7 +4893,7 @@ $grid-gaps: (
     // TERMS OF USE (FROM 1200 PX)
 
     #tos {
-      margin: $base-margin * 16 0 0 0;
+      margin: $base-margin * 16 auto 0 auto;
     }
     #tos h1 {
       font-size: $base-font-size * 2.5;
@@ -4921,9 +4921,10 @@ $grid-gaps: (
       margin: $base-margin * 2 0 0 $base-margin * 5;
     }
     #tos button {
+      width: 40%;
       font-size: $base-font-size * 1.65;
 
-      margin: $base-margin * 3 auto 0 auto;
+      margin: $base-margin * 2 0 0 0;
       padding: $base-padding * .5 0;
 
       border-bottom-right-radius: 1.5vw;

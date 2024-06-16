@@ -53,7 +53,7 @@ const PrivacyPolicy = () => {
         <h3>Changes to This Policy</h3>
         <p>We may update this Privacy Policy from time to time. We encourage you to review it periodically.</p>
         <h3>Contact Us</h3>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <b>ol.basement@gmail.com.</b></p>
+        <p>If you have any questions about this Privacy Policy, please contact us at: <br/><b>ol.basement@gmail.com.</b></p>
         <button 
             className='display-f col-9-lg col-12-xl jc-c'
             onClick={() => navigate(-1)}
