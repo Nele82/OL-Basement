@@ -3217,7 +3217,7 @@ footer span:nth-child(1) {
   .reset-form input {
     font-size: 2.125vw;
     margin: 0 0 3vw 0;
-    padding: 1.5vw;
+    padding: 1vw;
   }
   .reset-form button {
     font-size: 2.125vw;
@@ -3996,7 +3996,7 @@ footer span:nth-child(1) {
     font-size: 2.55vw;
   }
   #terms input {
-    width: 3.5vw;
+    width: 2.5vw;
     margin: 0 3vw 0 0;
   }
   #terms label {
@@ -4018,7 +4018,7 @@ footer span:nth-child(1) {
   .reset-form input {
     font-size: 1.4025vw;
     margin: 0.75vw 0;
-    padding: 0.5vw 0 0.5vw 3vw;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-top-right-radius: 2vw;
   }
   .reset-form button {
