@@ -1074,6 +1074,8 @@ $grid-gaps: (
   }
   footer span:nth-child(1) {
     font-size: $base-font-size * 3.75;
+
+    padding: $base-padding * .25 $base-padding * 3;
   }
   footer span:nth-child(1) i {
     margin: 0 0 0 $base-margin * 3.75;
@@ -2040,6 +2042,8 @@ $grid-gaps: (
   }
   footer span:nth-child(1) {
     font-size: $base-font-size * 2.75;
+
+    padding: $base-padding * .25 $base-padding * 2;
   }
   footer span:nth-child(1) i {
     margin: 0 0 0 $base-margin * 2.75;
@@ -2940,6 +2944,7 @@ $grid-gaps: (
       font-size: $base-font-size * 2;
 
       margin: $base-margin * .5 0 $base-margin * .5 0;
+      padding: $base-padding * .25 $base-padding * 2;
     }
     footer span:nth-child(2), footer span:nth-child(3) {
       font-size: $base-font-size * 2;
@@ -3966,6 +3971,7 @@ $grid-gaps: (
       font-size: $base-font-size * 1.8;
 
       margin: 0 0 $base-margin * .5 0;
+      padding: $base-padding * .25 $base-padding * 1;
     }
     footer span:nth-child(2), footer span:nth-child(3) {
       font-size: $base-font-size * 1.8;
