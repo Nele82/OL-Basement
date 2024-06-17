@@ -25,35 +25,35 @@ This a full-stack application designed using a well-known MERN stack. The MERN s
 
 This project leverages a variety of third-party npm packages across the frontend and backend to implement diverse functionalities, ensuring a robust and feature-rich application experience.
 
-- Back-end of the application uses the following third-party npm packages / dependencies:
+BACK-END of the application uses the following third-party npm packages / dependencies:
 
-> bcrypt: Used for hashing passwords, providing a secure way to store and compare user passwords.
-> cors: Enables Cross-Origin Resource Sharing (CORS), allowing the backend to process requests from different domains.
-> dotenv: A module that loads environment variables from a .env file into process.env, helping manage configuration settings securely.
-> express: A framework for Node.js, used to build web applications and APIs.
-> jsonwebtoken: A package that implements JSON Web Tokens, used for securely transmitting information between parties as a JSON object.
-> mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js that manages relationships between data and provides schema validation.
-> node-mailjet: A client library for the Mailjet API, used to send transactional emails, used in this application particularly for password reset emails.
+- bcrypt: Used for hashing passwords, providing a secure way to store and compare user passwords.
+- cors: Enables Cross-Origin Resource Sharing (CORS), allowing the backend to process requests from different domains.
+- dotenv: A module that loads environment variables from a .env file into process.env, helping manage configuration settings securely.
+- express: A framework for Node.js, used to build web applications and APIs.
+- jsonwebtoken: A package that implements JSON Web Tokens, used for securely transmitting information between parties as a JSON object.
+- mongoose: An Object Data Modeling (ODM) library for MongoDB and Node.js that manages relationships between data and provides schema validation.
+- node-mailjet: A client library for the Mailjet API, used to send transactional emails, used in this application particularly for password reset emails.
 
-- Front-end of the application uses the following third-party npm packages / dependencies:
+FRONT-END of the application uses the following third-party npm packages / dependencies:
 
-> @emailjs/browser: A library that allows sending emails using EmailJS service directly from the browser without server-side code.
-> @fullhuman/postcss-purgecss: A PostCSS plugin used to remove unused CSS, which helps in reducing file size and improving load times. 
-> @reduxjs/toolkit: It provides a set of tools to simplify Redux development, such as configuring the store and creating reducers and actions.
-> date-fns: This package manipulates JavaScript dates - it helps with formatting and handling dates within the app.
-> node-sass: A library that allows you to natively compile .scss files to css at incredible speed and automatically via a connect middleware.
-> react-csv: Provides CSV download functionality for your React application, allowing users to export data as a CSV file.
-> react-redux: It lets the React components to read data from a Redux store, and dispatch actions to the store to update data.
-> react-router-dom: A DOM binding for React Router, which is used for dynamic routing in web applications built with React.
+- @emailjs/browser: A library that allows sending emails using EmailJS service directly from the browser without server-side code.
+- @fullhuman/postcss-purgecss: A PostCSS plugin used to remove unused CSS, which helps in reducing file size and improving load times. 
+- @reduxjs/toolkit: It provides a set of tools to simplify Redux development, such as configuring the store and creating reducers and actions.
+- date-fns: This package manipulates JavaScript dates - it helps with formatting and handling dates within the app.
+- node-sass: A library that allows you to natively compile .scss files to css at incredible speed and automatically via a connect middleware.
+- react-csv: Provides CSV download functionality for your React application, allowing users to export data as a CSV file.
+- react-redux: It lets the React components to read data from a Redux store, and dispatch actions to the store to update data.
+- react-router-dom: A DOM binding for React Router, which is used for dynamic routing in web applications built with React.
 
 ### Web development and deployment third-party services
 
 The following third-party services utilized in this project collectively enhance the project’s email functionality and deployment processes:
 
-> MailJet: Used for managing transactional emails - as the node-mailjet npm package, this service is also used for password reset emails.
-> MailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
-> Netlify: Hosts the React front-end.
-> Vercel: Hosts the serverless backend.
+- MailJet: Used for managing transactional emails - as the node-mailjet npm package, this service is also used for password reset emails.
+- MailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
+- Netlify: Hosts the React front-end.
+- Vercel: Hosts the serverless backend.
 
 ## Features
 
