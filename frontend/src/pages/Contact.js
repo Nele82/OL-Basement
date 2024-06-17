@@ -55,7 +55,7 @@ const Contact = () => {
         return
       }
       emailjs.sendForm('ol_basement', 'ol_basement_form', formRef.current, {
-        publicKey: process.env.EMAILJS_PUBLIC,
+        publicKey: process.env.REACT_APP_EMAILJS_PUBLIC,
       })
       .then(() => {
         alert('Your message has been sent')
@@ -130,7 +130,7 @@ const Contact = () => {
         name="message" 
         ref={messageRef}
         onClick={()=>{
-          setError(null)         
+          setError(null)       
         }}
         onChange={(e)=>{
           setMessage(e.target.value)
