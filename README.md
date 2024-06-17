@@ -54,3 +54,17 @@ The following third-party services utilized in this project collectively enhance
 > MailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
 > Netlify: Hosts the React front-end.
 > Vercel: Hosts the serverless backend.
+
+## Features
+
+The following list of features emphasizes that the app is well-equipped to make storage management more efficient for the user. Naturally, there is always room for improvement!
+
+- User Account Management: Sign up, log in, and password reset capabilities with secure password encryption using bcrypt.
+- Intuitive Storage Tracking: Enter and manage storage facility details like title and dimensions.
+- Item Cataloging: Add items with details such as title, dimensions, description, and category.
+- Space Management: Automatic calculation of remaining storage space in cubic meters and visual representation of space usage with a progress bar.
+- Data Export: Download a comprehensive Excel spreadsheet of all stored items using the 'react-csv' package.
+- Easy Item Filtering: Quickly filter items by category with a single click.
+- Customizable Interface: Choose between light and dark mode for visual comfort.
+- Developer Support: Contact form integrated with 'EmailJS' service for user support inquiries.
+- Security: Session timeout after one hour to ensure user security.
