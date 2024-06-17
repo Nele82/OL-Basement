@@ -12,7 +12,7 @@ Welcome to OL Basement!
 
  It’s built with MERN stack technologies, offering features like user authentication, space calculation in cubic meters, and a visual progress bar indicating used space. Additional functionalities include secure password handling, CRUD operations for storage data, item categorization, Excel export, and light/dark mode visuals. Support is facilitated through a contact form using EmailJS.
 
-## Tecnologies Used
+## Technologies Used
 
 This a full-stack application designed using a well-known MERN stack. The MERN stack is a popular set of technology used to build modern web applications. It is an acronym that stands for MongoDB, Express.js, React, and Node.js where:
 
@@ -51,7 +51,7 @@ FRONT-END of the application uses the following third-party npm packages / depen
 The following third-party services utilized in this project collectively enhance the project’s email functionality and deployment processes:
 
 - MailJet: Used for managing transactional emails - as the node-mailjet npm package, this service is also used for password reset emails.
-- MailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
+- EmailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
 - Netlify: Hosts the React front-end.
 - Vercel: Hosts the serverless backend.
 
@@ -63,8 +63,29 @@ The following list of features emphasizes that the app is well-equipped to make 
 - Intuitive Storage Tracking: Enter and manage storage facility details like title and dimensions.
 - Item Cataloging: Add items with details such as title, dimensions, description, and category.
 - Space Management: Automatic calculation of remaining storage space in cubic meters and visual representation of space usage with a progress bar.
-- Data Export: Download a comprehensive Excel spreadsheet of all stored items using the 'react-csv' package.
+- Data Export: Download an Excel spreadsheet of all stored items using the 'react-csv' package.
 - Easy Item Filtering: Quickly filter items by category with a single click.
 - Customizable Interface: Choose between light and dark mode for visual comfort.
 - Developer Support: Contact form integrated with 'EmailJS' service for user support inquiries.
 - Security: Session timeout after one hour to ensure user security.
+
+## Setup
+
+Following are the simple steps to get the app up and running on your local machine for development and testing purposes.
+NOTE: The setup instructions provided below are for npm (Node Package Manager). If you’re using a different package manager or framework, please adapt the following steps accordingly to suit your development environment.
+
+### Clone the repository
+
+1) Type in the following URL to the browser and navigate to the repository: https://github.com/Nele82/OL-Basement.git
+2) Open your preferred CLI or integrated terminal in your code editor, and type in the following command to clone the project repository: 'git clone https://github.com/Nele82/OL-Basement.git'
+
+### Install dependencies
+
+After cloning, you’ll find the complete codebase in your specified folder. The project is organized into 'frontend' and 'backend' folders within the main 'OL-Basement' folder. Please open 'frontend' and 'backend' folders individually, open your preferred CLI or integrated terminal in your code editor and type the following command: 'npm install'
+Both 'frontend' and 'backend' folders contain the 'package.json' files used for managing the project's dependencies, scripts, version and more so this will install all the dependencies needed for the app to work.
+
+### Database setup (Backend)
+
+Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend with the MongoDB database. Since this information should be available only to the developer, you will need to set up an environment variable which we'll discuss in more detail in the next section. 
+
+

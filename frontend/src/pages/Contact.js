@@ -55,7 +55,7 @@ const Contact = () => {
         return
       }
       emailjs.sendForm('ol_basement', 'ol_basement_form', formRef.current, {
-        publicKey: '9VL1mCqQXBK0rmWMN',
+        publicKey: process.env.EMAILJS_PUBLIC,
       })
       .then(() => {
         alert('Your message has been sent')
