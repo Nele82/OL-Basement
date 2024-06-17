@@ -30,7 +30,7 @@ const Navbar = () => {
     }
     if (angle === 'fa-solid fa-angle-down') {
       if (window.innerWidth <= 480) {
-        document.getElementsByTagName('nav')[0].style.marginTop = '21vw'
+        document.getElementsByTagName('nav')[0].style.marginTop = '22vw'
       }
       if (window.innerWidth >= 480 && window.innerWidth < 720) {
         document.getElementsByTagName('nav')[0].style.marginTop = '15vw'
@@ -147,7 +147,7 @@ const Navbar = () => {
               } else {
                 setAngle('fa-solid fa-angle-down')
                 if (window.innerWidth <= 480) {
-                  document.getElementsByTagName('nav')[0].style.marginTop = '21vw'
+                  document.getElementsByTagName('nav')[0].style.marginTop = '22vw'
                 }
                 if (window.innerWidth >= 480 && window.innerWidth < 720) {
                   document.getElementsByTagName('nav')[0].style.marginTop = '15vw'
