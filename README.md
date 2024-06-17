@@ -86,6 +86,6 @@ Both 'frontend' and 'backend' folders contain the 'package.json' files used for 
 
 ### Database setup (Backend)
 
-Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend with the MongoDB database. Since this information should be available only to the developer, you will need to set up an environment variable which we'll discuss in more detail in the next section. 
+Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend with the MongoDB database. Since this information should be available only to the developer, an environment variable needs to be set which we'll discuss in more detail in the next section. 
 
 
