@@ -50,7 +50,7 @@ FRONT-END of the application uses the following third-party npm packages / depen
 
 The following third-party services utilized in this project collectively enhance the project’s email functionality and deployment processes:
 
-- MailJet: Used for managing transactional emails - as the node-mailjet npm package, this service is also used for password reset emails.
+- MailJet: Used for managing transactional emails - this service is used for password reset emails and it is complemented by the 'node-mailjet' npm package.
 - EmailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
 - Netlify: Hosts the React front-end.
 - Vercel: Hosts the serverless backend.
@@ -86,6 +86,49 @@ Both 'frontend' and 'backend' folders contain the 'package.json' files used for 
 
 ### Database setup (Backend)
 
-Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend with the MongoDB database. Since this information should be available only to the developer, an environment variable needs to be set which we'll discuss in more detail in the next section. 
+Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool 'YouTube' videos on the subject as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend a the MongoDB database. Since this information should be available only to the developer, an environment variable needs to be set which we'll discuss in more detail in the next section. 
+
+### Environment variables
+
+Environment variables are used to manage configuration settings for applications. They are stored in a file named .env in the root of any project. As mentioned in the previous section, this allows us to keep sensitive information like API keys, database passwords, and other secrets out of the codebase. In light of this fact, .env variables should be included in your .gitignore file to prevent them from being committed to version control (in most cases - GitHub). This project uses the following variables which are all located in their respective .env files (Frontend and Backend):
+
+'MONGODB' 
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'server.js' module/file in order to connect with a MongoDB database through the 'process.env' global object (process.env.MONGODB)
+- Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js'
+- Setup: Check out the guide at 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' 
+'PORT'
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'server.js' module/file in order to listen on a specific port through the 'process.env' global object (process.env.PORT)
+- Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js'
+- Setup: Use any free port number - make sure that other parts of the application are not already listening to the same port
+'SECRET_KEY'
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'userController.js' module/file in order to create a JWT (JSON Web Token) signature through the 'process.env' global object (process.env.SECRET_KEY)
+- Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
+- Setup: Use any secret key, but make sure that it is not reused across different applications or services to prevent cross-application attacks and make it long and complex
+'MJ_APIKEY_PUBLIC' 
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.MJ_APIKEY_PUBLIC) in order for the 'requestReset' function 
+  (password reset request function) to run
+- Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
+- Setup: Check out the guide at 'https://dev.mailjet.com/email/guides/getting-started/' 
+'MJ_APIKEY_PRIVATE' 
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.MJ_APIKEY_PRIVATE) in order for the 'requestReset' function 
+  (password reset request function) to run
+- Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
+- Setup: Check out the guide at 'https://dev.mailjet.com/email/guides/getting-started/' 
+'REACT_APP_EMAILJS_PUBLIC' 
+- Location: '/frontend/.env' (front-end root folder)
+- Usage: Used in 'Contact.js' module/file through the 'process.env' global object (process.env.REACT_APP_EMAILJS_PUBLIC) in order to utilize the 'EmailJS' service
+  through the 'sendEmail' function
+- Access in React.js: Called directly inside the 'sendEmail' function with 'REACT_APP_' prefix for security reasons - no npm package needed
+- Setup: Check out the guide at 'https://www.emailjs.com/docs/tutorial/overview/' 
+
+NOTE: All above variables in their respective .env files may be renamed, but then they also need to be renamed in their respective usage locations. Keep in mind that the one used in 
+the frontend part of the application (React.js) always needs to have the prefix 'REACT_APP_' (e.g. REACT_APP_VARIABLE_NAME).
+
+
 
 
