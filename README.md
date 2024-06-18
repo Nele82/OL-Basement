@@ -138,9 +138,20 @@ After completing the installation of dependencies, configuring the MongoDB datab
 
 Expected Output:
 
-For the backend: A message in the terminal "Connected to the MongoDB collection / Listening to port 3500" (if the 'PORT' variable is assigned 3500 in '/backend/.env file - in other words, the terminal console will display whichever port number is assigned)
-For the frontend: A message in the terminal like "Compiled successfully" (depending on your environment)
-For compiling SCSS: A message in the terminal like "Sass is watching for changes. Press Ctrl-C to stop." 
+- For the backend: A message in the terminal "Connected to the MongoDB collection / Listening to port 3500" (if the 'PORT' variable is assigned number 3500 in '/backend/.env file - in other words, the terminal console will display whichever port number is assigned)
+- For the frontend: A message in the terminal like "Compiled successfully" (depending on your environment)
+- For compiling SCSS: A message in the terminal like "Sass is watching for changes. Press Ctrl-C to stop." 
 
-NOTE: If you encounter any issues, check that all environment variables are set correctly and that MongoDB is running. To stop the servers, press Ctrl + C in your terminal.
+NOTE: If you encounter any issues, check if all environment variables are set correctly as well as if MongoDB is running. To stop the servers, press Ctrl + C in your terminal.
 
+## Usage
+
+This section provides step-by-step instructions on how to use the main features of an application. 
+
+- Account Setup: Sign up and log in to create your personal account. Use the password reset feature if needed.
+- Facility Details: Click on Enter your storage facility’s title and dimensions to start tracking.
+- Item Entry: Add items with their title, dimensions, description, and category.
+- Space Management: View the remaining space in cubic meters and occupied space percentage through a progress bar.
+- Data Handling: Download item details as an Excel Spreadsheet or filter items by category.
+- Customization: Choose between light and dark mode for visual comfort.
+- Support: Contact the developer through the in-app contact form for any assistance.
