@@ -76,8 +76,7 @@ NOTE: The setup instructions provided below are for npm (Node Package Manager). 
 
 ### Clone the repository
 
-1) Type in the following URL to the browser and navigate to the repository: https://github.com/Nele82/OL-Basement.git
-2) Open your preferred CLI or integrated terminal in your code editor, and type in the following command to clone the project repository: 'git clone https://github.com/Nele82/OL-Basement.git'
+Open your preferred CLI or integrated terminal in your code editor, and type in the following command to clone the project repository: 'git clone https://github.com/Nele82/OL-Basement.git'
 
 ### Install dependencies
 
