@@ -47,7 +47,11 @@ body {
   }
 
 // Cursor - pointer
-#loggedOut a, #loggedIn button, #loggedIn a, .storage-item-buttons, .filter-button, .login button, #forgotten-password b, .signup button, #check, #terms label u, .reset-form button, .password-reset button, .manage-storage-unit button, #root > div > div > main > div > button, #contact-ol, #privacy button, #tos button, .form-space-housing button, header img, #theme span, #reveal-menu span, footer a, footer ul li, footer span:nth-child(1), .update-items-header i, #storage-overview-lower .update-items .update-item-description button, .storage-item .items-delete-box div button, .storage-details .delete-box div button, .storage-details .update-form button, .storage-details .update-form .storage-unit-header-house i  {
+#loggedOut a, #loggedIn button, #loggedIn a, .storage-item-buttons, .filter-button, .login button, #forgotten-password b, .signup button, #check, #terms label u, 
+.reset-form button, .password-reset button, .manage-storage-unit button, #root > div > div > main > div > button, #contact-ol, #privacy button, #tos button, 
+.form-space-housing button, header img, #theme span, #reveal-menu span, footer a, footer ul li, footer span:nth-child(1), .update-items-header i, 
+#storage-overview-lower .update-items .update-item-description button, .storage-item .items-delete-box div button, .storage-details .delete-box div button, 
+.storage-details .update-form button, .storage-details .update-form .storage-unit-header-house i, .storage-wrapper .create-storage button {
     cursor: pointer;
 }
 

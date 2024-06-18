@@ -4036,6 +4036,8 @@ $grid-gaps: (
     .storage-wrapper .create-storage span {
       font-size: $base-font-size * 1.65;
       text-align: center;
+
+      margin: 0 0 $base-margin * 2 0;
     }
 
     // STORAGE UPDATE FORM (FROM 1200 PX)

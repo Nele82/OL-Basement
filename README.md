@@ -149,9 +149,19 @@ NOTE: If you encounter any issues, check if all environment variables are set co
 This section provides step-by-step instructions on how to use the main features of an application. 
 
 - Account Setup: Sign up and log in to create your personal account. Use the password reset feature if needed.
-- Facility Details: Click on Enter your storage facility’s title and dimensions to start tracking.
+- Facility Details: Enter your storage facility's title and dimensions to start tracking.
 - Item Entry: Add items with their title, dimensions, description, and category.
 - Space Management: View the remaining space in cubic meters and occupied space percentage through a progress bar.
 - Data Handling: Download item details as an Excel Spreadsheet or filter items by category.
 - Customization: Choose between light and dark mode for visual comfort.
 - Support: Contact the developer through the in-app contact form for any assistance.
+
+## Contact 
+
+We value your input and are dedicated to enhancing 'OL Basement' to meet your needs. If you encounter any issues or have suggestions for improvements, please don’t hesitate to reach out:
+
+LinkedIn: https://www.linkedin.com/in/nebojsa-pavlovic-5b2733164/
+
+GitHub: https://github.com/Nele82
+
+Portfolio website: https://nebojsapavlovic.netlify.app/
