@@ -100,12 +100,12 @@ Environment variables are used to manage configuration settings for applications
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'server.js' module/file in order to listen on a specific port through the 'process.env' global object (process.env.PORT)
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js'
-- Setup: Use any free port number - make sure that other parts of the application are not already listening to the same port
+- Setup: Assign any free port number - make sure that other parts of the application are not already listening to the same port
 #### 'SECRET_KEY'
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'userController.js' module/file in order to create a JWT (JSON Web Token) signature through the 'process.env' global object (process.env.SECRET_KEY)
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
-- Setup: Use any secret key, but make sure that it is not reused across different applications or services to prevent cross-application attacks and make it long and complex
+- Setup: Assign any secret key, but make sure that it is not reused across different applications or services to prevent cross-application attacks and make it long and complex
 #### 'MJ_APIKEY_PUBLIC' 
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.MJ_APIKEY_PUBLIC) in order for the 'requestReset' function 
@@ -128,6 +128,19 @@ Environment variables are used to manage configuration settings for applications
 NOTE: All above variables in their respective .env files may be renamed, but then they also need to be renamed in their respective usage locations. Keep in mind that the one used in 
 the frontend part of the application (React.js) always needs to have the prefix 'REACT_APP_' (e.g. REACT_APP_VARIABLE_NAME).
 
+## Running the app
 
+After completing the installation of dependencies, configuring the MongoDB database, and setting up the necessary environment variables, please proceed by opening your preferred command line interface (CLI) or the integrated terminal within your code editor. Then, execute the following commands in their corresponding folders:
 
+- Inside the 'backend' folder: run 'npm run dev' in the terminal - this is to connect the backend to the MongoDB database and listen for the client's requests
+- Inside the 'frontend' folder: run 'npm run dev' in the terminal - this is to launch the app in development mode which will open the UI (User Interface) itself
+- Inside the 'frontend' folder: run 'npm run node-sass' in the terminal - this is to compile .scss files to css
+
+Expected Output:
+
+For the backend: A message in the terminal "Connected to the MongoDB collection / Listening to port 3500" (if the 'PORT' variable is assigned 3500 in '/backend/.env file - in other words, the terminal console will display whichever port number is assigned)
+For the frontend: A message in the terminal like "Compiled successfully" (depending on your environment)
+For compiling SCSS: A message in the terminal like "Sass is watching for changes. Press Ctrl-C to stop." 
+
+NOTE: If you encounter any issues, check that all environment variables are set correctly and that MongoDB is running. To stop the servers, press Ctrl + C in your terminal.
 
