@@ -91,34 +91,34 @@ Being a MERN application, this project uses a MongoDB NoSQL database to store ap
 
 Environment variables are used to manage configuration settings for applications. They are stored in a file named .env in the root of any project. As mentioned in the previous section, this allows us to keep sensitive information like API keys, database passwords, and other secrets out of the codebase. In light of this fact, .env variables should be included in your .gitignore file to prevent them from being committed to version control (in most cases - GitHub). This project uses the following variables which are all located in their respective .env files (Frontend and Backend):
 
-'MONGODB' 
+#### 'MONGODB' 
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'server.js' module/file in order to connect with a MongoDB database through the 'process.env' global object (process.env.MONGODB)
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js'
 - Setup: Check out the guide at 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' 
-'PORT'
+#### 'PORT'
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'server.js' module/file in order to listen on a specific port through the 'process.env' global object (process.env.PORT)
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js'
 - Setup: Use any free port number - make sure that other parts of the application are not already listening to the same port
-'SECRET_KEY'
+#### 'SECRET_KEY'
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'userController.js' module/file in order to create a JWT (JSON Web Token) signature through the 'process.env' global object (process.env.SECRET_KEY)
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
 - Setup: Use any secret key, but make sure that it is not reused across different applications or services to prevent cross-application attacks and make it long and complex
-'MJ_APIKEY_PUBLIC' 
+#### 'MJ_APIKEY_PUBLIC' 
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.MJ_APIKEY_PUBLIC) in order for the 'requestReset' function 
   (password reset request function) to run
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
 - Setup: Check out the guide at 'https://dev.mailjet.com/email/guides/getting-started/' 
-'MJ_APIKEY_PRIVATE' 
+#### 'MJ_APIKEY_PRIVATE' 
 - Location: '/backend/.env' (back-end root folder)
 - Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.MJ_APIKEY_PRIVATE) in order for the 'requestReset' function 
   (password reset request function) to run
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
 - Setup: Check out the guide at 'https://dev.mailjet.com/email/guides/getting-started/' 
-'REACT_APP_EMAILJS_PUBLIC' 
+#### 'REACT_APP_EMAILJS_PUBLIC' 
 - Location: '/frontend/.env' (front-end root folder)
 - Usage: Used in 'Contact.js' module/file through the 'process.env' global object (process.env.REACT_APP_EMAILJS_PUBLIC) in order to utilize the 'EmailJS' service
   through the 'sendEmail' function
