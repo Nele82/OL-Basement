@@ -9,7 +9,7 @@ const DialogBoxItems = ({itemId, storeId}) => {
 
     // Fetching data for the filter buttons
     const buttonsArray = async () => {
-      const arr = await fetch(`http://localhost:3500/items/getItems/${storeId}`)
+      const arr = await fetch(`https://ol-basement.onrender.com/items/getItems/${storeId}`)
       const arrJSON = await arr.json()
       if(arr.ok) {
         let array = []

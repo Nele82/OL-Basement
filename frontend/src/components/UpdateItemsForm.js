@@ -25,7 +25,7 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
 
     const patchItem = async (itemTitle, length, width, height, description, category, itemId) => {
     
-        const response = await fetch(`http://localhost:3500/items/updateItem/${storeId}/${itemId}`, {
+        const response = await fetch(`https://ol-basement.onrender.com/items/updateItem/${storeId}/${itemId}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json'

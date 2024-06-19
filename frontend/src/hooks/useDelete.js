@@ -1,7 +1,7 @@
 export const deleteOneStorage = async (id) => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    const response = await fetch(`http://localhost:3500/facilities/deleteStorage/${id}`, {
+    const response = await fetch(`https://ol-basement.onrender.com/facilities/deleteStorage/${id}`, {
         method: 'DELETE',
         headers: {
         'Authorization': `User ${user.jwt}`},
@@ -18,7 +18,7 @@ export const deleteOneStorage = async (id) => {
 } 
 
 const deleteAllItems = async (storeId) => {
-    const response = await fetch(`http://localhost:3500/items/deleteAllStorageItems/${storeId}`, {
+    const response = await fetch(`https://ol-basement.onrender.com/items/deleteAllStorageItems/${storeId}`, {
         method: 'DELETE'
     })
     const json = await response.json()
@@ -33,7 +33,7 @@ const deleteAllItems = async (storeId) => {
 
 export const deleteOneItem = async (id) => {
 
-    const response = await fetch(`http://localhost:3500/items/deleteItem/${id}`, {
+    const response = await fetch(`https://ol-basement.onrender.com/items/deleteItem/${id}`, {
         method: 'DELETE'
     })
     const json = await response.json()

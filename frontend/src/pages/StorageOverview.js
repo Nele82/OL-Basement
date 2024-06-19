@@ -80,7 +80,7 @@ const StorageOverview = () => {
         }
 
         const fetchItems = async () => {
-          const response = await fetch(`http://localhost:3500/items/getItems/${local.id}`)
+          const response = await fetch(`https://ol-basement.onrender.com/items/getItems/${local.id}`)
           const json = await response.json()
 
           if (response.ok) {

@@ -18,7 +18,7 @@ const UpdateForm = ({storageId}) => {
     const patchStorage = async (facilityName, length, width, height, id) => {
         const user = JSON.parse(localStorage.getItem('user'))
     
-        const response = await fetch(`http://localhost:3500/facilities/updateStorage/${id}`, {
+        const response = await fetch(`https://ol-basement.onrender.com/facilities/updateStorage/${id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',

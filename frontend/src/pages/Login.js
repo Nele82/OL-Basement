@@ -21,7 +21,7 @@ const Login = () => {
     setLoading(true)
     setError(null)
 
-    const response = await fetch('http://localhost:3500/user/login', {
+    const response = await fetch('https://ol-basement.onrender.com/user/login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, password })

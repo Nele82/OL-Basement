@@ -30,7 +30,7 @@ const StorageList = () => {
 
     useEffect(()=>{
       const fetchStorage = async () => {
-        const response = await fetch('http://localhost:3500/facilities/getStorages', {
+        const response = await fetch('https://ol-basement.onrender.com/facilities/getStorages', {
           headers: {'Authorization': `User ${user.jwt}`},
         })
         const json = await response.json()
