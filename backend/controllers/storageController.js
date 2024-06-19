@@ -1,6 +1,5 @@
 // MongoDB - model & library
 const Facility = require('../models/storageModel') 
-const mongoose = require('mongoose')
 
 // Get storages
 const getAllStorages = async (req, res) => {    

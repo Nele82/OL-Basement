@@ -1,6 +1,5 @@
 // MongoDB - Items model & mongoose library
 const Item = require('../models/itemModel')
-const mongoose = require('mongoose')
 
 // Get all storage items
 const getAllItems = async (req, res) => {    
