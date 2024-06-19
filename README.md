@@ -52,8 +52,8 @@ The following third-party services utilized in this project collectively enhance
 
 - MailJet: Used for managing transactional emails - this service is used for password reset emails and it is complemented by the 'node-mailjet' npm package.
 - EmailJS: This service handles sending & receiving emails through the 'Contact' page using the above mentioned "@emailjs/browser" npm package.
-- Netlify: Hosts the React front-end.
-- Vercel: Hosts the serverless backend.
+- Netlify: Hosts the frontend (React.js).
+- Render.com: Hosts the backend (Express.js).
 
 ## Features
 
@@ -69,7 +69,7 @@ The following list of features emphasizes that the app is well-equipped to make 
 - Developer Support: Contact form integrated with 'EmailJS' service for user support inquiries.
 - Security: Session timeout after one hour to ensure user security.
 
-## Setup
+## Setup (for the local environment)
 
 Following are the simple steps to get the app up and running on your local machine for development and testing purposes.
 NOTE: The setup instructions provided below are for npm (Node Package Manager). If you’re using a different package manager or framework, please adapt the following steps accordingly to suit your development environment.
