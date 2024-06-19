@@ -20,7 +20,7 @@ const Signup = () => {
   const signupUser = async (username, email, password) => {
       setError(null)
 
-      const response = await fetch('http://localhost:3500/user/signup', {
+      const response = await fetch('https://ol-basement.onrender.com/user/signup', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, email, password })
