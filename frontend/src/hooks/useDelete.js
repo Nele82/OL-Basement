@@ -1,15 +1,14 @@
-import { useSelector } from "react-redux"
 
-// Redux reducer
-const httpInput = useSelector(state => state.httpAddress.value)
+// 'devServer' and 'deployServer' constants hold the http addresses (no endpoints as  
+// they don't change) for the backend server, for deployment and production - whichever is used by the Developer
+
+const devServer = 'http://localhost:3500'
+const deployServer = 'https://ol-basement.onrender.com'
 
 export const deleteOneStorage = async (id) => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/facilities/deleteStorage/${id}`, {
+    const response = await fetch(`${devServer}/facilities/deleteStorage/${id}`, {
         method: 'DELETE',
         headers: {
         'Authorization': `User ${user.jwt}`},
@@ -27,10 +26,7 @@ export const deleteOneStorage = async (id) => {
 
 const deleteAllItems = async (storeId) => {
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/items/deleteAllStorageItems/${storeId}`, {
+    const response = await fetch(`${devServer}/items/deleteAllStorageItems/${storeId}`, {
         method: 'DELETE'
     })
     const json = await response.json()
@@ -45,10 +41,7 @@ const deleteAllItems = async (storeId) => {
 
 export const deleteOneItem = async (id) => {
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/items/deleteItem/${id}`, {
+    const response = await fetch(`${devServer}/items/deleteItem/${id}`, {
         method: 'DELETE'
     })
     const json = await response.json()
