@@ -18,6 +18,7 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
 
   const addItem = async () => {
 
+    // const response = await fetch('http://localhost:3500/items/createItem', {
     const response = await fetch('https://ol-basement.onrender.com/items/createItem', {
         method: 'POST',
         headers: {
@@ -28,6 +29,7 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
       const json = await response.json()
       
       // Fetching data for the filter buttons
+      // const arr = await fetch(`http://localhost:3500/items/getItems/${storageId}`)
       const arr = await fetch(`https://ol-basement.onrender.com/items/getItems/${storageId}`)
       const arrJSON = await arr.json()
 

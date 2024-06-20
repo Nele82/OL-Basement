@@ -31,6 +31,7 @@ const PasswordReset = () => {
       return
     }
 
+    // const response = await fetch('http://localhost:3500/user/requestReset', {
     const response = await fetch('https://ol-basement.onrender.com/user/requestReset', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},

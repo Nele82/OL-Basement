@@ -18,6 +18,7 @@ const StorageInput = () => {
 
   // Create a basement / storage unit
   const createStorageUnit = async (facilityName, length, width, height) => {
+    // const response = await fetch('http://localhost:3500/facilities/createStorage', {
     const response = await fetch('https://ol-basement.onrender.com/facilities/createStorage', {
       method: 'POST',
       headers: {
