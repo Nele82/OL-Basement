@@ -13,13 +13,16 @@ const UpdateForm = ({storageId}) => {
     const [loading, setLoading] = useState(null)
     // Redux
     const theme = useSelector(state => state.theme.value)
+    const httpInput = useSelector(state => state.httpAddress.value)
     const dispatch = useDispatch()
 
     const patchStorage = async (facilityName, length, width, height, id) => {
         const user = JSON.parse(localStorage.getItem('user'))
     
-        // const response = await fetch(`http://localhost:3500/facilities/updateStorage/${id}`, {
-        const response = await fetch(`https://ol-basement.onrender.com/facilities/updateStorage/${id}`, {
+        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const response = await fetch(`${httpInput}/facilities/updateStorage/${id}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json',

@@ -26,6 +26,7 @@ const StorageOverview = () => {
     const dispatch = useDispatch()
     const theme = useSelector(state => state.theme.value)
     const items = useSelector(state => state.items.value)
+    const httpInput = useSelector(state => state.httpAddress.value)
 
     const filterElements = (arr, category) => {
       if(category === 'All Items') {
@@ -80,8 +81,10 @@ const StorageOverview = () => {
         }
 
         const fetchItems = async () => {
-          // const response = await fetch(`http://localhost:3500/items/getItems/${local.id}`)
-          const response = await fetch(`https://ol-basement.onrender.com/items/getItems/${local.id}`)
+          // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+          // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+          // for the backend
+          const response = await fetch(`${httpInput}/items/getItems/${local.id}`)
           const json = await response.json()
 
           if (response.ok) {

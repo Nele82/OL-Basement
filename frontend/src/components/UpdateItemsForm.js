@@ -12,21 +12,24 @@ import {
 import { getButtons } from '../slices/ButtonsSlice'
 
 const UpdateItemsForm = ({itemId, itemName, storeId}) => {
+    const [error, setError] = useState(null)
+    const [success, setSuccess] = useState(null)
+    // Redux
+    const dispatch = useDispatch()
     const itemTitle = useSelector(state => state.updatedItems.value.title)
     const length = useSelector(state => state.updatedItems.value.length)
     const width = useSelector(state => state.updatedItems.value.width)
     const height = useSelector(state => state.updatedItems.value.height)
     const description = useSelector(state => state.updatedItems.value.description)
     const category = useSelector(state => state.updatedItems.value.category)
-    const [error, setError] = useState(null)
-    const [success, setSuccess] = useState(null)
-    // Redux
-    const dispatch = useDispatch()
+    const httpInput = useSelector(state => state.httpAddress.value)
 
     const patchItem = async (itemTitle, length, width, height, description, category, itemId) => {
     
-        // const response = await fetch(`http://localhost:3500/items/updateItem/${storeId}/${itemId}`, {
-        const response = await fetch(`https://ol-basement.onrender.com/items/updateItem/${storeId}/${itemId}`, {
+        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const response = await fetch(`${httpInput}/items/updateItem/${storeId}/${itemId}`, {
             method: 'PATCH',
             headers: {
             'Content-Type': 'application/json'

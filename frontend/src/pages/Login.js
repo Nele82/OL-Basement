@@ -14,6 +14,7 @@ const Login = () => {
   // Redux
   const dispatch = useDispatch()
   const sessionTimeout = useSelector(state => state.session.value)
+  const httpInput = useSelector(state => state.httpAddress.value)
   const theme = useSelector(state => state.theme.value)
 
   // User login function
@@ -21,8 +22,10 @@ const Login = () => {
     setLoading(true)
     setError(null)
 
-    // const response = await fetch('http://localhost:3500/user/login', {
-    const response = await fetch('https://ol-basement.onrender.com/user/login', {
+    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+    // for the backend
+    const response = await fetch(`${httpInput}/user/login`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ username, password })

@@ -7,6 +7,7 @@ import setSessionMessage from './slices/SessionSlice'
 import setButtons from './slices/ButtonsSlice'
 import setUpdateItem from './slices/UpdateItemSlice'
 import setTheme from './slices/ThemeSlice'
+import setHttp from './slices/HTTPSlice'
 
 export default configureStore({
   reducer: {
@@ -17,6 +18,7 @@ export default configureStore({
     session: setSessionMessage,
     buttons: setButtons,
     updatedItems: setUpdateItem,
-    theme: setTheme
+    theme: setTheme,
+    httpAddress: setHttp
   }
 })

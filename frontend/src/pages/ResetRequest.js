@@ -12,6 +12,7 @@ const PasswordReset = () => {
 
   // Redux
   const theme = useSelector(state => state.theme.value)
+  const httpInput = useSelector(state => state.httpAddress.value)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -31,8 +32,10 @@ const PasswordReset = () => {
       return
     }
 
-    // const response = await fetch('http://localhost:3500/user/requestReset', {
-    const response = await fetch('https://ol-basement.onrender.com/user/requestReset', {
+    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+    // for the backend
+    const response = await fetch(`${httpInput}/user/requestReset`, {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({ email })

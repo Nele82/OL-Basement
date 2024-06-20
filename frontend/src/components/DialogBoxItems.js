@@ -1,16 +1,19 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { deleteOneItem } from '../hooks/useDelete'
 import { deleteItem } from '../slices/ItemsSlice'
 import { getButtons } from '../slices/ButtonsSlice'
 
 const DialogBoxItems = ({itemId, storeId}) => {
     const dispatch = useDispatch()
+    const httpInput = useSelector(state => state.httpAddress.value)
 
     // Fetching data for the filter buttons
     const buttonsArray = async () => {
-    //   const arr = await fetch(`http://localhost:3500/items/getItems/${storeId}`)
-      const arr = await fetch(`https://ol-basement.onrender.com/items/getItems/${storeId}`)
+    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+    // for the backend
+      const arr = await fetch(`${httpInput}/items/getItems/${storeId}`)
       const arrJSON = await arr.json()
       if(arr.ok) {
         let array = []
