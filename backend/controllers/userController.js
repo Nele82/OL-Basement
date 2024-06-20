@@ -2,6 +2,9 @@ const User = require("../models/userModel")
 const jwtoken = require('jsonwebtoken')
 const bcrypt = require('bcrypt') 
 const Mailjet = require ('node-mailjet')
+// Development & production http front-end server addresses
+const devFront = 'http://localhost:3000'
+const deployFront = 'https://ol-basement.netlify.app'
 
 // Create JSON Web Token 
 const createJWT = (_id) => {
@@ -48,8 +51,8 @@ const requestReset = async (req, res) => {
     }
   
     const token = jwtoken.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: '600000' })
-    // const resetLink = `http://localhost:3000/password-reset?token=${token}`
-    const resetLink = `https://ol-basement.netlify.app/password-reset?token=${token}`
+
+    const resetLink = `${devFront}/password-reset?token=${token}`
   
     const mailjet = Mailjet.apiConnect(
         process.env.MJ_APIKEY_PUBLIC,
