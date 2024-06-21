@@ -8,7 +8,7 @@ const deployServer = process.env.REACT_APP_HTTP_DEPLOY
 export const deleteOneStorage = async (id) => {
     const user = JSON.parse(localStorage.getItem('user'))
 
-    const response = await fetch(`${devServer}/facilities/deleteStorage/${id}`, {
+    const response = await fetch(`${deployServer}/facilities/deleteStorage/${id}`, {
         method: 'DELETE',
         headers: {
         'Authorization': `User ${user.jwt}`},
@@ -26,7 +26,7 @@ export const deleteOneStorage = async (id) => {
 
 const deleteAllItems = async (storeId) => {
 
-    const response = await fetch(`${devServer}/items/deleteAllStorageItems/${storeId}`, {
+    const response = await fetch(`${deployServer}/items/deleteAllStorageItems/${storeId}`, {
         method: 'DELETE'
     })
     const json = await response.json()
@@ -41,7 +41,7 @@ const deleteAllItems = async (storeId) => {
 
 export const deleteOneItem = async (id) => {
 
-    const response = await fetch(`${devServer}/items/deleteItem/${id}`, {
+    const response = await fetch(`${deployServer}/items/deleteItem/${id}`, {
         method: 'DELETE'
     })
     const json = await response.json()

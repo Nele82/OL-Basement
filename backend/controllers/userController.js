@@ -52,7 +52,7 @@ const requestReset = async (req, res) => {
   
     const token = jwtoken.sign({ id: user._id }, process.env.SECRET_KEY, { expiresIn: '600000' })
 
-    const resetLink = `${devFront}/password-reset?token=${token}`
+    const resetLink = `${deployFront}/password-reset?token=${token}`
   
     const mailjet = Mailjet.apiConnect(
         process.env.MJ_APIKEY_PUBLIC,
