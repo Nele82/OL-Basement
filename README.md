@@ -83,6 +83,10 @@ Open your preferred CLI or integrated terminal in your code editor, and type in 
 After cloning, you'll find the complete codebase in your specified folder. The project is organized into 'frontend' and 'backend' folders within the main 'OL-Basement' folder. Please open 'frontend' and 'backend' folders individually, open your preferred CLI or integrated terminal in your code editor and type the following command: 'npm install'
 Both 'frontend' and 'backend' folders contain the 'package.json' files used for managing the project's dependencies, scripts, version and more so this will install all the dependencies needed for the app to work.
 
+### HTTP development & production addresses
+
+TBA
+
 ### Database setup (Backend)
 
 Being a MERN application, this project uses a MongoDB NoSQL database to store application data. In order to set it up, please navigate to 'https://www.mongodb.com/developer/videos/the-ultimate-mern-stack-complete-guide-mongodb-express-react-node-js-/' and follow step-by-step instructions provided or check out some of the cool 'YouTube' videos on the subject as there will be a URI (Uniform Resource Identifier) containing information like the hostname, port, database name, and credentials needed to connect your backend a the MongoDB database. Since this information should be available only to the developer, an environment variable needs to be set which we'll discuss in more detail in the next section. 
@@ -158,7 +162,7 @@ This section provides step-by-step instructions on how to use the main features 
 
 ## Contact 
 
-We value your input and are dedicated to enhancing 'OL Basement' to meet your needs. If you encounter any issues or have suggestions for improvements, please don’t hesitate to reach out:
+Your feedback is highly valued and consistently taken into account to enhance the functionality and user experience of the 'OL Basement'. If you come across any issues or have suggestions for improvement, please feel free to get in touch:
 
 LinkedIn: https://www.linkedin.com/in/nebojsa-pavlovic-5b2733164/
 
