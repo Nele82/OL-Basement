@@ -10,7 +10,7 @@ const Layout = () => {
     <div>
         <Header/>
         <Navbar/>
-          <main className='col-10-xs col-10-sm col-9-md col-10-lg col-11-xl display-f fd-c ac-c jc-sb m-a'>
+          <main className='site-wrapper col-10-xs col-10-sm col-9-md col-10-lg col-11-xl display-f fd-c ac-c jc-sb m-a'>
             <Outlet/>
           </main>
         <Footer/>

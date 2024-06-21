@@ -3981,7 +3981,7 @@ footer span:nth-child(1) {
   .signup input {
     font-size: 1.4025vw;
     margin: 0.5vw 0;
-    padding: 0.5vw 0 0.5vw 3vw;
+    padding: 0.5vw 0 0.5vw 1vw;
     border-top-right-radius: 2vw;
   }
   .signup button {
