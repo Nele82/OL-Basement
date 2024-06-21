@@ -4,7 +4,7 @@ const bcrypt = require('bcrypt')
 const Mailjet = require ('node-mailjet')
 // Development & production http front-end server addresses
 const devFront = 'http://localhost:3000'
-const deployFront = 'https://ol-basement.netlify.app'
+const deployFront = process.env.HTTP_FRONTEND_DEPLOY
 
 // Create JSON Web Token 
 const createJWT = (_id) => {

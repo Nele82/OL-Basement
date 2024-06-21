@@ -30,7 +30,3 @@ mongoose.connect(process.env.MONGODB)
   .catch((error) => {
     console.log(error)
   })
-
-// Back-end is hosted on 'Render.com' at 'https://ol-basement.onrender.com' 
-
-  

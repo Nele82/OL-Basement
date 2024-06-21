@@ -123,16 +123,22 @@ Environment variables are used to manage configuration settings for applications
   (password reset request function) to run
 - Access in Node.js: 'require('dotenv').config()' called at the beginning of the entry file before any other code runs - in this case: 'server.js' 
 - Setup: Check out the guide at 'https://dev.mailjet.com/email/guides/getting-started/' 
+#### 'HTTP_FRONTEND_DEPLOY' (TO BE IGNORED IN THE DEV ENVIRONMENT)
+- Location: '/backend/.env' (back-end root folder)
+- Usage: Used in 'userController.js' module/file through the 'process.env' global object (process.env.HTTP_FRONTEND_DEPLOY) for http request pertaining to the password reset functionality.
+  NOTE: This is for production only!!! In development phase, you would normally run both front-end and back-end server from 'http://localhost:PORT_NUMBER' addresses
+- Access in Node.js: Called directly inside the 'requestReset' function
+- Setup: Assign http/https address once it's provided by the front-end server hosting provider of your choice 
 #### 'REACT_APP_EMAILJS_PUBLIC' 
 - Location: '/frontend/.env' (front-end root folder)
 - Usage: Used in 'Contact.js' module/file through the 'process.env' global object (process.env.REACT_APP_EMAILJS_PUBLIC) in order to utilize the 'EmailJS' service
   through the 'sendEmail' function
 - Access in React.js: Called directly inside the 'sendEmail' function with 'REACT_APP_' prefix for security reasons - no npm package needed
 - Setup: Check out the guide at 'https://www.emailjs.com/docs/tutorial/overview/' 
-#### 'REACT_APP_HTTP_DEPLOY' (TO BE IGNORED FOR THE DEV ENVIRONMENT)
+#### 'REACT_APP_HTTP_DEPLOY' (TO BE IGNORED IN THE DEV ENVIRONMENT)
 - Location: '/frontend/.env' (front-end root folder)
 - Usage: Used in 'HTTPSlice.js' module/file as well as in the 'deployServer' constant ('useDelete.js' custom hook) through the 'process.env' global object 
-  (process.env.REACT_APP_HTTP_DEPLOY) in order to set the http address for the back-end server in production. NOTE: This is for production only!!! In development, 
+  (process.env.REACT_APP_HTTP_DEPLOY) in order to set the http address for the back-end server in production. NOTE: This is for production only!!! In development phase, 
   you would normally run both front-end and back-end server from 'http://localhost:PORT_NUMBER' addresses
 - Access in React.js: Called directly inside the 'HTTPSlice.js' Redux slice and the 'useDelete.js' custom hook with 'REACT_APP_' prefix for security reasons - no npm package needed
 - Setup: Assign http/https address once it's provided by the back-end server hosting provider of your choice 
