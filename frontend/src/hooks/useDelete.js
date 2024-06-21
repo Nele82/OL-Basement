@@ -3,7 +3,7 @@
 // they don't change) for the backend server, for deployment and production - whichever is used by the Developer
 
 const devServer = 'http://localhost:3500'
-const deployServer = 'https://ol-basement.onrender.com'
+const deployServer = process.env.REACT_APP_HTTP_DEPLOY
 
 export const deleteOneStorage = async (id) => {
     const user = JSON.parse(localStorage.getItem('user'))

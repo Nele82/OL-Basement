@@ -83,9 +83,10 @@ Open your preferred CLI or integrated terminal in your code editor, and type in 
 After cloning, you'll find the complete codebase in your specified folder. The project is organized into 'frontend' and 'backend' folders within the main 'OL-Basement' folder. Please open 'frontend' and 'backend' folders individually, open your preferred CLI or integrated terminal in your code editor and type the following command: 'npm install'
 Both 'frontend' and 'backend' folders contain the 'package.json' files used for managing the project's dependencies, scripts, version and more so this will install all the dependencies needed for the app to work.
 
-### HTTP development & production addresses
+### Back-end server http address
 
-TBA
+Back-end server http address is used directly inside the 'HTTPSlice.js' Redux slice and the 'useDelete.js' custom hook (the 'devServer' constant). User could enter these addresses
+manually to every instance of the app where http requests are executed, but that would require going through those React components, pages and custom hooks - it's tedious and increases the possibility of syntax error(s).
 
 ### Database setup (Backend)
 
@@ -128,6 +129,13 @@ Environment variables are used to manage configuration settings for applications
   through the 'sendEmail' function
 - Access in React.js: Called directly inside the 'sendEmail' function with 'REACT_APP_' prefix for security reasons - no npm package needed
 - Setup: Check out the guide at 'https://www.emailjs.com/docs/tutorial/overview/' 
+#### 'REACT_APP_HTTP_DEPLOY' (TO BE IGNORED FOR THE DEV ENVIRONMENT)
+- Location: '/frontend/.env' (front-end root folder)
+- Usage: Used in 'HTTPSlice.js' module/file as well as in the 'deployServer' constant ('useDelete.js' custom hook) through the 'process.env' global object 
+  (process.env.REACT_APP_HTTP_DEPLOY) in order to set the http address for the back-end server in production. NOTE: This is for production only!!! In development, 
+  you would normally run both front-end and back-end server from 'http://localhost:PORT_NUMBER' addresses
+- Access in React.js: Called directly inside the 'HTTPSlice.js' Redux slice and the 'useDelete.js' custom hook with 'REACT_APP_' prefix for security reasons - no npm package needed
+- Setup: Assign http/https address once it's provided by the back-end server hosting provider of your choice 
 
 NOTE: All above variables in their respective .env files may be renamed, but then they also need to be renamed in their respective usage locations. Keep in mind that the one used in 
 the frontend part of the application (React.js) always needs to have the prefix 'REACT_APP_' (e.g. REACT_APP_VARIABLE_NAME).
