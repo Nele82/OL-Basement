@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { setLoadingMsg } from '../slices/LoadingSlice'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const Contact = () => {  
   const nameRef = useRef()
@@ -10,9 +12,10 @@ const Contact = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  const [error, setError] = useState(null)
+  const [processingMessage, setProcessingMessage] = useState(null)
   // Redux
   const theme = useSelector(state => state.theme.value)
+  const dispatch = useDispatch()
 
   const name_RegExp = /^[A-z][A-z0-9-_ ]{3,30}$/
   // The 'name' input may contain the following:
@@ -36,31 +39,42 @@ const Contact = () => {
       const testMessage = message_RegExp.test(message) 
 
       if(!name || !email || !message) {
-        setError('All fields are required!')
+        setProcessingMessage('All fields are required!')
         return
       }
       if(!testName) {
-        setError('Your name must be between 4 and 30 characters long and may include uppercase or lowercase letters, numbers, hyphens (-), underscores (_), or spaces')
+        setProcessingMessage('Your name must be between 4 and 30 characters long and may include uppercase or lowercase letters, numbers, hyphens (-), underscores (_), or spaces')
         return
       }
       if(!testEmail) {
-        setError(`Your email should contain the following: LOCAL PART (part before '@'): should contain one or more characters that are letters 
+        setProcessingMessage(`Your email should contain the following: LOCAL PART (part before '@'): should contain one or more characters that are letters 
         (both uppercase and lowercase), digits, dots, underscores, percent signs, plus signs, or hyphens; DOMAIN (part after '@'): should contain one 
         or more characters that are letters (both uppercase and lowercase), digits, dots, or hyphens; TOP LEVEL DOMAIN (part after '.'): should contain
         two or more letters for the top-level domain (like .com, .org, etc.)`)
         return
       }
       if(!testMessage) {
-        setError(`Your message must be between 20 and 1000 characters long`)
+        setProcessingMessage(`Your message must be between 20 and 1000 characters long`)
         return
       }
+
+      // Displays Loading message
+      dispatch(setLoadingMsg('SENDING YOUR EMAIL . . . .'))
+      loadBar()
+
       emailjs.sendForm('ol_basement', 'ol_basement_form', formRef.current, {
         publicKey: process.env.REACT_APP_EMAILJS_PUBLIC,
       })
       .then(() => {
-        alert('Your message has been sent')
+        // Sets the success message
+        setProcessingMessage('Your message has been sent')
+        // Removes Loading message
+        removeLoadBar()
       }, (error) => {
-        alert(`We're sorry, but your message could not be sent (Error: ${error}). Please check your internet connection and try again later.`)
+        // Sets the error message
+        setProcessingMessage(`We're sorry, but your message could not be sent (Error: ${error}). Please check your internet connection and try again later.`)
+        // Removes Loading message 
+        removeLoadBar()
       })
       setName('')
       setEmail('')
@@ -99,7 +113,7 @@ const Contact = () => {
         name="from_name" 
         ref={nameRef}
         onClick={()=>{
-          setError(null)         
+          setProcessingMessage(null)         
         }}
         onChange={(e)=>{
           setName(e.target.value)
@@ -115,7 +129,7 @@ const Contact = () => {
         name="user_email" 
         ref={emailRef}
         onClick={()=>{
-          setError(null)        
+          setProcessingMessage(null)        
         }}
         onChange={(e)=>{
           setEmail(e.target.value)
@@ -130,7 +144,7 @@ const Contact = () => {
         name="message" 
         ref={messageRef}
         onClick={()=>{
-          setError(null)       
+          setProcessingMessage(null)       
         }}
         onChange={(e)=>{
           setMessage(e.target.value)
@@ -150,7 +164,7 @@ const Contact = () => {
           color: theme ? 'rgb(238, 238, 238)' : 'black' 
         }}
       />
-      {error && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
+      {processingMessage && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {processingMessage}</div>}
     </form>
   )
 }

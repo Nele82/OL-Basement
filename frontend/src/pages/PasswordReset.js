@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
+import { setLoadingMsg } from '../slices/LoadingSlice'
 
 const PasswordReset = () => {
     const [newPassword, setNewPassword] = useState('')
@@ -13,6 +15,7 @@ const PasswordReset = () => {
 
     const navigate = useNavigate()
     // Redux
+    const dispatch = useDispatch()
     const theme = useSelector(state => state.theme.value)
     const httpInput = useSelector(state => state.httpAddress.value)
 
@@ -23,7 +26,6 @@ const PasswordReset = () => {
         // Password may contain the following: one lowercase letter, one uppercase letter, one digit (0-9) and one special 
         // character from the !@#$% set and needs to be between 8 and 20 characters long
         const testPass = passRegExp.test(newPassword)
-
 
         if(!newPassword || !confirm) {
             setError('ERROR: Both password fields are required. Please enter your password.')
@@ -40,6 +42,14 @@ const PasswordReset = () => {
             return
         }
 
+        // Displays Loading message
+        dispatch(setLoadingMsg('PASSWORD RESET IN PROGRESS . . . .'))
+        loadBar()
+
+        // Response time variables
+        let startTime = new Date()
+        let responseTime = null
+
         if(token) {
             // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
             // deployment or production (whichever is set by the Developer inside it's Redux slice) 
@@ -52,11 +62,37 @@ const PasswordReset = () => {
               const json = await response.json() 
           
               if (!response.ok) {
+                // Response time calculation
+                responseTime = new Date() - startTime
+
+                // Removes Loading message after 2 seconds or longer
+                if (responseTime < 2000) {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, 2000)
+                } else {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, responseTime)
+                }
                 console.log(json.message)
                 setError(json.message)
               }
           
-              if (response.ok) {      
+              if (response.ok) { 
+                // Response time calculation
+                responseTime = new Date() - startTime
+
+                // Removes Loading message after 2 seconds or longer
+                if (responseTime < 2000) {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, 2000)
+                } else {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, responseTime)
+                }     
                 console.log(json.message)
                 setSuccess(json.message)
                 setTimeout(() => {

@@ -341,6 +341,43 @@ body {
 
 /******************************************** C O M P O N E N T S ****************************************************/
 
+// LOADING BAR & MESSAGE
+
+// Housing
+#loading {
+    display: none;
+
+    position: fixed;
+
+    background-color: rgba(0, 0, 0, 0.705);
+}
+// Loading bar
+#loader {
+    display: flex;
+}
+.loader-char {
+    opacity: 0;
+    animation: fadeInOut 1s infinite alternate;
+}  
+// Loading message
+#loading p {
+    text-align: center;
+
+    opacity: 0;
+
+    animation: fadeInOut 1s forwards;
+
+    color: white;
+}
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 // ITEM INPUT FORM & SPACE CALCULATOR
 
 .form-space-housing input {
@@ -374,7 +411,7 @@ header {
     width: 100%;
 
     position: fixed;
-    z-index: 1;
+    z-index: 2;
 
     box-shadow: $light-box-shadow;
 }
@@ -402,7 +439,7 @@ header {
 nav {
     position: fixed;
 
-    z-index: 0;
+    z-index: 1;
 
     transition: margin .5s
 }

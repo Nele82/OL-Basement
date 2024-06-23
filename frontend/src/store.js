@@ -8,6 +8,7 @@ import setButtons from './slices/ButtonsSlice'
 import setUpdateItem from './slices/UpdateItemSlice'
 import setTheme from './slices/ThemeSlice'
 import setHttp from './slices/HTTPSlice'
+import setLoadingMessage from './slices/LoadingSlice'
 
 export default configureStore({
   reducer: {
@@ -19,6 +20,7 @@ export default configureStore({
     buttons: setButtons,
     updatedItems: setUpdateItem,
     theme: setTheme,
-    httpAddress: setHttp
+    httpAddress: setHttp,
+    loading: setLoadingMessage
   }
 })

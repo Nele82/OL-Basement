@@ -32,6 +32,7 @@ $grid-gaps: (
 }
 ////////////////////////////////////////// F R O M  0 PX ////////////////////////////////////////////
 // Column classes
+
 // FROM 0 PX (FROM 0 PX)
 @include xs {
   @for $i from 1 through $grid-columns {
@@ -42,6 +43,25 @@ $grid-gaps: (
     }
   }
   ////////////// C  O  M  P  O  N  E  N  T  S (FROM 0 PX) //////////////
+
+  // LOADING BAR & MESSAGE (FROM 0 PX)
+
+    // Loading housing
+    #loading {
+      top: 50%;
+
+      padding: $base-padding * 3 $base-padding * 5;
+    }
+    // Loading bar
+    #loader span {
+      font-size: $base-font-size * 12;
+    }
+    // Loading message
+    #loading p {
+      font-size: $base-font-size * 5;
+
+      margin: $base-margin * 2 0 0 0;
+    }
 
     // NAV (FROM 0 PX)
 
@@ -1027,6 +1047,25 @@ $grid-gaps: (
     }
   }
   ////////////// C  O  M  P  O  N  E  N  T  S (FROM 480 PX) //////////////
+  
+  // LOADING BAR & MESSAGE (FROM 480 PX)
+
+  // Loading housing
+  #loading {
+    top: 55%;
+
+    padding: $base-padding * 3 $base-padding * 5;
+  }
+  // Loading bar
+  #loader span {
+    font-size: $base-font-size * 10;
+  }
+  // Loading message
+  #loading p {
+    font-size: $base-font-size * 4.5;
+
+    margin: $base-margin * 2 0 0 0;
+  }
 
   // NAV (FROM 480 PX)
 
@@ -1990,6 +2029,29 @@ $grid-gaps: (
   }
   ////////////// C  O  M  P  O  N  E  N  T  S (FROM 720 PX) //////////////
 
+  // LOADING BAR & MESSAGE (FROM 720 PX)
+
+  // Loading housing
+  #loading {
+    left: 15%;
+    right: 15%;
+
+    padding: $base-padding * 2 $base-padding * 3;
+
+    border-top-right-radius: 4vw;
+    border-bottom-left-radius: 4vw;
+  }
+  // Loading bar
+  #loader span {
+    font-size: $base-font-size * 7;
+  }
+  // Loading message
+  #loading p {
+    font-size: $base-font-size * 3.25;
+
+    margin: $base-margin * .5 0 0 0;
+  }
+
   // NAV (FROM 720 PX)
 
   nav {
@@ -2892,6 +2954,23 @@ $grid-gaps: (
     }
   }
   ////////////// C  O  M  P  O  N  E  N  T  S (FROM 960 PX) //////////////
+
+  // LOADING BAR & MESSAGE (FROM 960 PX)
+
+  // Loading housing
+  #loading {
+    padding: $base-padding * 2 $base-padding * 5;
+  }
+  // Loading bar
+  #loader span {
+    font-size: $base-font-size * 5.5;
+  }
+  // Loading message
+  #loading p {
+    font-size: $base-font-size * 2.25;
+
+    margin: $base-margin * 1 0 0 0;
+  }
 
   // NAV (FROM 960 PX)
 
@@ -3916,6 +3995,27 @@ $grid-gaps: (
     }
   }
     ////////////// C  O  M  P  O  N  E  N  T  S (FROM 1200 PX) //////////////
+
+    // LOADING BAR & MESSAGE (FROM 1200 PX)
+
+    // Loading housing
+    #loading {
+      top: 50%;
+      left: 25%;
+      right: 25%;
+
+      padding: $base-padding * 2 $base-padding * 2;
+    }
+    // Loading bar
+    #loader span {
+      font-size: $base-font-size * 4;
+    }
+    // Loading message
+    #loading p {
+      font-size: $base-font-size * 1.65;
+
+      margin: $base-margin * 1 0 0 0;
+    }
 
     // NAV (FROM 1200 PX)
 

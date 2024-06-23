@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from '../slices/AuthSlice'
 import { setTimeoutMessage } from '../slices/SessionSlice'
+import { setLoadingMsg } from '../slices/LoadingSlice'
 import { useNavigate } from 'react-router-dom'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const Signup = () => {
   const [username, setUsername] = useState('')
@@ -20,6 +22,13 @@ const Signup = () => {
   // User sign-up function
   const signupUser = async (username, email, password) => {
       setError(null)
+      // Displays Loading message
+      dispatch(setLoadingMsg('USER SIGN-UP IN PROGRESS . . . .'))
+      loadBar()
+
+      // Response time variables
+      let startTime = new Date()
+      let responseTime = null
 
       // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
       // deployment or production (whichever is set by the Developer inside it's Redux slice) 
@@ -32,10 +41,36 @@ const Signup = () => {
     const json = await response.json() // Returns username, email & token
 
     if (!response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
       setError(json.message)
     }
 
     if (response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
       // Adding a timestamp 
       const timestamp = new Date().toISOString()
 
@@ -67,7 +102,7 @@ const Signup = () => {
     e.preventDefault()
     // The 'username' input begins with the capital or a lowcase letter and
     // can include letters, digits, hyphens, or underscores (input length: 6-30)
-    const user_RegExp = /^[A-z][A-z0-9-_]{5,30}$/
+    const user_RegExp = /^[A-z][A-z0-9-_ ]{5,30}$/
     // The 'username' input must contain at least one lowercase letter, one 
     // uppercase letter, one digit (0-9) and one special character from the 
     // !@#$% set. (input length: 6-30)

@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
+import { setLoadingMsg } from '../slices/LoadingSlice'
 
 const PasswordReset = () => {
   const [email, setEmail] = useState('')
@@ -11,6 +13,7 @@ const PasswordReset = () => {
   const navigate = useNavigate()
 
   // Redux
+  const dispatch = useDispatch()
   const theme = useSelector(state => state.theme.value)
   const httpInput = useSelector(state => state.httpAddress.value)
 
@@ -32,6 +35,14 @@ const PasswordReset = () => {
       return
     }
 
+    // Displays Loading message
+    dispatch(setLoadingMsg('REQUESTING PASSWORD RESET . . . .'))
+    loadBar()
+
+    // Response time variables
+    let startTime = new Date()
+    let responseTime = null
+
     // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
     // deployment or production (whichever is set by the Developer inside it's Redux slice) 
     // for the backend
@@ -44,10 +55,36 @@ const PasswordReset = () => {
     const json = await response.json()
 
     if (!response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
       setError(json.message)
     }
 
     if (response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
       setNotification(`Success! A link to reset your password has been sent to your email address. Please check your inbox 
       and follow the instructions to create a new password. If you don’t see the email, be sure to check your spam or 
       junk folder or resubmit your email.`)

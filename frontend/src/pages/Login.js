@@ -2,7 +2,9 @@ import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from '../slices/AuthSlice'
 import { removeTimeoutMessage, setTimeoutMessage } from '../slices/SessionSlice'
+import { setLoadingMsg } from '../slices/LoadingSlice'
 import { useNavigate } from 'react-router-dom'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const Login = () => {
   const [username, setUsername] = useState('')
@@ -19,6 +21,14 @@ const Login = () => {
 
   // User login function
   const loginUser = async (username, password) => { 
+    // Displays Loading message
+    dispatch(setLoadingMsg('LOADING STORAGE(S) LIST . . . .'))
+    loadBar()
+
+    // Response time variables
+    let startTime = new Date()
+    let responseTime = null
+
     setLoading(true)
     setError(null)
 
@@ -33,11 +43,38 @@ const Login = () => {
     const json = await response.json() // returns username, email & token
 
     if (!response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
       setLoading(false)
       setError(json.message)
     }
 
     if (response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+        setTimeout(() => {
+          removeLoadBar()
+        }, responseTime)
+      }
+
       // Adding a timestamp 
       const timestamp = new Date().toISOString()
 
