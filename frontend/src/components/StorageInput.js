@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { createStorage } from '../slices/StorageSlice'
+import { setLoadingMsg } from '../slices/LoadingSlice'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const StorageInput = () => {
   const [facilityName, setFacilityName] = useState('')
@@ -9,16 +11,24 @@ const StorageInput = () => {
   const [height, setHeight] = useState('')
   const [error, setError] = useState(null)
   const [success, setSuccess] = useState(null)
-  const [loading, setLoading] = useState(null)
-  const dispatch = useDispatch()
+  const [loading, setLoading] = useState(null)  
 
   const user = JSON.parse(localStorage.getItem('user'))
   // Redux
+  const dispatch = useDispatch()
   const theme = useSelector(state => state.theme.value)
   const httpInput = useSelector(state => state.httpAddress.value)
 
   // Create a basement / storage unit
   const createStorageUnit = async (facilityName, length, width, height) => {
+      // Displays Loading message
+      dispatch(setLoadingMsg('CREATING A NEW STORAGE UNIT . . . .'))
+      loadBar()
+  
+      // Response time variables
+      let startTime = new Date()
+      let responseTime = null
+
     // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
     // deployment or production (whichever is set by the Developer inside it's Redux slice) 
     // for the backend
@@ -33,7 +43,33 @@ const StorageInput = () => {
     const json = await response.json()
 
     if (response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+          removeLoadBar()
+      }
       dispatch(createStorage(json))
+    }
+
+    if (!response.ok) {
+      // Response time calculation
+      responseTime = new Date() - startTime
+
+      // Removes Loading message after 2 seconds or longer
+      if (responseTime < 2000) {
+        setTimeout(() => {
+          removeLoadBar()
+        }, 2000)
+      } else {
+          removeLoadBar()
+      }
+      setError(json.message)
     }
   }
 

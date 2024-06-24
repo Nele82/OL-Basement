@@ -3092,6 +3092,7 @@ $grid-gaps: (
       position: absolute;
       top: 34vw;
       left: 32.5vw;
+      z-index: 1;
 
       padding: $base-padding * 1;
 

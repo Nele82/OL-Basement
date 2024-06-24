@@ -50,9 +50,7 @@ const Signup = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
           removeLoadBar()
-        }, responseTime)
       }
       setError(json.message)
     }
@@ -67,9 +65,7 @@ const Signup = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
           removeLoadBar()
-        }, responseTime)
       }
       // Adding a timestamp 
       const timestamp = new Date().toISOString()

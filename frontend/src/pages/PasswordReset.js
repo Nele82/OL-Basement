@@ -71,9 +71,7 @@ const PasswordReset = () => {
                     removeLoadBar()
                     }, 2000)
                 } else {
-                    setTimeout(() => {
                     removeLoadBar()
-                    }, responseTime)
                 }
                 console.log(json.message)
                 setError(json.message)
@@ -89,9 +87,7 @@ const PasswordReset = () => {
                     removeLoadBar()
                     }, 2000)
                 } else {
-                    setTimeout(() => {
                     removeLoadBar()
-                    }, responseTime)
                 }     
                 console.log(json.message)
                 setSuccess(json.message)

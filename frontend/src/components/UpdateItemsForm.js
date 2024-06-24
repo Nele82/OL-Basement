@@ -10,6 +10,8 @@ import {
     updateItemCategory 
 } from '../slices/UpdateItemSlice'
 import { getButtons } from '../slices/ButtonsSlice'
+import { setLoadingMsg } from '../slices/LoadingSlice'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const UpdateItemsForm = ({itemId, itemName, storeId}) => {
     const [error, setError] = useState(null)
@@ -25,6 +27,13 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
     const httpInput = useSelector(state => state.httpAddress.value)
 
     const patchItem = async (itemTitle, length, width, height, description, category, itemId) => {
+        // Displays Loading message
+        dispatch(setLoadingMsg('ITEM DETAILS ARE CURRENTLY BEING UPDATED . . . .'))
+        loadBar()
+
+        // Response time variables
+        let startTime = new Date()
+        let responseTime = null
     
         // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
         // deployment or production (whichever is set by the Developer inside it's Redux slice) 
@@ -39,6 +48,17 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
         const json = await response.json()
     
         if (response.ok) {
+            // Response time calculation
+            responseTime = new Date() - startTime
+
+            // Removes Loading message after 2 seconds or longer
+            if (responseTime < 2000) {
+              setTimeout(() => {
+                removeLoadBar()
+              }, 2000)
+            } else {
+              removeLoadBar()
+            }
             console.log('Item has been updated')
             let array = []
             for (let i = 0; i < json.length; i++) {
@@ -50,7 +70,18 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
         }
 
         if (!response.ok) {
-            console.log(json.message)
+            // Response time calculation
+            responseTime = new Date() - startTime
+
+            // Removes Loading message after 2 seconds or longer
+            if (responseTime < 2000) {
+              setTimeout(() => {
+                removeLoadBar()
+              }, 2000)
+            } else {
+              removeLoadBar()
+            }
+            setError(json.message)
         }
     } 
 

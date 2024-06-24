@@ -64,9 +64,7 @@ const PasswordReset = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
           removeLoadBar()
-        }, responseTime)
       }
       setError(json.message)
     }
@@ -81,9 +79,7 @@ const PasswordReset = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
           removeLoadBar()
-        }, responseTime)
       }
       setNotification(`Success! A link to reset your password has been sent to your email address. Please check your inbox 
       and follow the instructions to create a new password. If you don’t see the email, be sure to check your spam or 

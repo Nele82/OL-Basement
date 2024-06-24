@@ -307,6 +307,7 @@ body {
 #loading {
   display: none;
   position: fixed;
+  z-index: 2;
   background-color: rgba(0, 0, 0, 0.705);
 }
 
@@ -434,12 +435,11 @@ footer span:nth-child(1) {
   display: none;
 }
 
-/* Update form */
-.update-form {
+/* STORAGE UPDATE FORM */
+.storage-wrapper #storage-units-housing .storage-details .manage-storage-unit .update-form {
   display: none;
 }
 
-/* ITEM UPDATE FORM */
 .update-items {
   display: none;
   box-shadow: 0px 4px 7px -2px #9E9284;
@@ -2939,6 +2939,7 @@ footer span:nth-child(1) {
     position: absolute;
     top: 34vw;
     left: 32.5vw;
+    z-index: 1;
     padding: 1vw;
     box-shadow: 0vw 0vw 2vw 2vw lightgray;
   }

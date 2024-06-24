@@ -348,6 +348,7 @@ body {
     display: none;
 
     position: fixed;
+    z-index: 2;
 
     background-color: rgba(0, 0, 0, 0.705);
 }
@@ -481,7 +482,11 @@ footer span:nth-child(1) {
     border-top-left-radius: 5vw;
     border-top-right-radius: 5vw;
 }
+
+// DELETE DIALOG BOX (STORAGE & ITEMS)
+
 /* Dialog box */
+
 .delete-box {
     display: none;
 }
@@ -489,11 +494,13 @@ footer span:nth-child(1) {
 .items-delete-box {
     display: none;
 }
-/* Update form */
-.update-form {
+
+/* STORAGE UPDATE FORM */
+
+.storage-wrapper #storage-units-housing .storage-details .manage-storage-unit .update-form {
     display: none;
 }
-/* ITEM UPDATE FORM */
+
 .update-items {
     display: none;
 

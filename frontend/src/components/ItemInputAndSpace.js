@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { createItem } from '../slices/ItemsSlice'
 import { useDispatch, useSelector } from 'react-redux'
 import { getButtons } from '../slices/ButtonsSlice'
+import { setLoadingMsg } from '../slices/LoadingSlice'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
 const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   const [itemTitle, setItemTitle] = useState('')
@@ -18,6 +20,13 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   const dispatch = useDispatch()
 
   const addItem = async () => {
+    // Displays Loading message
+    dispatch(setLoadingMsg('ADDING A NEW ITEM . . . .'))
+    loadBar()
+
+    // Response time variables
+    let startTime = new Date()
+    let responseTime = null
 
     // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
     // deployment or production (whichever is set by the Developer inside it's Redux slice) 
@@ -40,8 +49,34 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
       const arrJSON = await arr.json()
 
       if (response.ok) {
-          console.log('Item has been added to the storage')
-          dispatch(createItem(json))
+        // Response time calculation
+        responseTime = new Date() - startTime
+
+        // Removes Loading message after 2 seconds or longer
+        if (responseTime < 2000) {
+          setTimeout(() => {
+            removeLoadBar()
+          }, 2000)
+        } else {
+          removeLoadBar()
+        }
+        console.log('Item has been added to the storage')
+        dispatch(createItem(json))
+      }
+
+      if (!response.ok) {
+        // Response time calculation
+        responseTime = new Date() - startTime
+  
+        // Removes Loading message after 2 seconds or longer
+        if (responseTime < 2000) {
+          setTimeout(() => {
+            removeLoadBar()
+          }, 2000)
+        } else {
+            removeLoadBar()
+        }
+        setError(json.message)
       }
 
       if(arr.ok) {

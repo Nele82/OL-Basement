@@ -22,7 +22,7 @@ const Login = () => {
   // User login function
   const loginUser = async (username, password) => { 
     // Displays Loading message
-    dispatch(setLoadingMsg('LOADING STORAGE(S) LIST . . . .'))
+    dispatch(setLoadingMsg('LOADING STORAGE(S) . . . .'))
     loadBar()
 
     // Response time variables
@@ -52,9 +52,7 @@ const Login = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
-          removeLoadBar()
-        }, responseTime)
+        removeLoadBar()
       }
       setLoading(false)
       setError(json.message)
@@ -70,9 +68,7 @@ const Login = () => {
           removeLoadBar()
         }, 2000)
       } else {
-        setTimeout(() => {
           removeLoadBar()
-        }, responseTime)
       }
 
       // Adding a timestamp 

@@ -164,7 +164,7 @@ const Contact = () => {
           color: theme ? 'rgb(238, 238, 238)' : 'black' 
         }}
       />
-      {processingMessage && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {processingMessage}</div>}
+      {processingMessage && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9432;</p> {processingMessage}</div>}
     </form>
   )
 }
