@@ -468,6 +468,39 @@ $grid-gaps: (
 
   ////////////// P  A  G  E  S (FROM 0 PX) //////////////
 
+    // 404 PAGE (FROM 0 PX)
+
+    // Housing - Overall
+    #not-found {
+      margin: $base-margin * 54 0 0 0;
+    }
+    // Title
+    #not-found-upper h1 {
+      font-size: $base-font-size * 11;
+      text-align: center;
+
+      margin: 0 0 $base-margin * 6 0;
+    }
+    // Housing - Lower
+    #not-found-lower {
+      margin: $base-margin * 6 0 0 0;
+    }
+    // Message
+    #not-found p {
+      font-size: $base-font-size * 6;
+      text-align: center;
+    }
+    // Button
+    #not-found button {
+      font-size: $base-font-size * 5;
+
+      border-top-right-radius: 3vw;
+      border-bottom-left-radius: 3vw;
+
+      margin: $base-margin * 6 0 0 0;
+      padding: $base-padding * 1.5 $base-padding * 5;
+    }
+
     // MAIN PAGE (FROM 0 PX)
 
     #main-page-housing {
@@ -568,6 +601,9 @@ $grid-gaps: (
     // Error message
     .login div {
       font-size: $base-font-size * 5;
+      text-align: center;
+
+      padding: $base-padding * 1;
     }
     .login div span {
       font-size: $base-font-size * 10;
@@ -614,8 +650,10 @@ $grid-gaps: (
 
       margin: $base-margin * 3 0 $base-margin * 3 0;
     }
+    // Error message
     .signup div {
       font-size: $base-font-size * 5;
+      text-align: center;
     }
     .signup div p {
       font-size: $base-font-size * 10;
@@ -672,6 +710,7 @@ $grid-gaps: (
     // Error message
     .reset-form div {
       font-size: $base-font-size * 5;
+      text-align: center;
     }
     .reset-form div div {
       font-size: $base-font-size * 10;
@@ -718,6 +757,9 @@ $grid-gaps: (
     // Success message
     .password-reset span {
       font-size: $base-font-size * 5;
+    }
+    .password-reset span div {
+      font-size: $base-font-size * 10;
     }
 
     // STORAGE LIST PAGE (FROM 0 PX)
@@ -777,6 +819,13 @@ $grid-gaps: (
 
       margin: $base-margin * 1 0 $base-margin * 1 0;
       padding: $base-padding * 1 0;
+    }
+    // Error message 
+    .storeLoadError {
+      font-size: $base-font-size * 5;
+      text-align: center;
+
+      padding: $base-padding * 1;
     }
     // Log Out button
     .storage-wrapper button {
@@ -1467,6 +1516,39 @@ $grid-gaps: (
 
   ////////////// P  A  G  E  S (FROM 480 PX) //////////////
 
+  // 404 PAGE (FROM 480 PX)
+
+  // Housing - Overall
+  #not-found {
+    margin: $base-margin * 48 0 0 0;
+  }
+  // Title
+  #not-found-upper h1 {
+    font-size: $base-font-size * 9;
+    text-align: center;
+
+    margin: 0 0 $base-margin * 5 0;
+  }
+  // Housing - Lower
+  #not-found-lower {
+    margin: $base-margin * 5 0 0 0;
+  }
+  // Message
+  #not-found p {
+    font-size: $base-font-size * 5.5;
+    text-align: center;
+  }
+  // Button
+  #not-found button {
+    font-size: $base-font-size * 4.5;
+
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+
+    margin: $base-margin * 5 0 0 0;
+    padding: $base-padding * 1.5 $base-padding * 5;
+  }
+
   // MAIN PAGE (FROM 480 PX)
 
   #main-page-housing {
@@ -1692,6 +1774,7 @@ $grid-gaps: (
 
     margin: $base-margin * 6 0 $base-margin * 3 0;
   }
+  // Error message
   .password-reset div {
     font-size: $base-font-size * 4.5;
     text-align: center;
@@ -1702,6 +1785,9 @@ $grid-gaps: (
   // Success message
   .password-reset span {
     font-size: $base-font-size * 4.5;
+  }
+  .password-reset span div {
+    font-size: $base-font-size * 9;
   }
 
   // STORAGE LIST PAGE (FROM 480 PX)
@@ -1761,6 +1847,11 @@ $grid-gaps: (
 
       margin: $base-margin * 1 0 $base-margin * 1 0;
       padding: $base-padding * 1 0;
+    }
+    // Error message 
+    .storeLoadError {
+      font-size: $base-font-size * 4.5;
+      text-align: center;
     }
     // Log Out button
     .storage-wrapper button {
@@ -2417,6 +2508,39 @@ $grid-gaps: (
 
   ////////////// P  A  G  E  S (FROM 720 PX) //////////////
 
+  // 404 PAGE (FROM 720 PX)
+
+  // Housing - Overall
+  #not-found {
+    margin: $base-margin * 32 0 0 0;
+  }
+  // Title
+  #not-found-upper h1 {
+    font-size: $base-font-size * 8;
+    text-align: center;
+
+    margin: 0 0 $base-margin * 4 0;
+  }
+  // Housing - Lower
+  #not-found-lower {
+    margin: $base-margin * 5 0 0 0;
+  }
+  // Message
+  #not-found p {
+    font-size: $base-font-size * 4.5;
+    text-align: center;
+  }
+  // Button
+  #not-found button {
+    font-size: $base-font-size * 3.5;
+
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+
+    margin: $base-margin * 5 0 0 0;
+    padding: $base-padding * 1.25 $base-padding * 5;
+  }
+
   // MAIN PAGE (FROM 720 PX)
 
   #main-page-housing {
@@ -2620,6 +2744,7 @@ $grid-gaps: (
 
     margin: $base-margin * 5 0 $base-margin * 3 0;
   }
+  // Error message
   .password-reset div {
     font-size: $base-font-size * 3.5;
     text-align: center;
@@ -2630,6 +2755,9 @@ $grid-gaps: (
   // Success message
   .password-reset span {
     font-size: $base-font-size * 3.5;
+  }
+  .password-reset span div {
+    font-size: $base-font-size * 8;
   }
 
   // STORAGE LIST PAGE (FROM 720 PX)
@@ -2689,6 +2817,11 @@ $grid-gaps: (
 
       margin: $base-margin * 1 0 $base-margin * 1 0;
       padding: $base-padding * 1 0;
+    }
+    // Error message 
+    .storeLoadError {
+      font-size: $base-font-size * 3.5;
+      text-align: center;
     }
     // Log Out button
     .storage-wrapper button {
@@ -3419,6 +3552,39 @@ $grid-gaps: (
 
     ////////////// P  A  G  E  S (FROM 960 PX) //////////////
 
+    // 404 PAGE (FROM 960 PX)
+
+    // Housing - Overall
+    #not-found {
+      margin: $base-margin * 25 0 0 0;
+    }
+    // Title
+    #not-found-upper h1 {
+      font-size: $base-font-size * 5;
+      text-align: center;
+
+      margin: 0 0 $base-margin * 3 0;
+    }
+    // Housing - Lower
+    #not-found-lower {
+      margin: auto 0;
+    }
+    // Message
+    #not-found p {
+      font-size: $base-font-size * 3.5;
+      text-align: center;
+    }
+    // Button
+    #not-found button {
+      font-size: $base-font-size * 2.5;
+
+      border-top-right-radius: 2vw;
+      border-bottom-left-radius: 2vw;
+
+      margin: $base-margin * 8 0 0 0;
+      padding: $base-padding * 1 $base-padding * 5;
+    }
+
     // MAIN PAGE (FROM 960 PX)
 
     #main-page-housing {
@@ -3641,6 +3807,7 @@ $grid-gaps: (
       margin: $base-margin * 3 0 $base-margin * 3 0;
       padding: $base-padding * 1;
     }
+    // Error message 
     .password-reset div {
       font-size: $base-font-size * 2.5;
       text-align: center;
@@ -3648,9 +3815,13 @@ $grid-gaps: (
     .password-reset div div {
       font-size: $base-font-size * 5;
     }
+    // Success message
     .password-reset span {
       font-size: $base-font-size * 2.5;
       text-align: center;
+    }
+    .password-reset span div {
+      font-size: $base-font-size * 5;
     }
 
     // STORAGE LIST PAGE (FROM 960 PX)
@@ -3711,6 +3882,11 @@ $grid-gaps: (
 
       margin: $base-margin * 1 0 $base-margin * 1 0;
       padding: $base-padding * 1 0;
+    }
+    // Error message 
+    .storeLoadError {
+      font-size: $base-font-size * 2.5;
+      text-align: center;
     }
     // Log Out button
     .storage-wrapper button {
@@ -4476,6 +4652,32 @@ $grid-gaps: (
 
     ////////////// P  A  G  E  S (FROM 1200 PX) //////////////
 
+    // 404 PAGE (FROM 1200 PX)
+
+    // Housing
+    #not-found {
+      margin: $base-margin * 16 0 0 0;
+    }
+    // Title
+    #not-found-upper h1 {
+      font-size: $base-font-size * 3.5;
+    }
+    // Message
+    #not-found-lower p {
+      font-size: $base-font-size * 2;
+      text-align: center;
+    }
+    // Button
+    #not-found-lower button {
+      font-size: $base-font-size * 1.65;
+
+      border-top-right-radius: 1.5vw;
+      border-bottom-left-radius: 1.5vw;
+
+      margin: $base-margin * 3 0 0 0;
+      padding: $base-padding * .5 $base-padding * 5;
+    }
+
     // MAIN PAGE (FROM 1200 PX)
 
     #main-page-housing {
@@ -4715,6 +4917,7 @@ $grid-gaps: (
 
       border-bottom-right-radius: 2vw;
     }
+    // Error message
     .password-reset div {
       font-size: $base-font-size * 1.65;
       text-align: center;
@@ -4725,6 +4928,9 @@ $grid-gaps: (
     // Success message
     .password-reset span {
       font-size: $base-font-size * 1.65;
+    }
+    .password-reset span div {
+      font-size: $base-font-size * 3;
     }
 
     // STORAGE LIST PAGE (FROM 1200 PX)
@@ -4792,6 +4998,15 @@ $grid-gaps: (
       padding: $base-padding * .5 0;
 
       border-bottom-right-radius: 1.5vw;
+    }
+    // Error message 
+    .storeLoadError {
+      width: 70%;
+
+      font-size: $base-font-size * 1.65;
+      text-align: center;
+
+      margin: 0 auto;
     }
     // Log Out button
     .storage-wrapper button {

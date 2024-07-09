@@ -1,6 +1,6 @@
 const mongoose = require('mongoose') // MongoDB library
 const bcrypt = require('bcrypt') // Encryption - decryption library
-
+// Defining a Model in Mongoose is done through the Schema interface
 const Schema = mongoose.Schema
 
 const userSchema = new Schema({

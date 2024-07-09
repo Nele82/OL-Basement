@@ -29,68 +29,77 @@ const Signup = () => {
       // Response time variables
       let startTime = new Date()
       let responseTime = null
+      try {
+        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const response = await fetch(`${httpInput}/user/signup`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ username, email, password })
+        })
+        const json = await response.json() // Returns username & token
+    
+        if (!response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+    
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
+          setError(json.message)
+        }
+    
+        if (response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
 
-      // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-      // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-      // for the backend
-      const response = await fetch(`${httpInput}/user/signup`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ username, email, password })
-    })
-    const json = await response.json() // Returns username, email & token
-
-    if (!response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
-
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
+          // Adding a timestamp 
+          const timestamp = new Date().toISOString()
+    
+          // Saves User to the local storage
+          localStorage.setItem('user', JSON.stringify(json))
+          localStorage.setItem('time', JSON.stringify(timestamp))
+    
+          // Updates the redux store
+          dispatch(login(json)) // sets the 'user' key {username: string, token: string}
+    
+          // Navigate to 'storage-list'
+          navigate('/storage-list')
+    
+          // Update error state
+          setError(null)
+    
+          // Logout user after 1 hour
+          setTimeout(() => {
+            dispatch(logout())
+            dispatch(setTimeoutMessage())
+            localStorage.clear()
+            navigate('/login')
+          }, 3590000)
+        } 
+      } catch (error) {
+        if (!error?.response) {
+          // No server response (server is down)
+          setError(`Unable to establish server connection. Please verify your internet 
+            connection and try again. If the problem persists, kindly reach out to the 
+            developer through the 'Contact' page.`)
           removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
+        } 
       }
-      setError(json.message)
-    }
-
-    if (response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
-
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
-      }
-      // Adding a timestamp 
-      const timestamp = new Date().toISOString()
-
-      // Saves User to the local storage
-      localStorage.setItem('user', JSON.stringify(json))
-      localStorage.setItem('time', JSON.stringify(timestamp))
-
-      // Update the redux store
-      dispatch(login(json)) // sets the 'user' key {username: string, email: string, token: string}
-
-      // Navigate to 'storage-list'
-      navigate('/storage-list')
-
-      // Update error state
-      setError(null)
-
-      // Logout user after 1 hour
-      setTimeout(() => {
-        dispatch(logout())
-        dispatch(setTimeoutMessage())
-        localStorage.clear()
-        navigate('/login')
-      }, 3590000)
-    } 
   }
 
   // Checking the input (regExp & empty input) and submitting
@@ -199,7 +208,7 @@ const Signup = () => {
         Sign Up
       </button>
       <span>* - Required field</span>
-      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p> {error}</div>}
+      {error && <div className='display-f fd-c ai-c p-2 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><p>&#9888;</p>{error}</div>}
       <div 
         id='terms'
         className='display-f'

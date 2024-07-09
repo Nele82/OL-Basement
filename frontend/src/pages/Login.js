@@ -11,6 +11,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
+  const [loadingCleanup, setLoadingCleanup] = useState(null)
   const userRef = useRef()
   const navigate = useNavigate()
   // Redux
@@ -32,78 +33,89 @@ const Login = () => {
     setLoading(true)
     setError(null)
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/user/login`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ username, password })
-    })
-    const json = await response.json() // returns username, email & token
+    try {
+          // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const response = await fetch(`${httpInput}/user/login`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ username, password })
+        })
+        const json = await response.json() // Returns username & token
 
-    if (!response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
+        if (!response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+          setLoadingCleanup(responseTime)
 
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+            removeLoadBar()
+          }
+          setLoading(false)
+          setError(json.message)
+        }
+
+        if (response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+          setLoadingCleanup(responseTime)
+
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
+
+          // Adding a timestamp for session timeout function
+          const timestamp = new Date().toISOString()
+
+          // Update the local storage
+          localStorage.setItem('user', JSON.stringify(json))
+          localStorage.setItem('time', JSON.stringify(timestamp))
+
+          // Update the 'user' slice
+          dispatch(login(json)) // sets 'user' to {email: string, token: string}
+
+          // Navigate to 'storage-list'
+          navigate('/storage-list')
+
+          // Update loading state
+          setLoading(false)
+
+          // Update error state
+          setError(null)
+
+          // Logout user after 1 hour
+          setTimeout(() => {
+            dispatch(logout())
+            dispatch(setTimeoutMessage())
+            localStorage.clear()
+            navigate('/login')
+          }, 3590000)
+        }  
+    } catch (error) {
+      if (!error?.response) {
+        // No server response (server is down)
+        setError(`Unable to establish server connection. Please verify your internet 
+          connection and try again. If the problem persists, kindly reach out to the 
+          developer through the 'Contact' page.`)
         removeLoadBar()
-      }
-      setLoading(false)
-      setError(json.message)
+      } 
     }
-
-    if (response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
-
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
-      }
-
-      // Adding a timestamp 
-      const timestamp = new Date().toISOString()
-
-      // Update the local storage
-      localStorage.setItem('user', JSON.stringify(json))
-      localStorage.setItem('time', JSON.stringify(timestamp))
-
-      // Update the 'user' slice
-      dispatch(login(json)) // sets 'user' to {email: string, token: string}
-
-      // Navigate to 'storage-list'
-      navigate('/storage-list')
-
-      // Update loading state
-      setLoading(false)
-
-      // Update error state
-      setError(null)
-
-      // Logout user after 1 hour
-      setTimeout(() => {
-        dispatch(logout())
-        dispatch(setTimeoutMessage())
-        localStorage.clear()
-        navigate('/login')
-      }, 3590000)
-    }  
   }
 
-  // Checking for an empty input
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    // Checking for an empty input
     if(!username || !password) {
       setError('Please enter your username and password')
       return
@@ -117,6 +129,14 @@ const Login = () => {
     }
     navigate('/login')
     userRef.current.focus()
+
+    // Cleanup - removes loading bar if a User navigates away 
+    // and logging in takes longer than 2s
+    return ()=> {
+      if (loadingCleanup > 2000) {
+        removeLoadBar()
+      }
+    }
   }, [])
   
   return (

@@ -13,19 +13,26 @@ const DialogBoxItems = ({itemId, storeId}) => {
     // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
     // deployment or production (whichever is set by the Developer inside it's Redux slice) 
     // for the backend
-      const arr = await fetch(`${httpInput}/items/getItems/${storeId}`)
-      const arrJSON = await arr.json()
-      if(arr.ok) {
-        let array = []
-        for (let i = 0; i < arrJSON.length; i++) {
-          array.push(arrJSON[i]['category'])
+        try {
+            const arr = await fetch(`${httpInput}/items/getItems/${storeId}`)
+            const arrJSON = await arr.json()
+            if(arr.ok) {
+            let array = []
+            for (let i = 0; i < arrJSON.length; i++) {
+                array.push(arrJSON[i]['category'])
+            }
+            array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
+            dispatch(getButtons(array))
+            }
+            if (!arr.ok) {
+                console.log(arrJSON.message)
+            }
+        } catch (error) {
+            if (!error?.response) {
+                // No server response (server is down)
+                console.log('Server Down - Unable to generate a buttons array')
+            } 
         }
-        array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
-        dispatch(getButtons(array))
-      }
-      if (!arr.ok) {
-          console.log(arrJSON.message)
-      }
     }
 
   return (
@@ -37,8 +44,8 @@ const DialogBoxItems = ({itemId, storeId}) => {
         <div>
             <button
                 onClick={()=>{
-                    deleteOneItem(itemId)
-                    dispatch(deleteItem(itemId))
+                    deleteOneItem(itemId) // Calls a 'useDelete' custom hook function 
+                    dispatch(deleteItem(itemId)) // Updates the state
                     document.getElementById(`${itemId.slice(4, 11)}-delete-item`).style.display = 'none'
                     buttonsArray()
                 }}

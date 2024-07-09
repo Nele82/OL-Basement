@@ -17,10 +17,13 @@ export const storageSlice = createSlice({
         },
         deleteStorage: (state, action) => {
             state.value = (state.value).filter((storage) => storage._id !== action.payload)
+        },
+        nullStorage: (state) => {
+            state.value = []
         }
     }
 })
 
-export const {createStorage, getStorage, updateStorage, deleteStorage} = storageSlice.actions
+export const {createStorage, getStorage, updateStorage, deleteStorage, nullStorage} = storageSlice.actions
 
 export default storageSlice.reducer

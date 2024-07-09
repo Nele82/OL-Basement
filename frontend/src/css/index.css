@@ -48,11 +48,17 @@ body {
 .reset-form button, .password-reset button, .manage-storage-unit button, #root > div > div > main > div > button, #contact-ol, #privacy button, #tos button,
 .form-space-housing button, header img, #theme span, #reveal-menu span, footer a, footer ul li, footer span:nth-child(1), .update-items-header i,
 #storage-overview-lower .update-items .update-item-description button, .storage-item .items-delete-box div button, .storage-details .delete-box div button,
-.storage-details .update-form button, .storage-details .update-form .storage-unit-header-house i, .storage-wrapper .create-storage button {
+.storage-details .update-form button, .storage-details .update-form .storage-unit-header-house i, .storage-wrapper .create-storage button, #not-found-lower button {
   cursor: pointer;
 }
 
 /******************************************** P A G E S ****************************************************/
+/* 404 PAGE */
+#not-found button {
+  box-shadow: 0px 4px 7px -2px #9E9284;
+  border: 1px ridge rgb(218, 222, 223);
+}
+
 /* MAIN PAGE */
 /* Logged out menu */
 #loggedOut a {
@@ -902,6 +908,28 @@ footer span:nth-child(1) {
     margin: 0 1vw;
     padding: 0;
   }
+  #not-found {
+    margin: 54vw 0 0 0;
+  }
+  #not-found-upper h1 {
+    font-size: 9.35vw;
+    text-align: center;
+    margin: 0 0 6vw 0;
+  }
+  #not-found-lower {
+    margin: 6vw 0 0 0;
+  }
+  #not-found p {
+    font-size: 5.1vw;
+    text-align: center;
+  }
+  #not-found button {
+    font-size: 4.25vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    margin: 6vw 0 0 0;
+    padding: 1.5vw 5vw;
+  }
   #main-page-housing {
     margin: 54vw 0 10vw 0;
   }
@@ -976,6 +1004,8 @@ footer span:nth-child(1) {
   }
   .login div {
     font-size: 4.25vw;
+    text-align: center;
+    padding: 1vw;
   }
   .login div span {
     font-size: 8.5vw;
@@ -1010,6 +1040,7 @@ footer span:nth-child(1) {
   }
   .signup div {
     font-size: 4.25vw;
+    text-align: center;
   }
   .signup div p {
     font-size: 8.5vw;
@@ -1050,6 +1081,7 @@ footer span:nth-child(1) {
   }
   .reset-form div {
     font-size: 4.25vw;
+    text-align: center;
   }
   .reset-form div div {
     font-size: 8.5vw;
@@ -1083,6 +1115,9 @@ footer span:nth-child(1) {
   }
   .password-reset span {
     font-size: 4.25vw;
+  }
+  .password-reset span div {
+    font-size: 8.5vw;
   }
   .storage-wrapper {
     margin: 54vw 0 10vw 0;
@@ -1124,6 +1159,11 @@ footer span:nth-child(1) {
     font-size: 4.25vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
+  }
+  .storeLoadError {
+    font-size: 4.25vw;
+    text-align: center;
+    padding: 1vw;
   }
   .storage-wrapper button {
     font-size: 4.25vw;
@@ -1658,6 +1698,28 @@ footer span:nth-child(1) {
     margin: 0 1vw;
     padding: 0;
   }
+  #not-found {
+    margin: 48vw 0 0 0;
+  }
+  #not-found-upper h1 {
+    font-size: 7.65vw;
+    text-align: center;
+    margin: 0 0 5vw 0;
+  }
+  #not-found-lower {
+    margin: 5vw 0 0 0;
+  }
+  #not-found p {
+    font-size: 4.675vw;
+    text-align: center;
+  }
+  #not-found button {
+    font-size: 3.825vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    margin: 5vw 0 0 0;
+    padding: 1.5vw 5vw;
+  }
   #main-page-housing {
     margin: 48vw 0 10vw 0;
   }
@@ -1836,6 +1898,9 @@ footer span:nth-child(1) {
   .password-reset span {
     font-size: 3.825vw;
   }
+  .password-reset span div {
+    font-size: 7.65vw;
+  }
   .storage-wrapper {
     margin: 48vw 0 10vw 0;
   }
@@ -1876,6 +1941,10 @@ footer span:nth-child(1) {
     font-size: 3.825vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
+  }
+  .storeLoadError {
+    font-size: 3.825vw;
+    text-align: center;
   }
   .storage-wrapper button {
     font-size: 3.825vw;
@@ -2391,6 +2460,28 @@ footer span:nth-child(1) {
     margin: 0 1vw;
     padding: 0;
   }
+  #not-found {
+    margin: 32vw 0 0 0;
+  }
+  #not-found-upper h1 {
+    font-size: 6.8vw;
+    text-align: center;
+    margin: 0 0 4vw 0;
+  }
+  #not-found-lower {
+    margin: 5vw 0 0 0;
+  }
+  #not-found p {
+    font-size: 3.825vw;
+    text-align: center;
+  }
+  #not-found button {
+    font-size: 2.975vw;
+    border-top-right-radius: 3vw;
+    border-bottom-left-radius: 3vw;
+    margin: 5vw 0 0 0;
+    padding: 1.25vw 5vw;
+  }
   #main-page-housing {
     margin: 32vw 0 0 0;
   }
@@ -2561,6 +2652,9 @@ footer span:nth-child(1) {
   .password-reset span {
     font-size: 2.975vw;
   }
+  .password-reset span div {
+    font-size: 6.8vw;
+  }
   .storage-wrapper {
     margin: 32vw 0 0 0;
   }
@@ -2601,6 +2695,10 @@ footer span:nth-child(1) {
     font-size: 2.975vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
+  }
+  .storeLoadError {
+    font-size: 2.975vw;
+    text-align: center;
   }
   .storage-wrapper button {
     font-size: 2.975vw;
@@ -3160,6 +3258,28 @@ footer span:nth-child(1) {
     margin: 0 1vw;
     padding: 0;
   }
+  #not-found {
+    margin: 25vw 0 0 0;
+  }
+  #not-found-upper h1 {
+    font-size: 4.25vw;
+    text-align: center;
+    margin: 0 0 3vw 0;
+  }
+  #not-found-lower {
+    margin: auto 0;
+  }
+  #not-found p {
+    font-size: 2.975vw;
+    text-align: center;
+  }
+  #not-found button {
+    font-size: 2.125vw;
+    border-top-right-radius: 2vw;
+    border-bottom-left-radius: 2vw;
+    margin: 8vw 0 0 0;
+    padding: 1vw 5vw;
+  }
   #main-page-housing {
     margin: 25vw 0 0 0;
   }
@@ -3347,6 +3467,9 @@ footer span:nth-child(1) {
     font-size: 2.125vw;
     text-align: center;
   }
+  .password-reset span div {
+    font-size: 4.25vw;
+  }
   .storage-wrapper {
     margin: 25vw 0 0 0;
   }
@@ -3387,6 +3510,10 @@ footer span:nth-child(1) {
     font-size: 2.125vw;
     margin: 1vw 0 1vw 0;
     padding: 1vw 0;
+  }
+  .storeLoadError {
+    font-size: 2.125vw;
+    text-align: center;
   }
   .storage-wrapper button {
     font-size: 2.125vw;
@@ -3971,6 +4098,23 @@ footer span:nth-child(1) {
     margin: 0 1vw;
     padding: 0;
   }
+  #not-found {
+    margin: 16vw 0 0 0;
+  }
+  #not-found-upper h1 {
+    font-size: 2.975vw;
+  }
+  #not-found-lower p {
+    font-size: 1.7vw;
+    text-align: center;
+  }
+  #not-found-lower button {
+    font-size: 1.4025vw;
+    border-top-right-radius: 1.5vw;
+    border-bottom-left-radius: 1.5vw;
+    margin: 3vw 0 0 0;
+    padding: 0.5vw 5vw;
+  }
   #main-page-housing {
     margin: 16vw 0 0 0;
   }
@@ -4164,6 +4308,9 @@ footer span:nth-child(1) {
   .password-reset span {
     font-size: 1.4025vw;
   }
+  .password-reset span div {
+    font-size: 2.55vw;
+  }
   .storage-wrapper {
     margin: 16vw 0 0 0;
   }
@@ -4209,6 +4356,12 @@ footer span:nth-child(1) {
     margin: 0;
     padding: 0.5vw 0;
     border-bottom-right-radius: 1.5vw;
+  }
+  .storeLoadError {
+    width: 70%;
+    font-size: 1.4025vw;
+    text-align: center;
+    margin: 0 auto;
   }
   .storage-wrapper button {
     font-size: 1.4025vw;

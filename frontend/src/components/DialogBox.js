@@ -24,8 +24,8 @@ const DialogBox = ({storageId}) => {
         {/* BUTTONS */}
         <div className='display-f jc-sa'>
             <button onClick={() => {
-              deleteOneStorage(storageId)
-              dispatch(deleteStorage(storageId))
+              deleteOneStorage(storageId) // Calls the custom hook function to delete the storage in MongoDB
+              dispatch(deleteStorage(storageId)) // Updates the state
             }}
             style={{ 
               backgroundColor: theme ? 'black' : 'rgb(238, 238, 238)',

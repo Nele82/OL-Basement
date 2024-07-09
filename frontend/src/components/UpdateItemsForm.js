@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from "react-redux"
-import { updateItem } from '../slices/ItemsSlice'
+import { getItem } from '../slices/ItemsSlice'
 import { 
     updateItemTitle, 
     updateItemLength, 
@@ -13,7 +13,7 @@ import { getButtons } from '../slices/ButtonsSlice'
 import { setLoadingMsg } from '../slices/LoadingSlice'
 import { loadBar, removeLoadBar } from '../hooks/useLoader'
 
-const UpdateItemsForm = ({itemId, itemName, storeId}) => {
+const UpdateItemsForm = ({itemId, itemName, storeId, spaceTaken}) => {
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(null)
     // Redux
@@ -25,63 +25,76 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
     const description = useSelector(state => state.updatedItems.value.description)
     const category = useSelector(state => state.updatedItems.value.category)
     const httpInput = useSelector(state => state.httpAddress.value)
+    const availableSpace = useSelector(state => state.remainingSpace.value)
 
     const patchItem = async (itemTitle, length, width, height, description, category, itemId) => {
-        // Displays Loading message
-        dispatch(setLoadingMsg('ITEM DETAILS ARE CURRENTLY BEING UPDATED . . . .'))
-        loadBar()
+        try {
+          // Displays Loading message
+          dispatch(setLoadingMsg('ITEM DETAILS ARE CURRENTLY BEING UPDATED . . . .'))
+          loadBar()
 
-        // Response time variables
-        let startTime = new Date()
-        let responseTime = null
-    
-        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-        // for the backend
-        const response = await fetch(`${httpInput}/items/updateItem/${storeId}/${itemId}`, {
-            method: 'PATCH',
-            headers: {
-            'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({itemTitle, length, width, height, description, category})
-        })
-        const json = await response.json()
-    
-        if (response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+          // Response time variables
+          let startTime = new Date()
+          let responseTime = null
+      
+          // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+          // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+          // for the backend
+          const response = await fetch(`${httpInput}/items/updateItem/${storeId}/${itemId}`, {
+              method: 'PATCH',
+              headers: {
+              'Content-Type': 'application/json'
+              },
+              body: JSON.stringify({itemTitle, length, width, height, description, category})
+          })
+          const json = await response.json()
+      
+          if (response.ok) {
+              // Response time calculation
+              responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-              setTimeout(() => {
+              // Removes Loading message after 2 seconds or longer
+              if (responseTime < 2000) {
+                setTimeout(() => {
+                  removeLoadBar()
+                }, 2000)
+              } else {
                 removeLoadBar()
-              }, 2000)
-            } else {
-              removeLoadBar()
-            }
-            console.log('Item has been updated')
-            let array = []
-            for (let i = 0; i < json.length; i++) {
-              array.push(json[i]['category'])
-            }
-            array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
-            dispatch(getButtons(array))
-            dispatch(updateItem(json))
-        }
+              }
+              console.log('Item has been updated')
+              let array = []
+              for (let i = 0; i < json.length; i++) {
+                array.push(json[i]['category'])
+              }
+              array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
+              dispatch(getButtons(array))
+              dispatch(getItem(json))
+              // Sets a success message
+              setSuccess('Item has been successfully updated!')
+          }
 
-        if (!response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+          if (!response.ok) {
+              // Response time calculation
+              responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-              setTimeout(() => {
+              // Removes Loading message after 2 seconds or longer
+              if (responseTime < 2000) {
+                setTimeout(() => {
+                  removeLoadBar()
+                }, 2000)
+              } else {
                 removeLoadBar()
-              }, 2000)
-            } else {
-              removeLoadBar()
-            }
-            setError(json.message)
+              }
+              setError(json.message)
+          }
+        } catch (error) {
+          if (!error?.response) {
+            removeLoadBar()
+            // No server response (server is down)
+            setError(`Unable to establish server connection. Please verify your internet 
+                connection and try again. If the problem persists, kindly reach out to the 
+                developer through the 'Contact' page.`)
+          } 
         }
     } 
 
@@ -120,13 +133,22 @@ const UpdateItemsForm = ({itemId, itemName, storeId}) => {
             setError('Please select the category')
             return
           }
-    
-        patchItem(itemTitle, length, width, height, description, category, itemId)
-        setSuccess('Item has been successfully updated!')
-        setTimeout(() => {
-          setSuccess(null)
-          document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
-        }, 2000)
+          
+          if(parseFloat(availableSpace) + (parseFloat(spaceTaken) - parseFloat((length*width*height)/1000000)) < 0){
+            setError(`Unfortunately, there isn't sufficient space in the storage or basement unit to accommodate this 
+            item. We recommend trying to store a smaller item instead. It's essential to consider maneuvering space 
+            for storage operations.`)
+            setTimeout(() => {
+              setError(null)
+            }, 10000)
+            return
+          } else {
+            patchItem(itemTitle, length, width, height, description, category, itemId)
+            setTimeout(() => {
+              setSuccess(null)
+              document.getElementById(`${itemId.slice(4, 11)}-update-items`).style.display = 'none'
+            }, 5000)
+          }
       }
 
   return (

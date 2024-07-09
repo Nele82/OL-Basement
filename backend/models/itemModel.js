@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-
+// Defining a Model in Mongoose is done through the Schema interface
 const Schema = mongoose.Schema
 
 const itemSchema = new Schema({

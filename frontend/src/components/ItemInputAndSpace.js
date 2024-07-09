@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { createItem } from '../slices/ItemsSlice'
 import { useDispatch, useSelector } from 'react-redux'
+import { loadBar, removeLoadBar } from '../hooks/useLoader'
+import { createItem } from '../slices/ItemsSlice'
 import { getButtons } from '../slices/ButtonsSlice'
 import { setLoadingMsg } from '../slices/LoadingSlice'
-import { loadBar, removeLoadBar } from '../hooks/useLoader'
+import { updatesSpace } from '../slices/SpaceSlice'
+
 
 const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   const [itemTitle, setItemTitle] = useState('')
@@ -20,81 +22,91 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   const dispatch = useDispatch()
 
   const addItem = async () => {
-    // Displays Loading message
-    dispatch(setLoadingMsg('ADDING A NEW ITEM . . . .'))
-    loadBar()
+    try {
+      // Displays Loading message
+      dispatch(setLoadingMsg('ADDING A NEW ITEM . . . .'))
+      loadBar()
 
-    // Response time variables
-    let startTime = new Date()
-    let responseTime = null
-
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/items/createItem`, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({itemTitle, length, width, height, description, category, storageId})
-      })      
-      const json = await response.json()
-      
-      // Fetching data for the filter buttons
+      // Response time variables
+      let startTime = new Date()
+      let responseTime = null
 
       // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
       // deployment or production (whichever is set by the Developer inside it's Redux slice) 
       // for the backend
-      const arr = await fetch(`${httpInput}/items/getItems/${storageId}`)
-      const arrJSON = await arr.json()
+      const response = await fetch(`${httpInput}/items/createItem`, {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({itemTitle, length, width, height, description, category, storageId})
+        })      
+        const json = await response.json()
+        
+        // Fetching data for the filter buttons
 
-      if (response.ok) {
-        // Response time calculation
-        responseTime = new Date() - startTime
+        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const arr = await fetch(`${httpInput}/items/getItems/${storageId}`)
+        const arrJSON = await arr.json()
 
-        // Removes Loading message after 2 seconds or longer
-        if (responseTime < 2000) {
-          setTimeout(() => {
+        if (response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
             removeLoadBar()
-          }, 2000)
-        } else {
-          removeLoadBar()
+          }
+          console.log('Item has been added to the storage')
+          dispatch(createItem(json))
         }
-        console.log('Item has been added to the storage')
-        dispatch(createItem(json))
-      }
 
-      if (!response.ok) {
-        // Response time calculation
-        responseTime = new Date() - startTime
-  
-        // Removes Loading message after 2 seconds or longer
-        if (responseTime < 2000) {
-          setTimeout(() => {
-            removeLoadBar()
-          }, 2000)
-        } else {
-            removeLoadBar()
-        }
-        setError(json.message)
-      }
-
-      if(arr.ok) {
-        let array = []
-        for (let i = 0; i < arrJSON.length; i++) {
-          array.push(arrJSON[i]['category'])
-        }
-        array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
-        dispatch(getButtons(array))
-      }
-
-      if (!response.ok) {
+        if (!response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+    
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
           setError(json.message)
-      }
+        }
 
-      if (!arr.ok) {
-          console.log(arrJSON.message)
-      }
+        if(arr.ok) {
+          let array = []
+          for (let i = 0; i < arrJSON.length; i++) {
+            array.push(arrJSON[i]['category'])
+          }
+          array = array.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
+          dispatch(getButtons(array))
+        }
+
+        if (!response.ok) {
+            setError(json.message)
+        }
+
+        if (!arr.ok) {
+            console.log(arrJSON.message)
+        }
+    } catch (error) {
+      if (!error?.response) {
+        removeLoadBar()
+        // No server response (server is down)
+        setError(`Unable to establish server connection. Please verify your internet 
+            connection and try again. If the problem persists, kindly reach out to the 
+            developer through the 'Contact' page.`)
+      } 
+    }
   } 
 
   const handleSubmit = (e) => {
@@ -134,7 +146,9 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
     }
 
     if(parseFloat((length*width*height)/1000000) > parseFloat(basementSpace - (occupiedSpaceCubic(array)))){
-      setError('Unfortunately, there isn\'t sufficient space in the storage or basement unit to accommodate this item. I recommend trying to store a smaller item instead. It\'s essential to consider maneuvering space for storage operations.')
+      setError(`Unfortunately, there isn't sufficient space in the storage or basement unit to accommodate this 
+      item. We recommend trying to store a smaller item instead. It's essential to consider maneuvering space 
+      for storage operations.`)
       setTimeout(() => {
         setError(null)
       }, 10000)
@@ -167,6 +181,8 @@ const ItemInput = ({storageId, storeSpace, array, dimensions}) => {
   useEffect(()=>{
     setbasementSpace(storeSpace)
     occupiedSpaceCubic(array)
+    // Sets the remaining space value to a 'remainingSpace' Redux selector
+    dispatch(updatesSpace((basementSpace - (occupiedSpaceCubic(array))).toFixed(4)))
 }, [storeSpace, array])
 
   return (

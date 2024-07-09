@@ -11,6 +11,7 @@ import ResetRequest from './pages/ResetRequest'
 import PasswordReset from './pages/PasswordReset'
 import TermsOfUse from './pages/TermsOfUse'
 import PrivacyPolicy from './pages/PrivacyPolicy'
+import NotFound from './pages/404-NotFound'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './slices/AuthSlice'
@@ -100,6 +101,10 @@ function App() {
               <Route
                 path='privacy-policy'
                 element={<PrivacyPolicy />}
+              />
+              <Route
+                path='*'
+                element={<NotFound />}
               />
             </Route>
           </Routes>

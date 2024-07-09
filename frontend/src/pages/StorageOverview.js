@@ -23,6 +23,8 @@ const StorageOverview = () => {
     const buttons = useSelector(state => state.buttons.value)
     const [local, setLocal] = useState(JSON.parse(localStorage.getItem('singleStorage')))
     const [title, setTitle] = useState('')
+    const [loading, setLoading] = useState('L O A D I N G . . .')
+    const [error, setError] = useState(null)
     const navigate = useNavigate() 
     // Redux    
     const dispatch = useDispatch()
@@ -84,58 +86,71 @@ const StorageOverview = () => {
         }
 
         const fetchItems = async () => {
-          // Displays Loading message
-          dispatch(setLoadingMsg(`LOADING ITEMS . . . .`))
-          loadBar()
+          try {
+            // Displays Loading message
+            dispatch(setLoadingMsg(`LOADING ITEMS . . . .`))
+            loadBar()
 
-          // Response time variables
-          let startTime = new Date()
-          let responseTime = null
+            // Response time variables
+            let startTime = new Date()
+            let responseTime = null
 
-          // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-          // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-          // for the backend
-          const response = await fetch(`${httpInput}/items/getItems/${local.id}`)
-          const json = await response.json()
+            // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+            // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+            // for the backend
+            const response = await fetch(`${httpInput}/items/getItems/${local.id}`)
+            const json = await response.json()
 
-          if (response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+            if (response.ok) {
+              setLoading(null)
+              // Response time calculation
+              responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-                setTimeout(() => {
-                removeLoadBar()
-                }, 2000)
-            } else {
-                setTimeout(() => {
-                removeLoadBar()
-                }, responseTime)
+              // Removes Loading message after 2 seconds or longer
+              if (responseTime < 2000) {
+                  setTimeout(() => {
+                  removeLoadBar()
+                  }, 2000)
+              } else {
+                  setTimeout(() => {
+                  removeLoadBar()
+                  }, responseTime)
+              }
+              dispatch(getItem(json)) 
+              let arr = []
+              for (let i = 0; i < json.length; i++) {
+                arr.push(json[i]['category'])
+              }
+              arr = arr.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
+              dispatch(getButtons(arr))
             }
-            dispatch(getItem(json)) 
-            let arr = []
-            for (let i = 0; i < json.length; i++) {
-              arr.push(json[i]['category'])
-            }
-            arr = arr.sort().filter((item, pos, ary) => !pos || item !== ary[pos - 1])
-            dispatch(getButtons(arr))
-          }
 
-          if (!response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+            if (!response.ok) {
+              setLoading(null)
+              // Response time calculation
+              responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-                setTimeout(() => {
-                removeLoadBar()
-                }, 2000)
-            } else {
-                setTimeout(() => {
-                removeLoadBar()
-                }, responseTime)
+              // Removes Loading message after 2 seconds or longer
+              if (responseTime < 2000) {
+                  setTimeout(() => {
+                  removeLoadBar()
+                  }, 2000)
+              } else {
+                  setTimeout(() => {
+                  removeLoadBar()
+                  }, responseTime)
+              }
+              console.log(json.message)       
             }
-            console.log(json.message)       
+          } catch (error) {
+            if (!error?.response) {
+              setLoading(null)
+              removeLoadBar()
+              // No server response (server is down)
+              setError(`Unable to establish server connection. Please verify your internet 
+                  connection and try again. If the problem persists, kindly reach out to the 
+                  developer through the 'Contact' page.`)
+            } 
           }
         }
 
@@ -194,10 +209,12 @@ const StorageOverview = () => {
         >
           {/* TITLE*/}
           <h3 className='display-f jc-c'>Items:</h3>
+          {/* ERROR MESSAGE */}
+          {error && <span className='storeLoadError'><b>Attention! </b>{error}</span>}
           {/* NO ITEMS MESSAGE */}
-          {items.length === 0 && <p><b>There are no items stored in this storage unit.</b></p>}
+          {!loading && !error && items.length === 0 && <p><b>There are no items stored in this storage unit.</b></p>}
           {/* BUTTONS */}
-          {items.length > 0 && 
+          {!loading && !error && items.length > 0 && 
           <div className="buttons-group display-f fd-c ai-c">
             {items.length > 0 &&
               <h4 
@@ -237,8 +254,10 @@ const StorageOverview = () => {
             </div>
           </div>
           }
+          {/* LOADING DISPLAY */}
+          {loading && <span className='storeLoadError'><b>{loading}</b></span>}
           {/* ITEMS */}
-          {items.length > 0 && 
+          {!loading && !error && items.length > 0 && 
           <div className="items-group display-f ai-c col-12-xs">
             {items.length > 0 && items.map((item) => (
               // Single item DIV element
@@ -295,7 +314,7 @@ const StorageOverview = () => {
                       </i>
                   </div>
                   {/* Item update form component */}
-                  {local && <UpdateItemsForm itemId={item._id} itemName={item.itemTitle} storeId={local.id}/>}
+                  {local && <UpdateItemsForm itemId={item._id} itemName={item.itemTitle} storeId={local.id} spaceTaken={(((parseFloat(item.length) * parseFloat(item.width) * parseFloat(item.height)))/1000000).toFixed(4)}/>}
                   {/* Item delete - dialog box component */}
                   {local && <DialogBoxItems itemId={item._id} storeId={local.id}/>}
                   {/* Item info housing */}

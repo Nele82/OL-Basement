@@ -9,6 +9,7 @@ Welcome to OL Basement!
 - Project Name: OL Basement
 - Purpose: To manage and track inventory and space in home basements or other storage facilities.
 - Technology Stack: MERN
+- Developer: Nebojsa Pavlovic (https://nebojsapavlovic.netlify.app/)
 
  It’s built with MERN stack technologies, offering features like user authentication, space calculation in cubic meters, and a visual progress bar indicating used space. Additional functionalities include secure password handling, CRUD operations for storage data, item categorization, Excel export, and light/dark mode visuals. Support is facilitated through a contact form using EmailJS.
 

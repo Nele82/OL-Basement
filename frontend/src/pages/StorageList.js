@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import StorageInput from '../components/StorageInput'
 import DialogBox from '../components/DialogBox'
 import UpdateForm from '../components/UpdateForm'
 import { useDispatch, useSelector } from 'react-redux'
-import { getStorage } from '../slices/StorageSlice'
+import { getStorage, nullStorage } from '../slices/StorageSlice'
 import distanceToNow from 'date-fns/formatDistanceToNow'
 
 import { login, logout } from '../slices/AuthSlice'
@@ -11,6 +11,8 @@ import { updateHeight, updateLength, updateTitle, updateWidth } from '../slices/
 import { Link, useNavigate } from 'react-router-dom'
 
 const StorageList = () => {
+    const [error, setError] = useState(null)
+    const [loading, setLoading] = useState('L O A D I N G . . .')
     const storages = useSelector(state=> state.storage.value)
     const user = useSelector(state => state.user.value)
     const navigate = useNavigate()
@@ -31,16 +33,32 @@ const StorageList = () => {
 
     useEffect(()=>{
       const fetchStorage = async () => {
-        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-        // for the backend
-        const response = await fetch(`${httpInput}/facilities/getStorages`, {
-          headers: {'Authorization': `User ${user.jwt}`},
-        })
-        const json = await response.json()
+        try {
+          // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+          // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+          // for the backend
+          const response = await fetch(`${httpInput}/facilities/getStorages`, {
+            headers: {'Authorization': `User ${user.jwt}`},
+          })
+          const json = await response.json()
 
-        if (response.ok) {
-          dispatch(getStorage(json))          
+          if (response.ok) {
+            setLoading(null)
+            dispatch(getStorage(json))   
+          }
+          if (!response.ok) {
+            setLoading(null)
+            setError(json.message)   
+          }
+        } catch (error) {
+          if (!error?.response) {
+            setLoading(null)
+            // No server response (server is down)
+            setError(`Unable to establish server connection. Please verify your internet 
+                connection and try again. If the problem persists, kindly reach out to the 
+                developer through the 'Contact' page.`)
+            dispatch(nullStorage())  
+          } 
         }
       }
 
@@ -51,11 +69,15 @@ const StorageList = () => {
 
   return (
     <div className='storage-wrapper col-11-sm col-12-md display-f fd-c ai-c ml-a mr-a'>
-      <h3>Basement / storage units (User: {user.username})</h3>
+      <h3>Basement / storage units (User: {user.username})</h3>  
+      {/* LOADING DISPLAY */}
+      {loading && <span className='storeLoadError'><b>{loading}</b></span>}
+      {/* SERVER ERROR */}
+      {!loading && error && <span className='storeLoadError'><b>Attention! </b>{error}</span>}
       {/* NO STORAGE MESSAGE */}
-      {storages.length === 0 && <p className='display-f fd-c jc-c'>There are no storage units saved for<b className='ml-1'>{user.username}</b></p>}
+      {!loading && storages.length === 0 && !error && <p className='display-f fd-c jc-c'>There are no storage units saved for<b className='ml-1'>{user.username}</b></p>}
       {/* STORAGE UNITS HOUSING */}
-      {storages.length > 0 &&
+      {!loading && storages.length > 0 &&
       <div 
         id="storage-units-housing"
         className='display-f fr-w jc-sa col-12-xs col-11-md col-12-lg col-9-xl mr-a ml-a'

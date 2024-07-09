@@ -21,56 +21,67 @@ const StorageInput = () => {
 
   // Create a basement / storage unit
   const createStorageUnit = async (facilityName, length, width, height) => {
-      // Displays Loading message
-      dispatch(setLoadingMsg('CREATING A NEW STORAGE UNIT . . . .'))
-      loadBar()
-  
-      // Response time variables
-      let startTime = new Date()
-      let responseTime = null
+      try {
+          // Displays Loading message
+          dispatch(setLoadingMsg('CREATING A NEW STORAGE UNIT . . . .'))
+          loadBar()
+      
+          // Response time variables
+          let startTime = new Date()
+          let responseTime = null
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/facilities/createStorage`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `User ${user.jwt}`
-      },
-      body: JSON.stringify({facilityName, length, width, height})
-    })
-    const json = await response.json()
+        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+        // for the backend
+        const response = await fetch(`${httpInput}/facilities/createStorage`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `User ${user.jwt}`
+          },
+          body: JSON.stringify({facilityName, length, width, height})
+        })
+        const json = await response.json()
 
-    if (response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
+        if (response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
+          // Success message
+          setSuccess('The basement / storage unit has been successfully created!')
+          dispatch(createStorage(json))
+        }
 
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
+        if (!response.ok) {
+          // Response time calculation
+          responseTime = new Date() - startTime
+
+          // Removes Loading message after 2 seconds or longer
+          if (responseTime < 2000) {
+            setTimeout(() => {
+              removeLoadBar()
+            }, 2000)
+          } else {
+              removeLoadBar()
+          }
+          setError(json.message)
+        }
+      } catch (error) {
+        if (!error?.response) {
           removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
+          // No server response (server is down)
+          setError(`Unable to establish server connection. Please verify your internet 
+              connection and try again. If the problem persists, kindly reach out to the 
+              developer through the 'Contact' page.`)
+        } 
       }
-      dispatch(createStorage(json))
-    }
-
-    if (!response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
-
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
-      }
-      setError(json.message)
-    }
   }
 
   const handleSubmit = async (e) => {
@@ -104,10 +115,9 @@ const StorageInput = () => {
     setLength('')
     setWidth('')
     setHeight('')
-    setSuccess('The basement / storage unit has been successfully created!')
     setTimeout(() => {
       setSuccess(null)
-    }, 2000)
+    }, 5000)
   }
 
   return (

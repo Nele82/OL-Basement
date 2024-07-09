@@ -12,15 +12,12 @@ export const itemsSlice = createSlice({
         getItem: (state, action) => {
             state.value = action.payload
         },
-        updateItem: (state, action) => {
-            state.value = action.payload
-        },
         deleteItem: (state, action) => {
             state.value = (state.value).filter((items) => items._id !== action.payload)
         }
     }
 })
 
-export const {createItem, getItem, updateItem, deleteItem} = itemsSlice.actions
+export const {createItem, getItem, deleteItem} = itemsSlice.actions
 
 export default itemsSlice.reducer

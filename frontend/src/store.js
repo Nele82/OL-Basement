@@ -9,6 +9,7 @@ import setUpdateItem from './slices/UpdateItemSlice'
 import setTheme from './slices/ThemeSlice'
 import setHttp from './slices/HTTPSlice'
 import setLoadingMessage from './slices/LoadingSlice'
+import setRemainingSpace from './slices/SpaceSlice'
 
 export default configureStore({
   reducer: {
@@ -21,6 +22,7 @@ export default configureStore({
     updatedItems: setUpdateItem,
     theme: setTheme,
     httpAddress: setHttp,
-    loading: setLoadingMessage
+    loading: setLoadingMessage,
+    remainingSpace: setRemainingSpace
   }
 })

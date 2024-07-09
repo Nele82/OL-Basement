@@ -28,47 +28,56 @@ const UpdateForm = ({storageId}) => {
         let responseTime = null
 
         const user = JSON.parse(localStorage.getItem('user'))
-    
-        // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-        // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-        // for the backend
-        const response = await fetch(`${httpInput}/facilities/updateStorage/${id}`, {
-            method: 'PATCH',
-            headers: {
-            'Content-Type': 'application/json',
-            'Authorization': `User ${user.jwt}`},
-            body: JSON.stringify({facilityName, length, width, height})
-        })
-        const json = await response.json()
-    
-        if (response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+        try {
+            // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+            // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+            // for the backend
+            const response = await fetch(`${httpInput}/facilities/updateStorage/${id}`, {
+                method: 'PATCH',
+                headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `User ${user.jwt}`},
+                body: JSON.stringify({facilityName, length, width, height})
+            })
+            const json = await response.json()
+        
+            if (response.ok) {
+                // Response time calculation
+                responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-                setTimeout(() => {
-                removeLoadBar()
-                }, 2000)
-            } else {
-                removeLoadBar()
+                // Removes Loading message after 2 seconds or longer
+                if (responseTime < 2000) {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, 2000)
+                } else {
+                    removeLoadBar()
+                }
+                setSuccess('The basement / storage unit has been successfully updated!')
+                dispatch(updateStorage(json))
             }
-            console.log('Storage has been updated')
-            dispatch(updateStorage(json))
-        }
-        if (!response.ok) {
-            // Response time calculation
-            responseTime = new Date() - startTime
+            if (!response.ok) {
+                // Response time calculation
+                responseTime = new Date() - startTime
 
-            // Removes Loading message after 2 seconds or longer
-            if (responseTime < 2000) {
-                setTimeout(() => {
-                removeLoadBar()
-                }, 2000)
-            } else {
-                removeLoadBar()
+                // Removes Loading message after 2 seconds or longer
+                if (responseTime < 2000) {
+                    setTimeout(() => {
+                    removeLoadBar()
+                    }, 2000)
+                } else {
+                    removeLoadBar()
+                }
+                console.log(json.message)
             }
-            console.log(json.message)
+        } catch (error) {
+            if (!error?.response) {
+                // No server response (server is down)
+                setError(`Unable to establish server connection. Please verify your internet 
+                    connection and try again. If the problem persists, kindly reach out to the 
+                    developer through the 'Contact' page.`)
+                removeLoadBar()
+            } 
         }
     } 
 
@@ -99,11 +108,10 @@ const UpdateForm = ({storageId}) => {
         }
     
         patchStorage(facilityName, length, width, height, storageId)
-        setSuccess('The basement / storage unit has been successfully updated!')
         setTimeout(() => {
           setSuccess(null)
           document.getElementById(`${storageId.slice(4, 11)}-update`).style.display = 'none'
-        }, 2000)
+        }, 5000)
       }
 
   return (

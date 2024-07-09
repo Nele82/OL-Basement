@@ -42,49 +42,61 @@ const PasswordReset = () => {
     // Response time variables
     let startTime = new Date()
     let responseTime = null
+    let requestTime = new Date().toLocaleTimeString()
 
-    // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-    // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-    // for the backend
-    const response = await fetch(`${httpInput}/user/requestReset`, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({ email })
-    })
+    try {
+      // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+      // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+      // for the backend
+      const response = await fetch(`${httpInput}/user/requestReset`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email, requestTime })
+      })
 
-    const json = await response.json()
+      const json = await response.json()
 
-    if (!response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
+      if (!response.ok) {
+        // Response time calculation
+        responseTime = new Date() - startTime
 
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
+        // Removes Loading message after 2 seconds or longer
+        if (responseTime < 2000) {
+          setTimeout(() => {
+            removeLoadBar()
+          }, 2000)
+        } else {
+            removeLoadBar()
+        }
+        setError(json.message)
       }
-      setError(json.message)
-    }
 
-    if (response.ok) {
-      // Response time calculation
-      responseTime = new Date() - startTime
+      if (response.ok) {
+        console.log(json.data);
+        // Response time calculation
+        responseTime = new Date() - startTime
 
-      // Removes Loading message after 2 seconds or longer
-      if (responseTime < 2000) {
-        setTimeout(() => {
-          removeLoadBar()
-        }, 2000)
-      } else {
-          removeLoadBar()
+        // Removes Loading message after 2 seconds or longer
+        if (responseTime < 2000) {
+          setTimeout(() => {
+            removeLoadBar()
+          }, 2000)
+        } else {
+            removeLoadBar()
+        }
+        setNotification(`A link to reset your password has been sent to your email address. Please check your inbox 
+        and follow the instructions to create a new password. If you don’t see the email, be sure to check your spam or 
+        junk folder or resubmit your email.`)
+        setEmail('')
       }
-      setNotification(`Success! A link to reset your password has been sent to your email address. Please check your inbox 
-      and follow the instructions to create a new password. If you don’t see the email, be sure to check your spam or 
-      junk folder or resubmit your email.`)
-      setEmail('')
+    } catch (error) {
+      if (!error?.response) {
+        // No server response (server is down)
+        setError(`Unable to establish server connection. Please verify your internet 
+          connection and try again. If the problem persists, kindly reach out to the 
+          developer through the 'Contact' page.`)
+        removeLoadBar()
+      } 
     }
   }
 
@@ -123,7 +135,7 @@ const PasswordReset = () => {
             Submit
           </button>
           {error && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
-          {notification && <span>{notification}</span>}
+          {notification && <span><b>Success!</b> {notification}</span>}
           <button
             onClick={()=>{
               navigate('/login')

@@ -38,7 +38,7 @@ const PasswordReset = () => {
         }
 
         if(testPass && newPassword !== confirm) {
-            setError('ERROR: The passwords you provided don’t match. Please enter them again.')
+            setError('ERROR: The passwords you entered do not match. Please re-enter them.')
             return
         }
 
@@ -50,51 +50,60 @@ const PasswordReset = () => {
         let startTime = new Date()
         let responseTime = null
 
-        if(token) {
-            // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
-            // deployment or production (whichever is set by the Developer inside it's Redux slice) 
-            // for the backend
-            const response = await fetch(`${httpInput}/user/resetPassword`, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'},
-                body: JSON.stringify({ token, newPassword })
-              })
-              const json = await response.json() 
-          
-              if (!response.ok) {
-                // Response time calculation
-                responseTime = new Date() - startTime
-
-                // Removes Loading message after 2 seconds or longer
-                if (responseTime < 2000) {
+        try {
+            if(token) {
+                // 'httpInput' reducer holds the http address (no endpoint as it doesn't change) for 
+                // deployment or production (whichever is set by the Developer inside it's Redux slice) 
+                // for the backend
+                const response = await fetch(`${httpInput}/user/resetPassword`, {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({ token, newPassword })
+                  })
+                  const json = await response.json() 
+              
+                  if (!response.ok) {
+                    // Response time calculation
+                    responseTime = new Date() - startTime
+    
+                    // Removes Loading message after 2 seconds or longer
+                    if (responseTime < 2000) {
+                        setTimeout(() => {
+                        removeLoadBar()
+                        }, 2000)
+                    } else {
+                        removeLoadBar()
+                    }
+                    setError(json.message)
+                  }
+              
+                  if (response.ok) { 
+                    // Response time calculation
+                    responseTime = new Date() - startTime
+    
+                    // Removes Loading message after 2 seconds or longer
+                    if (responseTime < 2000) {
+                        setTimeout(() => {
+                        removeLoadBar()
+                        }, 2000)
+                    } else {
+                        removeLoadBar()
+                    }     
+                    console.log(json.message)
+                    setSuccess(json.message)
                     setTimeout(() => {
-                    removeLoadBar()
-                    }, 2000)
-                } else {
-                    removeLoadBar()
-                }
-                console.log(json.message)
-                setError(json.message)
-              }
-          
-              if (response.ok) { 
-                // Response time calculation
-                responseTime = new Date() - startTime
-
-                // Removes Loading message after 2 seconds or longer
-                if (responseTime < 2000) {
-                    setTimeout(() => {
-                    removeLoadBar()
-                    }, 2000)
-                } else {
-                    removeLoadBar()
-                }     
-                console.log(json.message)
-                setSuccess(json.message)
-                setTimeout(() => {
-                    navigate('/login')
-                }, 5000)
-              } 
+                        navigate('/login')
+                    }, 5000)
+                  } 
+            }
+        } catch (error) {
+                if (!error?.response) {
+                // No server response (server is down)
+                setError(`Unable to establish server connection. Please verify your internet 
+                    connection and try again. If the problem persists, kindly reach out to the 
+                    developer through the 'Contact' page.`)
+                removeLoadBar()
+            } 
         }
     }
 
@@ -154,7 +163,7 @@ const PasswordReset = () => {
             Submit
         </button>
         {error && <div className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><div>&#9888;</div> {error}</div>}
-        {success && <span>{success}</span>}
+        {success && <span className='display-f fd-c ai-c p-1 bd-black mt-1 mb-1' style={{border: theme ? '2px dotted white' : null}}><div>&#9432;</div>{success}</span>}
     </form>
   )
 }
