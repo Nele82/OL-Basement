@@ -4,7 +4,7 @@ import { createSlice } from '@reduxjs/toolkit'
 export const httpSlice = createSlice({
     name: 'httpAddress',
     initialState: {
-        value: 'http://localhost:3500'
+        value: process.env.REACT_APP_HTTP_DEPLOY
     }
 })
 
