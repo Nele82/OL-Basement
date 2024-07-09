@@ -11,7 +11,6 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(null)
-  const [loadingCleanup, setLoadingCleanup] = useState(null)
   const userRef = useRef()
   const navigate = useNavigate()
   // Redux
@@ -47,7 +46,6 @@ const Login = () => {
         if (!response.ok) {
           // Response time calculation
           responseTime = new Date() - startTime
-          setLoadingCleanup(responseTime)
 
           // Removes Loading message after 2 seconds or longer
           if (responseTime < 2000) {
@@ -64,7 +62,6 @@ const Login = () => {
         if (response.ok) {
           // Response time calculation
           responseTime = new Date() - startTime
-          setLoadingCleanup(responseTime)
 
           // Removes Loading message after 2 seconds or longer
           if (responseTime < 2000) {
@@ -131,11 +128,8 @@ const Login = () => {
     userRef.current.focus()
 
     // Cleanup - removes loading bar if a User navigates away 
-    // and logging in takes longer than 2s
     return ()=> {
-      if (loadingCleanup > 2000) {
         removeLoadBar()
-      }
     }
   }, [])
   
